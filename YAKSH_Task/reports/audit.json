@@ -1,0 +1,111 @@
+{
+  "batch_instance.csv": {
+    "extra_blank_column_rows": 0,
+    "flags": {
+      "accepted_for_duration_estimate": 6254166,
+      "completed_retry_excluded": 64555,
+      "missing_join_key": 3992098,
+      "negative_start_timestamp": 73443,
+      "no_eligible_task_join": 241434,
+      "not_complete_in_window": 9534501
+    },
+    "missing": {
+      "job_id": 3992098,
+      "machine_id": 1342871,
+      "real_cpu_avg": 2386677,
+      "real_cpu_max": 2386677,
+      "real_mem_avg": 14166324,
+      "real_mem_max": 14167556,
+      "task_id": 3992098
+    },
+    "rows": 16094656,
+    "statuses": {
+      "Failed": 209168,
+      "Interrupted": 5827,
+      "Ready": 67618,
+      "Running": 835194,
+      "Terminated": 13707867,
+      "Waiting": 1268982
+    },
+    "widths": {
+      "12": 16094656
+    }
+  },
+  "batch_task.csv": {
+    "extra_blank_column_rows": 0,
+    "missing": {
+      "plan_cpu_raw": 9017,
+      "plan_mem_normalized": 9017
+    },
+    "rows": 80553,
+    "widths": {
+      "8": 80553
+    }
+  },
+  "clean_instances": 6342960,
+  "clean_task_groups": 39861,
+  "container_event.csv": {
+    "extra_blank_column_rows": 11102,
+    "missing": {},
+    "rows": 11102,
+    "widths": {
+      "9": 11102
+    }
+  },
+  "container_usage.csv": {
+    "extra_blank_column_rows": 0,
+    "missing": {
+      "cpu_percent": 3,
+      "disk_percent": 5,
+      "load1": 5,
+      "load15": 5,
+      "load5": 5
+    },
+    "rows": 1480906,
+    "widths": {
+      "12": 1480906
+    }
+  },
+  "duration_coverage_median": 1.0,
+  "eligible_task_arrival_range_s": [
+    5,
+    43189
+  ],
+  "host_sample_total_variation": 0.03492717060167554,
+  "server_event.csv": {
+    "extra_blank_column_rows": 0,
+    "missing": {
+      "event_detail": 1313
+    },
+    "rows": 1352,
+    "widths": {
+      "7": 1352
+    }
+  },
+  "server_usage.csv": {
+    "extra_blank_column_rows": 0,
+    "invalid_utilization_or_host_rows": 1,
+    "missing": {
+      "cpu_percent": 1,
+      "disk_percent": 1,
+      "load1": 1,
+      "load15": 1,
+      "load5": 1
+    },
+    "rows": 187963,
+    "widths": {
+      "8": 187963
+    }
+  },
+  "task_exclusions_first_reason": {
+    "arrival_outside_window": 26354,
+    "invalid_or_censored_task_end": 230,
+    "missing_or_nonfinite_required_value": 10,
+    "no_valid_completed_first_attempt": 558,
+    "not_terminated": 13540
+  },
+  "usage_timestamp_range_s": [
+    39600,
+    82500
+  ]
+}

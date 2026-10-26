@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "workloads": [
+    {
+      "task_groups": 250,
+      "expanded_instances": 21723,
+      "cpu_work_matches": true
+    },
+    {
+      "task_groups": 1000,
+      "expanded_instances": 123401,
+      "cpu_work_matches": true
+    },
+    {
+      "task_groups": 4000,
+      "expanded_instances": 671994,
+      "cpu_work_matches": true
+    }
+  ]
+}

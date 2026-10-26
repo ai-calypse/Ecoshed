@@ -1,0 +1,179 @@
+{
+  "archive": {
+    "expected_sha256": "02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df",
+    "sha256": "02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df",
+    "verified": true
+  },
+  "clean_task_groups": 39861,
+  "config": {
+    "batch_cpu_units_per_core": 100.0,
+    "expected_archive_sha256": "02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df",
+    "host_count": 64,
+    "seed": 560,
+    "skew_ratio_threshold": 2.0,
+    "time_bin_s": 900,
+    "window_end_s": 43200,
+    "window_start_s": 0,
+    "workload_task_counts": [
+      250,
+      1000,
+      4000
+    ]
+  },
+  "format_version": 1,
+  "host_count": 64,
+  "official_sources": {
+    "checksum": "https://raw.githubusercontent.com/alibaba/clusterdata/master/cluster-trace-v2017/SHA256SUM",
+    "description": "https://github.com/alibaba/clusterdata/blob/master/cluster-trace-v2017/trace_201708.md",
+    "repository": "https://github.com/alibaba/clusterdata",
+    "schema": "https://github.com/alibaba/clusterdata/blob/master/cluster-trace-v2017/schema.csv"
+  },
+  "outputs": {
+    "config/experiment_1000.json": {
+      "bytes": 545,
+      "sha256": "6d5ccf6b8ff6f5930f94f51110bc595a9e5d5d6d3cda47fe2cab87cec2ee6951"
+    },
+    "config/experiment_250.json": {
+      "bytes": 544,
+      "sha256": "ef57b680ae388207de0027c334b8897657dcc0415c5cf3dde42ad4a6fb30ac03"
+    },
+    "config/experiment_4000.json": {
+      "bytes": 545,
+      "sha256": "5e2d3ba55d48afe1a5c12ba846767cf82fa17ed5fd53eb2e745906303bc3abf5"
+    },
+    "config/resolved_config.json": {
+      "bytes": 333,
+      "sha256": "5f61bd7033355841edbb22db0961feb56e7abae4f2229463f1fdac45a7905536"
+    },
+    "data/host_events.csv": {
+      "bytes": 1523,
+      "sha256": "0f1dd4a6290cfc7c6c1f42d6e8ede947d984dbf13221a02e5125d7034b0c7795"
+    },
+    "data/host_usage_sample.csv": {
+      "bytes": 401203,
+      "sha256": "dc0b729f776465e54d56d3dc5bdb79b09eed5806e5f7f76160185158d20b3b3a"
+    },
+    "data/hosts_64.csv": {
+      "bytes": 5992,
+      "sha256": "49d0bb6b50ffbf16df8cd76c95794795d2bf7497ed05d71adb5f9b268edb4d7e"
+    },
+    "data/hosts_all.csv": {
+      "bytes": 119366,
+      "sha256": "4eab11ac380e763d9706a3406e25bb128e758212f2a6afdf8fa82a8e48470e37"
+    },
+    "data/tasks_clean.csv": {
+      "bytes": 6504556,
+      "sha256": "d41fd78d70b2063685c6b156fa4804ef0e7bcdb4660b0ad6511a3d778cf24c28"
+    },
+    "data/workload_1000.csv": {
+      "bytes": 164340,
+      "sha256": "c4859364fcf81aceae571d3c61f543de5695d4413f6e2c464b186977ef673864"
+    },
+    "data/workload_250.csv": {
+      "bytes": 41101,
+      "sha256": "e2a3e5be12a122d99d9f564df6b3aebb4cc5ac3d3213bda83c5637b3e7e9e0a1"
+    },
+    "data/workload_4000.csv": {
+      "bytes": 653155,
+      "sha256": "a2d89733c7f8c87ca4ab107fc5a0688642430698af352df435bef51b93d95a49"
+    },
+    "docs/raw_schema.csv": {
+      "bytes": 1772,
+      "sha256": "8045a2d98a03735ab9b65e83f6b9282ccbabac3d104c7fe305a5d8b335372272"
+    },
+    "reports/arrival_profile.csv": {
+      "bytes": 3053,
+      "sha256": "a96a684898a5a1fec00dda411a7599ebb8fe2ec13c50f07aedd8293beb15e62f"
+    },
+    "reports/audit.json": {
+      "bytes": 2382,
+      "sha256": "105a1a61030646bb9ae087b4f0804fb92c0ff079e1c80d78a31dd2eceab8dd07"
+    },
+    "reports/host_sampling_comparison.csv": {
+      "bytes": 525,
+      "sha256": "69a46be4c54d69f707f24d0e44c40b29d09ed0ba9dfae12ffc6d49c856894c30"
+    },
+    "reports/sampling_comparison.csv": {
+      "bytes": 8697,
+      "sha256": "587dbea0e23197641d6ba6c910f7ee7a63ff42e5de4335a4bd2d19fd607f0751"
+    },
+    "reports/workload_summary.csv": {
+      "bytes": 989,
+      "sha256": "ed247c902374a1ef9a0a5e0f2a0b426f1f7cb8d732647f473b7853ba55cfdd04"
+    }
+  },
+  "pipeline_sha256": "3c7e40d018fdd81df3929502f2bf552fa33d6e6735dfac592c2f0f054f186208",
+  "source_files": {
+    "batch_instance.csv": {
+      "bytes": 858546781,
+      "sha256": "195f25ef36484a2da9bb92c08e203224ed34a32f48fcbe11c01d94ecf308d817"
+    },
+    "batch_task.csv": {
+      "bytes": 4631973,
+      "sha256": "50f3c50ab4a917ad06c1cee6ec601e1356708774d7962503e8eafdd720b2286d"
+    },
+    "container_event.csv": {
+      "bytes": 875035,
+      "sha256": "8e2c2776983fb0867f5088352849773186eab22de9d878e10978b5018c68aeda"
+    },
+    "container_usage.csv": {
+      "bytes": 275992839,
+      "sha256": "9ccb7abafdc492b173eb87b49c9cec3df30cb6e8fbfce09e7023be826de3a10a"
+    },
+    "server_event.csv": {
+      "bytes": 47615,
+      "sha256": "336f7255add3ae3c08bf5163b15319f542365a3c7814ed3f712699560933968b"
+    },
+    "server_usage.csv": {
+      "bytes": 19030775,
+      "sha256": "032fa4193f4b426941fb1eecef5add3d8b0632aaf7cbd7663b0051ceb8a4637a"
+    }
+  },
+  "workloads": [
+    {
+      "cpu_request_core_seconds": 1153093.120496304,
+      "instance_weighted_skew_total_variation": 0.02564390532324912,
+      "instances": 21723,
+      "mean_offered_cpu_capacity_ratio": 0.006516594331508518,
+      "mean_offered_memory_capacity_ratio": 0.013802549326038934,
+      "memory_request_normalized_seconds": 26446.93016438335,
+      "offered_cpu_over_capacity_seconds": 0.0,
+      "offered_memory_over_capacity_seconds": 0.0,
+      "peak_offered_cpu_capacity_ratio": 0.157470703125,
+      "peak_offered_memory_capacity_ratio": 0.361581016171452,
+      "skew_total_variation": 0.0018035673967035544,
+      "task_groups": 250,
+      "time_bin_total_variation": 0.06543117332731241
+    },
+    {
+      "cpu_request_core_seconds": 9593666.632838758,
+      "instance_weighted_skew_total_variation": 0.03586681917485331,
+      "instances": 123401,
+      "mean_offered_cpu_capacity_ratio": 0.054217679809789344,
+      "mean_offered_memory_capacity_ratio": 0.1145039823677122,
+      "memory_request_normalized_seconds": 219399.9639986597,
+      "offered_cpu_over_capacity_seconds": 0.0,
+      "offered_memory_over_capacity_seconds": 588.0619933237958,
+      "peak_offered_cpu_capacity_ratio": 0.9718017578125,
+      "peak_offered_memory_capacity_ratio": 1.942327801542294,
+      "skew_total_variation": 0.0002880509771455795,
+      "task_groups": 1000,
+      "time_bin_total_variation": 0.0203219186673691
+    },
+    {
+      "cpu_request_core_seconds": 64980431.50386255,
+      "instance_weighted_skew_total_variation": 0.009929501633689308,
+      "instances": 671994,
+      "mean_offered_cpu_capacity_ratio": 0.3672306287065438,
+      "mean_offered_memory_capacity_ratio": 0.7778374348965894,
+      "memory_request_normalized_seconds": 1490406.7237162178,
+      "offered_cpu_over_capacity_seconds": 2254.261070783669,
+      "offered_memory_over_capacity_seconds": 7202.476506010326,
+      "peak_offered_cpu_capacity_ratio": 6.8902587890625,
+      "peak_offered_memory_capacity_ratio": 13.489775876149634,
+      "skew_total_variation": 9.161837384908354e-05,
+      "task_groups": 4000,
+      "time_bin_total_variation": 0.004411323097764735
+    }
+  ]
+}

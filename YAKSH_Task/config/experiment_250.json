@@ -1,0 +1,13 @@
+{
+  "arrival_window_s": 43200,
+  "background_online_load": false,
+  "completion_policy": "drain_after_last_arrival",
+  "demand_model": "constant_requested_cpu_and_memory",
+  "hosts": "../data/hosts_64.csv",
+  "instance_runtime_model": "task_mean_completed_first_attempt_duration",
+  "note": "Paths relative to this config. Data handoff only; simulator/policies/power model are separate deliverables.",
+  "replay_source_host_failures": false,
+  "scheduling_unit": "individual_instance",
+  "seed": 560,
+  "workload": "../data/workload_250.csv"
+}

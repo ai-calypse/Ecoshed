@@ -1,0 +1,11 @@
+# Local raw inputs and release assets
+/trace_201708/
+/trace_201708.tgz
+/Project_Proposal.mp4
+/*.zip
+
+# Python and operating-system files
+__pycache__/
+*.py[cod]
+.DS_Store
+.venv/

@@ -1,0 +1,21 @@
+name: Validate prepared data
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Test deterministic sampling
+        run: python YAKSH_Task/scripts/test_sampling.py
+      - name: Verify prepared inputs and manifest
+        run: python YAKSH_Task/scripts/validate_data.py

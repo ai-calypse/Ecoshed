@@ -1,0 +1,15 @@
+{
+  "batch_cpu_units_per_core": 100.0,
+  "expected_archive_sha256": "02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df",
+  "host_count": 64,
+  "seed": 560,
+  "skew_ratio_threshold": 2.0,
+  "time_bin_s": 900,
+  "window_end_s": 43200,
+  "window_start_s": 0,
+  "workload_task_counts": [
+    250,
+    1000,
+    4000
+  ]
+}

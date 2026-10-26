@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "compared_files": 18,
+  "manifest_identical": true,
+  "files": [
+    "config/experiment_1000.json",
+    "config/experiment_250.json",
+    "config/experiment_4000.json",
+    "config/resolved_config.json",
+    "data/host_events.csv",
+    "data/host_usage_sample.csv",
+    "data/hosts_64.csv",
+    "data/hosts_all.csv",
+    "data/tasks_clean.csv",
+    "data/workload_1000.csv",
+    "data/workload_250.csv",
+    "data/workload_4000.csv",
+    "docs/raw_schema.csv",
+    "reports/arrival_profile.csv",
+    "reports/audit.json",
+    "reports/host_sampling_comparison.csv",
+    "reports/sampling_comparison.csv",
+    "reports/workload_summary.csv"
+  ],
+  "manifest_sha256": "7d3793d39ae30837616d17b505b44983a96223943383792ce27a1e4b571845fb"
+}
