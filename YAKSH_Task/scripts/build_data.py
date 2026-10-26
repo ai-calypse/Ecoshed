@@ -8,6 +8,7 @@ import json
 import math
 from pathlib import Path
 import statistics
+from sampling_quality import refine, measure, assert_limits, comparison_rows
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMAS = {
@@ -244,14 +245,15 @@ def build(raw, out, cfg, archive=None):
     if not clean: raise ValueError('No eligible workload remains')
     write_csv(data/'tasks_clean.csv',clean)
     all_strata=lambda t:(t['time_bin'],t['resource_skew'],t['multiplicity_band'])
-    summaries=[]; comparisons=[]; load_series=[]
+    summaries=[]; comparisons=[]; load_series=[]; weighted_comparisons=[]; quality_results=[]
     total_cpu=sum(h['cpu_capacity_cores'] for h in sample_hosts)
     total_mem=sum(h['memory_capacity_normalized'] for h in sample_hosts)
     horizon=cfg['window_end_s']-cfg['window_start_s']
     for size in cfg['workload_task_counts']:
         chosen=stratified(clean,size,all_strata,cfg['seed'],lambda t:t['task_group_id'],marginal=lambda t:t['resource_skew'])
+        print(f'Calibrating {size:,} groups against instance/resource arrival profiles.', flush=True)
+        chosen, refinement = refine(clean, chosen, cfg['seed'], cfg['sampling_refinement_max_passes'], cfg['sampling_mix_penalty'])
         chosen.sort(key=lambda t:(t['arrival_time_s'],int(t['job_id']),int(t['task_id'])))
-        write_csv(data/f'workload_{size}.csv',chosen)
         changes=[]
         for t in chosen:
             cpu=t['cpu_request_cores']*t['instance_num'];mem=t['memory_request_normalized']*t['instance_num']
@@ -272,6 +274,13 @@ def build(raw, out, cfg, archive=None):
                  'instance_weighted_skew_total_variation':tv(distribution(clean,lambda t:t['resource_skew'],lambda t:t['instance_num']),distribution(chosen,lambda t:t['resource_skew'],lambda t:t['instance_num']))}
         summary['mean_offered_cpu_capacity_ratio']=summary['cpu_request_core_seconds']/total_cpu/horizon
         summary['mean_offered_memory_capacity_ratio']=summary['memory_request_normalized_seconds']/total_mem/horizon
+        summary.update(measure(clean, chosen))
+        assert_limits(summary, cfg['sampling_limits'])
+        write_csv(data/f'workload_{size}.csv',chosen)
+        weighted_comparisons.extend(comparison_rows(clean, chosen, size))
+        quality_results.append({'task_groups': size, 'passed': True, 'refinement': refinement,
+                                'metrics': {key: summary[key] for key in cfg['sampling_limits']}})
+        print(f'  {size:,}: all weighted sampling quality limits passed.', flush=True)
         summaries.append(summary)
         for bin_id in range(math.ceil(horizon/cfg['time_bin_s'])):
             subset=[t for t in chosen if t['time_bin']==bin_id]
@@ -287,6 +296,8 @@ def build(raw, out, cfg, archive=None):
     write_csv(reports/'workload_summary.csv',summaries)
     write_csv(reports/'sampling_comparison.csv',comparisons)
     write_csv(reports/'arrival_profile.csv',load_series)
+    write_csv(reports/'weighted_sampling_comparison.csv',weighted_comparisons)
+    dump(reports/'sampling_quality.json',{'limits':cfg['sampling_limits'],'workloads':quality_results})
     host_compare=[]
     base=distribution(all_hosts,lambda h:h['host_stratum']);small=distribution(sample_hosts,lambda h:h['host_stratum'])
     for k in sorted(base):host_compare.append({'stratum':k,'population_hosts':base[k],'sample_hosts':small[k],'population_fraction':base[k]/len(all_hosts),'sample_fraction':small[k]/len(sample_hosts)})
@@ -301,9 +312,10 @@ def build(raw, out, cfg, archive=None):
     dump(reports/'audit.json',audit)
     dump(out/'config'/'resolved_config.json',cfg)
     write_csv(out/'docs'/'raw_schema.csv',({'file':name,'column_1_based':i,'field':field} for name,fields in SCHEMAS.items() for i,field in enumerate(fields,1)))
-    generated = list(data.glob('*.csv')) + list(reports.glob('*.csv')) + [reports/'audit.json',out/'config'/'resolved_config.json',out/'docs'/'raw_schema.csv'] + list((out/'config').glob('experiment_*.json'))
+    generated = list(data.glob('*.csv')) + list(reports.glob('*.csv')) + [reports/'audit.json',reports/'sampling_quality.json',out/'config'/'resolved_config.json',out/'docs'/'raw_schema.csv'] + list((out/'config').glob('experiment_*.json'))
     outputs={str(p.relative_to(out)): {'bytes':p.stat().st_size,'sha256':sha(p)} for p in sorted(generated)}
-    dump(out/'manifest.json',{'format_version':1,'config':cfg,'source_files':sources,'archive':archive_info,'pipeline_sha256':sha(Path(__file__)),
+    dump(out/'manifest.json',{'format_version':2,'config':cfg,'source_files':sources,'archive':archive_info,'pipeline_sha256':sha(Path(__file__)),
+         'pipeline_files':{f'scripts/{name}':sha(Path(__file__).parent/name) for name in ['build_data.py','sampling_quality.py']},
          'outputs':outputs,'workloads':summaries,'host_count':len(sample_hosts),'clean_task_groups':len(clean),
          'official_sources':{'repository':'https://github.com/alibaba/clusterdata','schema':'https://github.com/alibaba/clusterdata/blob/master/cluster-trace-v2017/schema.csv','description':'https://github.com/alibaba/clusterdata/blob/master/cluster-trace-v2017/trace_201708.md','checksum':'https://raw.githubusercontent.com/alibaba/clusterdata/master/cluster-trace-v2017/SHA256SUM'}})
     print(json.dumps({'clean_task_groups':len(clean),'clean_instances':audit['clean_instances'],'workloads':summaries},indent=2),flush=True)

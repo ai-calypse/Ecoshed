@@ -7,5 +7,18 @@
   "time_bin_s": 900,
   "batch_cpu_units_per_core": 100.0,
   "skew_ratio_threshold": 2.0,
+  "sampling_refinement_max_passes": 10,
+  "sampling_mix_penalty": 0.05,
+  "sampling_limits": {
+    "time_bin_total_variation": 0.10,
+    "instance_time_bin_total_variation": 0.10,
+    "cpu_request_time_bin_total_variation": 0.10,
+    "memory_request_time_bin_total_variation": 0.10,
+    "cpu_work_time_bin_total_variation": 0.20,
+    "memory_work_time_bin_total_variation": 0.20,
+    "instance_weighted_skew_total_variation": 0.05,
+    "cpu_request_weighted_skew_total_variation": 0.05,
+    "memory_request_weighted_skew_total_variation": 0.05
+  },
   "expected_archive_sha256": "02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df"
 }

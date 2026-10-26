@@ -1,6 +1,6 @@
 {
   "passed": true,
-  "compared_files": 18,
+  "compared_files": 20,
   "manifest_identical": true,
   "files": [
     "config/experiment_1000.json",
@@ -20,7 +20,9 @@
     "reports/audit.json",
     "reports/host_sampling_comparison.csv",
     "reports/sampling_comparison.csv",
+    "reports/sampling_quality.json",
+    "reports/weighted_sampling_comparison.csv",
     "reports/workload_summary.csv"
   ],
-  "manifest_sha256": "7d3793d39ae30837616d17b505b44983a96223943383792ce27a1e4b571845fb"
+  "manifest_sha256": "e7be8f967cab1f06a1d4490a59a6aaf6a97358db0907858b50460763efc70c99"
 }

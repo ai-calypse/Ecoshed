@@ -106,8 +106,12 @@ in the default scenario.
 9. The host sample reserves at least one representative per rounded capacity class;
    this deliberately overrepresents the rarest class. Small samples can still omit
    rare host utilization or workload strata. Quotas control
-   task-group resource proportions; instance-weighted mix, runtimes, and burst loads
-   remain approximate and are reported, not assumed equal.
+   task-group resource proportions. Calibration swaps whole source rows inside
+   the same arrival-bin/resource-skew cell, preserving group quotas and source
+   values. Instance/request arrivals, runtime-weighted work and resource mix
+   must meet the bounds in `config/default.json`; validation recomputes them
+   independently. Exact burst magnitudes remain approximate. See
+   [SAMPLING_QUALITY.md](SAMPLING_QUALITY.md).
 
 The report records actual sampling deviations and stress diagnostics. Keep the
 manifest and configs with results so all policies use exactly the same inputs.

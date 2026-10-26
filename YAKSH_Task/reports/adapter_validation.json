@@ -3,17 +3,17 @@
   "workloads": [
     {
       "task_groups": 250,
-      "expanded_instances": 21723,
+      "expanded_instances": 40381,
       "cpu_work_matches": true
     },
     {
       "task_groups": 1000,
-      "expanded_instances": 123401,
+      "expanded_instances": 160813,
       "cpu_work_matches": true
     },
     {
       "task_groups": 4000,
-      "expanded_instances": 671994,
+      "expanded_instances": 638647,
       "cpu_work_matches": true
     }
   ]

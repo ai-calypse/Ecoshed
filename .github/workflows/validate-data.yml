@@ -15,7 +15,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
-      - name: Test deterministic sampling
-        run: python YAKSH_Task/scripts/test_sampling.py
+      - name: Test sampling and read-only validation
+        run: python -m unittest discover -s YAKSH_Task/scripts -p 'test_*.py'
       - name: Verify prepared inputs and manifest
         run: python YAKSH_Task/scripts/validate_data.py
+      - name: Confirm checks leave tracked files unchanged
+        run: git diff --exit-code

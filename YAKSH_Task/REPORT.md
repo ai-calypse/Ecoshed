@@ -10,12 +10,12 @@ Prepared for the **Yaksh / Data & sampling** assignment in the EcoSched AMS 560 
 | Clean schema and invalid values | All six CSVs audited; filtered task population, named output fields, exclusion accounting |
 | Preserve instance_num | Unmodified source multiplicity in all cleaned/sample records; independent validation |
 | Deterministic representative host sample | 64 hosts; capacity/utilization strata, seed 560, comparison table |
-| Time-stratified workloads at several sizes | 250 / 1,000 / 4,000 groups; skew quotas, 15-minute bins, multiplicity bands |
+| Time-stratified workloads at several sizes | 250 / 1,000 / 4,000 groups; group quotas plus bounded instance/resource-weighted arrival profiles |
 | D1 documented subset, manifest, cleaned inputs | CSV package, manifest, configurations, scripts and simulator handoff |
 
 ## Verified source
 
-The archive SHA-256 is `02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df`. Full-source validation also confirms each extracted CSV is byte-identical to the corresponding file inside that verified archive.
+The archive SHA-256 is `02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df`. Full-source validation confirms each extracted CSV is byte-identical to the corresponding file inside that verified archive.
 
 | Raw file | Rows | Size (MiB) |
 |---|---:|---:|
@@ -60,21 +60,29 @@ Valid source utilization timestamps range from **39600 to 82500 seconds**. That 
 
 | Groups | Declared instances | Mean offered CPU / memory capacity | Peak offered CPU / memory capacity | Role |
 |---:|---:|---:|---:|---|
-| 250 | 21,723 | 0.007 / 0.014 | 0.157 / 0.362 | light / smoke run |
-| 1,000 | 123,401 | 0.054 / 0.115 | 0.972 / 1.942 | burst-constrained comparison |
-| 4,000 | 671,994 | 0.367 / 0.778 | 6.890 / 13.490 | heavy burst stress case |
+| 250 | 40,381 | 0.019 / 0.040 | 0.217 / 0.523 | light / smoke run |
+| 1,000 | 160,813 | 0.078 / 0.166 | 0.587 / 1.271 | burst-constrained comparison |
+| 4,000 | 638,647 | 0.312 / 0.676 | 2.621 / 6.977 | heavy burst stress case |
 
 Offered demand assumes every group's instances start immediately at task creation and hold their requested resources for the modeled mean duration. Ratios above 1 require queuing/rejection or overcommit. These diagnostics are neither measured utilization nor simulated SLA violations. Keep queue/admission rules identical across policies and drain all accepted work after the arrival window.
 
 ## Representativeness
 
-| Groups | Arrival-bin TV | Resource-skew TV | Instance-weighted resource-skew TV |
-|---:|---:|---:|---:|
-| 250 | 0.0654 | 0.0018 | 0.0256 |
-| 1,000 | 0.0203 | 0.0003 | 0.0359 |
-| 4,000 | 0.0044 | 0.0001 | 0.0099 |
+| Groups | Group arrival TV | Instance arrival TV | CPU-request arrival TV | Memory-request arrival TV | CPU-work arrival TV | Memory-work arrival TV |
+|---:|---:|---:|---:|---:|---:|---:|
+| 250 | 0.0654 | 0.0396 | 0.0276 | 0.0657 | 0.0546 | 0.1731 |
+| 1,000 | 0.0203 | 0.0191 | 0.0126 | 0.0218 | 0.0253 | 0.0474 |
+| 4,000 | 0.0044 | 0.0134 | 0.0110 | 0.0241 | 0.0334 | 0.0354 |
 
-Total variation compares normalized sample and clean-population distributions. Resource-mix quotas are applied first, then time/multiplicity quotas, using stable seeded hashes within strata. Samples preserve original arrival times and instance counts; they do not preserve every rare group or exact instance-weighted burst magnitude. Sampling is relative to the cleaned completed-work population, not the unfiltered source.
+Total variation compares normalized sample and clean-population distributions. Initial resource-skew/time/multiplicity quotas use stable seeded hashes. A deterministic calibration then swaps whole source rows within each time-bin/resource-skew cell to improve instance, request and work profiles while preserving the time-bin/skew group counts. Multiplicity-band counts may change during calibration. No source arrival, request, runtime or instance count is edited. Sampling is relative to the cleaned completed-work population.
+
+Every workload must pass these project acceptance limits: group/instance/CPU-request/memory-request arrival TV <= 0.10, CPU/memory work arrival TV <= 0.20, and instance/CPU-request/memory-request weighted resource-skew TV <= 0.05. Work includes estimated runtime and has the looser bound because it combines heavy-tailed multiplicity and runtime. These are declared approximation limits, not a claim of exact production replay or an industry standard. Both build and independent validation fail on an exceeded bound. See `reports/sampling_quality.json` and `reports/weighted_sampling_comparison.csv` for the criteria and all weighted profiles.
+
+| Groups | Group resource-skew TV | Instance-weighted skew TV | CPU-request-weighted skew TV | Memory-request-weighted skew TV |
+|---:|---:|---:|---:|---:|
+| 250 | 0.0018 | 0.0129 | 0.0168 | 0.0335 |
+| 1,000 | 0.0003 | 0.0064 | 0.0049 | 0.0034 |
+| 4,000 | 0.0001 | 0.0025 | 0.0026 | 0.0005 |
 
 | Population resource skew | Task groups |
 |---|---:|
@@ -86,9 +94,10 @@ The skew definition compares each request's CPU and memory fractions of the medi
 
 ## Verification and reproducibility
 
-- Independent saved-output checks: **59 passed**; full source/archive verification: **True**.
-- Nine focused algorithm tests passed: selection invariance to input order, quota rounding, uniqueness, seed variation, edge sample sizes, invalid sizes, resource-skew units, nonfinite-value handling and rare host-capacity preservation.
-- Fresh rebuild comparison: **18 generated data/config/report files byte-identical**, manifest identical: **True**.
+- Independent saved-output checks: **117 passed**; full source/archive verification: **True**.
+- Recorded regression tests: **15 run; passed: True**. Includes weighted-burst failure detection, deterministic calibration and read-only validation.
+- Validation prints results without modifying files by default. Saving a report requires an explicit `--output` path; a quick check preserves the full-source evidence and package checksums.
+- Fresh rebuild comparison: **20 generated data/config/report files byte-identical**, manifest identical: **True**.
 
 No scheduler, energy model or performance experiment has been run in D1. Constant requested demand limits claims about production temporal variability; absolute RAM and migration time need explicit simulator assumptions. See `docs/SIMULATOR_HANDOFF.md` before integrating LR/MMT.
 

@@ -7,6 +7,7 @@ import json
 import math
 from pathlib import Path
 import tarfile
+import collections
 
 ROOT=Path(__file__).resolve().parents[1]
 
@@ -19,7 +20,19 @@ def digest(path):
 def read(path):
     with path.open() as f:return list(csv.DictReader(f))
 
-def validate(root, raw=None, archive=None):
+def weighted_distance(population, sample, dimension, feature=None):
+    """Recompute distributions from CSV values, independently of the builder."""
+    def weights(rows):
+        counts=collections.Counter()
+        for row in rows:
+            n=int(row['instance_num']);cpu=n*float(row['cpu_request_cores']);mem=n*float(row['memory_request_normalized']);duration=float(row['duration_s'])
+            weight=1 if feature is None else (n,cpu,mem,cpu*duration,mem*duration)[feature]
+            counts[row[dimension]]+=weight
+        return counts
+    a,b=weights(population),weights(sample);sa,sb=sum(a.values()),sum(b.values())
+    return sum(abs(a[k]/sa-b[k]/sb) for k in sorted(a.keys()|b.keys()))/2
+
+def validate(root, raw=None, archive=None, output=None):
     checks=[]
     def check(condition,label):
         if not condition:raise AssertionError(label)
@@ -28,6 +41,8 @@ def validate(root, raw=None, archive=None):
     for name,meta in m['outputs'].items():
         check(digest(root/name)==meta['sha256'],f'output fingerprint: {name}')
     check(digest(root/'scripts'/'build_data.py')==m['pipeline_sha256'],'pipeline source matches manifest')
+    for name,fingerprint in m['pipeline_files'].items():
+        check(digest(root/name)==fingerprint,f'pipeline module fingerprint: {name}')
     if raw:
         for name,meta in m['source_files'].items():check(digest(raw/name)==meta['sha256'],f'raw fingerprint: {name}')
     if archive:
@@ -62,15 +77,27 @@ def validate(root, raw=None, archive=None):
         check([int(r['arrival_time_s']) for r in rows]==sorted(int(r['arrival_time_s']) for r in rows),f'{size}: chronological arrivals')
         work=sum(float(r['cpu_request_cores'])*int(r['instance_num'])*float(r['duration_s']) for r in rows)
         check(math.isclose(work,summary['cpu_request_core_seconds'],rel_tol=1e-12),f'{size}: CPU work includes multiplicity')
-        check(summary['skew_total_variation']<=3/size,f'{size}: resource-mix quota rounding bound')
-        check(summary['time_bin_total_variation']<=0.15,f'{size}: time-bin sampling deviation <= 0.15')
+        skew_tv=weighted_distance(clean,rows,'resource_skew')
+        check(math.isclose(skew_tv,summary['skew_total_variation'],abs_tol=1e-12),f'{size}: recomputed resource-skew distance matches report')
+        check(skew_tv<=3/size,f'{size}: resource-mix quota rounding bound')
+        metrics={'time_bin_total_variation':weighted_distance(clean,rows,'time_bin')}
+        for feature,name in enumerate(('instance','cpu_request','memory_request','cpu_work','memory_work')):
+            metrics[f'{name}_time_bin_total_variation']=weighted_distance(clean,rows,'time_bin',feature)
+            if feature<3:metrics[f'{name}_weighted_skew_total_variation']=weighted_distance(clean,rows,'resource_skew',feature)
+        for name,observed in metrics.items():
+            check(math.isclose(observed,summary[name],abs_tol=1e-12),f'{size}: independently recomputed {name} matches report')
+            check(observed<=cfg['sampling_limits'][name]+1e-12,f'{size}: {name} <= {cfg["sampling_limits"][name]}')
     audit=json.loads((root/'reports'/'audit.json').read_text())
     check(sum(audit['task_exclusions_first_reason'].values())+len(clean)==audit['batch_task.csv']['rows'],'task exclusion accounting balances')
     check(sum(audit['batch_instance.csv']['statuses'].values())==audit['batch_instance.csv']['rows'],'all instance statuses accounted for')
     result={'passed':True,'checks_passed':len(checks),'checks':checks,'full_source_verification':bool(raw and archive)}
-    (root/'reports'/'validation.json').write_text(json.dumps(result,indent=2)+'\n')
+    if output is not None:
+        output.parent.mkdir(parents=True,exist_ok=True)
+        output.write_text(json.dumps(result,indent=2)+'\n')
     print(json.dumps(result,indent=2))
+    return result
 
 if __name__=='__main__':
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--root',type=Path,default=ROOT);p.add_argument('--raw',type=Path);p.add_argument('--archive',type=Path)
-    a=p.parse_args();validate(a.root,a.raw,a.archive)
+    p.add_argument('--output',type=Path,help='Explicit result file; omitted means read-only validation.')
+    a=p.parse_args();validate(a.root,a.raw,a.archive,a.output)

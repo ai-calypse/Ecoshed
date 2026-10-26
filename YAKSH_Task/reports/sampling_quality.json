@@ -1,0 +1,72 @@
+{
+  "limits": {
+    "cpu_request_time_bin_total_variation": 0.1,
+    "cpu_request_weighted_skew_total_variation": 0.05,
+    "cpu_work_time_bin_total_variation": 0.2,
+    "instance_time_bin_total_variation": 0.1,
+    "instance_weighted_skew_total_variation": 0.05,
+    "memory_request_time_bin_total_variation": 0.1,
+    "memory_request_weighted_skew_total_variation": 0.05,
+    "memory_work_time_bin_total_variation": 0.2,
+    "time_bin_total_variation": 0.1
+  },
+  "workloads": [
+    {
+      "metrics": {
+        "cpu_request_time_bin_total_variation": 0.027635290365052613,
+        "cpu_request_weighted_skew_total_variation": 0.016766099654143444,
+        "cpu_work_time_bin_total_variation": 0.054580627880707555,
+        "instance_time_bin_total_variation": 0.03961516030873071,
+        "instance_weighted_skew_total_variation": 0.012871674912898687,
+        "memory_request_time_bin_total_variation": 0.06572387083610505,
+        "memory_request_weighted_skew_total_variation": 0.03354642076128554,
+        "memory_work_time_bin_total_variation": 0.17305663652628847,
+        "time_bin_total_variation": 0.06543117332731241
+      },
+      "passed": true,
+      "refinement": {
+        "passes": 10,
+        "swaps": 781
+      },
+      "task_groups": 250
+    },
+    {
+      "metrics": {
+        "cpu_request_time_bin_total_variation": 0.012569703844586366,
+        "cpu_request_weighted_skew_total_variation": 0.004937050888102435,
+        "cpu_work_time_bin_total_variation": 0.025322595881974,
+        "instance_time_bin_total_variation": 0.019124635898674816,
+        "instance_weighted_skew_total_variation": 0.0064491848745151,
+        "memory_request_time_bin_total_variation": 0.021781830579343027,
+        "memory_request_weighted_skew_total_variation": 0.0033729015175039618,
+        "memory_work_time_bin_total_variation": 0.047412687482242324,
+        "time_bin_total_variation": 0.0203219186673691
+      },
+      "passed": true,
+      "refinement": {
+        "passes": 10,
+        "swaps": 3790
+      },
+      "task_groups": 1000
+    },
+    {
+      "metrics": {
+        "cpu_request_time_bin_total_variation": 0.01097211924276778,
+        "cpu_request_weighted_skew_total_variation": 0.002643287239712873,
+        "cpu_work_time_bin_total_variation": 0.03340198904738202,
+        "instance_time_bin_total_variation": 0.01341350413273018,
+        "instance_weighted_skew_total_variation": 0.002452068176790813,
+        "memory_request_time_bin_total_variation": 0.02408979275788906,
+        "memory_request_weighted_skew_total_variation": 0.0004950158860233138,
+        "memory_work_time_bin_total_variation": 0.0353796557554662,
+        "time_bin_total_variation": 0.004411323097764735
+      },
+      "passed": true,
+      "refinement": {
+        "passes": 10,
+        "swaps": 15330
+      },
+      "task_groups": 4000
+    }
+  ]
+}

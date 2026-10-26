@@ -9,6 +9,19 @@
     "batch_cpu_units_per_core": 100.0,
     "expected_archive_sha256": "02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df",
     "host_count": 64,
+    "sampling_limits": {
+      "cpu_request_time_bin_total_variation": 0.1,
+      "cpu_request_weighted_skew_total_variation": 0.05,
+      "cpu_work_time_bin_total_variation": 0.2,
+      "instance_time_bin_total_variation": 0.1,
+      "instance_weighted_skew_total_variation": 0.05,
+      "memory_request_time_bin_total_variation": 0.1,
+      "memory_request_weighted_skew_total_variation": 0.05,
+      "memory_work_time_bin_total_variation": 0.2,
+      "time_bin_total_variation": 0.1
+    },
+    "sampling_mix_penalty": 0.05,
+    "sampling_refinement_max_passes": 10,
     "seed": 560,
     "skew_ratio_threshold": 2.0,
     "time_bin_s": 900,
@@ -20,7 +33,7 @@
       4000
     ]
   },
-  "format_version": 1,
+  "format_version": 2,
   "host_count": 64,
   "official_sources": {
     "checksum": "https://raw.githubusercontent.com/alibaba/clusterdata/master/cluster-trace-v2017/SHA256SUM",
@@ -42,8 +55,8 @@
       "sha256": "5e2d3ba55d48afe1a5c12ba846767cf82fa17ed5fd53eb2e745906303bc3abf5"
     },
     "config/resolved_config.json": {
-      "bytes": 333,
-      "sha256": "5f61bd7033355841edbb22db0961feb56e7abae4f2229463f1fdac45a7905536"
+      "bytes": 876,
+      "sha256": "8edb49a4f542c28c0c0d3633d429253629abc597f93bd183153169af4dc11d7a"
     },
     "data/host_events.csv": {
       "bytes": 1523,
@@ -66,24 +79,24 @@
       "sha256": "d41fd78d70b2063685c6b156fa4804ef0e7bcdb4660b0ad6511a3d778cf24c28"
     },
     "data/workload_1000.csv": {
-      "bytes": 164340,
-      "sha256": "c4859364fcf81aceae571d3c61f543de5695d4413f6e2c464b186977ef673864"
+      "bytes": 171717,
+      "sha256": "7fd81392712c43c64710806711155c3f77a4addf9aa7820a6470591f7c1fce14"
     },
     "data/workload_250.csv": {
-      "bytes": 41101,
-      "sha256": "e2a3e5be12a122d99d9f564df6b3aebb4cc5ac3d3213bda83c5637b3e7e9e0a1"
+      "bytes": 44147,
+      "sha256": "bae074d28d1899ac600746538bee6f8b4d7b26546f49b2b34bddaa2a124d71ef"
     },
     "data/workload_4000.csv": {
-      "bytes": 653155,
-      "sha256": "a2d89733c7f8c87ca4ab107fc5a0688642430698af352df435bef51b93d95a49"
+      "bytes": 654737,
+      "sha256": "d48904b39051f0fa36847c34007aa1c335d346a56b1b9758704791b76f4cb68f"
     },
     "docs/raw_schema.csv": {
       "bytes": 1772,
       "sha256": "8045a2d98a03735ab9b65e83f6b9282ccbabac3d104c7fe305a5d8b335372272"
     },
     "reports/arrival_profile.csv": {
-      "bytes": 3053,
-      "sha256": "a96a684898a5a1fec00dda411a7599ebb8fe2ec13c50f07aedd8293beb15e62f"
+      "bytes": 3077,
+      "sha256": "df15b6f7b784bb511eca38701ade6be8c42d7d03ee530a574ea144eb711627e0"
     },
     "reports/audit.json": {
       "bytes": 2382,
@@ -94,15 +107,27 @@
       "sha256": "69a46be4c54d69f707f24d0e44c40b29d09ed0ba9dfae12ffc6d49c856894c30"
     },
     "reports/sampling_comparison.csv": {
-      "bytes": 8697,
-      "sha256": "587dbea0e23197641d6ba6c910f7ee7a63ff42e5de4335a4bd2d19fd607f0751"
+      "bytes": 8705,
+      "sha256": "2e45c09803d9c5cbba7a9a3e81a788292ec69bbd297dbfaf5fce6c21cf768f96"
+    },
+    "reports/sampling_quality.json": {
+      "bytes": 2848,
+      "sha256": "484d01b9572b2387a2f6d23b492cbc455b7a8eaff1cc0ec3c5ad20120c49a188"
+    },
+    "reports/weighted_sampling_comparison.csv": {
+      "bytes": 84664,
+      "sha256": "c97b7e0a1eeb8f34234274d1c00ec305b8d5935c972b936e61cba4966bb295ff"
     },
     "reports/workload_summary.csv": {
-      "bytes": 989,
-      "sha256": "ed247c902374a1ef9a0a5e0f2a0b426f1f7cb8d732647f473b7853ba55cfdd04"
+      "bytes": 1691,
+      "sha256": "b352956e865b215cf684df8faded66404947dd2a573a82bd9c86665390d9009c"
     }
   },
-  "pipeline_sha256": "3c7e40d018fdd81df3929502f2bf552fa33d6e6735dfac592c2f0f054f186208",
+  "pipeline_files": {
+    "scripts/build_data.py": "4a8f3f58dcef4ed85556dc80ebd62a50cdcbc93388644edcc5b68dcd7f1e88e9",
+    "scripts/sampling_quality.py": "b62119fa33539c69f7abd0771290ccb178d024c7b4c6fcc80e0741db9ece72ee"
+  },
+  "pipeline_sha256": "4a8f3f58dcef4ed85556dc80ebd62a50cdcbc93388644edcc5b68dcd7f1e88e9",
   "source_files": {
     "batch_instance.csv": {
       "bytes": 858546781,
@@ -131,46 +156,67 @@
   },
   "workloads": [
     {
-      "cpu_request_core_seconds": 1153093.120496304,
-      "instance_weighted_skew_total_variation": 0.02564390532324912,
-      "instances": 21723,
-      "mean_offered_cpu_capacity_ratio": 0.006516594331508518,
-      "mean_offered_memory_capacity_ratio": 0.013802549326038934,
-      "memory_request_normalized_seconds": 26446.93016438335,
+      "cpu_request_core_seconds": 3327733.514094335,
+      "cpu_request_time_bin_total_variation": 0.027635290365052613,
+      "cpu_request_weighted_skew_total_variation": 0.016766099654143444,
+      "cpu_work_time_bin_total_variation": 0.054580627880707555,
+      "instance_time_bin_total_variation": 0.03961516030873071,
+      "instance_weighted_skew_total_variation": 0.012871674912898687,
+      "instances": 40381,
+      "mean_offered_cpu_capacity_ratio": 0.01880636435102864,
+      "mean_offered_memory_capacity_ratio": 0.03973861369208475,
+      "memory_request_normalized_seconds": 76142.77017371688,
+      "memory_request_time_bin_total_variation": 0.06572387083610505,
+      "memory_request_weighted_skew_total_variation": 0.03354642076128554,
+      "memory_work_time_bin_total_variation": 0.17305663652628847,
       "offered_cpu_over_capacity_seconds": 0.0,
       "offered_memory_over_capacity_seconds": 0.0,
-      "peak_offered_cpu_capacity_ratio": 0.157470703125,
-      "peak_offered_memory_capacity_ratio": 0.361581016171452,
+      "peak_offered_cpu_capacity_ratio": 0.216552734375,
+      "peak_offered_memory_capacity_ratio": 0.5230389877993085,
       "skew_total_variation": 0.0018035673967035544,
       "task_groups": 250,
       "time_bin_total_variation": 0.06543117332731241
     },
     {
-      "cpu_request_core_seconds": 9593666.632838758,
-      "instance_weighted_skew_total_variation": 0.03586681917485331,
-      "instances": 123401,
-      "mean_offered_cpu_capacity_ratio": 0.054217679809789344,
-      "mean_offered_memory_capacity_ratio": 0.1145039823677122,
-      "memory_request_normalized_seconds": 219399.9639986597,
+      "cpu_request_core_seconds": 13745540.751012325,
+      "cpu_request_time_bin_total_variation": 0.012569703844586366,
+      "cpu_request_weighted_skew_total_variation": 0.004937050888102435,
+      "cpu_work_time_bin_total_variation": 0.025322595881974,
+      "instance_time_bin_total_variation": 0.019124635898674816,
+      "instance_weighted_skew_total_variation": 0.0064491848745151,
+      "instances": 160813,
+      "mean_offered_cpu_capacity_ratio": 0.07768159513692403,
+      "mean_offered_memory_capacity_ratio": 0.16568852579274657,
+      "memory_request_normalized_seconds": 317474.1685156458,
+      "memory_request_time_bin_total_variation": 0.021781830579343027,
+      "memory_request_weighted_skew_total_variation": 0.0033729015175039618,
+      "memory_work_time_bin_total_variation": 0.047412687482242324,
       "offered_cpu_over_capacity_seconds": 0.0,
-      "offered_memory_over_capacity_seconds": 588.0619933237958,
-      "peak_offered_cpu_capacity_ratio": 0.9718017578125,
-      "peak_offered_memory_capacity_ratio": 1.942327801542294,
+      "offered_memory_over_capacity_seconds": 236.71274841621107,
+      "peak_offered_cpu_capacity_ratio": 0.5874267578125,
+      "peak_offered_memory_capacity_ratio": 1.2712855563657115,
       "skew_total_variation": 0.0002880509771455795,
       "task_groups": 1000,
       "time_bin_total_variation": 0.0203219186673691
     },
     {
-      "cpu_request_core_seconds": 64980431.50386255,
-      "instance_weighted_skew_total_variation": 0.009929501633689308,
-      "instances": 671994,
-      "mean_offered_cpu_capacity_ratio": 0.3672306287065438,
-      "mean_offered_memory_capacity_ratio": 0.7778374348965894,
-      "memory_request_normalized_seconds": 1490406.7237162178,
-      "offered_cpu_over_capacity_seconds": 2254.261070783669,
-      "offered_memory_over_capacity_seconds": 7202.476506010326,
-      "peak_offered_cpu_capacity_ratio": 6.8902587890625,
-      "peak_offered_memory_capacity_ratio": 13.489775876149634,
+      "cpu_request_core_seconds": 55195140.43852706,
+      "cpu_request_time_bin_total_variation": 0.01097211924276778,
+      "cpu_request_weighted_skew_total_variation": 0.002643287239712873,
+      "cpu_work_time_bin_total_variation": 0.03340198904738202,
+      "instance_time_bin_total_variation": 0.01341350413273018,
+      "instance_weighted_skew_total_variation": 0.002452068176790813,
+      "instances": 638647,
+      "mean_offered_cpu_capacity_ratio": 0.3119300019357586,
+      "mean_offered_memory_capacity_ratio": 0.6762283032702638,
+      "memory_request_normalized_seconds": 1295714.457475554,
+      "memory_request_time_bin_total_variation": 0.02408979275788906,
+      "memory_request_weighted_skew_total_variation": 0.0004950158860233138,
+      "memory_work_time_bin_total_variation": 0.0353796557554662,
+      "offered_cpu_over_capacity_seconds": 1214.2875577423242,
+      "offered_memory_over_capacity_seconds": 11561.307560984402,
+      "peak_offered_cpu_capacity_ratio": 2.6205322265625,
+      "peak_offered_memory_capacity_ratio": 6.9774174395273185,
       "skew_total_variation": 9.161837384908354e-05,
       "task_groups": 4000,
       "time_bin_total_variation": 0.004411323097764735

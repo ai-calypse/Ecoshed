@@ -3,6 +3,7 @@
 import argparse
 import csv
 import json
+import hashlib
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[1]
@@ -12,6 +13,9 @@ def main(root):
     v=json.loads((root/'reports'/'validation.json').read_text());cfg=m['config']
     repro_path=root/'reports'/'reproducibility.json'
     repro=json.loads(repro_path.read_text()) if repro_path.exists() else None
+    if repro and repro.get('manifest_sha256')!=hashlib.sha256((root/'manifest.json').read_bytes()).hexdigest():repro=None
+    tests_path=root/'reports'/'unit_tests.json'
+    tests=json.loads(tests_path.read_text()) if tests_path.exists() else None
     with (root/'data'/'tasks_clean.csv').open() as f:tasks=list(csv.DictReader(f))
     with (root/'data'/f"hosts_{cfg['host_count']}.csv").open() as f:hosts=list(csv.DictReader(f))
     skew={k:sum(t['resource_skew']==k for t in tasks) for k in ['cpu_heavy','balanced','memory_heavy']}
@@ -26,11 +30,11 @@ def main(root):
       '| Clean schema and invalid values | All six CSVs audited; filtered task population, named output fields, exclusion accounting |',
       '| Preserve instance_num | Unmodified source multiplicity in all cleaned/sample records; independent validation |',
       '| Deterministic representative host sample | 64 hosts; capacity/utilization strata, seed 560, comparison table |',
-      '| Time-stratified workloads at several sizes | 250 / 1,000 / 4,000 groups; skew quotas, 15-minute bins, multiplicity bands |',
+      '| Time-stratified workloads at several sizes | 250 / 1,000 / 4,000 groups; group quotas plus bounded instance/resource-weighted arrival profiles |',
       '| D1 documented subset, manifest, cleaned inputs | CSV package, manifest, configurations, scripts and simulator handoff |','',
       '## Verified source','',
-      f"The archive SHA-256 is `{cfg['expected_archive_sha256']}`. "
-      'Full-source validation also confirms each extracted CSV is byte-identical to the corresponding file inside that verified archive.','',
+      f"The archive SHA-256 is `{cfg['expected_archive_sha256']}`. " +
+      ('Full-source validation confirms each extracted CSV is byte-identical to the corresponding file inside that verified archive.' if v['full_source_verification'] else 'This validation record did not include full raw/archive verification.'),'',
       '| Raw file | Rows | Size (MiB) |','|---|---:|---:|']
     for n,meta in m['source_files'].items():lines.append(f"| {n} | {a[n]['rows']:,} | {meta['bytes']/1024**2:.2f} |")
     lines += ['',f"The source has **{total_instance:,} instance-trial records**. "
@@ -77,21 +81,32 @@ def main(root):
       'These diagnostics are neither measured utilization nor simulated SLA violations. '
       'Keep queue/admission rules identical across policies and drain all accepted work after the arrival window.','',
       '## Representativeness','',
-      '| Groups | Arrival-bin TV | Resource-skew TV | Instance-weighted resource-skew TV |',
-      '|---:|---:|---:|---:|']
-    for w in m['workloads']:lines.append(f"| {w['task_groups']:,} | {w['time_bin_total_variation']:.4f} | {w['skew_total_variation']:.4f} | {w['instance_weighted_skew_total_variation']:.4f} |")
+      '| Groups | Group arrival TV | Instance arrival TV | CPU-request arrival TV | Memory-request arrival TV | CPU-work arrival TV | Memory-work arrival TV |',
+      '|---:|---:|---:|---:|---:|---:|---:|']
+    for w in m['workloads']:lines.append(f"| {w['task_groups']:,} | {w['time_bin_total_variation']:.4f} | {w['instance_time_bin_total_variation']:.4f} | {w['cpu_request_time_bin_total_variation']:.4f} | {w['memory_request_time_bin_total_variation']:.4f} | {w['cpu_work_time_bin_total_variation']:.4f} | {w['memory_work_time_bin_total_variation']:.4f} |")
     lines += ['', 'Total variation compares normalized sample and clean-population distributions. '
-      'Resource-mix quotas are applied first, then time/multiplicity quotas, using stable seeded hashes within strata. '
-      'Samples preserve original arrival times and instance counts; they do not preserve every rare group or exact '
-      'instance-weighted burst magnitude. Sampling is relative to the cleaned completed-work population, not the unfiltered source.','',
+      'Initial resource-skew/time/multiplicity quotas use stable seeded hashes. A deterministic calibration then swaps '
+      'whole source rows within each time-bin/resource-skew cell to improve instance, request and work profiles while '
+      'preserving the time-bin/skew group counts. Multiplicity-band counts may change during calibration. '
+      'No source arrival, request, runtime or instance count is edited. Sampling is relative to the cleaned completed-work population.','',
+      'Every workload must pass these project acceptance limits: group/instance/CPU-request/memory-request arrival '
+      'TV <= 0.10, CPU/memory work arrival TV <= 0.20, and instance/CPU-request/memory-request weighted resource-skew '
+      'TV <= 0.05. Work includes estimated runtime and has the looser bound because it combines heavy-tailed multiplicity '
+      'and runtime. These are declared approximation limits, not a claim of exact production replay or an industry standard. '
+      'Both build and independent validation fail on an exceeded bound. See `reports/sampling_quality.json` and '
+      '`reports/weighted_sampling_comparison.csv` for the criteria and all weighted profiles.','',
+      '| Groups | Group resource-skew TV | Instance-weighted skew TV | CPU-request-weighted skew TV | Memory-request-weighted skew TV |',
+      '|---:|---:|---:|---:|---:|']
+    for w in m['workloads']:lines.append(f"| {w['task_groups']:,} | {w['skew_total_variation']:.4f} | {w['instance_weighted_skew_total_variation']:.4f} | {w['cpu_request_weighted_skew_total_variation']:.4f} | {w['memory_request_weighted_skew_total_variation']:.4f} |")
+    lines += ['',
       '| Population resource skew | Task groups |','|---|---:|']
     for k,n in skew.items():lines.append(f"| {k} | {n:,} |")
     lines += ['', 'The skew definition compares each request\'s CPU and memory fractions of the median sampled host; '
       'ratio >2 is CPU-heavy and <0.5 is memory-heavy.','',
       '## Verification and reproducibility','',
       f"- Independent saved-output checks: **{v['checks_passed']} passed**; full source/archive verification: **{v['full_source_verification']}**.",
-      '- Nine focused algorithm tests passed: selection invariance to input order, quota rounding, uniqueness, seed variation, '
-      'edge sample sizes, invalid sizes, resource-skew units, nonfinite-value handling and rare host-capacity preservation.']
+      (f"- Recorded regression tests: **{tests['tests_run']} run; passed: {tests['passed']}**. Includes weighted-burst failure detection, deterministic calibration and read-only validation." if tests else '- No recorded regression-test result is available.'),
+      '- Validation prints results without modifying files by default. Saving a report requires an explicit `--output` path; a quick check preserves the full-source evidence and package checksums.']
     if repro:lines.append(f"- Fresh rebuild comparison: **{repro['compared_files']} generated data/config/report files byte-identical**, "
                          f"manifest identical: **{repro['manifest_identical']}**.")
     else:lines.append('- Fresh rebuild comparison: not yet recorded.')

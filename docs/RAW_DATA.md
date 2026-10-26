@@ -4,13 +4,13 @@ The ready-to-use data is committed under `YAKSH_Task/data/`. Download the raw tr
 
 ## Release assets
 
-[Release data-v1.0.0](https://github.com/ai-calypse/Ecoshed/releases/tag/data-v1.0.0) contains:
+The [original-input release data-v1.0.0](https://github.com/ai-calypse/Ecoshed/releases/tag/data-v1.0.0) retains the raw archive and video. The updated handoff ZIP is in [data-v1.1.0](https://github.com/ai-calypse/Ecoshed/releases/tag/data-v1.1.0).
 
 | Asset | Contents |
 |---|---|
 | `trace_201708.tgz` | Original Alibaba v2017 archive; contains all six unmodified source CSVs |
 | `Project_Proposal.mp4` | Original project proposal video |
-| `EcoSched_Yaksh_D1_Handoff.zip` | Portable copy of the completed task package |
+| `EcoSched_Yaksh_D1_Handoff.zip` (data-v1.1.0) | Updated portable copy of the completed task package |
 
 The [original proposal PDF](EcoSched_Proposal.pdf) is tracked in Git. The proposal documents are preserved as originally provided; current ownership is described in the project and task READMEs.
 
@@ -35,10 +35,12 @@ Then:
 mkdir -p trace_201708
 tar -xzf trace_201708.tgz -C trace_201708
 python3 YAKSH_Task/scripts/build_data.py
-python3 YAKSH_Task/scripts/test_sampling.py
-python3 YAKSH_Task/scripts/validate_data.py --raw trace_201708 --archive trace_201708.tgz
+python3 -m unittest discover -s YAKSH_Task/scripts -p 'test_*.py'
+python3 YAKSH_Task/scripts/validate_data.py --raw trace_201708 --archive trace_201708.tgz --output YAKSH_Task/reports/validation.json
 python3 YAKSH_Task/scripts/make_report.py
 ```
+
+Validation is read-only by default; `--output` above is an explicit request to refresh the full-source record. For a quick check, omit it.
 
 For a fresh-build comparison without replacing the committed inputs:
 

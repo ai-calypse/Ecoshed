@@ -22,9 +22,11 @@ The planned experiment compares **LR-MMT** with **LR-MMT + CPU/Memory-Aware Plac
 3. Use the [simulator handoff](YAKSH_Task/docs/SIMULATOR_HANDOFF.md) to integrate the prepared inputs.
 
 ```sh
-python3 YAKSH_Task/scripts/test_sampling.py
+python3 -m unittest discover -s YAKSH_Task/scripts -p 'test_*.py'
 python3 YAKSH_Task/scripts/validate_data.py
 ```
+
+Both commands are read-only and preserve the recorded full-source verification report.
 
 The prepared files are already in the repository. **You do not need to download or process the raw trace to start the simulator.**
 
@@ -35,7 +37,8 @@ The prepared files are already in the repository. **You do not need to download 
 | [YAKSH_Task/](YAKSH_Task/) | Yaksh's completed data preparation, inputs, code, checks and handoff |
 | [YAKSH_Task/REPORT.md](YAKSH_Task/REPORT.md) | Detailed data quality and sampling report |
 | [docs/EcoSched_Proposal.pdf](docs/EcoSched_Proposal.pdf) | Original project proposal, preserved as submitted |
-| [Release downloads](https://github.com/ai-calypse/Ecoshed/releases/tag/data-v1.0.0) | Original raw-data archive, proposal video and portable handoff ZIP |
+| [Latest handoff release](https://github.com/ai-calypse/Ecoshed/releases/tag/data-v1.1.0) | Updated portable handoff ZIP |
+| [Original input downloads](https://github.com/ai-calypse/Ecoshed/releases/tag/data-v1.0.0) | Unmodified raw-data archive and proposal video |
 
 Large original inputs are release assets to keep clones small. See [raw-data instructions](docs/RAW_DATA.md) only if you need to rebuild the inputs.
 
@@ -43,7 +46,7 @@ Large original inputs are release assets to keep clones small. See [raw-data ins
 
 Every policy must use the same fixed 64-host pool and the same workload files. Prepared workloads contain 250, 1,000 and 4,000 **task groups**. Each group represents its original `instance_num` independently schedulable instances.
 
-Start with 250 groups for integration, then 1,000 for comparison. The 4,000-group input is a heavy burst stress case. Runtime estimates, missing measurements, resource units and sampling limits are documented with the data.
+Start with 250 groups for integration, then 1,000 for comparison. The 4,000-group input is a heavy burst stress case. Runtime estimates, missing measurements and resource units are documented with the data. Every sample now passes explicit instance/CPU/memory arrival-profile and resource-mix limits; see [sampling quality](YAKSH_Task/docs/SAMPLING_QUALITY.md).
 
 ## Sources
 

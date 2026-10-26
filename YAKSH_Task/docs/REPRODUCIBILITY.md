@@ -3,7 +3,7 @@
 This package completes the **Data & sampling** assignment in section 5 and the
 **D1 reproducible workload package** in section 6 of the EcoSched AMS 560 proposal.
 It contains the runnable preparation code, cleaned CSV inputs, a fixed mini-cluster,
-three reproducible workloads, source fingerprints, validation and a data report.
+three reproducible workloads with bounded weighted sampling error, source fingerprints, validation and a data report.
 
 Start with [REPORT.md](../REPORT.md) for the actual counts, exclusions and sampling
 quality. Use [SIMULATOR_HANDOFF.md](SIMULATOR_HANDOFF.md) for integration.
@@ -24,7 +24,7 @@ quality. Use [SIMULATOR_HANDOFF.md](SIMULATOR_HANDOFF.md) for integration.
 | `manifest.json` | Seed, config, input/output SHA-256 fingerprints, and workload metrics |
 | `reports/audit.json` | Full-file audit of all six source CSVs and exclusion counts |
 | `reports/validation.json` | Independent saved-output verification results |
-| `reports/*comparison.csv`, `arrival_profile.csv` | Population/sample representativeness evidence |
+| `reports/*comparison.csv`, `arrival_profile.csv`, `sampling_quality.json` | Population/sample representativeness evidence |
 
 **No external Python packages are required. Python 3.10+ is sufficient.** The CSVs
 are the proposal's allowed cleaned CSV format; no duplicate Parquet files are needed.
@@ -33,12 +33,12 @@ into this handoff package.
 
 ## Reproduce
 
-Run from the proposal directory:
+Run from the repository root:
 
 ```sh
 python3 YAKSH_Task/scripts/build_data.py
-python3 YAKSH_Task/scripts/test_sampling.py
-python3 YAKSH_Task/scripts/validate_data.py --raw trace_201708 --archive trace_201708.tgz
+python3 -m unittest discover -s YAKSH_Task/scripts -p 'test_*.py'
+python3 YAKSH_Task/scripts/validate_data.py --raw trace_201708 --archive trace_201708.tgz --output YAKSH_Task/reports/validation.json
 python3 YAKSH_Task/scripts/make_report.py
 ```
 
@@ -53,6 +53,8 @@ be mistaken for current outputs. To regenerate the report elsewhere, pass
 
 The full build streams the 819 MiB instance table once and retains only task-level
 statistics. It does not materialize millions of instances or duplicate the raw trace.
+Validation is read-only unless `--output` is supplied. The command above explicitly refreshes the full-source evidence; quick checks should omit `--output` or write outside the package.
+
 The validator optionally streams the archive to confirm every extracted input is
 identical to the checksummed release. It also checks all generated data fingerprints.
 
@@ -90,13 +92,12 @@ python3 YAKSH_Task/scripts/load_workload.py YAKSH_Task/data/workload_250.csv
 - **Demand:** constant requested CPU/memory per instance. Missing measured usage
   is retained as missing; no memory values are filled with zero or fabricated.
 - **Sampling:** seed 560; host strata combine rounded capacity and mean CPU/memory
-  utilization quartile bands, reserving at least one host per rounded capacity
+  25-percentage-point utilization bands, reserving at least one host per rounded capacity
   class so rare host types remain present. Workload sampling enforces resource-skew proportions,
   then allocates by 15-minute arrival bin and instance-count band using largest
-  remainders; stable SHA-256 ranks choose rows within cells. Sizes are independent
+  remainders; stable SHA-256 ranks choose initial rows within cells. A deterministic refinement swaps whole rows inside the same time/skew cell to fit weighted arrival and mix profiles; multiplicity-band counts can change. The build fails if the declared quality limits are exceeded. Sizes are independent
   fixed samples, not guaranteed nested. Arrival timestamps and multiplicities are
-  unchanged. Sampling preserves task-group proportions approximately; inspect
-  instance-weighted differences and load peaks as well.
+  unchanged. Group arrival/skew quotas stay unchanged during refinement. Independent validation enforces instance/request arrival TV <= 0.10, work arrival TV <= 0.20 and weighted resource-skew TV <= 0.05. Inspect load peaks as well. See [SAMPLING_QUALITY.md](SAMPLING_QUALITY.md).
 - **Fairness:** compare policies using the same files, no original placements,
   no replayed online load or host failures by default. No energy or scheduler
   performance claims are produced by this data package.
