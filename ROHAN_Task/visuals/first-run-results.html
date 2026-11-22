@@ -1,0 +1,208 @@
+<div id="ecosched-first-run">
+  <style>
+    #ecosched-first-run { color:var(--foreground); font-size:var(--font-size-base); }
+    #ecosched-first-run .legend { display:flex; flex-wrap:wrap; gap:8px 18px; margin:12px 0; }
+    #ecosched-first-run .series-toggle { display:inline-flex; align-items:center; gap:6px; background:transparent!important; border:0!important; border-radius:0; padding:0; color:var(--foreground)!important; font:inherit; font-weight:400; }
+    #ecosched-first-run .swatch { width:12px; height:12px; display:inline-block; }
+    #ecosched-first-run .plots { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:18px 24px; }
+    #ecosched-first-run figure { margin:12px 0 20px; min-width:0; }
+    #ecosched-first-run figcaption { font-weight:500; margin-bottom:8px; }
+    #ecosched-first-run .plot { width:100%; min-width:0; }
+    #ecosched-first-run .chart { display:block; overflow:visible; width:100%; }
+    #ecosched-first-run .chart text { fill:var(--foreground); font-size:12px; font-weight:400; }
+    #ecosched-first-run .chart .domain, #ecosched-first-run .chart .tick line { stroke:var(--border); }
+    #ecosched-first-run .chart .grid line { stroke:var(--border); opacity:.45; }
+    #ecosched-first-run .chart .grid .domain { display:none; }
+    @media (max-width:650px) { #ecosched-first-run .plots { grid-template-columns:1fr; } }
+  </style>
+  <h2>EcoSched · First 36-run comparison</h2>
+  <div class="legend" aria-label="Policies"></div>
+  <figure>
+    <figcaption>Modeled energy · HPE DL360 Gen9</figcaption>
+    <div class="plot energy-plot"></div>
+  </figure>
+  <div class="plots">
+    <figure><figcaption>Migration count · 4,000 task groups · HPE</figcaption><div class="plot" data-metric="migrations"></div></figure>
+    <figure><figcaption>Mean waiting time · 4,000 task groups · HPE</figcaption><div class="plot" data-metric="mean_wait_s"></div></figure>
+    <figure><figcaption>Mean powered hosts · 4,000 task groups · HPE</figcaption><div class="plot" data-metric="mean_active_hosts"></div></figure>
+    <figure><figcaption>Overload pressure proxy · 4,000 task groups · HPE</figcaption><div class="plot" data-metric="overload_host_time_fraction"></div></figure>
+  </div>
+  <figure>
+    <figcaption>Memory-aware energy reduction versus LR-MMT · All three curves</figcaption>
+    <div class="plot savings-plot"></div>
+  </figure>
+  <script type="application/json" class="results-data">[{"workload_groups":250,"policy":"best_fit","power_curve":"hpe_dl360_gen9","energy_kwh":9.409366256227228,"mean_wait_s":8.17703870632228,"mean_active_hosts":4.1591648595719075,"migrations":0.0,"overload_host_time_fraction":0.03929813472267276,"energy_reduction_vs_lr_mmt_pct":1.6570951614798635},{"workload_groups":250,"policy":"first_fit","power_curve":"hpe_dl360_gen9","energy_kwh":9.382509939807068,"mean_wait_s":8.281048017632054,"mean_active_hosts":4.108039189028811,"migrations":0.0,"overload_host_time_fraction":0.038887784480582575,"energy_reduction_vs_lr_mmt_pct":1.9377865596144652},{"workload_groups":250,"policy":"lr_mmt","power_curve":"hpe_dl360_gen9","energy_kwh":9.567915724756642,"mean_wait_s":8.055397340333325,"mean_active_hosts":4.339691640129433,"migrations":2061.0,"overload_host_time_fraction":0.02937247884969589,"energy_reduction_vs_lr_mmt_pct":0.0},{"workload_groups":250,"policy":"lr_mmt_memory","power_curve":"hpe_dl360_gen9","energy_kwh":9.588541336079174,"mean_wait_s":7.7964636834154675,"mean_active_hosts":4.413567587051257,"migrations":1953.0,"overload_host_time_fraction":0.02681229197388838,"energy_reduction_vs_lr_mmt_pct":-0.2155705789628236},{"workload_groups":250,"policy":"best_fit","power_curve":"huawei_rh2288h_v3","energy_kwh":9.182864142977587,"mean_wait_s":8.17703870632228,"mean_active_hosts":4.1591648595719075,"migrations":0.0,"overload_host_time_fraction":0.03929813472267276,"energy_reduction_vs_lr_mmt_pct":1.9757611554575263},{"workload_groups":250,"policy":"first_fit","power_curve":"huawei_rh2288h_v3","energy_kwh":9.157474577552467,"mean_wait_s":8.281048017632054,"mean_active_hosts":4.108039189028811,"migrations":0.0,"overload_host_time_fraction":0.038887784480582575,"energy_reduction_vs_lr_mmt_pct":2.2467869254831467},{"workload_groups":250,"policy":"lr_mmt","power_curve":"huawei_rh2288h_v3","energy_kwh":9.367952509726472,"mean_wait_s":7.893539040637924,"mean_active_hosts":4.4151432181624095,"migrations":2016.0,"overload_host_time_fraction":0.029029787482489054,"energy_reduction_vs_lr_mmt_pct":0.0},{"workload_groups":250,"policy":"lr_mmt_memory","power_curve":"huawei_rh2288h_v3","energy_kwh":9.364692758115572,"mean_wait_s":7.7964636834154675,"mean_active_hosts":4.436633688409397,"migrations":1982.0,"overload_host_time_fraction":0.02680283684967978,"energy_reduction_vs_lr_mmt_pct":0.03479684175934001},{"workload_groups":250,"policy":"best_fit","power_curve":"quanta_d51b_2u","energy_kwh":9.57561964534598,"mean_wait_s":8.17703870632228,"mean_active_hosts":4.1591648595719075,"migrations":0.0,"overload_host_time_fraction":0.03929813472267276,"energy_reduction_vs_lr_mmt_pct":1.6083233166057525},{"workload_groups":250,"policy":"first_fit","power_curve":"quanta_d51b_2u","energy_kwh":9.546205030949906,"mean_wait_s":8.281048017632054,"mean_active_hosts":4.108039189028811,"migrations":0.0,"overload_host_time_fraction":0.038887784480582575,"energy_reduction_vs_lr_mmt_pct":1.9105651909299812},{"workload_groups":250,"policy":"lr_mmt","power_curve":"quanta_d51b_2u","energy_kwh":9.732143986283015,"mean_wait_s":8.05564498155073,"mean_active_hosts":4.329909469647699,"migrations":2060.0,"overload_host_time_fraction":0.02932343583508351,"energy_reduction_vs_lr_mmt_pct":0.0},{"workload_groups":250,"policy":"lr_mmt_memory","power_curve":"quanta_d51b_2u","energy_kwh":9.75257567106367,"mean_wait_s":7.818751392981848,"mean_active_hosts":4.402248855615416,"migrations":2003.0,"overload_host_time_fraction":0.026805492661977955,"energy_reduction_vs_lr_mmt_pct":-0.20994022292984024},{"workload_groups":1000,"policy":"best_fit","power_curve":"hpe_dl360_gen9","energy_kwh":25.98285935592245,"mean_wait_s":8.665080758381038,"mean_active_hosts":15.776354644708872,"migrations":0.0,"overload_host_time_fraction":0.16742333368015663,"energy_reduction_vs_lr_mmt_pct":2.20255063347645},{"workload_groups":1000,"policy":"first_fit","power_curve":"hpe_dl360_gen9","energy_kwh":25.835535153744164,"mean_wait_s":8.70699913226536,"mean_active_hosts":15.51836378713727,"migrations":0.0,"overload_host_time_fraction":0.16544916587519704,"energy_reduction_vs_lr_mmt_pct":2.7570674018439894},{"workload_groups":1000,"policy":"lr_mmt","power_curve":"hpe_dl360_gen9","energy_kwh":26.568033751621016,"mean_wait_s":8.249234895463669,"mean_active_hosts":16.648548300815758,"migrations":8974.0,"overload_host_time_fraction":0.12420051931788749,"energy_reduction_vs_lr_mmt_pct":0.0},{"workload_groups":1000,"policy":"lr_mmt_memory","power_curve":"hpe_dl360_gen9","energy_kwh":28.498380256604847,"mean_wait_s":6.616101748247219,"mean_active_hosts":20.09574023311314,"migrations":6736.0,"overload_host_time_fraction":0.0980132154705322,"energy_reduction_vs_lr_mmt_pct":-7.265673188427251},{"workload_groups":1000,"policy":"best_fit","power_curve":"huawei_rh2288h_v3","energy_kwh":25.01307835675786,"mean_wait_s":8.665080758381038,"mean_active_hosts":15.776354644708872,"migrations":0.0,"overload_host_time_fraction":0.16742333368015663,"energy_reduction_vs_lr_mmt_pct":4.71351588979095},{"workload_groups":1000,"policy":"first_fit","power_curve":"huawei_rh2288h_v3","energy_kwh":24.874981534606015,"mean_wait_s":8.70699913226536,"mean_active_hosts":15.51836378713727,"migrations":0.0,"overload_host_time_fraction":0.16544916587519704,"energy_reduction_vs_lr_mmt_pct":5.2395911078013295},{"workload_groups":1000,"policy":"lr_mmt","power_curve":"huawei_rh2288h_v3","energy_kwh":26.250394891081875,"mean_wait_s":7.684532913466694,"mean_active_hosts":17.791477499312528,"migrations":9087.0,"overload_host_time_fraction":0.12057415603538701,"energy_reduction_vs_lr_mmt_pct":0.0},{"workload_groups":1000,"policy":"lr_mmt_memory","power_curve":"huawei_rh2288h_v3","energy_kwh":27.606149953758347,"mean_wait_s":6.560654349886054,"mean_active_hosts":20.336507485637743,"migrations":6905.0,"overload_host_time_fraction":0.09759737127809623,"energy_reduction_vs_lr_mmt_pct":-5.16470349608747},{"workload_groups":1000,"policy":"best_fit","power_curve":"quanta_d51b_2u","energy_kwh":26.549285456906638,"mean_wait_s":8.665080758381038,"mean_active_hosts":15.776354644708872,"migrations":0.0,"overload_host_time_fraction":0.16742333368015663,"energy_reduction_vs_lr_mmt_pct":2.767635410520282},{"workload_groups":1000,"policy":"first_fit","power_curve":"quanta_d51b_2u","energy_kwh":26.39004923094277,"mean_wait_s":8.70699913226536,"mean_active_hosts":15.51836378713727,"migrations":0.0,"overload_host_time_fraction":0.16544916587519704,"energy_reduction_vs_lr_mmt_pct":3.350811737578228},{"workload_groups":1000,"policy":"lr_mmt","power_curve":"quanta_d51b_2u","energy_kwh":27.304987972882437,"mean_wait_s":8.199319501951686,"mean_active_hosts":16.868699943026797,"migrations":8762.0,"overload_host_time_fraction":0.12331902653825068,"energy_reduction_vs_lr_mmt_pct":0.0},{"workload_groups":1000,"policy":"lr_mmt_memory","power_curve":"quanta_d51b_2u","energy_kwh":29.35970096966611,"mean_wait_s":6.58008843848504,"mean_active_hosts":20.221854307005206,"migrations":6889.0,"overload_host_time_fraction":0.09756691823113942,"energy_reduction_vs_lr_mmt_pct":-7.52504633521276},{"workload_groups":4000,"policy":"best_fit","power_curve":"hpe_dl360_gen9","energy_kwh":83.26846206266487,"mean_wait_s":227.73706478062385,"mean_active_hosts":50.89023034293019,"migrations":0.0,"overload_host_time_fraction":0.682006800952289,"energy_reduction_vs_lr_mmt_pct":0.3874394746602421},{"workload_groups":4000,"policy":"first_fit","power_curve":"hpe_dl360_gen9","energy_kwh":83.26949986838306,"mean_wait_s":228.31129561225637,"mean_active_hosts":50.790402674310016,"migrations":0.0,"overload_host_time_fraction":0.6798641879235824,"energy_reduction_vs_lr_mmt_pct":0.38619796638259724},{"workload_groups":4000,"policy":"lr_mmt","power_curve":"hpe_dl360_gen9","energy_kwh":83.59233175366752,"mean_wait_s":227.32737856738578,"mean_active_hosts":51.55943749726254,"migrations":9941.0,"overload_host_time_fraction":0.6309641466565196,"energy_reduction_vs_lr_mmt_pct":0.0},{"workload_groups":4000,"policy":"lr_mmt_memory","power_curve":"hpe_dl360_gen9","energy_kwh":87.61880077901215,"mean_wait_s":212.08208862493794,"mean_active_hosts":58.713646088174826,"migrations":6107.0,"overload_host_time_fraction":0.5313687149626604,"energy_reduction_vs_lr_mmt_pct":-4.816792331155384},{"workload_groups":4000,"policy":"best_fit","power_curve":"huawei_rh2288h_v3","energy_kwh":79.48094673182585,"mean_wait_s":227.73706478062385,"mean_active_hosts":50.89023034293019,"migrations":0.0,"overload_host_time_fraction":0.682006800952289,"energy_reduction_vs_lr_mmt_pct":1.4702616688884342},{"workload_groups":4000,"policy":"first_fit","power_curve":"huawei_rh2288h_v3","energy_kwh":79.47740164786688,"mean_wait_s":228.31129561225637,"mean_active_hosts":50.790402674310016,"migrations":0.0,"overload_host_time_fraction":0.6798641879235824,"energy_reduction_vs_lr_mmt_pct":1.4746563849707368},{"workload_groups":4000,"policy":"lr_mmt","power_curve":"huawei_rh2288h_v3","energy_kwh":80.6669621558602,"mean_wait_s":222.18571089122298,"mean_active_hosts":53.33286704044258,"migrations":10690.0,"overload_host_time_fraction":0.610009395043406,"energy_reduction_vs_lr_mmt_pct":0.0},{"workload_groups":4000,"policy":"lr_mmt_memory","power_curve":"huawei_rh2288h_v3","energy_kwh":83.75550710521783,"mean_wait_s":212.05117984621768,"mean_active_hosts":58.91700602613309,"migrations":5964.0,"overload_host_time_fraction":0.5304542731427989,"energy_reduction_vs_lr_mmt_pct":-3.828760705516729},{"workload_groups":4000,"policy":"best_fit","power_curve":"quanta_d51b_2u","energy_kwh":84.85238794110185,"mean_wait_s":227.73706478062385,"mean_active_hosts":50.89023034293019,"migrations":0.0,"overload_host_time_fraction":0.682006800952289,"energy_reduction_vs_lr_mmt_pct":0.43288493272964723},{"workload_groups":4000,"policy":"first_fit","power_curve":"quanta_d51b_2u","energy_kwh":84.83441337858683,"mean_wait_s":228.31129561225637,"mean_active_hosts":50.790402674310016,"migrations":0.0,"overload_host_time_fraction":0.6798641879235824,"energy_reduction_vs_lr_mmt_pct":0.45397656465236086},{"workload_groups":4000,"policy":"lr_mmt","power_curve":"quanta_d51b_2u","energy_kwh":85.2212981000536,"mean_wait_s":225.5945801294326,"mean_active_hosts":51.52784579341869,"migrations":9981.0,"overload_host_time_fraction":0.6263603482089163,"energy_reduction_vs_lr_mmt_pct":0.0},{"workload_groups":4000,"policy":"lr_mmt_memory","power_curve":"quanta_d51b_2u","energy_kwh":89.65822009685226,"mean_wait_s":211.6359586398193,"mean_active_hosts":58.61488412959357,"migrations":6076.0,"overload_host_time_fraction":0.531857288883017,"energy_reduction_vs_lr_mmt_pct":-5.206353453557484}]</script>
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+  <script>
+    (() => {
+      const root = document.getElementById('ecosched-first-run');
+      const rows = JSON.parse(root.querySelector('.results-data').textContent);
+      const policies = ['first_fit','best_fit','lr_mmt','lr_mmt_memory'];
+      const names = {first_fit:'First-fit',best_fit:'Best-fit',lr_mmt:'LR-MMT',lr_mmt_memory:'Memory-aware'};
+      const color = p => `var(--viz-series-${policies.indexOf(p)+1})`;
+      const sizes = [250,1000,4000];
+      const hpe = rows.filter(r=>r.power_curve==='hpe_dl360_gen9');
+      const primary = hpe.filter(r=>r.workload_groups===4000);
+      const restored = window.openai?.widgetState?.modelContent?.visiblePolicies;
+      let enabled = new Set(Array.isArray(restored) ? restored.filter(p=>policies.includes(p)) : policies);
+      let drawn = false;
+      const legend = d3.select(root.querySelector('.legend'));
+      const buttons = legend.selectAll('button').data(policies).join('button')
+        .attr('type','button').attr('class','series-toggle cursor-interaction')
+        .attr('aria-pressed',p=>String(enabled.has(p)));
+      buttons.append('span').attr('class','swatch').style('background',color).attr('aria-hidden','true');
+      buttons.append('span').text(p=>names[p]);
+      buttons.on('click',(_,p)=>{
+        enabled.has(p)?enabled.delete(p):enabled.add(p);
+        buttons.attr('aria-pressed',x=>String(enabled.has(x)));
+        buttons.select('.swatch').style('opacity',x=>enabled.has(x)?1:.2);
+        draw(true);
+        window.openai?.setWidgetState?.({modelContent:{visiblePolicies:[...enabled]},privateContent:null}).catch(()=>{});
+      });
+      buttons.select('.swatch').style('opacity',p=>enabled.has(p)?1:.2);
+
+      const formatNumber = x => d3.format(x>=1000?',.0f':x>=10?'.2f':'.3f')(x);
+      const animate = selection => selection.transition().duration(
+        drawn && !matchMedia('(prefers-reduced-motion: reduce)').matches ? 250 : 0);
+
+      function base(container,height,title,description) {
+        const width = Math.max(280,container.getBoundingClientRect().width);
+        const svg = d3.select(container).selectAll('svg').data([0]).join('svg')
+          .attr('class','chart').attr('role','img').attr('aria-label',title)
+          .attr('viewBox',`0 0 ${width} ${height}`).attr('height',height);
+        svg.selectAll('title').data([title]).join('title').text(x=>x);
+        svg.selectAll('desc').data([description]).join('desc').text(x=>x);
+        return {svg,width,height};
+      }
+      function frame(svg,left,top,width,height) {
+        svg.selectAll('rect[data-chart-frame]').data([0]).join('rect')
+          .attr('data-chart-frame','').attr('x',left).attr('y',top).attr('width',width)
+          .attr('height',height).attr('fill','none').attr('stroke','var(--border)');
+      }
+      function axisTitle(svg,key,text,x,y,anchor='middle') {
+        svg.selectAll(`text.axis-title[data-axis="${key}"]`).data([text]).join('text')
+          .attr('class','axis-title').attr('data-axis',key).attr('x',x).attr('y',y)
+          .attr('text-anchor',anchor).text(d=>d);
+      }
+      function avoidCollisions(svg) {
+        const nodes=[...svg.node().querySelectorAll('.tick text,.value-label,.axis-title')];
+        const kept=[];
+        for (const node of nodes) {
+          const b=node.getBoundingClientRect();
+          const overlap=kept.some(a=>b.left<a.right+4&&b.right+4>a.left&&b.top<a.bottom+4&&b.bottom+4>a.top);
+          if(overlap&&node.classList.contains('value-label')) node.style.visibility='hidden';
+          else kept.push(b);
+        }
+      }
+      function energy() {
+        const container=root.querySelector('.energy-plot');
+        const {svg,width,height}=base(container,285,'Modeled energy on the primary HPE curve',
+          'Four policies across 250, 1000 and 4000 task groups. Lower kWh means less modeled energy.');
+        const m={left:66,right:12,top:28,bottom:54};
+        const bottom=height-m.bottom;
+        const x=d3.scaleBand().domain(sizes).range([m.left+5,width-m.right-5]).paddingInner(.25).paddingOuter(.08);
+        const sub=d3.scaleBand().domain(policies).range([0,x.bandwidth()]).padding(.12);
+        const ext=d3.extent(hpe,d=>d.energy_kwh);
+        const y=d3.scaleLinear().domain([Math.min(0,ext[0]),ext[1]*1.14]).nice().range([bottom,m.top]);
+        frame(svg,m.left,m.top,width-m.left-m.right,bottom-m.top);
+        svg.selectAll('g.grid').data([0]).join('g').attr('class','grid').attr('transform',`translate(${m.left},0)`)
+          .call(d3.axisLeft(y).ticks(4).tickSize(-(width-m.left-m.right)).tickFormat(''));
+        svg.selectAll('g.x-axis').data([0]).join('g').attr('class','x-axis').attr('transform',`translate(0,${bottom})`)
+          .call(d3.axisBottom(x).tickSizeOuter(0).tickFormat(d3.format(',')));
+        svg.selectAll('g.y-axis').data([0]).join('g').attr('class','y-axis').attr('transform',`translate(${m.left},0)`)
+          .call(d3.axisLeft(y).ticks(4));
+        axisTitle(svg,'x','Task groups (count)',(m.left+width-m.right)/2,height-9);
+        axisTitle(svg,'y','Energy (kWh)',m.left,m.top-12,'start');
+        const groups=svg.selectAll('g.energy-mark').data(hpe,d=>d.workload_groups+':'+d.policy)
+          .join(enter=>{const g=enter.append('g').attr('class','energy-mark');g.append('rect').attr('class','bar');g.append('rect').attr('class','hit');g.append('text').attr('class','value-label');return g;});
+        animate(groups.select('.bar')).attr('x',d=>x(d.workload_groups)+sub(d.policy)).attr('width',sub.bandwidth())
+          .attr('y',d=>enabled.has(d.policy)?y(d.energy_kwh):bottom)
+          .attr('height',d=>enabled.has(d.policy)?bottom-y(d.energy_kwh):0).attr('fill',d=>color(d.policy));
+        groups.select('.hit').attr('x',d=>x(d.workload_groups)+sub(d.policy)+sub.bandwidth()/2-16)
+          .attr('y',m.top).attr('width',32).attr('height',bottom-m.top).attr('fill','transparent')
+          .attr('data-chart-hit','').attr('data-tooltip',d=>`${names[d.policy]} · ${d.workload_groups.toLocaleString()} groups · ${d.energy_kwh.toFixed(6)} modeled kWh`)
+          .style('pointer-events',d=>enabled.has(d.policy)?'auto':'none');
+        groups.select('.value-label').style('visibility',null).attr('text-anchor','middle')
+          .attr('x',d=>x(d.workload_groups)+sub(d.policy)+sub.bandwidth()/2).attr('y',d=>y(d.energy_kwh)-7)
+          .text(d=>enabled.has(d.policy)&&width>650?d.energy_kwh.toFixed(2):'');
+        avoidCollisions(svg);
+      }
+      const metrics={
+        migrations:{title:'Migrations (count)',format:d3.format(',d')},
+        mean_wait_s:{title:'Mean wait (seconds)',format:d3.format('.2f')},
+        mean_active_hosts:{title:'Powered hosts (mean count)',format:d3.format('.2f')},
+        overload_host_time_fraction:{title:'Host-time above threshold (%)',format:x=>d3.format('.2f')(100*x),percent:true}
+      };
+      function metric(container) {
+        const key=container.dataset.metric, options=metrics[key];
+        const {svg,width,height}=base(container,230,options.title,
+          'Primary HPE curve, 4000 task groups. Overload is a reservation-pressure proxy, not an observed SLA failure rate.');
+        const m={left:103,right:55,top:14,bottom:55};
+        const bottom=height-m.bottom;
+        const domain=d3.extent(primary,d=>d[key]);
+        const x=d3.scaleLinear().domain([Math.min(0,domain[0]),domain[1]*1.08||1]).nice().range([m.left,width-m.right]);
+        const y=d3.scaleBand().domain(policies).range([m.top+4,bottom-4]).padding(.35);
+        frame(svg,m.left,m.top,width-m.left-m.right,bottom-m.top);
+        svg.selectAll('g.x-axis').data([0]).join('g').attr('class','x-axis').attr('transform',`translate(0,${bottom})`)
+          .call(d3.axisBottom(x).ticks(width<360?2:3).tickFormat(v=>options.percent?d3.format('.0f')(100*v):d3.format('~s')(v)).tickSizeOuter(0));
+        svg.selectAll('g.y-axis').data([0]).join('g').attr('class','y-axis').attr('transform',`translate(${m.left},0)`)
+          .call(d3.axisLeft(y).tickFormat(p=>names[p]).tickSize(0));
+        axisTitle(svg,'x',options.title,(m.left+width-m.right)/2,height-10);
+        axisTitle(svg,'y','Policy',4,m.top-2,'start');
+        const groups=svg.selectAll('g.metric-mark').data(primary,d=>d.policy)
+          .join(enter=>{const g=enter.append('g').attr('class','metric-mark');g.append('rect').attr('class','bar');g.append('text').attr('class','value-label');g.append('rect').attr('class','hit');return g;});
+        animate(groups.select('.bar')).attr('x',x(0)).attr('y',d=>y(d.policy)).attr('height',y.bandwidth())
+          .attr('width',d=>enabled.has(d.policy)?Math.max(0,x(d[key])-x(0)):0).attr('fill',d=>color(d.policy));
+        groups.select('.value-label').style('visibility',null).attr('x',width-2).attr('text-anchor','end')
+          .attr('y',d=>y(d.policy)+y.bandwidth()/2+4).text(d=>enabled.has(d.policy)?options.format(d[key]):'');
+        groups.select('.hit').attr('x',m.left).attr('y',d=>y(d.policy)-6).attr('width',width-m.left)
+          .attr('height',y.bandwidth()+12).attr('fill','transparent').attr('data-chart-hit','')
+          .attr('data-tooltip',d=>`${names[d.policy]} · ${options.title}: ${options.format(d[key])}`)
+          .style('pointer-events',d=>enabled.has(d.policy)?'auto':'none');
+        avoidCollisions(svg);
+      }
+      function savings() {
+        const container=root.querySelector('.savings-plot');
+        const labels={hpe_dl360_gen9:'HPE',huawei_rh2288h_v3:'Huawei',quanta_d51b_2u:'Quanta'};
+        const values=rows.filter(r=>r.policy==='lr_mmt_memory').sort((a,b)=>sizes.indexOf(a.workload_groups)-sizes.indexOf(b.workload_groups)||Object.keys(labels).indexOf(a.power_curve)-Object.keys(labels).indexOf(b.power_curve));
+        const {svg,width,height}=base(container,392,'Memory-aware energy reduction versus LR-MMT',
+          'Nine paired comparisons across three power curves and three workload sizes. Negative percentages mean more energy.');
+        const m={left:116,right:70,top:20,bottom:54},bottom=height-m.bottom;
+        const extent=d3.extent(values,d=>d.energy_reduction_vs_lr_mmt_pct);
+        const span=Math.max(1,extent[1]-extent[0]);
+        const x=d3.scaleLinear().domain([Math.min(0,extent[0])-.08*span,Math.max(0,extent[1])+.08*span]).nice().range([m.left,width-m.right]);
+        const id=d=>d.power_curve+':'+d.workload_groups;
+        const y=d3.scaleBand().domain(values.map(id)).range([m.top+3,bottom-3]).padding(.28);
+        frame(svg,m.left,m.top,width-m.left-m.right,bottom-m.top);
+        svg.selectAll('g.x-axis').data([0]).join('g').attr('class','x-axis').attr('transform',`translate(0,${bottom})`)
+          .call(d3.axisBottom(x).ticks(width<420?3:6).tickFormat(d=>d+'%').tickSizeOuter(0));
+        svg.selectAll('g.y-axis').data([0]).join('g').attr('class','y-axis').attr('transform',`translate(${m.left},0)`)
+          .call(d3.axisLeft(y).tickFormat(v=>{const [c,n]=v.split(':');return `${labels[c]} · ${Number(n).toLocaleString()}`;}).tickSize(0));
+        svg.selectAll('line.zero').data([0]).join('line').attr('class','zero').attr('x1',x(0)).attr('x2',x(0))
+          .attr('y1',m.top).attr('y2',bottom).attr('stroke','var(--foreground)').attr('stroke-width',1);
+        axisTitle(svg,'x','Energy reduction vs LR-MMT (%)',(m.left+width-m.right)/2,height-10);
+        axisTitle(svg,'y','Curve · task groups',4,m.top-7,'start');
+        const groups=svg.selectAll('g.savings-mark').data(values,id)
+          .join(enter=>{const g=enter.append('g').attr('class','savings-mark');g.append('rect');g.append('text').attr('class','value-label');g.append('rect').attr('class','hit');return g;});
+        groups.select('rect').attr('x',d=>Math.min(x(0),x(d.energy_reduction_vs_lr_mmt_pct)))
+          .attr('width',d=>Math.abs(x(d.energy_reduction_vs_lr_mmt_pct)-x(0)))
+          .attr('y',d=>y(id(d))).attr('height',y.bandwidth()).attr('fill',color('lr_mmt_memory'));
+        groups.select('.value-label').style('visibility',null).attr('text-anchor','end').attr('x',width-2)
+          .attr('y',d=>y(id(d))+y.bandwidth()/2+4).text(d=>d3.format('+.3f')(d.energy_reduction_vs_lr_mmt_pct)+'%');
+        groups.select('.hit').attr('x',m.left).attr('y',d=>y(id(d))-4).attr('width',width-m.left)
+          .attr('height',y.bandwidth()+8).attr('fill','transparent').attr('data-chart-hit','')
+          .attr('data-tooltip',d=>`${labels[d.power_curve]} · ${d.workload_groups.toLocaleString()} groups · ${d3.format('+.4f')(d.energy_reduction_vs_lr_mmt_pct)}% energy reduction`);
+        avoidCollisions(svg);
+      }
+      function draw(changed=false) {
+        energy();root.querySelectorAll('[data-metric]').forEach(metric);savings();drawn=true;
+      }
+      new ResizeObserver(()=>draw()).observe(root);
+      window.addEventListener('openai:set_globals',event=>{
+        const values=event.detail?.globals?.widgetState?.modelContent?.visiblePolicies;
+        if(Array.isArray(values)) {enabled=new Set(values.filter(p=>policies.includes(p)));buttons.attr('aria-pressed',p=>String(enabled.has(p)));buttons.select('.swatch').style('opacity',p=>enabled.has(p)?1:.2);draw();}
+      });
+      draw();
+    })();
+  </script>
+</div>

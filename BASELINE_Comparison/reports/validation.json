@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "active_policies": [
+    "first_fit",
+    "best_fit",
+    "lr_mmt",
+    "lr_mmt_memory"
+  ],
+  "unique_runs": 36,
+  "per_curve_runs": {
+    "hpe_dl360_gen9": 12,
+    "huawei_rh2288h_v3": 12,
+    "quanta_d51b_2u": 12
+  },
+  "input_manifest_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+  "source_summary_sha256": "b64f374f1884cdb8c4bd0a0be540cdca69be842fc7d3e2ca18e03d5fb91c7f0c",
+  "analysis_source_sha256": "1a2b4879cb0fcbae73c2f8514a8944159cb48541117e71067bc75ed93602b86b",
+  "source_result_grid_verified": 54,
+  "no_new_simulations": true,
+  "synthetic_runs": 0
+}

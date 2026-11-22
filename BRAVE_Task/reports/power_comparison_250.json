@@ -1,0 +1,29 @@
+[
+  {
+    "power_curve": "hpe_dl360_gen9",
+    "completed_instances": 40381,
+    "rejected_instances": 0,
+    "energy_kwh": 9.382509939807068,
+    "mean_wait_s": 8.281048017632054,
+    "max_wait_s": 10.0,
+    "peak_active_hosts": 34
+  },
+  {
+    "power_curve": "huawei_rh2288h_v3",
+    "completed_instances": 40381,
+    "rejected_instances": 0,
+    "energy_kwh": 9.157474577552467,
+    "mean_wait_s": 8.281048017632054,
+    "max_wait_s": 10.0,
+    "peak_active_hosts": 34
+  },
+  {
+    "power_curve": "quanta_d51b_2u",
+    "completed_instances": 40381,
+    "rejected_instances": 0,
+    "energy_kwh": 9.546205030949906,
+    "mean_wait_s": 8.281048017632054,
+    "max_wait_s": 10.0,
+    "peak_active_hosts": 34
+  }
+]

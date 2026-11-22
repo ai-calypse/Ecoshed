@@ -1,0 +1,114 @@
+{
+  "config_sha256": "dee0d1c7a5f4afecad9f58ae70f4b07bc0469e8e5256dd12799f5edf2afbad11",
+  "parameter_selection_performed": false,
+  "planned_cases": 225,
+  "policy_frozen_before_evaluation": true,
+  "protocol": {
+    "acceptance": {
+      "maximum_mean_wait_increase_fraction": 0.05,
+      "maximum_migration_increase_fraction": 0.1,
+      "maximum_overload_fraction_increase": 0.01,
+      "maximum_p95_wait_increase_fraction": 0.05,
+      "migration_tolerance_floor_count": 1,
+      "minimum_energy_reduction_pct": 1.0,
+      "wait_tolerance_floor_s": 1.0
+    },
+    "base_simulation": {
+      "arrival_window_s": 3600,
+      "control_interval_s": 60,
+      "idle_timeout_s": 60,
+      "memory_unit_bytes": 68719476736,
+      "migration_bandwidth_bytes_s": 125000000,
+      "migration_extra_watts": 0,
+      "overload_threshold": 0.9,
+      "sleep_watts": 5,
+      "wake_energy_j": 0,
+      "wake_latency_s": 10
+    },
+    "bootstrap": {
+      "confidence": 0.95,
+      "resamples": 2000,
+      "seed": 560
+    },
+    "curves": [
+      "hpe_dl360_gen9",
+      "huawei_rh2288h_v3",
+      "quanta_d51b_2u"
+    ],
+    "data_source": "synthetic_only_no_YAKSH_imports",
+    "development_seeds": [
+      11,
+      12,
+      13
+    ],
+    "heldout_seeds": [
+      101,
+      102,
+      103,
+      104,
+      105,
+      106,
+      107,
+      108
+    ],
+    "host_count": 16,
+    "instance_count": 160,
+    "lifetimes": [
+      "short",
+      "long"
+    ],
+    "mixes": [
+      "cpu_heavy",
+      "memory_heavy",
+      "mixed",
+      "balanced",
+      "scarce_cpu_heavy"
+    ],
+    "protocol": "Fixed policy before heldout evaluation; no hyperparameter selection. Every planned positive, zero and negative result is reported. Sensitivities change one setting at a time on mixed/long heldout episodes; no production generalization claim.",
+    "schema_version": 1,
+    "sensitivity": {
+      "control_interval_s": [
+        30,
+        300
+      ],
+      "idle_timeout_s": [
+        0,
+        300
+      ],
+      "memory_unit_bytes": [
+        34359738368,
+        137438953472
+      ],
+      "migration_bandwidth_bytes_s": [
+        62500000,
+        250000000
+      ],
+      "sleep_watts": [
+        0,
+        15
+      ],
+      "wake_latency_s": [
+        0,
+        30
+      ]
+    }
+  },
+  "python_version": "3.14.3",
+  "source_sha256": {
+    "ENERGY_Study/__init__.py": "826b080bc3e631bef9a0469e8cb07503abcb92f64b5659b565185cd40bfd3511",
+    "ENERGY_Study/instrumentation.py": "ce3b1ee1790477ee8252bdbf11fc0f1beacc6f5409a81702e00326938e50b937",
+    "ENERGY_Study/policies.py": "73231d5f32109c87c81d29d1ca4b2370a9e75aad074f3383dd345d579b1fc2bc",
+    "ENERGY_Study/run.py": "e7024907b47b21d0ff41126f16e35917eb01283665eeada2d1dc63b260c7c05c",
+    "ENERGY_Study/statistics.py": "9db4e56a58cd79cdfe3a5807c8cec125f87c94f714168a6570405837d06e7e59",
+    "ENERGY_Study/verify.py": "cc6f7e4fbfc7b8a27b7bba97d0a9a75f8ab95bd0d9ae2cf81ee1015450473758",
+    "ENERGY_Study/workloads.py": "70ef4c8cd48c4eab73e3b948585e789e185074120b173d73729e3c59647fbf00",
+    "ROHAN_Task/policies.py": "a0e2d66ee85e960731389370ccf41cc3d20f91b392307da16f4e3d7ff05a43bc",
+    "ecosched/__init__.py": "4ca0a98f4b1795517424ecd4c7a9fa1d181dd0d7a255c3db6930de06659aeef8",
+    "ecosched/__main__.py": "e9e1271c2548d9b55b2db058baf62e7c1c2f8acaf31af937cb06f4d4abd3e0d7",
+    "ecosched/engine.py": "1f468124cd751c21c57c87e525049e1453cbdd5d4bb49b9aeb6e05a09505dbd3",
+    "ecosched/models.py": "f0627674b71cba2ff918551bd19a83e760b206f6ac8e31abb725855f293482fb",
+    "ecosched/policies.py": "15360788f03f676ec09590624f37a1074fb068cd105356ad4c9f4b371dcd81b4",
+    "ecosched/power.py": "8d269e0b7749f7346268b9ebeb6df54e76f2c75307405ae13fd34a87aef66442",
+    "ecosched/power_curves.json": "3740374e6ec09c0645bc7d3cf81daceba26648d7c37fbe7633acac1e6c7e9ca6"
+  }
+}

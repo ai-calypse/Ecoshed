@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "independent_raw_row_verification": true,
+  "manifest_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+  "checked_groups": 4000,
+  "checked_instances": 378285,
+  "checked_hosts": 64,
+  "uses_yaksh_cleaned_inputs": false,
+  "synthetic_workloads": false,
+  "published_legacy_archive_hash_matches": false,
+  "checks": [
+    "raw/output hashes",
+    "exact original task-row equality",
+    "raw host capacities",
+    "unique observed raw attempt rows",
+    "individual observed duration equality",
+    "no mean-runtime imputation",
+    "complete original multiplicity",
+    "sorted releases"
+  ]
+}

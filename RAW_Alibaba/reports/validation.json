@@ -1,0 +1,25 @@
+{
+  "passed": true,
+  "runs": 54,
+  "fresh_raw_archive_processing": true,
+  "uses_yaksh_prepared_inputs": false,
+  "synthetic_runs": 0,
+  "total_completed_instance_replays": 8338968,
+  "per_curve_runs": {
+    "hpe_dl360_gen9": 18,
+    "huawei_rh2288h_v3": 18,
+    "quanta_d51b_2u": 18
+  },
+  "archive_sha256": "b7efe9dc9caa75352de41b9ac34b329602cde3414fd7cab87c1d21a9a9871d66",
+  "published_legacy_archive_hash_matches": false,
+  "all_gzip_and_member_integrity_checks_passed": true,
+  "checks": [
+    "independent raw-table preparation",
+    "actual per-attempt durations",
+    "original complete-group multiplicity",
+    "single curve per fresh simulator",
+    "identical full grid per curve",
+    "source/input hashes",
+    "full work conservation"
+  ]
+}

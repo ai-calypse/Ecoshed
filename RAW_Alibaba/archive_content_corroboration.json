@@ -1,0 +1,14 @@
+{
+  "purpose": "archive-content corroboration only; no cleaned inputs or cleaning code are used by fresh preparation",
+  "reference": "previously recorded raw-file fingerprints in YAKSH_Task/manifest.json",
+  "all_six_raw_payloads_match": true,
+  "member_checks": {
+    "batch_instance.csv": true,
+    "batch_task.csv": true,
+    "container_event.csv": true,
+    "container_usage.csv": true,
+    "server_event.csv": true,
+    "server_usage.csv": true
+  },
+  "published_legacy_compressed_archive_matches": false
+}

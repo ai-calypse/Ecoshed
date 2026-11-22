@@ -1,0 +1,15 @@
+{
+  "evaluation_role": "in_sample_algorithm_development_on_unchanged_raw_alibaba_benchmark",
+  "policies": ["energy_first_cpu", "energy_first_memory", "compact_memory", "payback_cpu", "payback_memory", "payback_compact_memory"],
+  "payback_safety_factor": 1.2,
+  "minimum_residence_s": 60,
+  "projection_horizon": "one unchanged controller interval",
+  "packing_objective": "incremental watts first; smallest remaining CPU-fraction times remaining memory-fraction only on power ties",
+  "success_limits": {
+    "mean_wait_relative_increase": 0.05,
+    "p95_wait_relative_increase": 0.05,
+    "wait_absolute_floor_s": 1,
+    "pressure_absolute_increase": 0.01
+  },
+  "protocol": "Fixed ablations defined before candidate runs. Same prepared raw records, host pool, original durations, six policy cases for each of three sizes and each of three separate SPEC curves. No per-case policy selection or oracle access to future completions. All candidates and adverse outcomes retained. These are development results, not held-out production validation."
+}

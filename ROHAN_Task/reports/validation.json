@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "runs": 36,
+  "matrix": {
+    "sizes": [
+      250,
+      1000,
+      4000
+    ],
+    "curves": [
+      "hpe_dl360_gen9",
+      "huawei_rh2288h_v3",
+      "quanta_d51b_2u"
+    ],
+    "policies": [
+      "first_fit",
+      "best_fit",
+      "lr_mmt",
+      "lr_mmt_memory"
+    ],
+    "simulation_overrides": {
+      "memory_unit_bytes": 68719476736,
+      "migration_bandwidth_bytes_s": 125000000.0,
+      "migration_extra_watts": 0.0
+    },
+    "policy": {
+      "history_length": 10,
+      "safety_factor": 1.2,
+      "fallback_threshold": 0.9,
+      "underload_threshold": 0.3,
+      "memory_balance_weight": 0.25,
+      "cooldown_s": 600.0,
+      "max_migrations_per_tick": 256
+    },
+    "assumptions": {
+      "memory_conversion": "EXPERIMENTAL assumption: one normalized memory unit equals 64 GiB; not supplied by Alibaba or derived from SPEC RAM.",
+      "bandwidth": "EXPERIMENTAL assumption: independent 125 MB/s link per concurrent transfer; Brave stop-and-copy model.",
+      "lr": "Tricube-weighted local linear CPU forecast over last 10 control samples; CPU safety 1.2; common static memory guard at 0.9.",
+      "placement": "Only the placement score differs between the two LR-MMT variants; control, admission, conversion, power and migration mechanics are shared."
+    }
+  },
+  "checks": [
+    "complete unique matrix",
+    "instance/group conservation",
+    "input and Brave source hashes",
+    "Rohan source hashes",
+    "identical resolved simulation and LR/MMT settings",
+    "per-host/total energy reconciliation",
+    "migration reason reconciliation"
+  ],
+  "total_completed_instance_replays": 10078092
+}

@@ -1,0 +1,25 @@
+phase,scenario,mix,lifetime,curve,episodes,mean_energy_reduction_pct,ci_lower_pct,ci_upper_pct,confidence,bootstrap_resamples,statistical_unit,accepted_episodes,positive_energy_episodes,ci_excludes_zero_in_savings_direction
+heldout,base,cpu_heavy,short,hpe_dl360_gen9,8,-0.06881891017591686,-0.16775543546234223,0.0,0.95,2000,paired independently generated synthetic episode,0,1,False
+heldout,base,cpu_heavy,long,hpe_dl360_gen9,8,0.005232250824010634,-0.1470874052912738,0.15220717620874488,0.95,2000,paired independently generated synthetic episode,0,3,False
+heldout,base,memory_heavy,short,hpe_dl360_gen9,8,0.0,0.0,0.0,0.95,2000,paired independently generated synthetic episode,0,0,False
+heldout,base,memory_heavy,long,hpe_dl360_gen9,8,0.008322112380484754,-0.11188239934171494,0.13601539240992733,0.95,2000,paired independently generated synthetic episode,0,2,False
+heldout,base,mixed,short,hpe_dl360_gen9,8,1.4659784759229115,0.21222779397678526,3.4440701259118205,0.95,2000,paired independently generated synthetic episode,3,8,True
+heldout,base,mixed,long,hpe_dl360_gen9,8,-0.36734266772835905,-1.3456132511196726,0.7828228786639879,0.95,2000,paired independently generated synthetic episode,1,3,False
+heldout,base,balanced,short,hpe_dl360_gen9,8,-0.43788404156186406,-1.227722235551438,0.025635573976572516,0.95,2000,paired independently generated synthetic episode,0,1,False
+heldout,base,balanced,long,hpe_dl360_gen9,8,0.11820563586364279,-0.8538787244998541,1.1282438270779565,0.95,2000,paired independently generated synthetic episode,1,5,False
+heldout,base,scarce_cpu_heavy,short,hpe_dl360_gen9,8,-0.14324587494731597,-0.4297376248419479,0.0,0.95,2000,paired independently generated synthetic episode,0,0,False
+heldout,base,scarce_cpu_heavy,long,hpe_dl360_gen9,8,-0.5655691410456323,-1.5440346231344944,0.5318812173203115,0.95,2000,paired independently generated synthetic episode,1,2,False
+power_sensitivity,base,mixed,long,huawei_rh2288h_v3,8,0.8491915391450555,0.08279213432751008,1.5720175782176098,0.95,2000,paired independently generated synthetic episode,3,6,True
+power_sensitivity,base,mixed,long,quanta_d51b_2u,8,0.22556026513160113,-0.42988033388901586,0.832604002272981,0.95,2000,paired independently generated synthetic episode,0,6,False
+assumption_sensitivity,memory_unit_bytes=34359738368,mixed,long,hpe_dl360_gen9,8,0.03434262984916322,-0.40278780970617667,0.5214857804131248,0.95,2000,paired independently generated synthetic episode,0,3,False
+assumption_sensitivity,memory_unit_bytes=137438953472,mixed,long,hpe_dl360_gen9,8,-0.7980295893016123,-2.0848866162304174,0.4587604705317591,0.95,2000,paired independently generated synthetic episode,1,2,False
+assumption_sensitivity,migration_bandwidth_bytes_s=62500000,mixed,long,hpe_dl360_gen9,8,-0.7980295893016123,-2.0848866162304174,0.4587604705317591,0.95,2000,paired independently generated synthetic episode,1,2,False
+assumption_sensitivity,migration_bandwidth_bytes_s=250000000,mixed,long,hpe_dl360_gen9,8,0.03434262984916322,-0.40278780970617667,0.5214857804131248,0.95,2000,paired independently generated synthetic episode,0,3,False
+assumption_sensitivity,control_interval_s=30,mixed,long,hpe_dl360_gen9,8,0.7849212707995371,-0.07759693006710522,1.6250040085652309,0.95,2000,paired independently generated synthetic episode,2,7,False
+assumption_sensitivity,control_interval_s=300,mixed,long,hpe_dl360_gen9,8,1.1900703985875039,0.398562285020014,1.9029330732692946,0.95,2000,paired independently generated synthetic episode,2,7,True
+assumption_sensitivity,idle_timeout_s=0,mixed,long,hpe_dl360_gen9,8,-0.10649574209945165,-1.0381585990911777,0.9577596886967175,0.95,2000,paired independently generated synthetic episode,2,3,False
+assumption_sensitivity,idle_timeout_s=300,mixed,long,hpe_dl360_gen9,8,-0.3809135050332724,-1.413347836477102,0.7667105065670149,0.95,2000,paired independently generated synthetic episode,1,3,False
+assumption_sensitivity,sleep_watts=0,mixed,long,hpe_dl360_gen9,8,-0.3615160881370486,-1.3217121725878191,0.8045737570845747,0.95,2000,paired independently generated synthetic episode,1,3,False
+assumption_sensitivity,sleep_watts=15,mixed,long,hpe_dl360_gen9,8,-0.37894282117288686,-1.4489140154338631,0.7600531558257707,0.95,2000,paired independently generated synthetic episode,1,3,False
+assumption_sensitivity,wake_latency_s=0,mixed,long,hpe_dl360_gen9,8,-0.041040412739103915,-2.0096408218596196,1.8868132359282475,0.95,2000,paired independently generated synthetic episode,3,4,False
+assumption_sensitivity,wake_latency_s=30,mixed,long,hpe_dl360_gen9,8,-0.01710217168969049,-1.438518640649419,1.1186135808422375,0.95,2000,paired independently generated synthetic episode,2,5,False

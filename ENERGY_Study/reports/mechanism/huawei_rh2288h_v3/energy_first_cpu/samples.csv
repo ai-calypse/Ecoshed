@@ -1,0 +1,5 @@
+time_s,host_id,cpu_capacity,memory_capacity,cpu_used,memory_used,state,power_w
+0,host_00,100.0,1.0,86.0,0.21000000000000002,active,225.39999999999998
+0,host_01,100.0,1.0,72.0,0.8,active,187.99999999999997
+0,host_02,100.0,1.0,15.0,0.3,active,89.9
+0,host_03,100.0,1.0,0.0,0.0,sleep,5
