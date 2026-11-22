@@ -1,6 +1,10 @@
 # Local raw inputs and release assets
 /trace_201708/
 /trace_201708.tgz
+/alibaba-trace-2017.tar.gz
+/RAW_Alibaba/raw/
+/RAW_Alibaba/prepared/*.csv
+/RAW_Alibaba/smoke/
 /Project_Proposal.mp4
 /*.zip
 
@@ -9,3 +13,11 @@ __pycache__/
 *.py[cod]
 .DS_Store
 .venv/
+
+# Simulator event/instance output; keep compact verified reports separately
+/BRAVE_Task/results/
+/ROHAN_Task/results/
+/ROHAN_Task/smoke/
+/ROHAN_Task/full_runs/
+/ENERGY_Study/smoke/
+/ENERGY_Study/alibaba_smoke/

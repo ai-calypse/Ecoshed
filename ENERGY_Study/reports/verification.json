@@ -1,0 +1,9 @@
+{
+  "passed": true,
+  "verified_runs": 510,
+  "verified_pairs": 225,
+  "verified_pointwise_intervals": 24,
+  "config_and_sources_match": true,
+  "source_data": "synthetic",
+  "production_claim_established": false
+}

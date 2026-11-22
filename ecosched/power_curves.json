@@ -1,0 +1,37 @@
+{
+  "load_axis": "target_load_fraction: 0, 0.1, ..., 1.0",
+  "units": "whole-server AC watts; Active Idle at zero",
+  "mapping": "Same selected curve on every sampled host at requested CPU / source CPU capacity. No core-count or memory scaling. This is a surrogate sensitivity model, not Alibaba hardware calibration.",
+  "curves": {
+    "hpe_dl360_gen9": {
+      "role": "primary",
+      "model": "HPE ProLiant DL360 Gen9",
+      "result_id": "20151215-00708",
+      "source": "https://www.spec.org/power_ssj2008/results/res2016q1/power_ssj2008-20151215-00708.html",
+      "hardware_available": "2015-11",
+      "published": "2016-01-07",
+      "sockets": 2, "cores": 36, "threads": 72, "memory_gb": 64,
+      "watts": [45.0, 83.7, 101, 118, 133, 145, 162, 188, 218, 248, 276]
+    },
+    "huawei_rh2288h_v3": {
+      "role": "secondary",
+      "model": "Huawei Fusion Server RH2288H V3",
+      "result_id": "20150829-00703",
+      "source": "https://www.spec.org/power_ssj2008/results/res2015q3/power_ssj2008-20150829-00703.html",
+      "hardware_available": "2015-05",
+      "published": "2015-09-25",
+      "sockets": 2, "cores": 36, "threads": 72, "memory_gb": 64,
+      "watts": [44.8, 83.2, 96.6, 110, 125, 141, 160, 183, 208, 237, 266]
+    },
+    "quanta_d51b_2u": {
+      "role": "third",
+      "model": "QuantaGrid D51B-2U",
+      "result_id": "20141124-00679",
+      "source": "https://www.spec.org/power_ssj2008/results/res2014q4/power_ssj2008-20141124-00679.html",
+      "hardware_available": "2014-09",
+      "published": "2014-12-10",
+      "sockets": 2, "cores": 36, "threads": 72, "memory_gb": 64,
+      "watts": [49.6, 88.0, 104, 120, 137, 148, 169, 190, 217, 245, 272]
+    }
+  }
+}

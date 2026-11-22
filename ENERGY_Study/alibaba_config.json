@@ -1,0 +1,15 @@
+{
+  "data_source": "alibaba_v2017_prepared_trace_rows",
+  "source_repository": "https://github.com/alibaba/clusterdata/tree/master/cluster-trace-v2017",
+  "preparation_package": "YAKSH_Task",
+  "fresh_raw_archive_replay": false,
+  "sizes": [250, 1000, 4000],
+  "curves": ["hpe_dl360_gen9", "huawei_rh2288h_v3", "quanta_d51b_2u"],
+  "policies": ["lr_mmt", "lr_mmt_memory", "energy_first_cpu", "energy_first_memory"],
+  "simulation_overrides": {
+    "memory_unit_bytes": 68719476736,
+    "migration_bandwidth_bytes_s": 125000000,
+    "migration_extra_watts": 0
+  },
+  "notes": "Identical Alibaba-derived hosts/trace rows/multiplicity/mean durations across policies. One SPECpower curve per fresh simulation, with the same complete grid per curve. No generated jobs, rescaled demands, synthetic arrival patterns or synthetic fallback. Existing prepared files are used because raw archive download is unavailable in this environment. No independent-window confidence intervals are claimed."
+}

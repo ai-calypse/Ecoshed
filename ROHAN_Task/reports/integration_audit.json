@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "completion_audits": [
+    {
+      "policy": "lr_mmt",
+      "checked_instances": 40381,
+      "completion_extensions_reconcile": true
+    },
+    {
+      "policy": "lr_mmt_memory",
+      "checked_instances": 40381,
+      "completion_extensions_reconcile": true
+    }
+  ],
+  "yaksh_files_unchanged": 47,
+  "brave_sources_unchanged": true
+}

@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="550" viewBox="0 0 1200 550" role="img" aria-labelledby="title desc">
+<title id="title">Modeled energy on the largest unchanged Alibaba sample</title>
+<desc id="desc">Three separate power curves; all ten policies run the identical 378285 task instances. Horizontal bars start at zero. Lower is better.</desc>
+<rect width="1200" height="550" fill="#fff"/>
+<g font-family="Arial, sans-serif" fill="#172a3a">
+<text x="25" y="30" font-size="22" font-weight="bold">Largest Alibaba sample: 4,000 groups / 378,285 instances</text>
+<text x="25" y="53" font-size="14">Modeled energy (kWh), lower is better. Separate simulations per curve; identical workload and 64-host pool.</text>
+<text x="25" y="90" font-size="17" font-weight="bold">HPE DL360 Gen9</text>
+<line x1="205.0" y1="104" x2="205.0" y2="473" stroke="#e3e8ed"/><text x="205.0" y="495" text-anchor="middle" font-size="11">0</text>
+<line x1="242.64575957579427" y1="104" x2="242.64575957579427" y2="473" stroke="#e3e8ed"/><text x="242.64575957579427" y="495" text-anchor="middle" font-size="11">10</text>
+<line x1="280.29151915158855" y1="104" x2="280.29151915158855" y2="473" stroke="#e3e8ed"/><text x="280.29151915158855" y="495" text-anchor="middle" font-size="11">20</text>
+<line x1="317.9372787273829" y1="104" x2="317.9372787273829" y2="473" stroke="#e3e8ed"/><text x="317.9372787273829" y="495" text-anchor="middle" font-size="11">30</text>
+<line x1="355.58303830317715" y1="104" x2="355.58303830317715" y2="473" stroke="#e3e8ed"/><text x="355.58303830317715" y="495" text-anchor="middle" font-size="11">40</text>
+<text x="25" y="128" font-size="11">First Fit</text><rect x="205" y="112" width="128.56712783308305" height="23" fill="#8796a5"/><text x="337.5671278330831" y="128" font-size="11">34.152</text>
+<text x="25" y="164" font-size="11">Best Fit</text><rect x="205" y="148" width="128.74290207387074" height="23" fill="#8796a5"/><text x="337.7429020738707" y="164" font-size="11">34.199</text>
+<text x="25" y="200" font-size="11">LR-MMT (CPU)</text><rect x="205" y="184" width="129.01187384699548" height="23" fill="#8796a5"/><text x="338.0118738469955" y="200" font-size="11">34.270</text>
+<text x="25" y="236" font-size="11">LR-MMT + weighted memory</text><rect x="205" y="220" width="147.33079815421758" height="23" fill="#8796a5"/><text x="356.3307981542176" y="236" font-size="11">39.136</text>
+<text x="25" y="272" font-size="11">Energy-first CPU</text><rect x="205" y="256" width="128.48254107672867" height="23" fill="#8796a5"/><text x="337.4825410767287" y="272" font-size="11">34.129</text>
+<text x="25" y="308" font-size="11">Energy-first memory</text><rect x="205" y="292" width="135.96520428284555" height="23" fill="#8796a5"/><text x="344.96520428284555" y="308" font-size="11">36.117</text>
+<text x="25" y="344" font-size="11">Compact memory</text><rect x="205" y="328" width="128.63738842157719" height="23" fill="#8796a5"/><text x="337.63738842157716" y="344" font-size="11">34.170</text>
+<text x="25" y="380" font-size="11">CPU + payback</text><rect x="205" y="364" width="128.01085721708918" height="23" fill="#087f8c"/><text x="337.0108572170892" y="380" font-size="11">34.004</text>
+<text x="25" y="416" font-size="11">Memory + payback</text><rect x="205" y="400" width="137.11621529821767" height="23" fill="#dd6e42"/><text x="346.11621529821764" y="416" font-size="11">36.423</text>
+<text x="25" y="452" font-size="11">Compact memory + payback</text><rect x="205" y="436" width="128.14615418321387" height="23" fill="#8796a5"/><text x="337.14615418321387" y="452" font-size="11">34.040</text>
+<text x="420" y="90" font-size="17" font-weight="bold">Huawei RH2288H V3</text>
+<line x1="600.0" y1="104" x2="600.0" y2="473" stroke="#e3e8ed"/><text x="600.0" y="495" text-anchor="middle" font-size="11">0</text>
+<line x1="637.6457595757943" y1="104" x2="637.6457595757943" y2="473" stroke="#e3e8ed"/><text x="637.6457595757943" y="495" text-anchor="middle" font-size="11">10</text>
+<line x1="675.2915191515885" y1="104" x2="675.2915191515885" y2="473" stroke="#e3e8ed"/><text x="675.2915191515885" y="495" text-anchor="middle" font-size="11">20</text>
+<line x1="712.9372787273828" y1="104" x2="712.9372787273828" y2="473" stroke="#e3e8ed"/><text x="712.9372787273828" y="495" text-anchor="middle" font-size="11">30</text>
+<line x1="750.5830383031771" y1="104" x2="750.5830383031771" y2="473" stroke="#e3e8ed"/><text x="750.5830383031771" y="495" text-anchor="middle" font-size="11">40</text>
+<text x="420" y="128" font-size="11">First Fit</text><rect x="600" y="112" width="123.58723591953574" height="23" fill="#8796a5"/><text x="727.5872359195357" y="128" font-size="11">32.829</text>
+<text x="420" y="164" font-size="11">Best Fit</text><rect x="600" y="148" width="123.74513031498348" height="23" fill="#8796a5"/><text x="727.7451303149835" y="164" font-size="11">32.871</text>
+<text x="420" y="200" font-size="11">LR-MMT (CPU)</text><rect x="600" y="184" width="128.05959679481367" height="23" fill="#8796a5"/><text x="732.0595967948136" y="200" font-size="11">34.017</text>
+<text x="420" y="236" font-size="11">LR-MMT + weighted memory</text><rect x="600" y="220" width="142.09512170538886" height="23" fill="#8796a5"/><text x="746.0951217053889" y="236" font-size="11">37.745</text>
+<text x="420" y="272" font-size="11">Energy-first CPU</text><rect x="600" y="256" width="124.20087866551445" height="23" fill="#8796a5"/><text x="728.2008786655144" y="272" font-size="11">32.992</text>
+<text x="420" y="308" font-size="11">Energy-first memory</text><rect x="600" y="292" width="131.5780223193319" height="23" fill="#8796a5"/><text x="735.5780223193319" y="308" font-size="11">34.952</text>
+<text x="420" y="344" font-size="11">Compact memory</text><rect x="600" y="328" width="124.19499426651576" height="23" fill="#8796a5"/><text x="728.1949942665158" y="344" font-size="11">32.990</text>
+<text x="420" y="380" font-size="11">CPU + payback</text><rect x="600" y="364" width="123.67590155058505" height="23" fill="#087f8c"/><text x="727.6759015505851" y="380" font-size="11">32.853</text>
+<text x="420" y="416" font-size="11">Memory + payback</text><rect x="600" y="400" width="133.08697012486456" height="23" fill="#dd6e42"/><text x="737.0869701248646" y="416" font-size="11">35.352</text>
+<text x="420" y="452" font-size="11">Compact memory + payback</text><rect x="600" y="436" width="123.8126186568214" height="23" fill="#8796a5"/><text x="727.8126186568214" y="452" font-size="11">32.889</text>
+<text x="815" y="90" font-size="17" font-weight="bold">QuantaGrid D51B-2U</text>
+<line x1="995.0" y1="104" x2="995.0" y2="473" stroke="#e3e8ed"/><text x="995.0" y="495" text-anchor="middle" font-size="11">0</text>
+<line x1="1032.6457595757943" y1="104" x2="1032.6457595757943" y2="473" stroke="#e3e8ed"/><text x="1032.6457595757943" y="495" text-anchor="middle" font-size="11">10</text>
+<line x1="1070.2915191515885" y1="104" x2="1070.2915191515885" y2="473" stroke="#e3e8ed"/><text x="1070.2915191515885" y="495" text-anchor="middle" font-size="11">20</text>
+<line x1="1107.9372787273828" y1="104" x2="1107.9372787273828" y2="473" stroke="#e3e8ed"/><text x="1107.9372787273828" y="495" text-anchor="middle" font-size="11">30</text>
+<line x1="1145.583038303177" y1="104" x2="1145.583038303177" y2="473" stroke="#e3e8ed"/><text x="1145.583038303177" y="495" text-anchor="middle" font-size="11">40</text>
+<text x="815" y="128" font-size="11">First Fit</text><rect x="995" y="112" width="131.89789775012753" height="23" fill="#8796a5"/><text x="1130.8978977501274" y="128" font-size="11">35.037</text>
+<text x="815" y="164" font-size="11">Best Fit</text><rect x="995" y="148" width="132.0805165733222" height="23" fill="#8796a5"/><text x="1131.0805165733223" y="164" font-size="11">35.085</text>
+<text x="815" y="200" font-size="11">LR-MMT (CPU)</text><rect x="995" y="184" width="133.01437475847982" height="23" fill="#8796a5"/><text x="1132.0143747584798" y="200" font-size="11">35.333</text>
+<text x="815" y="236" font-size="11">LR-MMT + weighted memory</text><rect x="995" y="220" width="152.38095238095238" height="23" fill="#8796a5"/><text x="1151.3809523809523" y="236" font-size="11">40.478</text>
+<text x="815" y="272" font-size="11">Energy-first CPU</text><rect x="995" y="256" width="132.67765080595095" height="23" fill="#8796a5"/><text x="1131.6776508059509" y="272" font-size="11">35.244</text>
+<text x="815" y="308" font-size="11">Energy-first memory</text><rect x="995" y="292" width="140.9517496483699" height="23" fill="#8796a5"/><text x="1139.95174964837" y="308" font-size="11">37.442</text>
+<text x="815" y="344" font-size="11">Compact memory</text><rect x="995" y="328" width="132.73858599256621" height="23" fill="#8796a5"/><text x="1131.7385859925662" y="344" font-size="11">35.260</text>
+<text x="815" y="380" font-size="11">CPU + payback</text><rect x="995" y="364" width="132.02871081796243" height="23" fill="#087f8c"/><text x="1131.0287108179625" y="380" font-size="11">35.071</text>
+<text x="815" y="416" font-size="11">Memory + payback</text><rect x="995" y="400" width="142.56705276890287" height="23" fill="#dd6e42"/><text x="1141.5670527689028" y="416" font-size="11">37.871</text>
+<text x="815" y="452" font-size="11">Compact memory + payback</text><rect x="995" y="436" width="132.18841632342244" height="23" fill="#8796a5"/><text x="1131.1884163234224" y="452" font-size="11">35.114</text>
+<text x="25" y="531" font-size="12">Energy alone does not establish acceptable performance; see the report for waiting, migrations and pressure.</text>
+</g></svg>

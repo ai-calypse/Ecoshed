@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "source_result_sets_verified": true,
+  "unique_runs": 90,
+  "overlapping_exact_reproductions": 18,
+  "per_curve_runs": {
+    "hpe_dl360_gen9": 30,
+    "huawei_rh2288h_v3": 30,
+    "quanta_d51b_2u": 30
+  },
+  "input_manifest_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+  "source_summary_sha256": {
+    "RAW_Alibaba/reports/summaries.json": "b64f374f1884cdb8c4bd0a0be540cdca69be842fc7d3e2ca18e03d5fb91c7f0c",
+    "POLICY_Improvement/reports/summaries.json": "048eb8da77c62a425b91660bde18e160925a35f4d792b6460594260e92a00ef1"
+  },
+  "analysis_source_sha256": "b6aae46663e66d6aa3cbf9d00c43c914c3732f5cf55db1d47434562608379b9d",
+  "unchanged_simulation_settings": true,
+  "no_new_simulations": true,
+  "synthetic_runs": 0
+}

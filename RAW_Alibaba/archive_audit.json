@@ -1,0 +1,42 @@
+{
+  "archive_bytes": 243321159,
+  "archive_file": "alibaba-trace-2017.tar.gz",
+  "archive_sha256": "b7efe9dc9caa75352de41b9ac34b329602cde3414fd7cab87c1d21a9a9871d66",
+  "checksum_discrepancy_reference": "https://github.com/alibaba/clusterdata/issues/209",
+  "gzip_crc_and_tar_members_valid": true,
+  "matches_published_legacy_archive": false,
+  "published_legacy_archive_sha256": "02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df",
+  "source_files": {
+    "batch_instance.csv": {
+      "archive_member": "alibaba-trace-2017/batch_instance.csv",
+      "bytes": 858546781,
+      "sha256": "195f25ef36484a2da9bb92c08e203224ed34a32f48fcbe11c01d94ecf308d817"
+    },
+    "batch_task.csv": {
+      "archive_member": "alibaba-trace-2017/batch_task.csv",
+      "bytes": 4631973,
+      "sha256": "50f3c50ab4a917ad06c1cee6ec601e1356708774d7962503e8eafdd720b2286d"
+    },
+    "container_event.csv": {
+      "archive_member": "alibaba-trace-2017/container_event.csv",
+      "bytes": 875035,
+      "sha256": "8e2c2776983fb0867f5088352849773186eab22de9d878e10978b5018c68aeda"
+    },
+    "container_usage.csv": {
+      "archive_member": "alibaba-trace-2017/container_usage.csv",
+      "bytes": 275992839,
+      "sha256": "9ccb7abafdc492b173eb87b49c9cec3df30cb6e8fbfce09e7023be826de3a10a"
+    },
+    "server_event.csv": {
+      "archive_member": "alibaba-trace-2017/server_event.csv",
+      "bytes": 47615,
+      "sha256": "336f7255add3ae3c08bf5163b15319f542365a3c7814ed3f712699560933968b"
+    },
+    "server_usage.csv": {
+      "archive_member": "alibaba-trace-2017/server_usage.csv",
+      "bytes": 19030775,
+      "sha256": "032fa4193f4b426941fb1eecef5add3d8b0632aaf7cbd7663b0051ceb8a4637a"
+    }
+  },
+  "source_url": "https://github.com/alibaba/clusterdata/tree/master/cluster-trace-v2017"
+}

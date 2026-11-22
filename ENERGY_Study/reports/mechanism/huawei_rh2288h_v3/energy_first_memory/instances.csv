@@ -1,0 +1,5 @@
+instance_id,task_group_id,status,host_id,cpu_request_cores,memory_request_normalized,arrival_s,start_s,finish_s,wait_s
+a,a,completed,host_00,72,0.2,0,0,1000,0
+b,b,completed,host_01,72,0.8,0,0,1000,0
+c,c,completed,host_01,14,0.01,0,0,1000,0
+d,d,completed,host_00,15,0.3,0,0,1000,0

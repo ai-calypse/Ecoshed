@@ -1,0 +1,21 @@
+{
+  "passed": true,
+  "runs": 36,
+  "data_source": "alibaba_v2017_prepared_trace_rows",
+  "synthetic_runs": 0,
+  "fresh_raw_archive_replay": false,
+  "total_completed_instance_replays": 10078092,
+  "per_curve_runs": {
+    "hpe_dl360_gen9": 12,
+    "huawei_rh2288h_v3": 12,
+    "quanta_d51b_2u": 12
+  },
+  "checks": [
+    "manifest-verified Alibaba-derived inputs",
+    "no generated workload substitution",
+    "same complete grid independently per power curve",
+    "source/config provenance",
+    "identical paired hosts, trace rows and assumptions",
+    "work conservation"
+  ]
+}

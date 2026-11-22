@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "planned_cases": 225,
+  "completed_runs": 510,
+  "paired_comparisons": 225,
+  "heldout_comparisons": 80,
+  "all_runs_conserved_work": true,
+  "total_completed_instances": 80664,
+  "raw_alibaba_replay_performed": false,
+  "yaksh_data_used": false,
+  "checks": [
+    "source/config frozen before evaluation",
+    "disjoint development/heldout seeds",
+    "identical paired workloads/config",
+    "unique outcomes and full drain",
+    "energy components reconcile",
+    "completion durations plus migration pauses",
+    "sampled capacity limits"
+  ]
+}
