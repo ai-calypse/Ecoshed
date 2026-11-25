@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="500" viewBox="0 0 980 500" role="img" aria-labelledby="title desc">
+<title id="title">When the two placement rules disagree, which server does each pick?</title>
+<desc id="desc">Share of disagreements where the policy&#x27;s own pick was the less-loaded server (HPE curve). 250 groups: CPU-oriented LR-MMT 2%, LR-MMT + CPU/memory-aware (proposed) 40%; 1,000 groups: CPU-oriented LR-MMT 2%, LR-MMT + CPU/memory-aware (proposed) 59%; 4,000 groups: CPU-oriented LR-MMT 17%, LR-MMT + CPU/memory-aware (proposed) 62%</desc>
+<rect width="980" height="500" fill="#ffffff"/>
+<g font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+<text x="24.0" y="34.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="bold">When the two placement rules disagree, which server does each pick?</text>
+<text x="24.0" y="58.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">Share of disagreements where the policy&#x27;s own pick was the less-loaded server (HPE curve).</text>
+<rect x="24.0" y="78.0" width="12" height="12" rx="2" fill="#2a78d6"/>
+<text x="42.0" y="88.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">CPU-oriented LR-MMT</text>
+<rect x="204.8" y="78.0" width="12" height="12" rx="2" fill="#eb6834"/>
+<text x="222.8" y="88.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">LR-MMT + CPU/memory-aware (proposed)</text>
+<line x1="70" y1="392.0" x2="950" y2="392.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="396.0" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">0%</text>
+<line x1="70" y1="298.7" x2="950" y2="298.7" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="302.7" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">20%</text>
+<line x1="70" y1="205.3" x2="950" y2="205.3" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="209.3" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">40%</text>
+<line x1="70" y1="112.0" x2="950" y2="112.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="116.0" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">60%</text>
+<path d="M191.7,392.0 V386.0 Q191.7,382.0 195.7,382.0 H211.7 Q215.7,382.0 215.7,386.0 V392.0 Z" fill="#2a78d6"><title>CPU-oriented LR-MMT, 250 groups: 2%</title></path>
+<text x="203.7" y="376.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">2%</text>
+<path d="M217.7,392.0 V209.9 Q217.7,205.9 221.7,205.9 H237.7 Q241.7,205.9 241.7,209.9 V392.0 Z" fill="#eb6834"><title>LR-MMT + CPU/memory-aware (proposed), 250 groups: 40%</title></path>
+<text x="229.7" y="199.9" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">40%</text>
+<text x="216.7" y="410.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">250 groups</text>
+<path d="M485.0,392.0 V386.7 Q485.0,382.7 489.0,382.7 H505.0 Q509.0,382.7 509.0,386.7 V392.0 Z" fill="#2a78d6"><title>CPU-oriented LR-MMT, 1,000 groups: 2%</title></path>
+<text x="497.0" y="376.7" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">2%</text>
+<path d="M511.0,392.0 V119.1 Q511.0,115.1 515.0,115.1 H531.0 Q535.0,115.1 535.0,119.1 V392.0 Z" fill="#eb6834"><title>LR-MMT + CPU/memory-aware (proposed), 1,000 groups: 59%</title></path>
+<text x="523.0" y="109.1" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">59%</text>
+<text x="510.0" y="410.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">1,000 groups</text>
+<path d="M778.3,392.0 V317.9 Q778.3,313.9 782.3,313.9 H798.3 Q802.3,313.9 802.3,317.9 V392.0 Z" fill="#2a78d6"><title>CPU-oriented LR-MMT, 4,000 groups: 17%</title></path>
+<text x="790.3" y="307.9" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">17%</text>
+<path d="M804.3,392.0 V106.1 Q804.3,102.1 808.3,102.1 H824.3 Q828.3,102.1 828.3,106.1 V392.0 Z" fill="#eb6834"><title>LR-MMT + CPU/memory-aware (proposed), 4,000 groups: 62%</title></path>
+<text x="816.3" y="96.1" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">62%</text>
+<text x="803.3" y="410.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">4,000 groups</text>
+<line x1="70" y1="392" x2="950" y2="392" stroke="#c3c2b7" stroke-width="1"/>
+<text x="510.0" y="432.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">% of disagreements where the policy picked the less-loaded server</text>
+<text x="24.0" y="484.0" font-size="12" fill="#898781" text-anchor="start" font-weight="normal">At every placement the recorder also computed the other rule&#x27;s choice from the same snapshot; nothing was changed.</text>
+</g>
+</svg>

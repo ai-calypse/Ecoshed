@@ -19,7 +19,7 @@ excluded from the project comparison; their code and results remain historical.
 
 ## Current status
 
-**Data preparation, the simulator/power model, and scheduling policies are implemented.**
+**Data preparation, the simulator/power model, scheduling policies and the D5 analysis are implemented.**
 
 | Deliverable | Status |
 |---|---|
@@ -27,7 +27,8 @@ excluded from the project comparison; their code and results remain historical.
 | D2: Simulator and power model | Complete — [Brave's implementation and handoff](BRAVE_Task/README.md) |
 | D3: Scheduling policies | Implemented — [Rohan's policies and integration](ROHAN_Task/README.md) |
 | D4: Experiment matrix | Complete — [54 fresh raw-archive comparisons](RAW_Alibaba/REPORT.md); original 36-run comparison preserved |
-| D5–D6: Further analysis, demo and final report | Pending |
+| D5: Research analysis | Complete — [Rushi's energy-gap and placement analysis](RUSHI_Task/README.md) |
+| D6: Demo and final report | Pending |
 
 ## Start here
 
@@ -91,6 +92,7 @@ The prepared files are already in the repository. **You do not need to download 
 | [ROHAN_Task/](ROHAN_Task/) | Scheduling policies, consolidation, tests, runner and comparison reports |
 | [ENERGY_Study/](ENERGY_Study/) | Energy-first policies and fragmentation diagnostics evaluated on verified Alibaba-derived workloads; synthetic diagnostics retained only as history |
 | [RAW_Alibaba/](RAW_Alibaba/) | Active independent raw-archive extraction, preparation, row-level verification and complete separate-curve replay |
+| [RUSHI_Task/](RUSHI_Task/) | Rushi's D5 analysis: exact energy-gap breakdown, recorded placement decisions, results by task type, charts and handoff |
 | [YAKSH_Task/REPORT.md](YAKSH_Task/REPORT.md) | Detailed data quality and sampling report |
 | [docs/EcoSched_Proposal.pdf](docs/EcoSched_Proposal.pdf) | Original project proposal, preserved as submitted |
 | [Latest handoff release](https://github.com/ai-calypse/Ecoshed/releases/tag/data-v1.1.0) | Updated portable handoff ZIP |
