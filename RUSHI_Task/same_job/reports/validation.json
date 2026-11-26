@@ -1,0 +1,61 @@
+{
+  "passed": true,
+  "expected": 36,
+  "present": 36,
+  "stale": 0,
+  "failed_validation": 0,
+  "originals_expected": 18,
+  "originals_reproduced": 18,
+  "data": "team's prepared inputs only (RAW_Alibaba/prepared)",
+  "limits_source": "POLICY_Improvement/config.json success_limits",
+  "limits": {
+    "mean_wait_relative_increase": 0.05,
+    "p95_wait_relative_increase": 0.05,
+    "wait_absolute_floor_s": 1,
+    "pressure_absolute_increase": 0.01
+  },
+  "energy_split_checked": "RUSHI_Task.accounting.pair_gap raises if parts do not add up",
+  "code_sha256": {
+    "ecosched/__init__.py": "4ca0a98f4b1795517424ecd4c7a9fa1d181dd0d7a255c3db6930de06659aeef8",
+    "ecosched/__main__.py": "e9e1271c2548d9b55b2db058baf62e7c1c2f8acaf31af937cb06f4d4abd3e0d7",
+    "ecosched/engine.py": "1f468124cd751c21c57c87e525049e1453cbdd5d4bb49b9aeb6e05a09505dbd3",
+    "ecosched/models.py": "f0627674b71cba2ff918551bd19a83e760b206f6ac8e31abb725855f293482fb",
+    "ecosched/policies.py": "15360788f03f676ec09590624f37a1074fb068cd105356ad4c9f4b371dcd81b4",
+    "ecosched/power.py": "8d269e0b7749f7346268b9ebeb6df54e76f2c75307405ae13fd34a87aef66442",
+    "ecosched/power_curves.json": "3740374e6ec09c0645bc7d3cf81daceba26648d7c37fbe7633acac1e6c7e9ca6",
+    "ENERGY_Study/instrumentation.py": "ce3b1ee1790477ee8252bdbf11fc0f1beacc6f5409a81702e00326938e50b937",
+    "ENERGY_Study/policies.py": "73231d5f32109c87c81d29d1ca4b2370a9e75aad074f3383dd345d579b1fc2bc",
+    "RAW_Alibaba/__init__.py": "b79631c1e876456f529c35b5c18d0ef7fd20bf1213f030759aab69016a00c33e",
+    "RAW_Alibaba/data.py": "71fbc35957fe7def7c3be619a3b37b802d771158da5541c69dc5086735a8ae6b",
+    "RAW_Alibaba/extract.py": "963c5792da64bb49c8aedc76fbf24d6fe83e9c4816bfa149c247bff5199fcbab",
+    "RAW_Alibaba/prepare.py": "e4ca1bb06435f7706b0b72381c81b3ab6356d7071cfdeeda12e228498c98931c",
+    "RAW_Alibaba/run.py": "f17793dcb1af8aa7c88e240f5d3deb0e47ea91b73ddec269268e73a2c28b27d0",
+    "RAW_Alibaba/verify.py": "2b36f546f65aac034d8adff4bda6da1cefd5b54531fae463251408308a5f9f54",
+    "RAW_Alibaba/verify_data.py": "ca8de3a89520164d0247cfc47574aee3b5f3fe0e2ae51a1465364505f1a72977",
+    "ROHAN_Task/policies.py": "a0e2d66ee85e960731389370ccf41cc3d20f91b392307da16f4e3d7ff05a43bc",
+    "RUSHI_Task/same_job/policy.py": "50674e937185cca52eaa717b4a4209cc60dbbc504a4d68890587b23519c6a8c1",
+    "RUSHI_Task/same_job/run.py": "432bce78539ed22f31f1a799fdde3abfc7f6005703fd9ea3043a0038bada7b12"
+  },
+  "predictions": [
+    {
+      "prediction": "Mechanism: busy servers hold fewer different jobs, for both policies, at every size",
+      "held": true
+    },
+    {
+      "prediction": "S1 is small (within \u00b11.5% in total) and saves energy",
+      "held": true
+    },
+    {
+      "prediction": "S2 saves more than S1 on the largest workload",
+      "held": true
+    },
+    {
+      "prediction": "S5: memory-aware + rule still uses more energy than LR-MMT on the largest workload",
+      "held": true
+    },
+    {
+      "prediction": "Side effects small: every S1 and S2 case within the team's limits",
+      "held": false
+    }
+  ]
+}

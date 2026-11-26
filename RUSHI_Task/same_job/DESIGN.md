@@ -114,3 +114,5 @@ local working branch (commit `742d058`, 26 November 2026). That branch also held
 exploratory work that is not part of this pull request, so its history is not included
 here. For this pull request the code was moved into this self-contained folder (only file
 paths and docstrings changed; the rule's logic is identical) and all 36 runs were repeated.
+Every recorded result of every run matched the first run exactly; only the code
+fingerprints differ, because the files moved.

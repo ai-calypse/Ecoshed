@@ -1,0 +1,11 @@
+{
+  "workload_groups": 4000,
+  "seed": 0,
+  "jobs_with_2plus_tasks": 2297,
+  "same_job_pairs": 32045,
+  "other_job_pairs": 9786,
+  "same_job_median_gap_s": 2.0,
+  "other_job_median_gap_s": 47.0,
+  "same_job_within_idle_timeout_pct": 96.34264315805898,
+  "other_job_within_idle_timeout_pct": 57.50051093398733
+}
