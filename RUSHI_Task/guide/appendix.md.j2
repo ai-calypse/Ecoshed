@@ -1,0 +1,58 @@
+<h1><span class="part">Appendix</span>Glossary</h1>
+
+| Term | Meaning in this guide |
+|---|---|
+| **Balance term** | The memory-aware part of the score: 0.25 × how lopsided CPU and memory are on a server after placing the task. |
+| **Best Fit / First Fit** | Packing rules: put the task on the fullest server that fits / on the first server in a fixed order that fits. |
+| **Consolidation** | Moving the last tasks off a lightly used server so it can sleep. |
+| **Controller** | The part of LR-MMT that runs every 5 minutes: overload check, MMT moves, emptying servers under 30%. |
+| **CPU, core** | The calculating part of a server. Our servers have 64 cores each. |
+| **Energy, kWh** | Power × time. 1 kWh = 1,000 W for 1 hour. The main thing we try to reduce. |
+| **FIFO** | First in, first out: tasks are placed in arrival order. |
+| **Fragmentation** | Free space split across servers in pieces that are awkward to use. |
+| **Idle timeout** | An on server with no work falls asleep after 60 seconds. |
+| **Job, job-mates** | Here, a task group: tasks created together. Job-mates are tasks of the same job. |
+| **LR (Local Regression)** | A weighted trend line through a server's last 10 CPU readings, used to predict the next one. |
+| **Memory** | Where running programs keep their data. Usually the resource that runs out first here. |
+| **Migration, pause** | Moving a running task to another server. It pauses while its memory is copied. |
+| **MMT** | Minimum Migration Time: move the tasks that are quickest to copy (smallest memory) first. |
+| **Overfitting** | Tuning something so it fits the test data's quirks instead of being genuinely better. |
+| **Overload line** | Memory at 90%, or CPU forecast × 1.2 at 100%. Above it, the controller moves tasks away. |
+| **P95** | The 95th percentile: 95% of the values are below it. |
+| **Placement** | Choosing the server for a new task. |
+| **Power, watt (W)** | How fast electricity is used right now. |
+| **Power curve, SPECpower** | A server's measured watts at 0%, 10%, …, 100% CPU load. |
+| **Pressure** | Share of server-time above 90% CPU or memory: the team's warning sign for crowding. |
+| **Request** | The CPU and memory a task asks for. The simulator reserves exactly that. |
+| **Same-job rule** | This guide's new rule: put a new task on a server that is running work, already has tasks of its job, and stays under the overload line; otherwise decide as before. |
+| **Score** | The number placement uses to rank servers. Lower wins. |
+| **Seed** | The starting number of a random draw. Same seed, same draw. |
+| **Task, task group** | A task is one running piece of work; a task group (a "job" in this guide) is tasks created together. |
+| **Trace** | A recorded log of real work; here Alibaba's 2017 cluster trace. |
+| **Underload rule** | A server under 30% of both CPU and memory is emptied if all of its tasks fit elsewhere. |
+| **Wake-up** | Turning a sleeping server on: 10 seconds at full power, during which its tasks wait. |
+
+## How to rerun everything
+
+From the repository root, with Python 3.10+ and the team's prepared inputs (see
+`RUSHI_Task/README.md` for how to rebuild them from the release archive):
+
+```
+python -m unittest discover -s RUSHI_Task/tests -v
+python -m RUSHI_Task.same_job.run
+python -m RUSHI_Task.same_job.analyze
+python -m RUSHI_Task.guide.build --profile <an empty scratch folder>
+```
+
+| Step | What it does | Time |
+|---|---|---:|
+| Tests | {{ v.test_count }} unit tests, including "rule off = Rohan's policy" | seconds |
+| `same_job.run` | the {{ v.runs }} runs of Part D5; skips finished ones, so it can resume | ~25 min |
+| `same_job.analyze` | scores the comparisons, applies the limits, checks the premise, writes tables and charts | ~1 min |
+| `guide.build` | rebuilds this PDF from the code and the results (needs Microsoft Edge) | ~1 min |
+
+Files: `RUSHI_Task/same_job/` holds `policy.py` (the rule), `DESIGN.md` (the plan, fixed
+before running), `run.py`, `analyze.py` and `reports/` (every run's results, tables, charts
+and `REPORT.md`). `RUSHI_Task/guide/` holds this document and its source. The D5 analysis
+itself is in `RUSHI_Task/` (`accounting.py`, `observer.py`, `rerun.py`, `analyze.py`,
+`reports/`).

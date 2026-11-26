@@ -1,0 +1,535 @@
+<div class="cover" markdown="1">
+<div class="kicker">EcoSched · AMS 560 · D5 analysis and extension</div>
+<h1 class="title">Keeping each job together: a simple rule that saves energy, explained from scratch</h1>
+<p class="subtitle">Why the proposed memory-aware placement used more energy, a new rule that keeps the tasks of each job on the same server, and a fair test on the team's own data.</p>
+<p class="meta">Rushi Jhala · {{ v.date }} · Code: <code>RUSHI_Task/</code> (D5) and <code>RUSHI_Task/same_job/</code> (the rule)</p>
+
+<div class="box key summary" markdown="1">
+<span class="label">The whole story in six sentences</span>
+{{ v.story }}
+</div>
+</div>
+
+<div class="toc" markdown="1">
+## What is inside
+
+<ol>
+<li class="part">Part A. The ideas you need</li>
+<li class="sub">A1 What a data center is</li>
+<li class="sub">A2 Power and energy</li>
+<li class="sub">A3 The three states of a server</li>
+<li class="sub">A4 The power curve</li>
+<li class="sub">A5 Tasks and the Alibaba trace</li>
+<li class="sub">A6 Scheduling: two decisions</li>
+<li class="sub">A7 Packing and consolidation</li>
+<li class="sub">A8 LR-MMT, step by step</li>
+<li class="sub">A9 The memory-aware version</li>
+<li class="sub">A10 How "better" is measured</li>
+<li class="part">Part B. What D5 found</li>
+<li class="sub">B1 The starting results</li>
+<li class="sub">B2 Why the memory-aware version spreads tasks out</li>
+<li class="part">Part C. The new idea: keep each job together</li>
+<li class="sub">C1 Why a server stays on</li>
+<li class="sub">C2 The same-job rule</li>
+<li class="sub">C3 A tiny example, worked out by the real code</li>
+<li class="sub">C4 Does the idea's assumption hold?</li>
+<li class="sub">C5 Is it new?</li>
+<li class="part">Part D. Testing fairly on the team's data</li>
+<li class="sub">D1 What "tuning on the data" means</li>
+<li class="sub">D2 Our four rules</li>
+<li class="sub">D3 The data: only the team's</li>
+<li class="sub">D4 What counts as success</li>
+<li class="sub">D5 The 36 runs</li>
+<li class="part">Part E. Results</li>
+<li class="sub">E1 The verdicts</li>
+<li class="sub">E2 Least energy in each case</li>
+<li class="sub">E3 Energy by workload size</li>
+<li class="sub">E4 Why: fewer servers on</li>
+<li class="sub">E5 Did servers hold fewer jobs?</li>
+<li class="sub">E6 Waiting and crowding</li>
+<li class="sub">E7 By task type</li>
+<li class="sub">E8 Our predictions, checked</li>
+<li class="part">Part F. What we can and cannot claim</li>
+<li class="sub">F1 What we can claim</li>
+<li class="sub">F2 What this does not show</li>
+<li class="sub">F3 What to tell the team</li>
+<li class="part">Glossary · How to rerun everything</li>
+</ol>
+
+**How to read this guide.** Part A builds every idea from zero, with a tiny example
+first each time. If you already know a section, skip it. Part B explains, with pen and
+paper, why the proposed memory-aware placement used more energy (my D5 analysis). Part C
+introduces the new rule. Part D explains how we made sure the test was fair, Part E gives
+the results, and Part F says what they do and do not prove.
+</div>
+
+<h1><span class="part">Part A</span>The ideas you need</h1>
+
+## A1. What a data center is
+
+A **data center** is a building full of computers called **servers**. Companies send
+them work: "run this program". Our simulated data center has **64 servers** of nearly
+the same size. For this project, two parts of a server matter:
+
+- **CPU**: the part that calculates. Each of our servers has **64 CPU cores** (64 small
+  calculators working side by side).
+- **Memory** (RAM): the space where a running program keeps its data.
+
+<div class="box example" markdown="1">
+<span class="label">Analogy: a kitchen</span>
+Think of a server as a kitchen. The **CPU cores are the cooks** and the **memory is the
+counter space**. Every dish (a task) needs some cooks and some counter space. If the
+counter is full, you cannot start another dish, even if cooks are standing around.
+That is exactly what happens on our servers, and it matters later.
+</div>
+
+## A2. Power and energy
+
+Two words that sound alike but mean different things:
+
+| Word | Unit | Meaning | Everyday example |
+|---|---|---|---|
+| **Power** | watt (W) | how fast electricity is used *right now* | a 60 W light bulb |
+| **Energy** | kilowatt-hour (kWh) | power **×** time: the total used | the number on the electricity bill |
+
+**1 kWh = 1,000 W for 1 hour**, about a microwave running for one hour.
+
+<div class="box example" markdown="1">
+<span class="label">Tiny example</span>
+A server drawing 100 W for 3 hours uses 100 W × 3 h = 300 Wh = **0.3 kWh**.
+Two servers drawing 100 W each for 3 hours use **0.6 kWh**.
+</div>
+
+The goal of the whole project is **fewer kWh for the same work**, without making the
+work noticeably slower.
+
+## A3. The three states of a server
+
+The simulator (Brave's engine, `ecosched/engine.py`) puts every server in exactly
+one of three states at every moment. These are the numbers for the HPE server model:
+
+| State | Power | What it means |
+|---|---:|---|
+| **Asleep** | {{ v.sleep_w }} W | cannot run anything, almost free |
+| **Waking up** | {{ v.full_w }} W for {{ v.wake_s }} s | full power while it boots; its tasks wait |
+| **On** | {{ v.idle_w }} W and up | runs tasks; draws more the busier its CPU is |
+
+Two rules complete the picture:
+
+1. An **on server with no work falls asleep after {{ v.idle_timeout }} seconds**.
+2. A task can only start on a server that is on. If the scheduler picks a sleeping
+   server, it must wake up first, so the task **waits {{ v.wake_s }} seconds**.
+
+<div class="box why" markdown="1">
+<span class="label">The most important number in this guide</span>
+Being on costs **{{ v.on_premium }} W more than sleeping** ({{ v.idle_w }} − {{ v.sleep_w }}),
+even with nothing to do. So **every server that is on but could be asleep wastes
+{{ v.on_premium }} W**. Saving energy is mostly about having fewer servers on.
+</div>
+
+## A4. The power curve
+
+How much power does an *on* server draw? That depends on how busy its CPU is. Real
+servers were measured with a standard benchmark called **SPECpower**, which records the
+watts at 0%, 10%, 20%, …, 100% CPU load. That list is the server's **power curve**.
+The team uses three real server models: HPE DL360 Gen9, Huawei RH2288H V3 and
+QuantaGrid D51B-2U. Here is the HPE curve:
+
+{{ t.power_table }}
+
+Read the table in three baby steps:
+
+1. **Watts** go up as the CPU gets busier, from {{ v.idle_w }} W (idle) to {{ v.full_w }} W (100%).
+2. **Cost of the next 10%** is not the same everywhere. The **first 10% is the most
+   expensive slice** ({{ v.first_slice }} W). Slices in the middle are cheap
+   (as low as {{ v.cheapest_slice }} W).
+3. **Watts per unit of work** divides the watts by the load. It is the price of doing
+   one "full server" worth of work at that load. It falls from {{ v.eff_10 }} W at 10% load
+   to about {{ v.eff_best }} W at {{ v.eff_best_load }} load. **Lightly loaded servers
+   are very wasteful.**
+
+<figure>
+<img src="charts/power_curve.svg" alt="HPE DL360 Gen9 power curve and the cost of each 10% slice">
+<figcaption>Figure 1. Left: HPE watts at each CPU load. Right: watts added by each 10% slice. The first slice is by far the most expensive.</figcaption>
+</figure>
+
+<div class="box example" markdown="1">
+<span class="label">Tiny example: packing versus spreading</span>
+You have work equal to 20% of one server's CPU, and two servers.
+
+| | Server A | Server B | Total |
+|---|---|---|---:|
+| **Pack** it on one server | 20% → {{ v.p20 }} W | asleep → {{ v.sleep_w }} W | **{{ v.pack_total }} W** |
+| **Spread** it over two | 10% → {{ v.p10 }} W | 10% → {{ v.p10 }} W | **{{ v.spread_total }} W** |
+
+Same work, but spreading costs **{{ v.spread_extra }} W more** ({{ v.spread_pct }} more).
+Of that, {{ v.on_premium }} W is server B being on instead of asleep, and
+{{ v.spread_dynamic }} W is paying for the expensive first slice twice.
+</div>
+
+## A5. Tasks and the Alibaba trace
+
+In 2017 Alibaba published a **trace**: a log of 12 hours of real work in one of its data
+centers. The team turned it into simulator input (`RAW_Alibaba/`).
+
+- A **job** is split into **tasks**. A task asks for some **CPU** (in cores) and some
+  **memory**, and runs for a recorded number of seconds. What it asks for is its
+  **request**.
+- Tasks that belong together form a **task group**. The team made three test sizes:
+  **250, 1,000 and 4,000 groups** (small, medium, large). The large one has
+  {{ v.team_tasks_4000 }} tasks in 12 hours.
+- A **typical task** asks for half a core ({{ v.task_cpu_pct }} of a server's CPU) and
+  {{ v.task_mem_pct }} of its memory. In kitchen terms, it needs few cooks but a fair amount of counter
+  space, so **memory tends to run out before CPU does**.
+- The team labels each group by its shape: **balanced**, **memory-heavy** or
+  **CPU-heavy**.
+
+The simulator replays the tasks exactly: same arrival times, same requests, same recorded
+durations. Only the scheduling rule changes between runs, so any difference in energy
+comes from the rule alone.
+
+## A6. Scheduling: two decisions
+
+A **scheduler** makes two kinds of decisions:
+
+1. **Placement.** A new task arrives. Which server should run it?
+2. **Migration.** Later, move a running task to another server. While its memory is
+   copied over the network, the task pauses for a few seconds.
+
+Tasks are placed in arrival order (**first in, first out**). If the next task fits on no
+server, every task behind it waits too. A task's **wait** is the time from arrival to
+start. Usually it is 0; it is {{ v.wake_s }} s if a server had to wake up; it is longer only
+when the whole data center is full.
+
+<figure>
+<img src="charts/life_of_a_task.svg" alt="How a task and a server move through the simulator">
+<figcaption>Figure 2. The life of a task (top) and of a server (bottom). The controller runs every 5 minutes.</figcaption>
+</figure>
+
+## A7. Packing and consolidation
+
+<div class="box example" markdown="1">
+<span class="label">Analogy: moving trucks</span>
+You are moving boxes with rented trucks. Every truck on the road costs money, even if it
+is half empty. You want **few, full trucks**. In our world, trucks are servers, boxes are
+tasks, and sending a truck home means letting a server sleep.
+</div>
+
+Classic packing rules:
+
+| Rule | How it chooses | Effect |
+|---|---|---|
+| **First Fit** | the first server, in a fixed order, that has room | fills the "front" servers; the back ones stay asleep |
+| **Best Fit** | the fullest server that still has room | keeps loads high; empty servers drain |
+
+Our world differs from moving trucks in one big way: **tasks leave on their own when they
+finish**, and new ones keep arriving. So servers slowly empty out over time.
+**Consolidation** means helping that along: move the last few tasks off a nearly empty
+server so it can go to sleep sooner.
+
+## A8. LR-MMT, step by step
+
+LR-MMT is a well-known energy-saving method from research (Beloglazov and Buyya, 2012).
+In our simulator it is Rohan's code (`ROHAN_Task/policies.py`). It has two parts.
+
+**Part 1: the controller.** Every 5 minutes it looks at every server and does three things.
+
+1. **Overload check with LR (Local Regression).** It draws a trend line through the
+   server's last 10 CPU readings (50 minutes) and predicts the next one. The server
+   counts as **overloaded** if the prediction × 1.2 reaches 100%, or if memory reaches 90%.
+   (The 1.2 is a safety margin.)
+2. **MMT (Minimum Migration Time).** From an overloaded server, move the tasks that are
+   quickest to move (the smallest memory) until it is no longer overloaded.
+3. **Underload.** A server using less than **30%** of both CPU and memory is
+   **emptied**: if all of its tasks fit on other running servers, they are moved, and
+   the empty server falls asleep.
+
+<div class="box example" markdown="1">
+<span class="label">Tiny example: the trend line</span>
+A server's last 10 CPU readings climbed steadily from {{ v.lr_ok_first }} to {{ v.lr_ok_last }}.
+The trend line predicts {{ v.lr_ok_pred }} next. Times 1.2 gives {{ v.lr_ok_press }}, which is under 100%: **not
+overloaded**. If the readings had climbed to {{ v.lr_over_last }} instead, the prediction would be
+{{ v.lr_over_pred }}, and {{ v.lr_over_pred }} × 1.2 = {{ v.lr_over_press }}: **overloaded**, so the smallest tasks move away.
+</div>
+
+**Part 2: placement.** Between controller checks, every new task goes to the server where
+it adds **the fewest extra watts**. This is called power-aware best fit. As a formula, the
+**score** of a server is:
+
+<div class="formula">score = (watts after placing − watts before) ÷ (full watts − idle watts)</div>
+
+The lowest score wins. Dividing by ({{ v.full_w }} − {{ v.idle_w }}) = {{ v.scale }} W just turns watts into a number
+between 0 and about 1. A sleeping server counts as {{ v.sleep_w }} W "before", so waking one looks
+expensive.
+
+<div class="box example" markdown="1">
+<span class="label">Tiny example: scores for one typical task (HPE)</span>
+
+{{ t.score_table }}
+
+The busy server wins. Waking a sleeping server is about {{ v.wake_vs_busy }} times more expensive, so
+**LR-MMT only wakes a server when no running server has room**.
+</div>
+
+## A9. The memory-aware version
+
+The proposal's idea was to make placement care about **memory too**, not only CPU, so that
+neither resource is wasted (the "Tetris" idea: fit shapes together). Rohan implemented it
+by adding a **balance term** to the score:
+
+<div class="formula">memory-aware score = power score + 0.25 × | CPU share − memory share |  (after placing)</div>
+
+Here | x | means "the size of x, ignoring the sign". A server whose CPU and memory are
+equally full gets no penalty. A lopsided server gets a penalty.
+
+<div class="box example" markdown="1">
+<span class="label">Tiny example</span>
+A server at 30% CPU and 57% memory: | 0.30 − 0.57 | = 0.27, so the penalty is
+0.25 × 0.27 ≈ **0.068**. Remember this number; it is about to cause trouble.
+</div>
+
+## A10. How "better" is measured
+
+| Measure | What it tells you | Better is |
+|---|---|---|
+| **Energy** (kWh) | the electricity bill; the main goal | lower |
+| **Mean wait** | average seconds from arrival to start | lower |
+| **P95 wait** | 95% of tasks waited less than this | lower |
+| **Pressure** | share of server-time above 90% CPU or memory; the team's warning sign for crowding | lower |
+| **Migrations** | how many times tasks were moved (each move pauses a task) | lower |
+| **Wake-ups** | how many times a server was woken | lower |
+| **Servers on** | average number of servers switched on | lower |
+
+In this simulator a crowded server does not actually slow down: requests can never exceed
+capacity. Pressure is therefore a **warning sign**, not real slowness, but the team uses it,
+so we report it.
+
+<h1><span class="part">Part B</span>What D5 found (pen and paper only)</h1>
+
+## B1. The starting results
+
+The team's comparison (`BASELINE_Comparison`, 9 cases = 3 sizes × 3 server models) found:
+
+- The memory-aware version saves a little energy on small workloads but uses
+  **{{ v.team_mem_range }} more energy** on the largest workload.
+- **First Fit**, the simplest rule, used the least energy in **{{ v.team_ff_wins }} of 9** cases.
+  Plain LR-MMT used the least in none.
+
+My D5 analysis showed *why*: the memory-aware version keeps more servers switched on at
+the same time, because it spreads tasks out. On the largest workload, about
+**{{ v.d5_running_share }}** of its extra energy is servers kept on while running work (mean of the 3
+server models). Below, the cause is worked out on paper.
+
+## B2. Why the memory-aware version spreads tasks out
+
+Take one typical task (half a core, {{ v.task_mem_pct }} of memory) and two HPE servers:
+
+- **Busy**: 30% CPU, 57% memory. It will stay on for a long time anyway.
+- **Empty**: on, but with no work. Left alone, it **falls asleep within {{ v.idle_timeout }} seconds**.
+
+{{ t.flaw1_table }}
+
+The memory-aware rule picks the **empty** server, and that is a costly choice:
+
+1. The busy server's imbalance (0.27) **was already there**. This one task changes it by
+   only {{ v.task_skew }}. The penalty is mostly a **tax on the server's existing state**,
+   not on the decision being made.
+2. That tax ({{ v.flaw_balance_gap }}) is **{{ v.flaw_ratio }} times bigger** than the whole power difference between
+   the two servers ({{ v.flaw_power_gap }}).
+3. The real cost of choosing the empty server is large: it **keeps a server on that would
+   have slept**, which costs {{ v.on_premium }} W for as long as the task runs. The score sees
+   only {{ v.empty_extra_w }} W.
+
+It gets worse with every task of the same job. Each task placed on a server adds a little
+more imbalance there, so the **next** task of the job looks cheaper on a *different* empty
+server. The memory-aware version therefore spreads one job's tasks across several servers
+(Part C3 shows this with the real code), and each of them stays on until its share of the
+job ends.
+
+<div class="box why" markdown="1">
+<span class="label">Why the score gets this wrong</span>
+A score that compares choices should measure **what each choice changes**. The power part
+does ("watts after − watts before"). The balance part does not ("imbalance after").
+Repairing that score is a possible next step (Part F3). This guide takes a different,
+simpler route: it leaves every score alone and adds one rule about **which tasks share a
+server**.
+</div>
+
+<h1><span class="part">Part C</span>The new idea: keep each job together</h1>
+
+## C1. Why a server stays on
+
+A server can only go to sleep when its **last** task finishes. So what keeps a server on
+is often a single leftover task.
+
+<div class="box example" markdown="1">
+<span class="label">Tiny example</span>
+
+| Server | Tasks on it | When it can sleep |
+|---|---|---|
+| S1 | 40 tasks of job J7, all started at 2:00 | when J7 ends |
+| S2 | 30 tasks of J7 and 1 task of job J9 | when J7 **and** J9 have both ended |
+
+If J9 runs an hour longer than J7, S2 stays on for that extra hour just for one task. Had
+that task been placed with the other J9 tasks, S2 could have slept as soon as J7 ended:
+{{ v.sleep_w }} W instead of {{ v.idle_w }} W or more for that hour.
+</div>
+
+All the tasks of a job are created at the same moment, and they usually finish close
+together (C4 checks this on the team's data). So a server that holds **one** job tends to
+empty **in one go**.
+
+## C2. The same-job rule
+
+<div class="formula">Put a new task next to tasks of its own job, if a suitable server exists.</div>
+
+"Suitable" means three things, and each one is there for a reason:
+
+| Condition | Why it is needed |
+|---|---|
+| 1. The server is **running work** right now | The rule must never wake a sleeping server or refill an empty one. (The policy is not told when a task finishes, so its notes can be a few minutes out of date.) |
+| 2. It already has **tasks of this job** | That is the whole idea: job-mates finish together. |
+| 3. It stays **under the overload line** after this task (memory 90%, CPU forecast × 1.2) | Overcrowding would make the controller move the job's tasks apart again, the opposite of the goal. |
+
+If several servers qualify, the algorithm's own score picks among them. If **none**
+qualifies, the algorithm decides **exactly as before**. That is the whole rule. It is
+added in front of Rohan's code for both LR-MMT and the memory-aware version
+(`RUSHI_Task/same_job/policy.py`), and:
+
+- the **controller** is Rohan's, untouched (LR overload check, MMT, the 30% underload rule);
+- there are **no new numbers**: the overload line already exists in Rohan's controller;
+- it needs **no prediction**: every task already carries its job's id;
+- **switch the rule off and you get Rohan's policy exactly** (a unit test compares every
+  result field).
+
+## C3. A tiny example, worked out by the real code
+
+Job J7 arrives with {{ v.toy.tasks }} identical typical tasks. Five HPE servers are on: two busy
+ones (**Busy-A**: 30% CPU, 57% memory; **Busy-B**: 45% CPU, 50% memory) and three with no
+work (**Empty-1** to **Empty-3**, which would fall asleep within {{ v.idle_timeout }} s if left alone). The
+tasks are fed one by one to Rohan's real code, with and without the rule:
+
+{{ t.toy_table }}
+
+- The **memory-aware** version spreads J7 over **{{ v.toy.mem_servers }} servers**, all of them empty ones that
+  would otherwise have slept (the arithmetic of Part B2, repeated task after task). With the
+  rule, J7 sits on **{{ v.toy.mem_rule_servers }}**, and the other {{ v.toy.mem_saved }} empty servers fall asleep.
+- **Plain LR-MMT** already prefers busy servers, so it keeps no extra server on. The rule
+  only keeps J7 on one busy server instead of {{ v.toy.lr_servers }}.
+
+That is why we expected a much bigger effect on the memory-aware version than on plain
+LR-MMT, before running anything.
+
+## C4. Does the idea's assumption hold?
+
+The rule only makes sense if tasks of the same job really finish close together. We checked
+on the team's own large sample, using {{ v.premise.pairs }} pairs of tasks from {{ v.premise.jobs }} jobs:
+
+| Pairs of tasks | Median gap between finish times | Finish within 60 s of each other |
+|---|---:|---:|
+| Same job | **{{ v.premise.same_gap }}** | **{{ v.premise.same_within }}** |
+| Different jobs, released in the same 5 minutes | {{ v.premise.other_gap }} | {{ v.premise.other_within }} |
+
+**Yes, strongly.** Tasks of the same job finish almost together. 60 seconds is the
+simulator's idle timeout, so tasks that end within it let their server sleep in one go.
+(This check reads the recorded durations; no policy ever sees them.)
+
+## C5. Is it new?
+
+We searched the research literature (a web search, not a full systematic review):
+
+| Published work | What it does | How ours differs |
+|---|---|---|
+| MinUsageTime bin packing (Li, Tang & Cai and follow-ups) | Groups work by finish time to empty servers, but assumes finish times are **known in advance** | We do not know finish times |
+| Resource Central (Microsoft, 2017); lifetime-aware placement (Microsoft, 2023) | **Machine learning** predicts how long each virtual machine lives | No prediction model |
+| LAVA and NILAS (Google, 2025) | Group machines by **predicted** lifetime; put short ones on servers kept on by long ones | No prediction; the job itself is the signal |
+
+What we did **not** find anywhere: using **job membership itself** as the "will finish
+together" signal for energy-saving placement. That is the part we can propose as new,
+with the words "to our knowledge".
+
+<h1><span class="part">Part D</span>Testing fairly on the team's data</h1>
+
+## D1. What "tuning on the data" means
+
+<div class="box example" markdown="1">
+<span class="label">Analogy: the practice exam</span>
+If you memorize last year's exam answers, you will ace last year's exam and learn very
+little about this year's. Tuning a scheduler on the same data you test it on is the same
+trap. You end up learning the quirks of that data, not a better rule. This is called
+**overfitting**.
+</div>
+
+A sneakier version: try ten variants, keep the one that looks best, and report only that
+one. Even if every variant is reasonable, picking the winner after seeing the results
+makes it look better than it really is.
+
+## D2. Our four rules
+
+1. **Design on paper.** The rule comes from how the simulator works (a server sleeps only
+   when its last task leaves) and from one check of the trace (C4), not from trying versions
+   on the data and keeping the best.
+2. **No new numbers.** The rule has nothing to adjust. Its only threshold, the overload
+   line, already existed in Rohan's controller.
+3. **Fix the plan before running.** The rule, the comparisons, the success rule and our
+   predictions were written down and committed to git before the first run (commit
+   `{{ v.first_design_commit }}` on my working branch). For the pull request the code was moved into its own
+   folder and all {{ v.runs }} runs were repeated; every result matched the first run exactly.
+4. **Run once, report everything.** Each policy ran once on each case, and every
+   comparison is reported, including the ones that fail.
+
+<div class="box why" markdown="1">
+<span class="label">One honest caveat</span>
+D5 used these same 9 cases, so this is not a test on data nobody has seen. What stops it
+from being "tuning on the data" is rules 1 to 3: nothing was adjusted after seeing a result.
+</div>
+
+## D3. The data: only the team's
+
+- The **same 9 cases** as the team's comparison (`BASELINE_Comparison`): 250, 1,000 and
+  4,000 task groups, each run on the three server models separately.
+- The **same tasks** ({{ v.team_tasks[250] }} / {{ v.team_tasks[1000] }} / {{ v.team_tasks[4000] }} for the three sizes),
+  the same 64 servers and the same simulator settings. The prepared files are checked
+  against the team's fingerprints before every run.
+- Rohan's two original policies were **re-run** with a read-only counter attached (it counts
+  how many different jobs share each server). All {{ v.originals_reproduced }} re-runs matched the team's committed
+  results in every field, so the counter changed nothing. First Fit and Best Fit use the
+  team's committed results.
+
+## D4. What counts as success (decided before running)
+
+The **performance limits** are the team's own, from their earlier experiment
+(`POLICY_Improvement/config.json`), not chosen by us:
+
+- mean wait and P95 wait may rise by at most **1 second or 5%**, whichever is larger;
+- pressure may rise by at most **0.01** (one percentage point).
+
+A policy **works better** than another if **all three** hold:
+
+1. it uses less energy in **more than half** of the 9 cases (at least 5);
+2. its **total** energy over the 9 cases is lower;
+3. it stays **within the limits in every case it wins**.
+
+| ID | Comparison | The question it answers |
+|---|---|---|
+| S1 | LR-MMT + rule vs LR-MMT | Does the rule improve LR-MMT? (main) |
+| S2 | Memory-aware + rule vs memory-aware | Does the rule improve the memory-aware version? (main) |
+| S3 | LR-MMT + rule vs First Fit | Does it now beat the simplest rule? |
+| S4 | Memory-aware + rule vs First Fit | The same question for the memory-aware version |
+| S5 | Memory-aware + rule vs LR-MMT | The team's question: does the proposal (with the rule) beat LR-MMT? |
+| S6 | Memory-aware + rule vs LR-MMT + rule | With the rule on both, does caring about memory help? |
+
+## D5. The 36 runs
+
+| What | Runs |
+|---|---:|
+| LR-MMT + rule and memory-aware + rule × 9 cases | 18 |
+| Rohan's two originals re-run with the counter × 9 cases (must match the team's results) | 18 |
+| **Total** | **36** |
+| First Fit and Best Fit × 9 cases: the team's committed results | (18 already done) |
+
+Every run uses a **fresh simulator** and the team's own checks (`validate_run`): every
+task finishes, nothing is rejected, durations are unchanged except for migration pauses,
+and the energy parts add up to the total.
+
+{% include "results.md.j2" %}

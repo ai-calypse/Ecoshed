@@ -1,0 +1,1748 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Keeping each job together</title><style>@page {
+  size: Letter;
+  margin: 0.75in 0.8in 0.85in 0.8in;
+  @bottom-center {
+    content: counter(page);
+    font-family: "Segoe UI", system-ui, sans-serif;
+    font-size: 9pt;
+    color: #898781;
+  }
+}
+@page :first {
+  @bottom-center { content: none; }
+}
+
+:root {
+  --ink: #1d1d1b;
+  --ink-2: #52514e;
+  --muted: #898781;
+  --rule: #e1e0d9;
+  --soft: #f5f4f0;
+  --accent: #2a78d6;
+  --example: #2a78d6;
+  --why: #c98500;
+  --key: #1baf7a;
+  --warn: #e34948;
+}
+
+html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  font-size: 10.5pt;
+  line-height: 1.5;
+  color: var(--ink);
+  background: #ffffff;
+  margin: 0;
+}
+
+h1, h2, h3 { color: #0b0b0b; line-height: 1.25; break-after: avoid; page-break-after: avoid; }
+h1 {
+  font-size: 21pt;
+  margin: 0 0 6pt;
+  padding-bottom: 6pt;
+  border-bottom: 2px solid var(--ink);
+  break-before: page;
+  page-break-before: always;
+}
+h1 .part { display: block; font-size: 10pt; font-weight: 600; letter-spacing: .08em;
+           text-transform: uppercase; color: var(--accent); margin-bottom: 2pt; }
+h2 { font-size: 14pt; margin: 18pt 0 4pt; }
+h3 { font-size: 11.5pt; margin: 12pt 0 2pt; }
+p { margin: 5pt 0 7pt; orphans: 3; widows: 3; }
+ul, ol { margin: 4pt 0 8pt; padding-left: 18pt; }
+li { margin: 2pt 0; }
+strong { color: #0b0b0b; }
+a { color: var(--accent); text-decoration: none; }
+
+code {
+  font-family: Consolas, "Cascadia Mono", monospace;
+  font-size: 9.2pt;
+  background: var(--soft);
+  padding: 0 3pt;
+  border-radius: 3px;
+}
+pre {
+  font-family: Consolas, "Cascadia Mono", monospace;
+  font-size: 9pt;
+  line-height: 1.4;
+  background: var(--soft);
+  padding: 8pt 10pt;
+  border-radius: 4px;
+  white-space: pre-wrap;
+  break-inside: avoid;
+}
+pre code { background: none; padding: 0; }
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin: 6pt 0 10pt;
+  font-size: 9.4pt;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+th {
+  text-align: left;
+  background: var(--soft);
+  font-weight: 600;
+  color: #0b0b0b;
+  padding: 4pt 7pt;
+  border-bottom: 1.5px solid #c3c2b7;
+}
+td { padding: 3.5pt 7pt; border-bottom: 1px solid var(--rule); vertical-align: top; }
+td[align="right"], th[align="right"] { text-align: right; font-variant-numeric: tabular-nums; }
+tr:nth-child(even) td { background: #fbfbf9; }
+
+.box {
+  border-left: 4px solid var(--accent);
+  background: #f4f8fd;
+  padding: 7pt 12pt 5pt;
+  margin: 9pt 0 11pt;
+  border-radius: 0 5px 5px 0;
+  break-inside: avoid;
+  page-break-inside: avoid;
+}
+.box > p:first-child { margin-top: 0; }
+.box .label { display: block; font-size: 8.5pt; font-weight: 700; letter-spacing: .07em;
+              text-transform: uppercase; margin-bottom: 1pt; }
+.box.example { border-color: var(--example); background: #f3f7fd; }
+.box.example .label { color: var(--example); }
+.box.why { border-color: var(--why); background: #fdf8ee; }
+.box.why .label { color: #9a6700; }
+.box.key { border-color: var(--key); background: #effaf5; }
+.box.key .label { color: #0f7a54; }
+.box.warn { border-color: var(--warn); background: #fdf1f1; }
+.box.warn .label { color: #b42f2e; }
+.box table { background: #ffffff; }
+
+figure { margin: 10pt 0 12pt; break-inside: avoid; page-break-inside: avoid; }
+figure img { width: 100%; display: block; }
+figcaption { font-size: 9pt; color: var(--ink-2); margin-top: 3pt; }
+
+.cover { height: 9.2in; display: flex; flex-direction: column; }
+.cover .kicker { font-size: 10pt; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+                 color: var(--accent); margin-top: 0.6in; }
+.cover h1.title { font-size: 30pt; border: none; margin: 8pt 0 6pt; padding: 0; break-before: auto;
+                  page-break-before: auto; line-height: 1.12; }
+.cover .subtitle { font-size: 13pt; color: var(--ink-2); margin: 0 0 18pt; }
+.cover .meta { font-size: 10pt; color: var(--ink-2); margin-bottom: 18pt; }
+.cover .summary { margin-top: auto; }
+
+.toc ol { list-style: none; padding-left: 0; columns: 2; column-gap: 28pt; }
+.toc li { margin: 1.5pt 0; break-inside: avoid; }
+.toc li.part { font-weight: 700; margin-top: 7pt; color: #0b0b0b; }
+.toc li.sub { padding-left: 10pt; color: var(--ink-2); }
+
+.formula {
+  font-family: "Cambria Math", Cambria, Georgia, serif;
+  font-size: 11.5pt;
+  text-align: center;
+  margin: 8pt 0 10pt;
+  padding: 6pt;
+  background: var(--soft);
+  border-radius: 4px;
+  break-inside: avoid;
+}
+.small { font-size: 9pt; color: var(--ink-2); }
+.yes { color: #0f7a54; font-weight: 700; }
+.no { color: #b42f2e; font-weight: 700; }
+.pagebreak { break-before: page; page-break-before: always; }
+</style></head><body><div class="cover">
+<div class="kicker">EcoSched · AMS 560 · D5 analysis and extension</div>
+<h1 class="title">Keeping each job together: a simple rule that saves energy, explained from scratch</h1>
+<p class="subtitle">Why the proposed memory-aware placement used more energy, a new rule that keeps the tasks of each job on the same server, and a fair test on the team's own data.</p>
+<p class="meta">Rushi Jhala · November 26, 2026 · Code: <code>RUSHI_Task/</code> (D5) and <code>RUSHI_Task/same_job/</code> (the rule)</p>
+<div class="box key summary">
+<p><span class="label">The whole story in six sentences</span>
+The memory-aware LR-MMT our proposal promised used 11–15% more energy than plain LR-MMT on the team's largest workload, because its balance score spreads tasks onto extra servers (my D5 analysis). This guide adds one new placement rule: put each task next to tasks of its own job, because a server can only sleep when its last task leaves, and in this trace tasks of the same job finish a median of 2 s apart. The rule needs no prediction and adds no tuned numbers, and we fixed the plan in git before running it once on the team's own 9 cases. It made both algorithms use less energy in all 9 cases: −1.02% for LR-MMT and −8.69% for the memory-aware version (−11.1% on the largest workload). With the rule, the memory-aware version used the least energy of all six algorithms in 6 of the 9 cases, but First Fit still wins the largest workload, and one large case went just over the team's crowding limit. This is a simulation of one 12-hour trace with the same data used throughout, so the results are promising rather than proven.</p>
+</div>
+</div>
+<div class="toc">
+<h2>What is inside</h2>
+<ol>
+<li class="part">Part A. The ideas you need</li>
+<li class="sub">A1 What a data center is</li>
+<li class="sub">A2 Power and energy</li>
+<li class="sub">A3 The three states of a server</li>
+<li class="sub">A4 The power curve</li>
+<li class="sub">A5 Tasks and the Alibaba trace</li>
+<li class="sub">A6 Scheduling: two decisions</li>
+<li class="sub">A7 Packing and consolidation</li>
+<li class="sub">A8 LR-MMT, step by step</li>
+<li class="sub">A9 The memory-aware version</li>
+<li class="sub">A10 How "better" is measured</li>
+<li class="part">Part B. What D5 found</li>
+<li class="sub">B1 The starting results</li>
+<li class="sub">B2 Why the memory-aware version spreads tasks out</li>
+<li class="part">Part C. The new idea: keep each job together</li>
+<li class="sub">C1 Why a server stays on</li>
+<li class="sub">C2 The same-job rule</li>
+<li class="sub">C3 A tiny example, worked out by the real code</li>
+<li class="sub">C4 Does the idea's assumption hold?</li>
+<li class="sub">C5 Is it new?</li>
+<li class="part">Part D. Testing fairly on the team's data</li>
+<li class="sub">D1 What "tuning on the data" means</li>
+<li class="sub">D2 Our four rules</li>
+<li class="sub">D3 The data: only the team's</li>
+<li class="sub">D4 What counts as success</li>
+<li class="sub">D5 The 36 runs</li>
+<li class="part">Part E. Results</li>
+<li class="sub">E1 The verdicts</li>
+<li class="sub">E2 Least energy in each case</li>
+<li class="sub">E3 Energy by workload size</li>
+<li class="sub">E4 Why: fewer servers on</li>
+<li class="sub">E5 Did servers hold fewer jobs?</li>
+<li class="sub">E6 Waiting and crowding</li>
+<li class="sub">E7 By task type</li>
+<li class="sub">E8 Our predictions, checked</li>
+<li class="part">Part F. What we can and cannot claim</li>
+<li class="sub">F1 What we can claim</li>
+<li class="sub">F2 What this does not show</li>
+<li class="sub">F3 What to tell the team</li>
+<li class="part">Glossary · How to rerun everything</li>
+</ol>
+<p><strong>How to read this guide.</strong> Part A builds every idea from zero, with a tiny example
+first each time. If you already know a section, skip it. Part B explains, with pen and
+paper, why the proposed memory-aware placement used more energy (my D5 analysis). Part C
+introduces the new rule. Part D explains how we made sure the test was fair, Part E gives
+the results, and Part F says what they do and do not prove.</p>
+</div>
+<h1><span class="part">Part A</span>The ideas you need</h1>
+
+<h2>A1. What a data center is</h2>
+<p>A <strong>data center</strong> is a building full of computers called <strong>servers</strong>. Companies send
+them work: "run this program". Our simulated data center has <strong>64 servers</strong> of nearly
+the same size. For this project, two parts of a server matter:</p>
+<ul>
+<li><strong>CPU</strong>: the part that calculates. Each of our servers has <strong>64 CPU cores</strong> (64 small
+  calculators working side by side).</li>
+<li><strong>Memory</strong> (RAM): the space where a running program keeps its data.</li>
+</ul>
+<div class="box example">
+<p><span class="label">Analogy: a kitchen</span>
+Think of a server as a kitchen. The <strong>CPU cores are the cooks</strong> and the <strong>memory is the
+counter space</strong>. Every dish (a task) needs some cooks and some counter space. If the
+counter is full, you cannot start another dish, even if cooks are standing around.
+That is exactly what happens on our servers, and it matters later.</p>
+</div>
+<h2>A2. Power and energy</h2>
+<p>Two words that sound alike but mean different things:</p>
+<table>
+<thead>
+<tr>
+<th>Word</th>
+<th>Unit</th>
+<th>Meaning</th>
+<th>Everyday example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Power</strong></td>
+<td>watt (W)</td>
+<td>how fast electricity is used <em>right now</em></td>
+<td>a 60 W light bulb</td>
+</tr>
+<tr>
+<td><strong>Energy</strong></td>
+<td>kilowatt-hour (kWh)</td>
+<td>power <strong>×</strong> time: the total used</td>
+<td>the number on the electricity bill</td>
+</tr>
+</tbody>
+</table>
+<p><strong>1 kWh = 1,000 W for 1 hour</strong>, about a microwave running for one hour.</p>
+<div class="box example">
+<p><span class="label">Tiny example</span>
+A server drawing 100 W for 3 hours uses 100 W × 3 h = 300 Wh = <strong>0.3 kWh</strong>.
+Two servers drawing 100 W each for 3 hours use <strong>0.6 kWh</strong>.</p>
+</div>
+<p>The goal of the whole project is <strong>fewer kWh for the same work</strong>, without making the
+work noticeably slower.</p>
+<h2>A3. The three states of a server</h2>
+<p>The simulator (Brave's engine, <code>ecosched/engine.py</code>) puts every server in exactly
+one of three states at every moment. These are the numbers for the HPE server model:</p>
+<table>
+<thead>
+<tr>
+<th>State</th>
+<th style="text-align: right;">Power</th>
+<th>What it means</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Asleep</strong></td>
+<td style="text-align: right;">5 W</td>
+<td>cannot run anything, almost free</td>
+</tr>
+<tr>
+<td><strong>Waking up</strong></td>
+<td style="text-align: right;">276 W for 10 s</td>
+<td>full power while it boots; its tasks wait</td>
+</tr>
+<tr>
+<td><strong>On</strong></td>
+<td style="text-align: right;">45 W and up</td>
+<td>runs tasks; draws more the busier its CPU is</td>
+</tr>
+</tbody>
+</table>
+<p>Two rules complete the picture:</p>
+<ol>
+<li>An <strong>on server with no work falls asleep after 60 seconds</strong>.</li>
+<li>A task can only start on a server that is on. If the scheduler picks a sleeping
+   server, it must wake up first, so the task <strong>waits 10 seconds</strong>.</li>
+</ol>
+<div class="box why">
+<p><span class="label">The most important number in this guide</span>
+Being on costs <strong>40 W more than sleeping</strong> (45 − 5),
+even with nothing to do. So <strong>every server that is on but could be asleep wastes
+40 W</strong>. Saving energy is mostly about having fewer servers on.</p>
+</div>
+<h2>A4. The power curve</h2>
+<p>How much power does an <em>on</em> server draw? That depends on how busy its CPU is. Real
+servers were measured with a standard benchmark called <strong>SPECpower</strong>, which records the
+watts at 0%, 10%, 20%, …, 100% CPU load. That list is the server's <strong>power curve</strong>.
+The team uses three real server models: HPE DL360 Gen9, Huawei RH2288H V3 and
+QuantaGrid D51B-2U. Here is the HPE curve:</p>
+<table>
+<thead>
+<tr>
+<th>CPU load</th>
+<th style="text-align: right;">Watts</th>
+<th style="text-align: right;">Cost of the next 10%</th>
+<th style="text-align: right;">Watts per unit of work</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0%</td>
+<td style="text-align: right;">45.0</td>
+<td style="text-align: right;">38.7</td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>10%</td>
+<td style="text-align: right;">83.7</td>
+<td style="text-align: right;">17.3</td>
+<td style="text-align: right;">837</td>
+</tr>
+<tr>
+<td>20%</td>
+<td style="text-align: right;">101.0</td>
+<td style="text-align: right;">17.0</td>
+<td style="text-align: right;">505</td>
+</tr>
+<tr>
+<td>30%</td>
+<td style="text-align: right;">118.0</td>
+<td style="text-align: right;">15.0</td>
+<td style="text-align: right;">393</td>
+</tr>
+<tr>
+<td>40%</td>
+<td style="text-align: right;">133.0</td>
+<td style="text-align: right;">12.0</td>
+<td style="text-align: right;">332</td>
+</tr>
+<tr>
+<td>50%</td>
+<td style="text-align: right;">145.0</td>
+<td style="text-align: right;">17.0</td>
+<td style="text-align: right;">290</td>
+</tr>
+<tr>
+<td>60%</td>
+<td style="text-align: right;">162.0</td>
+<td style="text-align: right;">26.0</td>
+<td style="text-align: right;">270</td>
+</tr>
+<tr>
+<td>70%</td>
+<td style="text-align: right;">188.0</td>
+<td style="text-align: right;">30.0</td>
+<td style="text-align: right;">269</td>
+</tr>
+<tr>
+<td>80%</td>
+<td style="text-align: right;">218.0</td>
+<td style="text-align: right;">30.0</td>
+<td style="text-align: right;">272</td>
+</tr>
+<tr>
+<td>90%</td>
+<td style="text-align: right;">248.0</td>
+<td style="text-align: right;">28.0</td>
+<td style="text-align: right;">276</td>
+</tr>
+<tr>
+<td>100%</td>
+<td style="text-align: right;">276.0</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;">276</td>
+</tr>
+</tbody>
+</table>
+<p>Read the table in three baby steps:</p>
+<ol>
+<li><strong>Watts</strong> go up as the CPU gets busier, from 45 W (idle) to 276 W (100%).</li>
+<li><strong>Cost of the next 10%</strong> is not the same everywhere. The <strong>first 10% is the most
+   expensive slice</strong> (38.7 W). Slices in the middle are cheap
+   (as low as 12 W).</li>
+<li><strong>Watts per unit of work</strong> divides the watts by the load. It is the price of doing
+   one "full server" worth of work at that load. It falls from 837 W at 10% load
+   to about 269 W at 70% load. <strong>Lightly loaded servers
+   are very wasteful.</strong></li>
+</ol>
+<figure>
+<img src="charts/power_curve.svg" alt="HPE DL360 Gen9 power curve and the cost of each 10% slice">
+<figcaption>Figure 1. Left: HPE watts at each CPU load. Right: watts added by each 10% slice. The first slice is by far the most expensive.</figcaption>
+</figure>
+
+<div class="box example">
+<p><span class="label">Tiny example: packing versus spreading</span>
+You have work equal to 20% of one server's CPU, and two servers.</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Server A</th>
+<th>Server B</th>
+<th style="text-align: right;">Total</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Pack</strong> it on one server</td>
+<td>20% → 101 W</td>
+<td>asleep → 5 W</td>
+<td style="text-align: right;"><strong>106 W</strong></td>
+</tr>
+<tr>
+<td><strong>Spread</strong> it over two</td>
+<td>10% → 83.7 W</td>
+<td>10% → 83.7 W</td>
+<td style="text-align: right;"><strong>167.4 W</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Same work, but spreading costs <strong>61.4 W more</strong> (58% more).
+Of that, 40 W is server B being on instead of asleep, and
+21.4 W is paying for the expensive first slice twice.</p>
+</div>
+<h2>A5. Tasks and the Alibaba trace</h2>
+<p>In 2017 Alibaba published a <strong>trace</strong>: a log of 12 hours of real work in one of its data
+centers. The team turned it into simulator input (<code>RAW_Alibaba/</code>).</p>
+<ul>
+<li>A <strong>job</strong> is split into <strong>tasks</strong>. A task asks for some <strong>CPU</strong> (in cores) and some
+  <strong>memory</strong>, and runs for a recorded number of seconds. What it asks for is its
+  <strong>request</strong>.</li>
+<li>Tasks that belong together form a <strong>task group</strong>. The team made three test sizes:
+  <strong>250, 1,000 and 4,000 groups</strong> (small, medium, large). The large one has
+  378,285 tasks in 12 hours.</li>
+<li>A <strong>typical task</strong> asks for half a core (0.78% of a server's CPU) and
+  1.17% of its memory. In kitchen terms, it needs few cooks but a fair amount of counter
+  space, so <strong>memory tends to run out before CPU does</strong>.</li>
+<li>The team labels each group by its shape: <strong>balanced</strong>, <strong>memory-heavy</strong> or
+  <strong>CPU-heavy</strong>.</li>
+</ul>
+<p>The simulator replays the tasks exactly: same arrival times, same requests, same recorded
+durations. Only the scheduling rule changes between runs, so any difference in energy
+comes from the rule alone.</p>
+<h2>A6. Scheduling: two decisions</h2>
+<p>A <strong>scheduler</strong> makes two kinds of decisions:</p>
+<ol>
+<li><strong>Placement.</strong> A new task arrives. Which server should run it?</li>
+<li><strong>Migration.</strong> Later, move a running task to another server. While its memory is
+   copied over the network, the task pauses for a few seconds.</li>
+</ol>
+<p>Tasks are placed in arrival order (<strong>first in, first out</strong>). If the next task fits on no
+server, every task behind it waits too. A task's <strong>wait</strong> is the time from arrival to
+start. Usually it is 0; it is 10 s if a server had to wake up; it is longer only
+when the whole data center is full.</p>
+<figure>
+<img src="charts/life_of_a_task.svg" alt="How a task and a server move through the simulator">
+<figcaption>Figure 2. The life of a task (top) and of a server (bottom). The controller runs every 5 minutes.</figcaption>
+</figure>
+
+<h2>A7. Packing and consolidation</h2>
+<div class="box example">
+<p><span class="label">Analogy: moving trucks</span>
+You are moving boxes with rented trucks. Every truck on the road costs money, even if it
+is half empty. You want <strong>few, full trucks</strong>. In our world, trucks are servers, boxes are
+tasks, and sending a truck home means letting a server sleep.</p>
+</div>
+<p>Classic packing rules:</p>
+<table>
+<thead>
+<tr>
+<th>Rule</th>
+<th>How it chooses</th>
+<th>Effect</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>First Fit</strong></td>
+<td>the first server, in a fixed order, that has room</td>
+<td>fills the "front" servers; the back ones stay asleep</td>
+</tr>
+<tr>
+<td><strong>Best Fit</strong></td>
+<td>the fullest server that still has room</td>
+<td>keeps loads high; empty servers drain</td>
+</tr>
+</tbody>
+</table>
+<p>Our world differs from moving trucks in one big way: <strong>tasks leave on their own when they
+finish</strong>, and new ones keep arriving. So servers slowly empty out over time.
+<strong>Consolidation</strong> means helping that along: move the last few tasks off a nearly empty
+server so it can go to sleep sooner.</p>
+<h2>A8. LR-MMT, step by step</h2>
+<p>LR-MMT is a well-known energy-saving method from research (Beloglazov and Buyya, 2012).
+In our simulator it is Rohan's code (<code>ROHAN_Task/policies.py</code>). It has two parts.</p>
+<p><strong>Part 1: the controller.</strong> Every 5 minutes it looks at every server and does three things.</p>
+<ol>
+<li><strong>Overload check with LR (Local Regression).</strong> It draws a trend line through the
+   server's last 10 CPU readings (50 minutes) and predicts the next one. The server
+   counts as <strong>overloaded</strong> if the prediction × 1.2 reaches 100%, or if memory reaches 90%.
+   (The 1.2 is a safety margin.)</li>
+<li><strong>MMT (Minimum Migration Time).</strong> From an overloaded server, move the tasks that are
+   quickest to move (the smallest memory) until it is no longer overloaded.</li>
+<li><strong>Underload.</strong> A server using less than <strong>30%</strong> of both CPU and memory is
+   <strong>emptied</strong>: if all of its tasks fit on other running servers, they are moved, and
+   the empty server falls asleep.</li>
+</ol>
+<div class="box example">
+<p><span class="label">Tiny example: the trend line</span>
+A server's last 10 CPU readings climbed steadily from 62% to 80%.
+The trend line predicts 82% next. Times 1.2 gives 98%, which is under 100%: <strong>not
+overloaded</strong>. If the readings had climbed to 84% instead, the prediction would be
+86%, and 86% × 1.2 = 103%: <strong>overloaded</strong>, so the smallest tasks move away.</p>
+</div>
+<p><strong>Part 2: placement.</strong> Between controller checks, every new task goes to the server where
+it adds <strong>the fewest extra watts</strong>. This is called power-aware best fit. As a formula, the
+<strong>score</strong> of a server is:</p>
+<div class="formula">score = (watts after placing − watts before) ÷ (full watts − idle watts)</div>
+
+<p>The lowest score wins. Dividing by (276 − 45) = 231 W just turns watts into a number
+between 0 and about 1. A sleeping server counts as 5 W "before", so waking one looks
+expensive.</p>
+<div class="box example">
+<p><span class="label">Tiny example: scores for one typical task (HPE)</span></p>
+<table>
+<thead>
+<tr>
+<th>Server</th>
+<th style="text-align: right;">Extra watts for this task</th>
+<th style="text-align: right;">Score (lower wins)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Busy server, 45% CPU</td>
+<td style="text-align: right;">0.94 W</td>
+<td style="text-align: right;">0.0041</td>
+</tr>
+<tr>
+<td>Empty server, on, no work</td>
+<td style="text-align: right;">3.02 W</td>
+<td style="text-align: right;">0.0131</td>
+</tr>
+<tr>
+<td>Sleeping server</td>
+<td style="text-align: right;">43.02 W</td>
+<td style="text-align: right;">0.1862</td>
+</tr>
+</tbody>
+</table>
+<p>The busy server wins. Waking a sleeping server is about 46 times more expensive, so
+<strong>LR-MMT only wakes a server when no running server has room</strong>.</p>
+</div>
+<h2>A9. The memory-aware version</h2>
+<p>The proposal's idea was to make placement care about <strong>memory too</strong>, not only CPU, so that
+neither resource is wasted (the "Tetris" idea: fit shapes together). Rohan implemented it
+by adding a <strong>balance term</strong> to the score:</p>
+<div class="formula">memory-aware score = power score + 0.25 × | CPU share − memory share |  (after placing)</div>
+
+<p>Here | x | means "the size of x, ignoring the sign". A server whose CPU and memory are
+equally full gets no penalty. A lopsided server gets a penalty.</p>
+<div class="box example">
+<p><span class="label">Tiny example</span>
+A server at 30% CPU and 57% memory: | 0.30 − 0.57 | = 0.27, so the penalty is
+0.25 × 0.27 ≈ <strong>0.068</strong>. Remember this number; it is about to cause trouble.</p>
+</div>
+<h2>A10. How "better" is measured</h2>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>What it tells you</th>
+<th>Better is</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Energy</strong> (kWh)</td>
+<td>the electricity bill; the main goal</td>
+<td>lower</td>
+</tr>
+<tr>
+<td><strong>Mean wait</strong></td>
+<td>average seconds from arrival to start</td>
+<td>lower</td>
+</tr>
+<tr>
+<td><strong>P95 wait</strong></td>
+<td>95% of tasks waited less than this</td>
+<td>lower</td>
+</tr>
+<tr>
+<td><strong>Pressure</strong></td>
+<td>share of server-time above 90% CPU or memory; the team's warning sign for crowding</td>
+<td>lower</td>
+</tr>
+<tr>
+<td><strong>Migrations</strong></td>
+<td>how many times tasks were moved (each move pauses a task)</td>
+<td>lower</td>
+</tr>
+<tr>
+<td><strong>Wake-ups</strong></td>
+<td>how many times a server was woken</td>
+<td>lower</td>
+</tr>
+<tr>
+<td><strong>Servers on</strong></td>
+<td>average number of servers switched on</td>
+<td>lower</td>
+</tr>
+</tbody>
+</table>
+<p>In this simulator a crowded server does not actually slow down: requests can never exceed
+capacity. Pressure is therefore a <strong>warning sign</strong>, not real slowness, but the team uses it,
+so we report it.</p>
+<h1><span class="part">Part B</span>What D5 found (pen and paper only)</h1>
+
+<h2>B1. The starting results</h2>
+<p>The team's comparison (<code>BASELINE_Comparison</code>, 9 cases = 3 sizes × 3 server models) found:</p>
+<ul>
+<li>The memory-aware version saves a little energy on small workloads but uses
+  <strong>10.96–14.56% more energy</strong> on the largest workload.</li>
+<li><strong>First Fit</strong>, the simplest rule, used the least energy in <strong>7 of 9</strong> cases.
+  Plain LR-MMT used the least in none.</li>
+</ul>
+<p>My D5 analysis showed <em>why</em>: the memory-aware version keeps more servers switched on at
+the same time, because it spreads tasks out. On the largest workload, about
+<strong>88%</strong> of its extra energy is servers kept on while running work (mean of the 3
+server models). Below, the cause is worked out on paper.</p>
+<h2>B2. Why the memory-aware version spreads tasks out</h2>
+<p>Take one typical task (half a core, 1.17% of memory) and two HPE servers:</p>
+<ul>
+<li><strong>Busy</strong>: 30% CPU, 57% memory. It will stay on for a long time anyway.</li>
+<li><strong>Empty</strong>: on, but with no work. Left alone, it <strong>falls asleep within 60 seconds</strong>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th style="text-align: right;">Busy: 30% CPU, 57% memory</th>
+<th style="text-align: right;">Empty: on, no work</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extra watts for this task</td>
+<td style="text-align: right;">1.17 W</td>
+<td style="text-align: right;">3.02 W</td>
+</tr>
+<tr>
+<td>Power score (watts ÷ 231)</td>
+<td style="text-align: right;">0.0051</td>
+<td style="text-align: right;">0.0131</td>
+</tr>
+<tr>
+<td>Balance term (0.25 × imbalance after)</td>
+<td style="text-align: right;">0.0685</td>
+<td style="text-align: right;">0.0010</td>
+</tr>
+<tr>
+<td><strong>Memory-aware total</strong></td>
+<td style="text-align: right;"><strong>0.0735</strong></td>
+<td style="text-align: right;"><strong>0.0141</strong> ← picked</td>
+</tr>
+</tbody>
+</table>
+<p>The memory-aware rule picks the <strong>empty</strong> server, and that is a costly choice:</p>
+<ol>
+<li>The busy server's imbalance (0.27) <strong>was already there</strong>. This one task changes it by
+   only 0.0039. The penalty is mostly a <strong>tax on the server's existing state</strong>,
+   not on the decision being made.</li>
+<li>That tax (0.0675) is <strong>8.4 times bigger</strong> than the whole power difference between
+   the two servers (0.0080).</li>
+<li>The real cost of choosing the empty server is large: it <strong>keeps a server on that would
+   have slept</strong>, which costs 40 W for as long as the task runs. The score sees
+   only 3.0 W.</li>
+</ol>
+<p>It gets worse with every task of the same job. Each task placed on a server adds a little
+more imbalance there, so the <strong>next</strong> task of the job looks cheaper on a <em>different</em> empty
+server. The memory-aware version therefore spreads one job's tasks across several servers
+(Part C3 shows this with the real code), and each of them stays on until its share of the
+job ends.</p>
+<div class="box why">
+<p><span class="label">Why the score gets this wrong</span>
+A score that compares choices should measure <strong>what each choice changes</strong>. The power part
+does ("watts after − watts before"). The balance part does not ("imbalance after").
+Repairing that score is a possible next step (Part F3). This guide takes a different,
+simpler route: it leaves every score alone and adds one rule about <strong>which tasks share a
+server</strong>.</p>
+</div>
+<h1><span class="part">Part C</span>The new idea: keep each job together</h1>
+
+<h2>C1. Why a server stays on</h2>
+<p>A server can only go to sleep when its <strong>last</strong> task finishes. So what keeps a server on
+is often a single leftover task.</p>
+<div class="box example">
+<p><span class="label">Tiny example</span></p>
+<table>
+<thead>
+<tr>
+<th>Server</th>
+<th>Tasks on it</th>
+<th>When it can sleep</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td>40 tasks of job J7, all started at 2:00</td>
+<td>when J7 ends</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>30 tasks of J7 and 1 task of job J9</td>
+<td>when J7 <strong>and</strong> J9 have both ended</td>
+</tr>
+</tbody>
+</table>
+<p>If J9 runs an hour longer than J7, S2 stays on for that extra hour just for one task. Had
+that task been placed with the other J9 tasks, S2 could have slept as soon as J7 ended:
+5 W instead of 45 W or more for that hour.</p>
+</div>
+<p>All the tasks of a job are created at the same moment, and they usually finish close
+together (C4 checks this on the team's data). So a server that holds <strong>one</strong> job tends to
+empty <strong>in one go</strong>.</p>
+<h2>C2. The same-job rule</h2>
+<div class="formula">Put a new task next to tasks of its own job, if a suitable server exists.</div>
+
+<p>"Suitable" means three things, and each one is there for a reason:</p>
+<table>
+<thead>
+<tr>
+<th>Condition</th>
+<th>Why it is needed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1. The server is <strong>running work</strong> right now</td>
+<td>The rule must never wake a sleeping server or refill an empty one. (The policy is not told when a task finishes, so its notes can be a few minutes out of date.)</td>
+</tr>
+<tr>
+<td>2. It already has <strong>tasks of this job</strong></td>
+<td>That is the whole idea: job-mates finish together.</td>
+</tr>
+<tr>
+<td>3. It stays <strong>under the overload line</strong> after this task (memory 90%, CPU forecast × 1.2)</td>
+<td>Overcrowding would make the controller move the job's tasks apart again, the opposite of the goal.</td>
+</tr>
+</tbody>
+</table>
+<p>If several servers qualify, the algorithm's own score picks among them. If <strong>none</strong>
+qualifies, the algorithm decides <strong>exactly as before</strong>. That is the whole rule. It is
+added in front of Rohan's code for both LR-MMT and the memory-aware version
+(<code>RUSHI_Task/same_job/policy.py</code>), and:</p>
+<ul>
+<li>the <strong>controller</strong> is Rohan's, untouched (LR overload check, MMT, the 30% underload rule);</li>
+<li>there are <strong>no new numbers</strong>: the overload line already exists in Rohan's controller;</li>
+<li>it needs <strong>no prediction</strong>: every task already carries its job's id;</li>
+<li><strong>switch the rule off and you get Rohan's policy exactly</strong> (a unit test compares every
+  result field).</li>
+</ul>
+<h2>C3. A tiny example, worked out by the real code</h2>
+<p>Job J7 arrives with 12 identical typical tasks. Five HPE servers are on: two busy
+ones (<strong>Busy-A</strong>: 30% CPU, 57% memory; <strong>Busy-B</strong>: 45% CPU, 50% memory) and three with no
+work (<strong>Empty-1</strong> to <strong>Empty-3</strong>, which would fall asleep within 60 s if left alone). The
+tasks are fed one by one to Rohan's real code, with and without the rule:</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th>Where J7's tasks went</th>
+<th style="text-align: right;">Servers holding J7</th>
+<th style="text-align: right;">Empty servers kept on by J7</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memory-aware LR-MMT</td>
+<td><span style="white-space:nowrap">Empty-1 × 4</span>, <span style="white-space:nowrap">Empty-2 × 4</span>, <span style="white-space:nowrap">Empty-3 × 4</span></td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">3</td>
+</tr>
+<tr>
+<td>Memory-aware LR-MMT <strong>+ rule</strong></td>
+<td><span style="white-space:nowrap">Empty-1 × 12</span></td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr>
+<td>LR-MMT</td>
+<td><span style="white-space:nowrap">Busy-A × 6</span>, <span style="white-space:nowrap">Busy-B × 6</span></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr>
+<td>LR-MMT <strong>+ rule</strong></td>
+<td><span style="white-space:nowrap">Busy-B × 12</span></td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>The <strong>memory-aware</strong> version spreads J7 over <strong>3 servers</strong>, all of them empty ones that
+  would otherwise have slept (the arithmetic of Part B2, repeated task after task). With the
+  rule, J7 sits on <strong>1</strong>, and the other 2 empty servers fall asleep.</li>
+<li><strong>Plain LR-MMT</strong> already prefers busy servers, so it keeps no extra server on. The rule
+  only keeps J7 on one busy server instead of 2.</li>
+</ul>
+<p>That is why we expected a much bigger effect on the memory-aware version than on plain
+LR-MMT, before running anything.</p>
+<h2>C4. Does the idea's assumption hold?</h2>
+<p>The rule only makes sense if tasks of the same job really finish close together. We checked
+on the team's own large sample, using 32,045 pairs of tasks from 2,297 jobs:</p>
+<table>
+<thead>
+<tr>
+<th>Pairs of tasks</th>
+<th style="text-align: right;">Median gap between finish times</th>
+<th style="text-align: right;">Finish within 60 s of each other</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Same job</td>
+<td style="text-align: right;"><strong>2 s</strong></td>
+<td style="text-align: right;"><strong>96%</strong></td>
+</tr>
+<tr>
+<td>Different jobs, released in the same 5 minutes</td>
+<td style="text-align: right;">47 s</td>
+<td style="text-align: right;">58%</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Yes, strongly.</strong> Tasks of the same job finish almost together. 60 seconds is the
+simulator's idle timeout, so tasks that end within it let their server sleep in one go.
+(This check reads the recorded durations; no policy ever sees them.)</p>
+<h2>C5. Is it new?</h2>
+<p>We searched the research literature (a web search, not a full systematic review):</p>
+<table>
+<thead>
+<tr>
+<th>Published work</th>
+<th>What it does</th>
+<th>How ours differs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MinUsageTime bin packing (Li, Tang &amp; Cai and follow-ups)</td>
+<td>Groups work by finish time to empty servers, but assumes finish times are <strong>known in advance</strong></td>
+<td>We do not know finish times</td>
+</tr>
+<tr>
+<td>Resource Central (Microsoft, 2017); lifetime-aware placement (Microsoft, 2023)</td>
+<td><strong>Machine learning</strong> predicts how long each virtual machine lives</td>
+<td>No prediction model</td>
+</tr>
+<tr>
+<td>LAVA and NILAS (Google, 2025)</td>
+<td>Group machines by <strong>predicted</strong> lifetime; put short ones on servers kept on by long ones</td>
+<td>No prediction; the job itself is the signal</td>
+</tr>
+</tbody>
+</table>
+<p>What we did <strong>not</strong> find anywhere: using <strong>job membership itself</strong> as the "will finish
+together" signal for energy-saving placement. That is the part we can propose as new,
+with the words "to our knowledge".</p>
+<h1><span class="part">Part D</span>Testing fairly on the team's data</h1>
+
+<h2>D1. What "tuning on the data" means</h2>
+<div class="box example">
+<p><span class="label">Analogy: the practice exam</span>
+If you memorize last year's exam answers, you will ace last year's exam and learn very
+little about this year's. Tuning a scheduler on the same data you test it on is the same
+trap. You end up learning the quirks of that data, not a better rule. This is called
+<strong>overfitting</strong>.</p>
+</div>
+<p>A sneakier version: try ten variants, keep the one that looks best, and report only that
+one. Even if every variant is reasonable, picking the winner after seeing the results
+makes it look better than it really is.</p>
+<h2>D2. Our four rules</h2>
+<ol>
+<li><strong>Design on paper.</strong> The rule comes from how the simulator works (a server sleeps only
+   when its last task leaves) and from one check of the trace (C4), not from trying versions
+   on the data and keeping the best.</li>
+<li><strong>No new numbers.</strong> The rule has nothing to adjust. Its only threshold, the overload
+   line, already existed in Rohan's controller.</li>
+<li><strong>Fix the plan before running.</strong> The rule, the comparisons, the success rule and our
+   predictions were written down and committed to git before the first run (commit
+   <code>742d058</code> on my working branch). For the pull request the code was moved into its own
+   folder and all 36 runs were repeated; every result matched the first run exactly.</li>
+<li><strong>Run once, report everything.</strong> Each policy ran once on each case, and every
+   comparison is reported, including the ones that fail.</li>
+</ol>
+<div class="box why">
+<p><span class="label">One honest caveat</span>
+D5 used these same 9 cases, so this is not a test on data nobody has seen. What stops it
+from being "tuning on the data" is rules 1 to 3: nothing was adjusted after seeing a result.</p>
+</div>
+<h2>D3. The data: only the team's</h2>
+<ul>
+<li>The <strong>same 9 cases</strong> as the team's comparison (<code>BASELINE_Comparison</code>): 250, 1,000 and
+  4,000 task groups, each run on the three server models separately.</li>
+<li>The <strong>same tasks</strong> (16,534 / 68,457 / 378,285 for the three sizes),
+  the same 64 servers and the same simulator settings. The prepared files are checked
+  against the team's fingerprints before every run.</li>
+<li>Rohan's two original policies were <strong>re-run</strong> with a read-only counter attached (it counts
+  how many different jobs share each server). All 18 re-runs matched the team's committed
+  results in every field, so the counter changed nothing. First Fit and Best Fit use the
+  team's committed results.</li>
+</ul>
+<h2>D4. What counts as success (decided before running)</h2>
+<p>The <strong>performance limits</strong> are the team's own, from their earlier experiment
+(<code>POLICY_Improvement/config.json</code>), not chosen by us:</p>
+<ul>
+<li>mean wait and P95 wait may rise by at most <strong>1 second or 5%</strong>, whichever is larger;</li>
+<li>pressure may rise by at most <strong>0.01</strong> (one percentage point).</li>
+</ul>
+<p>A policy <strong>works better</strong> than another if <strong>all three</strong> hold:</p>
+<ol>
+<li>it uses less energy in <strong>more than half</strong> of the 9 cases (at least 5);</li>
+<li>its <strong>total</strong> energy over the 9 cases is lower;</li>
+<li>it stays <strong>within the limits in every case it wins</strong>.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Comparison</th>
+<th>The question it answers</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td>LR-MMT + rule vs LR-MMT</td>
+<td>Does the rule improve LR-MMT? (main)</td>
+</tr>
+<tr>
+<td>S2</td>
+<td>Memory-aware + rule vs memory-aware</td>
+<td>Does the rule improve the memory-aware version? (main)</td>
+</tr>
+<tr>
+<td>S3</td>
+<td>LR-MMT + rule vs First Fit</td>
+<td>Does it now beat the simplest rule?</td>
+</tr>
+<tr>
+<td>S4</td>
+<td>Memory-aware + rule vs First Fit</td>
+<td>The same question for the memory-aware version</td>
+</tr>
+<tr>
+<td>S5</td>
+<td>Memory-aware + rule vs LR-MMT</td>
+<td>The team's question: does the proposal (with the rule) beat LR-MMT?</td>
+</tr>
+<tr>
+<td>S6</td>
+<td>Memory-aware + rule vs LR-MMT + rule</td>
+<td>With the rule on both, does caring about memory help?</td>
+</tr>
+</tbody>
+</table>
+<h2>D5. The 36 runs</h2>
+<table>
+<thead>
+<tr>
+<th>What</th>
+<th style="text-align: right;">Runs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LR-MMT + rule and memory-aware + rule × 9 cases</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr>
+<td>Rohan's two originals re-run with the counter × 9 cases (must match the team's results)</td>
+<td style="text-align: right;">18</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td style="text-align: right;"><strong>36</strong></td>
+</tr>
+<tr>
+<td>First Fit and Best Fit × 9 cases: the team's committed results</td>
+<td style="text-align: right;">(18 already done)</td>
+</tr>
+</tbody>
+</table>
+<p>Every run uses a <strong>fresh simulator</strong> and the team's own checks (<code>validate_run</code>): every
+task finishes, nothing is rejected, durations are unchanged except for migration pauses,
+and the energy parts add up to the total.</p>
+<h1><span class="part">Part E</span>Results</h1>
+
+<p>Everything in this part comes from the team's 9 cases: the 36 runs, plus the team's
+committed results for First Fit and Best Fit.</p>
+<h2>E1. The verdicts</h2>
+<p>Each row is one question from Part D4, scored with the rules written down before running.
+Negative energy means <strong>less</strong> energy.</p>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Question</th>
+<th style="text-align: right;">Energy wins</th>
+<th style="text-align: right;">Total energy</th>
+<th style="text-align: right;">Largest workload</th>
+<th style="text-align: right;">Cases outside limits</th>
+<th>Works better?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>S1</td>
+<td>Does the rule improve LR-MMT?</td>
+<td style="text-align: right;">9 of 9</td>
+<td style="text-align: right;">−1.02%</td>
+<td style="text-align: right;">−1.33%</td>
+<td style="text-align: right;">0</td>
+<td><span class="yes">yes</span></td>
+</tr>
+<tr>
+<td>S2</td>
+<td>Does the rule improve the memory-aware version?</td>
+<td style="text-align: right;">9 of 9</td>
+<td style="text-align: right;">−8.69%</td>
+<td style="text-align: right;">−11.13%</td>
+<td style="text-align: right;">1</td>
+<td><span class="no">no</span></td>
+</tr>
+<tr>
+<td>S3</td>
+<td>Does LR-MMT + rule beat First Fit?</td>
+<td style="text-align: right;">0 of 9</td>
+<td style="text-align: right;">+0.33%</td>
+<td style="text-align: right;">+0.23%</td>
+<td style="text-align: right;">0</td>
+<td><span class="no">no</span></td>
+</tr>
+<tr>
+<td>S4</td>
+<td>Does memory-aware + rule beat First Fit?</td>
+<td style="text-align: right;">6 of 9</td>
+<td style="text-align: right;">+1.34%</td>
+<td style="text-align: right;">+2.22%</td>
+<td style="text-align: right;">0</td>
+<td><span class="no">no</span></td>
+</tr>
+<tr>
+<td>S5</td>
+<td>Does the proposal (memory-aware + rule) beat LR-MMT?</td>
+<td style="text-align: right;">7 of 9</td>
+<td style="text-align: right;">−0.03%</td>
+<td style="text-align: right;">+0.63%</td>
+<td style="text-align: right;">0</td>
+<td><span class="yes">yes</span></td>
+</tr>
+<tr>
+<td>S6</td>
+<td>With the rule on both, does caring about memory help?</td>
+<td style="text-align: right;">6 of 9</td>
+<td style="text-align: right;">+1.00%</td>
+<td style="text-align: right;">+1.99%</td>
+<td style="text-align: right;">0</td>
+<td><span class="no">no</span></td>
+</tr>
+</tbody>
+</table>
+<p>In plain words:</p>
+<ul>
+<li><strong>The rule makes both algorithms use less energy in every one of the 9 cases.</strong> For
+  LR-MMT the saving is small (−1.02% in total) and passes every test. For the
+  memory-aware version it is large (−8.69% in total, −11.13% on the largest workload).</li>
+<li><strong>Why S2 still says "no":</strong> in 1 of the 9 cases (largest workload, Huawei RH2288H V3: +1.11 points), crowding rose by more than the team allows (+1.00 points). The other large cases rose by +0.98 and +0.97 points, just inside. The limits were fixed before running, so
+  it counts as a "no", however close. E6 explains what crowding means here.</li>
+<li><strong>First Fit is still hard to beat.</strong> LR-MMT + rule beats it in 0 of 9 cases
+  (+0.33% in total). Memory-aware + rule beats it in 6 of 9 cases, every small and medium
+  one, but not on the largest workload (+2.22%), so its total is +1.34%.</li>
+<li><strong>The team's original question (S5) turns into a narrow "yes":</strong> with the rule, the
+  memory-aware version beats LR-MMT in 7 of 9 cases, but by only −0.03% in total, and it is
+  still +0.63% on the largest workload.</li>
+<li><strong>With the rule on both (S6)</strong>, caring about memory helps on small and medium workloads
+  but not on the largest (+1.99%), so the total is +1.00%.</li>
+</ul>
+<h2>E2. Least energy in each case</h2>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align: right;">Least energy, original four only</th>
+<th style="text-align: right;">Least energy, all six</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>First Fit</td>
+<td style="text-align: right;">7 of 9</td>
+<td style="text-align: right;">3 of 9</td>
+</tr>
+<tr>
+<td>Best Fit</td>
+<td style="text-align: right;">0 of 9</td>
+<td style="text-align: right;">0 of 9</td>
+</tr>
+<tr>
+<td>LR-MMT</td>
+<td style="text-align: right;">0 of 9</td>
+<td style="text-align: right;">0 of 9</td>
+</tr>
+<tr>
+<td>Memory-aware LR-MMT</td>
+<td style="text-align: right;">2 of 9</td>
+<td style="text-align: right;">0 of 9</td>
+</tr>
+<tr>
+<td>LR-MMT + same-job rule</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">0 of 9</td>
+</tr>
+<tr>
+<td>Memory-aware LR-MMT + same-job rule</td>
+<td style="text-align: right;">–</td>
+<td style="text-align: right;">6 of 9</td>
+</tr>
+</tbody>
+</table>
+<p>With only the four original algorithms, First Fit used the least energy in 7 of 9 cases.
+With the rule added, the memory-aware version takes 6 of them (every small and medium
+case), and First Fit keeps 3 (the largest ones).</p>
+<h2>E3. Energy by workload size</h2>
+<p>All compared with LR-MMT, averaged over the 3 server models of each size:</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm (vs LR-MMT)</th>
+<th style="text-align: right;">Small (250)</th>
+<th style="text-align: right;">Medium (1,000)</th>
+<th style="text-align: right;">Large (4,000)</th>
+<th style="text-align: right;">All 9 cases</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Memory-aware LR-MMT</td>
+<td style="text-align: right;">−0.49%</td>
+<td style="text-align: right;">+0.88%</td>
+<td style="text-align: right;">+13.24%</td>
+<td style="text-align: right;">+9.49%</td>
+</tr>
+<tr>
+<td>LR-MMT + same-job rule</td>
+<td style="text-align: right;">−0.07%</td>
+<td style="text-align: right;">−0.43%</td>
+<td style="text-align: right;">−1.33%</td>
+<td style="text-align: right;">−1.02%</td>
+</tr>
+<tr>
+<td>Memory-aware LR-MMT + same-job rule</td>
+<td style="text-align: right;">−0.88%</td>
+<td style="text-align: right;">−2.10%</td>
+<td style="text-align: right;">+0.63%</td>
+<td style="text-align: right;">−0.03%</td>
+</tr>
+<tr>
+<td>First Fit</td>
+<td style="text-align: right;">−0.46%</td>
+<td style="text-align: right;">−1.11%</td>
+<td style="text-align: right;">−1.56%</td>
+<td style="text-align: right;">−1.35%</td>
+</tr>
+</tbody>
+</table>
+<figure>
+<img src="charts/energy_vs_lr_mmt_by_size.svg" alt="Energy change compared with LR-MMT, by workload size">
+<figcaption>Figure 3. Bars to the left of 0 use less energy than LR-MMT. The exact value is printed next to each bar.</figcaption>
+</figure>
+
+<p>The memory-aware version's large-workload penalty (+13.24%) shrinks to +0.63%
+with the rule.</p>
+<h2>E4. Why: fewer servers on</h2>
+<p>On the largest workload, the memory-aware version kept <strong>32.6</strong> servers on, on
+average. With the rule it keeps <strong>25.3</strong>, close to LR-MMT's 24.7.</p>
+<figure>
+<img src="charts/servers_over_time.svg" alt="Servers switched on over the 12 hours">
+<figcaption>Figure 4. The large workload on the HPE server model, in 30-minute averages. Top: servers switched on. Bottom: CPU load of the servers that are running work.</figcaption>
+</figure>
+
+<p>The exact energy split from D5 (<code>RUSHI_Task/accounting.py</code>) says where the saving comes
+from. Every server-second is charged in one state, so the parts add up exactly. Values
+are the change in kWh per large (4,000-group) run when the rule is added, averaged over the
+3 server models; negative = saves energy:</p>
+<table>
+<thead>
+<tr>
+<th>Rule added to</th>
+<th style="text-align: right;">Time on, running work</th>
+<th style="text-align: right;">Time on, no work</th>
+<th style="text-align: right;">Load-dependent</th>
+<th style="text-align: right;">Wake-ups</th>
+<th style="text-align: right;">Net (kWh)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LR-MMT</td>
+<td style="text-align: right;">−0.39</td>
+<td style="text-align: right;">−0.01</td>
+<td style="text-align: right;">−0.13</td>
+<td style="text-align: right;">+0.09</td>
+<td style="text-align: right;">−0.46</td>
+</tr>
+<tr>
+<td>Memory-aware LR-MMT</td>
+<td style="text-align: right;">−3.74</td>
+<td style="text-align: right;">+0.06</td>
+<td style="text-align: right;">−1.06</td>
+<td style="text-align: right;">+0.38</td>
+<td style="text-align: right;">−4.36</td>
+</tr>
+</tbody>
+</table>
+<p>For the memory-aware version the rule saves 4.36 kWh per large run, and
+86% of that is servers no longer kept on while running work. Wake-ups go up
+(1,129 → 1,639): servers that empty in one go fall asleep, so more of them have to be woken
+later. That costs +0.38 kWh, far less than it saves. For LR-MMT the same pattern
+is much smaller (0.46 kWh per run).</p>
+<figure>
+<img src="charts/where_the_difference_comes_from.svg" alt="Exact split of the energy difference into parts">
+<figcaption>Figure 5. Red adds energy, purple saves energy, gray is the net change.</figcaption>
+</figure>
+
+<h2>E5. Did servers hold fewer jobs?</h2>
+<p>The rule did what it was designed to do: busy servers ran fewer different jobs at once.
+Mean number of different jobs on a server that is running work (mean of the 3 server
+models):</p>
+<table>
+<thead>
+<tr>
+<th>Workload</th>
+<th style="text-align: right;">LR-MMT</th>
+<th style="text-align: right;">LR-MMT + rule</th>
+<th style="text-align: right;">Memory-aware</th>
+<th style="text-align: right;">Memory-aware + rule</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>250 groups</td>
+<td style="text-align: right;">1.14</td>
+<td style="text-align: right;">1.13</td>
+<td style="text-align: right;">1.15</td>
+<td style="text-align: right;">1.12</td>
+</tr>
+<tr>
+<td>1,000 groups</td>
+<td style="text-align: right;">1.33</td>
+<td style="text-align: right;">1.33</td>
+<td style="text-align: right;">1.34</td>
+<td style="text-align: right;">1.30</td>
+</tr>
+<tr>
+<td>4,000 groups</td>
+<td style="text-align: right;">2.04</td>
+<td style="text-align: right;">1.98</td>
+<td style="text-align: right;">2.18</td>
+<td style="text-align: right;">1.71</td>
+</tr>
+</tbody>
+</table>
+<p>The change is biggest for the memory-aware version on the large workload
+(2.18 → 1.71 jobs per busy server; servers running a single job went from
+41% to 61%), exactly where its energy fell most. For plain LR-MMT the change is
+small (2.04 → 1.98), because LR-MMT already kept most of a job's tasks together,
+and so is its saving.</p>
+<h2>E6. Waiting and crowding</h2>
+<p>Saving energy only counts if the work is not noticeably slower. Large workload, mean of
+the 3 server models:</p>
+<table>
+<thead>
+<tr>
+<th>Algorithm</th>
+<th style="text-align: right;">Energy (kWh)</th>
+<th style="text-align: right;">Mean wait</th>
+<th style="text-align: right;">P95 wait</th>
+<th style="text-align: right;">Pressure</th>
+<th style="text-align: right;">Migrations</th>
+<th style="text-align: right;">Wake-ups</th>
+<th style="text-align: right;">Servers on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LR-MMT</td>
+<td style="text-align: right;">34.54</td>
+<td style="text-align: right;">55.9 s</td>
+<td style="text-align: right;">466 s</td>
+<td style="text-align: right;">17.9%</td>
+<td style="text-align: right;">8,045</td>
+<td style="text-align: right;">1,863</td>
+<td style="text-align: right;">24.7</td>
+</tr>
+<tr>
+<td>LR-MMT + same-job rule</td>
+<td style="text-align: right;">34.08</td>
+<td style="text-align: right;">56.1 s</td>
+<td style="text-align: right;">465 s</td>
+<td style="text-align: right;">18.1%</td>
+<td style="text-align: right;">7,028</td>
+<td style="text-align: right;">1,981</td>
+<td style="text-align: right;">23.9</td>
+</tr>
+<tr>
+<td>Memory-aware LR-MMT</td>
+<td style="text-align: right;">39.12</td>
+<td style="text-align: right;">54.5 s</td>
+<td style="text-align: right;">465 s</td>
+<td style="text-align: right;">14.1%</td>
+<td style="text-align: right;">7,152</td>
+<td style="text-align: right;">1,129</td>
+<td style="text-align: right;">32.6</td>
+</tr>
+<tr>
+<td>Memory-aware LR-MMT + same-job rule</td>
+<td style="text-align: right;">34.76</td>
+<td style="text-align: right;">55.5 s</td>
+<td style="text-align: right;">465 s</td>
+<td style="text-align: right;">15.1%</td>
+<td style="text-align: right;">5,087</td>
+<td style="text-align: right;">1,639</td>
+<td style="text-align: right;">25.3</td>
+</tr>
+<tr>
+<td>First Fit</td>
+<td style="text-align: right;">34.01</td>
+<td style="text-align: right;">56.0 s</td>
+<td style="text-align: right;">465 s</td>
+<td style="text-align: right;">19.6%</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">1,901</td>
+<td style="text-align: right;">23.9</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Waiting barely changes:</strong> the mean wait moves by +0.2 s for LR-MMT and
+  +1.0 s for the memory-aware version, out of about 55.9 s. On the large workload, bursts
+  fill all 64 servers, so every algorithm makes some tasks wait.</li>
+<li><strong>Crowding (pressure) rises a little,</strong> because fuller servers spend more time above
+  90%. Memory-aware + rule (15.1%) is still <strong>less</strong> crowded than LR-MMT
+  (17.9%) and First Fit (19.6%). The original memory-aware version was less crowded
+  (14.1%) only because it kept about 7 more servers on. That is the comparison
+  (S2) with one case just over the limit.</li>
+<li><strong>Migrations fall:</strong> −13% for LR-MMT and −29% for the memory-aware version.</li>
+</ul>
+<p>Remember that pressure is a warning sign, not real slowness: in this simulator a crowded
+server does not slow down, because requests can never exceed capacity.</p>
+<h2>E7. By task type</h2>
+<p>The proposal also asked how each <strong>type</strong> of task is affected. Large workload, mean of the
+3 server models:</p>
+<figure>
+<img src="charts/waits_by_task_type.svg" alt="Share of tasks that waited, by task type">
+<figcaption>Figure 6. Share of tasks that had to wait at all, by task type.</figcaption>
+</figure>
+
+<table>
+<thead>
+<tr>
+<th>Task type</th>
+<th>Algorithm</th>
+<th style="text-align: right;">Tasks per case</th>
+<th style="text-align: right;">Waited</th>
+<th style="text-align: right;">Mean wait</th>
+<th style="text-align: right;">Moved at least once</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Balanced</td>
+<td>LR-MMT</td>
+<td style="text-align: right;">303,807</td>
+<td style="text-align: right;">51.1%</td>
+<td style="text-align: right;">53.2 s</td>
+<td style="text-align: right;">1.5%</td>
+</tr>
+<tr>
+<td>Balanced</td>
+<td>LR-MMT + same-job rule</td>
+<td style="text-align: right;">303,807</td>
+<td style="text-align: right;">52.7%</td>
+<td style="text-align: right;">53.3 s</td>
+<td style="text-align: right;">1.3%</td>
+</tr>
+<tr>
+<td>Balanced</td>
+<td>Memory-aware LR-MMT</td>
+<td style="text-align: right;">303,807</td>
+<td style="text-align: right;">38.7%</td>
+<td style="text-align: right;">51.8 s</td>
+<td style="text-align: right;">1.4%</td>
+</tr>
+<tr>
+<td>Balanced</td>
+<td>Memory-aware LR-MMT + same-job rule</td>
+<td style="text-align: right;">303,807</td>
+<td style="text-align: right;">48.4%</td>
+<td style="text-align: right;">52.9 s</td>
+<td style="text-align: right;">0.9%</td>
+</tr>
+<tr>
+<td>Memory-heavy</td>
+<td>LR-MMT</td>
+<td style="text-align: right;">73,730</td>
+<td style="text-align: right;">39.3%</td>
+<td style="text-align: right;">67.1 s</td>
+<td style="text-align: right;">4.6%</td>
+</tr>
+<tr>
+<td>Memory-heavy</td>
+<td>LR-MMT + same-job rule</td>
+<td style="text-align: right;">73,730</td>
+<td style="text-align: right;">42.2%</td>
+<td style="text-align: right;">67.4 s</td>
+<td style="text-align: right;">4.1%</td>
+</tr>
+<tr>
+<td>Memory-heavy</td>
+<td>Memory-aware LR-MMT</td>
+<td style="text-align: right;">73,730</td>
+<td style="text-align: right;">25.6%</td>
+<td style="text-align: right;">65.6 s</td>
+<td style="text-align: right;">3.8%</td>
+</tr>
+<tr>
+<td>Memory-heavy</td>
+<td>Memory-aware LR-MMT + same-job rule</td>
+<td style="text-align: right;">73,730</td>
+<td style="text-align: right;">35.0%</td>
+<td style="text-align: right;">66.6 s</td>
+<td style="text-align: right;">2.8%</td>
+</tr>
+<tr>
+<td>CPU-heavy</td>
+<td>LR-MMT</td>
+<td style="text-align: right;">748</td>
+<td style="text-align: right;">12.4%</td>
+<td style="text-align: right;">53.7 s</td>
+<td style="text-align: right;">13.1%</td>
+</tr>
+<tr>
+<td>CPU-heavy</td>
+<td>LR-MMT + same-job rule</td>
+<td style="text-align: right;">748</td>
+<td style="text-align: right;">14.9%</td>
+<td style="text-align: right;">53.9 s</td>
+<td style="text-align: right;">12.1%</td>
+</tr>
+<tr>
+<td>CPU-heavy</td>
+<td>Memory-aware LR-MMT</td>
+<td style="text-align: right;">748</td>
+<td style="text-align: right;">10.8%</td>
+<td style="text-align: right;">53.4 s</td>
+<td style="text-align: right;">11.3%</td>
+</tr>
+<tr>
+<td>CPU-heavy</td>
+<td>Memory-aware LR-MMT + same-job rule</td>
+<td style="text-align: right;">748</td>
+<td style="text-align: right;">15.3%</td>
+<td style="text-align: right;">53.9 s</td>
+<td style="text-align: right;">16.5%</td>
+</tr>
+</tbody>
+</table>
+<p>With the rule, more tasks have to wait at all, because fewer servers are kept on and more of them must be woken (E4). For the memory-aware version, the share that waited rises from 38.7% to 48.4% for balanced tasks and from 25.6% to 35.0% for memory-heavy tasks; for LR-MMT it rises by at most 2.9 points. The waits stay short: no task type's mean wait changes by more than 1.04 s. Memory-aware + rule still makes fewer tasks wait than LR-MMT (35.0% against 39.3% of memory-heavy tasks).</p>
+<h2>E8. Our predictions, checked</h2>
+<p>These were written in <code>RUSHI_Task/same_job/DESIGN.md</code> before the first run.</p>
+<table>
+<thead>
+<tr>
+<th>Prediction, written before the first run</th>
+<th>Did it hold?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mechanism: busy servers hold fewer different jobs, for both policies, at every size</td>
+<td><strong>yes</strong></td>
+</tr>
+<tr>
+<td>S1 is small (within ±1.5% in total) and saves energy</td>
+<td><strong>yes</strong></td>
+</tr>
+<tr>
+<td>S2 saves more than S1 on the largest workload</td>
+<td><strong>yes</strong></td>
+</tr>
+<tr>
+<td>S5: memory-aware + rule still uses more energy than LR-MMT on the largest workload</td>
+<td><strong>yes</strong></td>
+</tr>
+<tr>
+<td>Side effects small: every S1 and S2 case within the team's limits</td>
+<td><strong>no</strong></td>
+</tr>
+</tbody>
+</table>
+<p>4 of 5 held. The one that did not: one S2 case went just over the crowding limit (E1).</p>
+<h1><span class="part">Part F</span>What we can and cannot claim</h1>
+
+<h2>F1. What we can claim</h2>
+<p>On the team's own 9 cases, with nothing tuned and the plan fixed before running:</p>
+<ol>
+<li><strong>A new, prediction-free rule makes both LR-MMT versions use less energy in every
+   case.</strong> Placing each task next to tasks of its own job changed energy by −1.02% for LR-MMT
+   (it passes every pre-set test) and by −8.69% for the memory-aware version (−11.13% on the
+   largest workload).</li>
+<li><strong>It removes most of the memory-aware version's large-workload penalty.</strong> Against LR-MMT,
+   that version went from +13.24% to +0.63% on the largest workload.</li>
+<li><strong>Its assumption is strongly supported:</strong> job-mates finish a median of 2 s apart,
+   against 47 s for other tasks released at the same time.</li>
+<li><strong>It works the way we said it would:</strong> busy servers held fewer different jobs, and
+   4 of our 5 predictions came true (E8).</li>
+</ol>
+<p>How big is this? For plain LR-MMT, −1.02% is modest. For the memory-aware version the gain
+is large, but <strong>First Fit still uses the least energy on the largest workload</strong>, and the
+memory-aware comparison misses the team's crowding limit in one case by 0.11 points. The
+honest headline is: <em>the rule improves both LR-MMT versions in all 9 cases; First Fit still
+wins the largest workload.</em></p>
+<h2>F2. What this does not show</h2>
+<ul>
+<li><strong>Not a test on unseen data.</strong> D5 used these same 9 cases. What guards against tuning is
+  that the rule has nothing to tune and each algorithm ran once per case. A stronger test
+  would run the same code on task samples nobody has looked at.</li>
+<li><strong>Not real electricity.</strong> The simulator multiplies time by SPECpower watts for the CPU a
+  task <em>requested</em>. Real servers also use power for memory, disks, fans and cooling, and
+  real tasks rarely use exactly what they request.</li>
+<li><strong>Not other days.</strong> Alibaba published one 12-hour window, so this shows the rule on these
+  jobs, not on a different day, season or company.</li>
+<li><strong>Not independent repeats.</strong> The three sizes are nested (the 250 groups are part of the
+  1,000, which are part of the 4,000), and the three server models replay the same tasks.
+  The 9 cases are 9 views of one sample, so no statistical significance is claimed.</li>
+<li><strong>Pressure is a warning sign, not slowness.</strong> In this simulator a crowded server does not
+  slow down, because requests can never exceed capacity.</li>
+<li><strong>The rule needs job ids.</strong> It works because every task in the trace says which job it
+  belongs to. A system without that information could not use it.</li>
+</ul>
+<h2>F3. What to tell the team</h2>
+<ul>
+<li><strong>It is an extension.</strong> AGENTS.md keeps the team's active comparison frozen. This work adds
+  two policies next to it and changes no workload, simulator setting or existing result.
+  Putting it into the final report needs the team's agreement.</li>
+<li><strong>It is small.</strong> The rule is about 30 lines in <code>RUSHI_Task/same_job/policy.py</code>, built on
+  Rohan's class. With the rule switched off, it is Rohan's policy exactly.</li>
+<li><strong>On novelty:</strong> say "to our knowledge" and cite LAVA and the MinUsageTime work. Run a proper
+  Google Scholar check before calling it a first.</li>
+<li><strong>Possible next steps:</strong> repair the memory-aware score itself (Part B2), so the <em>first</em>
+  task of each job also goes to a busy server; and check the rule on task samples nobody has
+  looked at.</li>
+</ul>
+<h1><span class="part">Appendix</span>Glossary</h1>
+
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Meaning in this guide</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Balance term</strong></td>
+<td>The memory-aware part of the score: 0.25 × how lopsided CPU and memory are on a server after placing the task.</td>
+</tr>
+<tr>
+<td><strong>Best Fit / First Fit</strong></td>
+<td>Packing rules: put the task on the fullest server that fits / on the first server in a fixed order that fits.</td>
+</tr>
+<tr>
+<td><strong>Consolidation</strong></td>
+<td>Moving the last tasks off a lightly used server so it can sleep.</td>
+</tr>
+<tr>
+<td><strong>Controller</strong></td>
+<td>The part of LR-MMT that runs every 5 minutes: overload check, MMT moves, emptying servers under 30%.</td>
+</tr>
+<tr>
+<td><strong>CPU, core</strong></td>
+<td>The calculating part of a server. Our servers have 64 cores each.</td>
+</tr>
+<tr>
+<td><strong>Energy, kWh</strong></td>
+<td>Power × time. 1 kWh = 1,000 W for 1 hour. The main thing we try to reduce.</td>
+</tr>
+<tr>
+<td><strong>FIFO</strong></td>
+<td>First in, first out: tasks are placed in arrival order.</td>
+</tr>
+<tr>
+<td><strong>Fragmentation</strong></td>
+<td>Free space split across servers in pieces that are awkward to use.</td>
+</tr>
+<tr>
+<td><strong>Idle timeout</strong></td>
+<td>An on server with no work falls asleep after 60 seconds.</td>
+</tr>
+<tr>
+<td><strong>Job, job-mates</strong></td>
+<td>Here, a task group: tasks created together. Job-mates are tasks of the same job.</td>
+</tr>
+<tr>
+<td><strong>LR (Local Regression)</strong></td>
+<td>A weighted trend line through a server's last 10 CPU readings, used to predict the next one.</td>
+</tr>
+<tr>
+<td><strong>Memory</strong></td>
+<td>Where running programs keep their data. Usually the resource that runs out first here.</td>
+</tr>
+<tr>
+<td><strong>Migration, pause</strong></td>
+<td>Moving a running task to another server. It pauses while its memory is copied.</td>
+</tr>
+<tr>
+<td><strong>MMT</strong></td>
+<td>Minimum Migration Time: move the tasks that are quickest to copy (smallest memory) first.</td>
+</tr>
+<tr>
+<td><strong>Overfitting</strong></td>
+<td>Tuning something so it fits the test data's quirks instead of being genuinely better.</td>
+</tr>
+<tr>
+<td><strong>Overload line</strong></td>
+<td>Memory at 90%, or CPU forecast × 1.2 at 100%. Above it, the controller moves tasks away.</td>
+</tr>
+<tr>
+<td><strong>P95</strong></td>
+<td>The 95th percentile: 95% of the values are below it.</td>
+</tr>
+<tr>
+<td><strong>Placement</strong></td>
+<td>Choosing the server for a new task.</td>
+</tr>
+<tr>
+<td><strong>Power, watt (W)</strong></td>
+<td>How fast electricity is used right now.</td>
+</tr>
+<tr>
+<td><strong>Power curve, SPECpower</strong></td>
+<td>A server's measured watts at 0%, 10%, …, 100% CPU load.</td>
+</tr>
+<tr>
+<td><strong>Pressure</strong></td>
+<td>Share of server-time above 90% CPU or memory: the team's warning sign for crowding.</td>
+</tr>
+<tr>
+<td><strong>Request</strong></td>
+<td>The CPU and memory a task asks for. The simulator reserves exactly that.</td>
+</tr>
+<tr>
+<td><strong>Same-job rule</strong></td>
+<td>This guide's new rule: put a new task on a server that is running work, already has tasks of its job, and stays under the overload line; otherwise decide as before.</td>
+</tr>
+<tr>
+<td><strong>Score</strong></td>
+<td>The number placement uses to rank servers. Lower wins.</td>
+</tr>
+<tr>
+<td><strong>Seed</strong></td>
+<td>The starting number of a random draw. Same seed, same draw.</td>
+</tr>
+<tr>
+<td><strong>Task, task group</strong></td>
+<td>A task is one running piece of work; a task group (a "job" in this guide) is tasks created together.</td>
+</tr>
+<tr>
+<td><strong>Trace</strong></td>
+<td>A recorded log of real work; here Alibaba's 2017 cluster trace.</td>
+</tr>
+<tr>
+<td><strong>Underload rule</strong></td>
+<td>A server under 30% of both CPU and memory is emptied if all of its tasks fit elsewhere.</td>
+</tr>
+<tr>
+<td><strong>Wake-up</strong></td>
+<td>Turning a sleeping server on: 10 seconds at full power, during which its tasks wait.</td>
+</tr>
+</tbody>
+</table>
+<h2>How to rerun everything</h2>
+<p>From the repository root, with Python 3.10+ and the team's prepared inputs (see
+<code>RUSHI_Task/README.md</code> for how to rebuild them from the release archive):</p>
+<pre><code>python -m unittest discover -s RUSHI_Task/tests -v
+python -m RUSHI_Task.same_job.run
+python -m RUSHI_Task.same_job.analyze
+python -m RUSHI_Task.guide.build --profile &lt;an empty scratch folder&gt;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>What it does</th>
+<th style="text-align: right;">Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Tests</td>
+<td>17 unit tests, including "rule off = Rohan's policy"</td>
+<td style="text-align: right;">seconds</td>
+</tr>
+<tr>
+<td><code>same_job.run</code></td>
+<td>the 36 runs of Part D5; skips finished ones, so it can resume</td>
+<td style="text-align: right;">~25 min</td>
+</tr>
+<tr>
+<td><code>same_job.analyze</code></td>
+<td>scores the comparisons, applies the limits, checks the premise, writes tables and charts</td>
+<td style="text-align: right;">~1 min</td>
+</tr>
+<tr>
+<td><code>guide.build</code></td>
+<td>rebuilds this PDF from the code and the results (needs Microsoft Edge)</td>
+<td style="text-align: right;">~1 min</td>
+</tr>
+</tbody>
+</table>
+<p>Files: <code>RUSHI_Task/same_job/</code> holds <code>policy.py</code> (the rule), <code>DESIGN.md</code> (the plan, fixed
+before running), <code>run.py</code>, <code>analyze.py</code> and <code>reports/</code> (every run's results, tables, charts
+and <code>REPORT.md</code>). <code>RUSHI_Task/guide/</code> holds this document and its source. The D5 analysis
+itself is in <code>RUSHI_Task/</code> (<code>accounting.py</code>, <code>observer.py</code>, <code>rerun.py</code>, <code>analyze.py</code>,
+<code>reports/</code>).</p></body></html>

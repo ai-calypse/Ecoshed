@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="400" viewBox="0 0 980 400" role="img" aria-labelledby="title desc">
+<title id="title">HPE DL360 Gen9 power curve</title>
+<desc id="desc">Watts at 0-100% load: 45.0, 83.7, 101.0, 118.0, 133.0, 145.0, 162.0, 188.0, 218.0, 248.0, 276.0</desc>
+<rect width="980" height="400" fill="#ffffff"/>
+<g font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+<text x="24.0" y="34.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="bold">HPE DL360 Gen9: watts at each CPU load</text>
+<text x="24.0" y="58.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">SPECpower measurements used by the simulator. The first 10% slice costs the most.</text>
+<line x1="80" y1="336.0" x2="450" y2="336.0" stroke="#e1e0d9"/>
+<text x="72.0" y="340.0" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">0 W</text>
+<line x1="80" y1="259.3" x2="450" y2="259.3" stroke="#e1e0d9"/>
+<text x="72.0" y="263.3" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">100 W</text>
+<line x1="80" y1="182.7" x2="450" y2="182.7" stroke="#e1e0d9"/>
+<text x="72.0" y="186.7" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">200 W</text>
+<line x1="80" y1="106.0" x2="450" y2="106.0" stroke="#e1e0d9"/>
+<text x="72.0" y="110.0" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">300 W</text>
+<text x="80.0" y="354.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">0%</text>
+<text x="154.0" y="354.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">20%</text>
+<text x="228.0" y="354.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">40%</text>
+<text x="302.0" y="354.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">60%</text>
+<text x="376.0" y="354.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">80%</text>
+<text x="450.0" y="354.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">100%</text>
+<polyline points="80.0,301.5 117.0,271.8 154.0,258.6 191.0,245.5 228.0,234.0 265.0,224.8 302.0,211.8 339.0,191.9 376.0,168.9 413.0,145.9 450.0,124.4" fill="none" stroke="#52514e" stroke-width="2"/>
+<circle cx="80.0" cy="301.5" r="4" fill="#52514e" stroke="#ffffff" stroke-width="2"><title>0% CPU: 45.0 W</title></circle>
+<circle cx="117.0" cy="271.8" r="4" fill="#52514e" stroke="#ffffff" stroke-width="2"><title>10% CPU: 83.7 W</title></circle>
+<circle cx="154.0" cy="258.6" r="4" fill="#52514e" stroke="#ffffff" stroke-width="2"><title>20% CPU: 101.0 W</title></circle>
+<circle cx="191.0" cy="245.5" r="4" fill="#52514e" stroke="#ffffff" stroke-width="2"><title>30% CPU: 118.0 W</title></circle>
+<circle cx="228.0" cy="234.0" r="4" fill="#52514e" stroke="#ffffff" stroke-width="2"><title>40% CPU: 133.0 W</title></circle>
+<circle cx="265.0" cy="224.8" r="4" fill="#52514e" stroke="#ffffff" stroke-width="2"><title>50% CPU: 145.0 W</title></circle>
+<circle cx="302.0" cy="211.8" r="4" fill="#52514e" stroke="#ffffff" stroke-width="2"><title>60% CPU: 162.0 W</title></circle>
+<circle cx="339.0" cy="191.9" r="4" fill="#52514e" stroke="#ffffff" stroke-width="2"><title>70% CPU: 188.0 W</title></circle>
+<circle cx="376.0" cy="168.9" r="4" fill="#52514e" stroke="#ffffff" stroke-width="2"><title>80% CPU: 218.0 W</title></circle>
+<circle cx="413.0" cy="145.9" r="4" fill="#52514e" stroke="#ffffff" stroke-width="2"><title>90% CPU: 248.0 W</title></circle>
+<circle cx="450.0" cy="124.4" r="4" fill="#52514e" stroke="#ffffff" stroke-width="2"><title>100% CPU: 276.0 W</title></circle>
+<text x="88.0" y="319.5" font-size="12" fill="#52514e" text-anchor="start" font-weight="normal">idle 45 W</text>
+<text x="442.0" y="115.4" font-size="12" fill="#52514e" text-anchor="end" font-weight="normal">full 276 W</text>
+<line x1="80" y1="336" x2="450" y2="336" stroke="#c3c2b7"/>
+<text x="265.0" y="378.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">CPU load</text>
+<line x1="560" y1="336.0" x2="950" y2="336.0" stroke="#e1e0d9"/>
+<text x="552.0" y="340.0" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">0 W</text>
+<line x1="560" y1="284.9" x2="950" y2="284.9" stroke="#e1e0d9"/>
+<text x="552.0" y="288.9" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">10 W</text>
+<line x1="560" y1="233.8" x2="950" y2="233.8" stroke="#e1e0d9"/>
+<text x="552.0" y="237.8" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">20 W</text>
+<line x1="560" y1="182.7" x2="950" y2="182.7" stroke="#e1e0d9"/>
+<text x="552.0" y="186.7" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">30 W</text>
+<line x1="560" y1="131.6" x2="950" y2="131.6" stroke="#e1e0d9"/>
+<text x="552.0" y="135.6" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">40 W</text>
+<path d="M567.0,336.0 V142.2 Q567.0,138.2 571.0,138.2 H588.0 Q592.0,138.2 592.0,142.2 V336.0 Z" fill="#e34948"><title>0-10%: +38.7 W</title></path>
+<text x="579.5" y="132.2" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">39</text>
+<text x="579.5" y="354.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">0</text>
+<path d="M606.0,336.0 V251.6 Q606.0,247.6 610.0,247.6 H627.0 Q631.0,247.6 631.0,251.6 V336.0 Z" fill="#52514e"><title>10-20%: +17.3 W</title></path>
+<text x="618.5" y="241.6" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">17</text>
+<text x="618.5" y="354.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">10</text>
+<path d="M645.0,336.0 V253.1 Q645.0,249.1 649.0,249.1 H666.0 Q670.0,249.1 670.0,253.1 V336.0 Z" fill="#52514e"><title>20-30%: +17.0 W</title></path>
+<text x="657.5" y="243.1" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">17</text>
+<text x="657.5" y="354.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">20</text>
+<path d="M684.0,336.0 V263.3 Q684.0,259.3 688.0,259.3 H705.0 Q709.0,259.3 709.0,263.3 V336.0 Z" fill="#52514e"><title>30-40%: +15.0 W</title></path>
+<text x="696.5" y="253.3" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">15</text>
+<text x="696.5" y="354.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">30</text>
+<path d="M723.0,336.0 V278.7 Q723.0,274.7 727.0,274.7 H744.0 Q748.0,274.7 748.0,278.7 V336.0 Z" fill="#52514e"><title>40-50%: +12.0 W</title></path>
+<text x="735.5" y="268.7" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">12</text>
+<text x="735.5" y="354.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">40</text>
+<path d="M762.0,336.0 V253.1 Q762.0,249.1 766.0,249.1 H783.0 Q787.0,249.1 787.0,253.1 V336.0 Z" fill="#52514e"><title>50-60%: +17.0 W</title></path>
+<text x="774.5" y="243.1" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">17</text>
+<text x="774.5" y="354.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">50</text>
+<path d="M801.0,336.0 V207.1 Q801.0,203.1 805.0,203.1 H822.0 Q826.0,203.1 826.0,207.1 V336.0 Z" fill="#52514e"><title>60-70%: +26.0 W</title></path>
+<text x="813.5" y="197.1" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">26</text>
+<text x="813.5" y="354.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">60</text>
+<path d="M840.0,336.0 V186.7 Q840.0,182.7 844.0,182.7 H861.0 Q865.0,182.7 865.0,186.7 V336.0 Z" fill="#52514e"><title>70-80%: +30.0 W</title></path>
+<text x="852.5" y="176.7" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">30</text>
+<text x="852.5" y="354.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">70</text>
+<path d="M879.0,336.0 V186.7 Q879.0,182.7 883.0,182.7 H900.0 Q904.0,182.7 904.0,186.7 V336.0 Z" fill="#52514e"><title>80-90%: +30.0 W</title></path>
+<text x="891.5" y="176.7" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">30</text>
+<text x="891.5" y="354.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">80</text>
+<path d="M918.0,336.0 V196.9 Q918.0,192.9 922.0,192.9 H939.0 Q943.0,192.9 943.0,196.9 V336.0 Z" fill="#52514e"><title>90-100%: +28.0 W</title></path>
+<text x="930.5" y="186.9" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">28</text>
+<text x="930.5" y="354.0" font-size="11" fill="#898781" text-anchor="middle" font-weight="normal">90</text>
+<line x1="560" y1="336" x2="950" y2="336" stroke="#c3c2b7"/>
+<text x="755.0" y="378.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">watts added by each 10% slice (slice start, %)</text>
+<text x="80.0" y="90.0" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="bold">Watts</text>
+<text x="560.0" y="90.0" font-size="13" fill="#0b0b0b" text-anchor="start" font-weight="bold">Cost of each 10% slice</text>
+</g>
+</svg>

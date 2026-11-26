@@ -1,0 +1,37 @@
+<h1><span class="part">Part F</span>What we can and cannot claim</h1>
+
+## F1. What we can claim
+
+On the team's own 9 cases, with nothing tuned and the plan fixed before running:
+
+1. **A new, prediction-free rule makes both LR-MMT versions use less energy in every
+   case.** Placing each task next to tasks of its own job changed energy by {{ v.S1.total }} for LR-MMT
+   (it passes every pre-set test) and by {{ v.S2.total }} for the memory-aware version ({{ v.S2.large }} on the
+   largest workload).
+2. **It removes most of the memory-aware version's large-workload penalty.** Against LR-MMT,
+   that version went from {{ v.size.lr_mmt_memory.s4000 }} to {{ v.size.lr_mmt_memory_same_job.s4000 }} on the largest workload.
+3. **Its assumption is strongly supported:** job-mates finish a median of {{ v.premise.same_gap }} apart,
+   against {{ v.premise.other_gap }} for other tasks released at the same time.
+4. **It works the way we said it would:** busy servers held fewer different jobs, and
+   {{ v.pred_held }} of our {{ v.pred_total }} predictions came true (E8).
+
+How big is this? For plain LR-MMT, {{ v.S1.total }} is modest. For the memory-aware version the gain
+is large, but **First Fit still uses the least energy on the largest workload**, and the
+memory-aware comparison misses the team's crowding limit in one case by {{ v.s2_over_by }} points. The
+honest headline is: *the rule improves both LR-MMT versions in all 9 cases; First Fit still
+wins the largest workload.*
+
+{% include "limits.md.j2" %}
+
+## F3. What to tell the team
+
+- **It is an extension.** AGENTS.md keeps the team's active comparison frozen. This work adds
+  two policies next to it and changes no workload, simulator setting or existing result.
+  Putting it into the final report needs the team's agreement.
+- **It is small.** The rule is about 30 lines in `RUSHI_Task/same_job/policy.py`, built on
+  Rohan's class. With the rule switched off, it is Rohan's policy exactly.
+- **On novelty:** say "to our knowledge" and cite LAVA and the MinUsageTime work. Run a proper
+  Google Scholar check before calling it a first.
+- **Possible next steps:** repair the memory-aware score itself (Part B2), so the *first*
+  task of each job also goes to a busy server; and check the rule on task samples nobody has
+  looked at.

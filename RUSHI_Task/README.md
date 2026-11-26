@@ -9,8 +9,9 @@ Rohan implemented the proposed policy (`lr_mmt_memory` in
 36-run comparison ([`BASELINE_Comparison`](../BASELINE_Comparison/reports/REPORT.md)).
 That comparison showed **what** happened: the proposed placement saves energy in
 4/9 cases but uses 10.96–14.56% more on the largest workload. This folder explains
-**why**. Nothing here changes a workload, policy or simulator setting, and no new
-policy variant is added (AGENTS.md scope).
+**why**. The D5 analysis changes no workload, policy or simulator setting and adds no
+policy variant (AGENTS.md scope). A separate extension at the end
+([same_job/](same_job/)) proposes a new placement rule and tests it.
 
 Full results: **[reports/REPORT.md](reports/REPORT.md)**.
 
@@ -72,6 +73,8 @@ Full results: **[reports/REPORT.md](reports/REPORT.md)**.
 | [reports/outcomes_by_task_type.csv](reports/outcomes_by_task_type.csv) | Waits and migrations by task type, all 18 runs | Report table |
 | [reports/runs/](reports/runs/) | Compact recording per re-run (decisions, time series, per-type outcomes) | Kafka/dashboard demo data source |
 | [reports/validation.json](reports/validation.json) | Every check this analysis ran | Reproducibility appendix |
+| [guide/EcoSched_Same_Job_Rule_Guide.pdf](guide/EcoSched_Same_Job_Rule_Guide.pdf) | Beginner's guide: D5 and the same-job rule, from first principles | Background reading, report wording |
+| [same_job/reports/REPORT.md](same_job/reports/REPORT.md) | Extension results: the same-job rule on the team's 9 cases | Extension slide, if the team agrees |
 
 ## Run
 
@@ -93,6 +96,15 @@ python -m RUSHI_Task.rerun
 python -m RUSHI_Task.analyze
 ```
 
+The extension and the guide (same prepared inputs; the guide also needs the `jinja2` and
+`markdown` packages and Microsoft Edge):
+
+```sh
+python -m RUSHI_Task.same_job.run        # 36 runs, about 25 minutes, resumable
+python -m RUSHI_Task.same_job.analyze
+python -m RUSHI_Task.guide.build --profile <an empty scratch folder>
+```
+
 Passing `--output` keeps `extract` from overwriting the committed `RAW_Alibaba/archive_audit.json`.
 
 ## Notes for Brave (repo housekeeping, not changed here)
@@ -112,6 +124,36 @@ Passing `--output` keeps `extract` from overwriting the committed `RAW_Alibaba/a
 This analysis checks content equality instead of those two hashes and reports both
 in [reports/validation.json](reports/validation.json).
 
+## Extension: the same-job rule (separate folder)
+
+[same_job/](same_job/) turns the analysis into a proposal. A server can only sleep when its
+last task leaves, and tasks of the same job finish close together (a median of 2 s apart in
+the team's trace, against 47 s for other tasks released at the same time). So the
+**same-job rule** puts a new task on a server that is running work, already has tasks of its
+job, and stays under the overload line; otherwise Rohan's policy decides exactly as before.
+It is added to both LR-MMT and the memory-aware version, needs no prediction and adds no
+tuned numbers. The plan ([same_job/DESIGN.md](same_job/DESIGN.md)) was fixed before any run,
+and everything was tested on the team's own 9 cases. Start with
+[the beginner's guide (PDF)](guide/EcoSched_Same_Job_Rule_Guide.pdf).
+
+| Comparison (team's 9 cases) | Energy wins | Total energy | Verdict (rule fixed before running) |
+|---|---:|---:|---|
+| LR-MMT + rule vs LR-MMT | 9/9 | −1.02% | **works better** |
+| Memory-aware + rule vs memory-aware | 9/9 | −8.69% (−11.13% on the largest workload) | **no**: one large case is 0.11 points over the pressure limit |
+| LR-MMT + rule vs First Fit | 0/9 | +0.33% | no |
+| Memory-aware + rule vs First Fit | 6/9 | +1.34% | no: First Fit still wins the largest workload |
+| Memory-aware + rule vs LR-MMT | 7/9 | −0.03% | **works better** (by a hair) |
+
+On the largest workload the rule cuts the memory-aware version from 32.6 to 25.3 servers on,
+and busy servers run 1.71 different jobs instead of 2.18. With the rule, the memory-aware
+version uses the least energy of all six algorithms in the 6 small and medium cases; First
+Fit still uses the least in the 3 largest. Full results:
+[same_job/reports/REPORT.md](same_job/reports/REPORT.md).
+
+This is an extension next to the frozen active comparison (AGENTS.md): it adds two policies
+and changes no workload, simulator setting or existing result. Including it in the final
+conclusions needs the team's agreement.
+
 ## Open questions for the team
 
 - **Balance weight.** The analysis keeps the implemented weight of 0.25. A small
@@ -120,6 +162,8 @@ in [reports/validation.json](reports/validation.json).
   variants and the core freeze applies, so it was not run. It needs the team's OK,
   and the result would have to be labelled as tuned on the same data.
 - **Untouched samples** (midterm plan, D4) are outside this D5 analysis.
+- **The same-job rule** (extension above): should it go into the final report? AGENTS.md
+  keeps later placement extensions out of the active conclusions unless the team agrees.
 
 ## Limits
 
