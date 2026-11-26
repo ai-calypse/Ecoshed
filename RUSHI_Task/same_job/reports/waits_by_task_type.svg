@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="462" viewBox="0 0 980 462" role="img" aria-labelledby="title desc">
+<title id="title">Share of tasks that had to wait, by task type (4,000 groups)</title>
+<desc id="desc">Mean over the 3 server models. A task waits if no running server has room or its server is waking. Balanced: LR-MMT 51%, LR-MMT + rule 53%, Memory-aware 39%, Memory-aware + rule 48%; Memory-heavy: LR-MMT 39%, LR-MMT + rule 42%, Memory-aware 26%, Memory-aware + rule 35%; CPU-heavy: LR-MMT 12%, LR-MMT + rule 15%, Memory-aware 11%, Memory-aware + rule 15%</desc>
+<rect width="980" height="462" fill="#ffffff"/>
+<g font-family="system-ui, -apple-system, &quot;Segoe UI&quot;, sans-serif">
+<text x="24.0" y="34.0" font-size="20" fill="#0b0b0b" text-anchor="start" font-weight="bold">Share of tasks that had to wait, by task type (4,000 groups)</text>
+<text x="24.0" y="58.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">Mean over the 3 server models. A task waits if no running server has room or its server is waking.</text>
+<rect x="24.0" y="78.0" width="12" height="12" rx="2" fill="#2a78d6"/>
+<text x="42.0" y="88.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">LR-MMT</text>
+<rect x="111.2" y="78.0" width="12" height="12" rx="2" fill="#e87ba4"/>
+<text x="129.2" y="88.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">LR-MMT + rule</text>
+<rect x="248.8" y="78.0" width="12" height="12" rx="2" fill="#eb6834"/>
+<text x="266.8" y="88.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">Memory-aware</text>
+<rect x="379.2" y="78.0" width="12" height="12" rx="2" fill="#1baf7a"/>
+<text x="397.2" y="88.0" font-size="13" fill="#52514e" text-anchor="start" font-weight="normal">Memory-aware + rule</text>
+<line x1="70" y1="392.0" x2="950" y2="392.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="396.0" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">0%</text>
+<line x1="70" y1="305.3" x2="950" y2="305.3" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="309.3" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">20%</text>
+<line x1="70" y1="218.7" x2="950" y2="218.7" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="222.7" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">40%</text>
+<line x1="70" y1="132.0" x2="950" y2="132.0" stroke="#e1e0d9" stroke-width="1"/>
+<text x="62.0" y="136.0" font-size="12" fill="#898781" text-anchor="end" font-weight="normal">60%</text>
+<path d="M165.7,392.0 V174.7 Q165.7,170.7 169.7,170.7 H185.7 Q189.7,170.7 189.7,174.7 V392.0 Z" fill="#2a78d6"><title>LR-MMT, Balanced: 51%</title></path>
+<text x="177.7" y="164.7" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">51%</text>
+<path d="M191.7,392.0 V167.8 Q191.7,163.8 195.7,163.8 H211.7 Q215.7,163.8 215.7,167.8 V392.0 Z" fill="#e87ba4"><title>LR-MMT + rule, Balanced: 53%</title></path>
+<text x="203.7" y="157.8" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">53%</text>
+<path d="M217.7,392.0 V228.4 Q217.7,224.4 221.7,224.4 H237.7 Q241.7,224.4 241.7,228.4 V392.0 Z" fill="#eb6834"><title>Memory-aware, Balanced: 39%</title></path>
+<text x="229.7" y="218.4" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">39%</text>
+<path d="M243.7,392.0 V186.2 Q243.7,182.2 247.7,182.2 H263.7 Q267.7,182.2 267.7,186.2 V392.0 Z" fill="#1baf7a"><title>Memory-aware + rule, Balanced: 48%</title></path>
+<text x="255.7" y="176.2" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">48%</text>
+<text x="216.7" y="410.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">Balanced</text>
+<path d="M459.0,392.0 V225.7 Q459.0,221.7 463.0,221.7 H479.0 Q483.0,221.7 483.0,225.7 V392.0 Z" fill="#2a78d6"><title>LR-MMT, Memory-heavy: 39%</title></path>
+<text x="471.0" y="215.7" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">39%</text>
+<path d="M485.0,392.0 V213.1 Q485.0,209.1 489.0,209.1 H505.0 Q509.0,209.1 509.0,213.1 V392.0 Z" fill="#e87ba4"><title>LR-MMT + rule, Memory-heavy: 42%</title></path>
+<text x="497.0" y="203.1" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">42%</text>
+<path d="M511.0,392.0 V285.2 Q511.0,281.2 515.0,281.2 H531.0 Q535.0,281.2 535.0,285.2 V392.0 Z" fill="#eb6834"><title>Memory-aware, Memory-heavy: 26%</title></path>
+<text x="523.0" y="275.2" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">26%</text>
+<path d="M537.0,392.0 V244.5 Q537.0,240.5 541.0,240.5 H557.0 Q561.0,240.5 561.0,244.5 V392.0 Z" fill="#1baf7a"><title>Memory-aware + rule, Memory-heavy: 35%</title></path>
+<text x="549.0" y="234.5" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">35%</text>
+<text x="510.0" y="410.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">Memory-heavy</text>
+<path d="M752.3,392.0 V342.3 Q752.3,338.3 756.3,338.3 H772.3 Q776.3,338.3 776.3,342.3 V392.0 Z" fill="#2a78d6"><title>LR-MMT, CPU-heavy: 12%</title></path>
+<text x="764.3" y="332.3" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">12%</text>
+<path d="M778.3,392.0 V331.3 Q778.3,327.3 782.3,327.3 H798.3 Q802.3,327.3 802.3,331.3 V392.0 Z" fill="#e87ba4"><title>LR-MMT + rule, CPU-heavy: 15%</title></path>
+<text x="790.3" y="321.3" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">15%</text>
+<path d="M804.3,392.0 V349.1 Q804.3,345.1 808.3,345.1 H824.3 Q828.3,345.1 828.3,349.1 V392.0 Z" fill="#eb6834"><title>Memory-aware, CPU-heavy: 11%</title></path>
+<text x="816.3" y="339.1" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">11%</text>
+<path d="M830.3,392.0 V329.8 Q830.3,325.8 834.3,325.8 H850.3 Q854.3,325.8 854.3,329.8 V392.0 Z" fill="#1baf7a"><title>Memory-aware + rule, CPU-heavy: 15%</title></path>
+<text x="842.3" y="319.8" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">15%</text>
+<text x="803.3" y="410.0" font-size="12" fill="#52514e" text-anchor="middle" font-weight="normal">CPU-heavy</text>
+<line x1="70" y1="392" x2="950" y2="392" stroke="#c3c2b7" stroke-width="1"/>
+<text x="510.0" y="436.0" font-size="12" fill="#898781" text-anchor="middle" font-weight="normal">tasks that waited</text>
+</g>
+</svg>

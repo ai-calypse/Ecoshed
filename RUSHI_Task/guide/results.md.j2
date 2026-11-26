@@ -1,0 +1,137 @@
+<h1><span class="part">Part E</span>Results</h1>
+
+Everything in this part comes from the team's 9 cases: the {{ v.runs }} runs, plus the team's
+committed results for First Fit and Best Fit.
+
+## E1. The verdicts
+
+Each row is one question from Part D4, scored with the rules written down before running.
+Negative energy means **less** energy.
+
+{{ t.verdict_table }}
+
+In plain words:
+
+- **The rule makes both algorithms use less energy in every one of the 9 cases.** For
+  LR-MMT the saving is small ({{ v.S1.total }} in total) and passes every test. For the
+  memory-aware version it is large ({{ v.S2.total }} in total, {{ v.S2.large }} on the largest workload).
+- **Why S2 still says "no":** {{ v.s2_fail_text }} The limits were fixed before running, so
+  it counts as a "no", however close. E6 explains what crowding means here.
+- **First Fit is still hard to beat.** LR-MMT + rule beats it in {{ v.S3.wins }} of 9 cases
+  ({{ v.S3.total }} in total). Memory-aware + rule beats it in {{ v.S4.wins }} of 9 cases, every small and medium
+  one, but not on the largest workload ({{ v.S4.large }}), so its total is {{ v.S4.total }}.
+- **The team's original question (S5) turns into a narrow "yes":** with the rule, the
+  memory-aware version beats LR-MMT in {{ v.S5.wins }} of 9 cases, but by only {{ v.S5.total }} in total, and it is
+  still {{ v.S5.large }} on the largest workload.
+- **With the rule on both (S6)**, caring about memory helps on small and medium workloads
+  but not on the largest ({{ v.S6.large }}), so the total is {{ v.S6.total }}.
+
+## E2. Least energy in each case
+
+{{ t.lowest_table }}
+
+With only the four original algorithms, First Fit used the least energy in {{ v.ff_before }} of 9 cases.
+With the rule added, the memory-aware version takes {{ v.mem_rule_lowest }} of them (every {{ v.mem_rule_lowest_sizes }}
+case), and First Fit keeps {{ v.ff_after }} (the {{ v.ff_after_sizes }} ones).
+
+## E3. Energy by workload size
+
+All compared with LR-MMT, averaged over the 3 server models of each size:
+
+{{ t.size_table }}
+
+<figure>
+<img src="charts/energy_vs_lr_mmt_by_size.svg" alt="Energy change compared with LR-MMT, by workload size">
+<figcaption>Figure 3. Bars to the left of 0 use less energy than LR-MMT. The exact value is printed next to each bar.</figcaption>
+</figure>
+
+The memory-aware version's large-workload penalty ({{ v.size.lr_mmt_memory.s4000 }}) shrinks to {{ v.size.lr_mmt_memory_same_job.s4000 }}
+with the rule.
+
+## E4. Why: fewer servers on
+
+On the largest workload, the memory-aware version kept **{{ v.servers.lr_mmt_memory }}** servers on, on
+average. With the rule it keeps **{{ v.servers.lr_mmt_memory_same_job }}**, close to LR-MMT's {{ v.servers.lr_mmt }}.
+
+<figure>
+<img src="charts/servers_over_time.svg" alt="Servers switched on over the 12 hours">
+<figcaption>Figure 4. The large workload on the HPE server model, in 30-minute averages. Top: servers switched on. Bottom: CPU load of the servers that are running work.</figcaption>
+</figure>
+
+The exact energy split from D5 (`RUSHI_Task/accounting.py`) says where the saving comes
+from. Every server-second is charged in one state, so the parts add up exactly. Values
+are the change in kWh per large (4,000-group) run when the rule is added, averaged over the
+3 server models; negative = saves energy:
+
+{{ t.split_table }}
+
+For the memory-aware version the rule saves {{ v.split.mem_net }} kWh per large run, and
+{{ v.split.mem_running_share }} of that is servers no longer kept on while running work. Wake-ups go up
+({{ v.split.mem_wakes }}): servers that empty in one go fall asleep, so more of them have to be woken
+later. That costs {{ v.split.mem_wake_cost }} kWh, far less than it saves. For LR-MMT the same pattern
+is much smaller ({{ v.split.lr_net }} kWh per run).
+
+<figure>
+<img src="charts/where_the_difference_comes_from.svg" alt="Exact split of the energy difference into parts">
+<figcaption>Figure 5. Red adds energy, purple saves energy, gray is the net change.</figcaption>
+</figure>
+
+## E5. Did servers hold fewer jobs?
+
+The rule did what it was designed to do: busy servers ran fewer different jobs at once.
+Mean number of different jobs on a server that is running work (mean of the 3 server
+models):
+
+{{ t.mix_table }}
+
+The change is biggest for the memory-aware version on the large workload
+({{ v.mix.mem_before }} → {{ v.mix.mem_after }} jobs per busy server; servers running a single job went from
+{{ v.mix.mem_single_before }} to {{ v.mix.mem_single_after }}), exactly where its energy fell most. For plain LR-MMT the change is
+small ({{ v.mix.lr_before }} → {{ v.mix.lr_after }}), because LR-MMT already kept most of a job's tasks together,
+and so is its saving.
+
+## E6. Waiting and crowding
+
+Saving energy only counts if the work is not noticeably slower. Large workload, mean of
+the 3 server models:
+
+{{ t.quality_table }}
+
+- **Waiting barely changes:** the mean wait moves by {{ v.wait_change_lr }} s for LR-MMT and
+  {{ v.wait_change_mem }} s for the memory-aware version, out of about {{ v.wait.lr_mmt }} s. On the large workload, bursts
+  fill all 64 servers, so every algorithm makes some tasks wait.
+- **Crowding (pressure) rises a little,** because fuller servers spend more time above
+  90%. Memory-aware + rule ({{ v.pressure.lr_mmt_memory_same_job }}) is still **less** crowded than LR-MMT
+  ({{ v.pressure.lr_mmt }}) and First Fit ({{ v.pressure.first_fit }}). The original memory-aware version was less crowded
+  ({{ v.pressure.lr_mmt_memory }}) only because it kept about {{ v.extra_servers }} more servers on. That is the comparison
+  (S2) with one case just over the limit.
+{% if v.migrations_fall %}- **Migrations fall:** {{ v.migrations_change.lr_mmt }} for LR-MMT and {{ v.migrations_change.lr_mmt_memory }} for the memory-aware version.
+{% endif %}
+Remember that pressure is a warning sign, not real slowness: in this simulator a crowded
+server does not slow down, because requests can never exceed capacity.
+
+## E7. By task type
+
+The proposal also asked how each **type** of task is affected. Large workload, mean of the
+3 server models:
+
+<figure>
+<img src="charts/waits_by_task_type.svg" alt="Share of tasks that waited, by task type">
+<figcaption>Figure 6. Share of tasks that had to wait at all, by task type.</figcaption>
+</figure>
+
+{{ t.types_table }}
+
+{{ v.types_sentence }}
+
+## E8. Our predictions, checked
+
+These were written in `RUSHI_Task/same_job/DESIGN.md` before the first run.
+
+{{ t.predictions_table }}
+
+{{ v.pred_held }} of {{ v.pred_total }} held. The one that did not: one S2 case went just over the crowding limit (E1).
+
+{% include "claims.md.j2" %}
+
+{% include "appendix.md.j2" %}

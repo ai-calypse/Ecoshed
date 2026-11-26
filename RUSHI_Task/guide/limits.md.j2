@@ -1,0 +1,17 @@
+## F2. What this does not show
+
+- **Not a test on unseen data.** D5 used these same 9 cases. What guards against tuning is
+  that the rule has nothing to tune and each algorithm ran once per case. A stronger test
+  would run the same code on task samples nobody has looked at.
+- **Not real electricity.** The simulator multiplies time by SPECpower watts for the CPU a
+  task *requested*. Real servers also use power for memory, disks, fans and cooling, and
+  real tasks rarely use exactly what they request.
+- **Not other days.** Alibaba published one 12-hour window, so this shows the rule on these
+  jobs, not on a different day, season or company.
+- **Not independent repeats.** The three sizes are nested (the 250 groups are part of the
+  1,000, which are part of the 4,000), and the three server models replay the same tasks.
+  The 9 cases are 9 views of one sample, so no statistical significance is claimed.
+- **Pressure is a warning sign, not slowness.** In this simulator a crowded server does not
+  slow down, because requests can never exceed capacity.
+- **The rule needs job ids.** It works because every task in the trace says which job it
+  belongs to. A system without that information could not use it.

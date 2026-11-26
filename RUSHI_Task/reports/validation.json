@@ -1,0 +1,27 @@
+{
+  "passed": true,
+  "committed_runs_checked": 36,
+  "pairs_decomposed": 9,
+  "decomposition_exact": true,
+  "decision_recordings": 18,
+  "recordings_reproduce_committed_runs": true,
+  "new_simulations_in_this_step": 0,
+  "synthetic_runs": 0,
+  "summaries_sha256": "479d3c44747f114e8c793362ff382e455a2b09470ef0d86ae2f775f02fd917d9",
+  "summary_sha256_recorded_by_baseline_validation": "b64f374f1884cdb8c4bd0a0be540cdca69be842fc7d3e2ca18e03d5fb91c7f0c",
+  "active_rows_equal_baseline_validated_rows": true,
+  "raw_result_validation_passed": true,
+  "simulator_source_unchanged_since_runs": true,
+  "manifest_sha256_recorded_in_results": [
+    "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b"
+  ],
+  "committed_manifest_sha256": "91de65a667ac2fbc30f5c803819602f829b230f45a23d7ba66e04f089e7e6ce5",
+  "analysis_source_sha256": {
+    "RUSHI_Task/__init__.py": "11c973711c7658766ed169007c17c83523d5cf9f64464a557355a42379cf427a",
+    "RUSHI_Task/accounting.py": "fd48e740f47e4c5f1cfd63ee12d48b37f0aebb05d9ea1e57127cdd0db407c2a0",
+    "RUSHI_Task/analyze.py": "9bcf03a2662e4018f6d7a8af54aee8ebe6ace43d3244aeb0032f974b13a570c5",
+    "RUSHI_Task/charts.py": "54e5a7481e9228b0a9e29ec19af538517561e294595e86bd0dcb2d0573836e5b",
+    "RUSHI_Task/observer.py": "af652febe06f82f29787da1d2c464eca1f928a0591126152b7d35a6b71d9c0d6",
+    "RUSHI_Task/rerun.py": "cf09b3dba25875630db5c50f4c38c97411f810538d342294f1b69ac862272a03"
+  }
+}
