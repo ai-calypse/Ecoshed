@@ -6,6 +6,8 @@ Reads the 36 runs in reports/runs/ and the team's committed First Fit and Best F
 (RAW_Alibaba/reports/summaries.json). Applies the success rule and the team's limits
 (POLICY_Improvement/config.json), both fixed in DESIGN.md before any run. Also re-checks
 the rule's premise on the team's trace: do tasks of the same job finish close together?
+(That check needs the git-ignored prepared inputs; without them the committed
+reports/premise_check.json is reused, so everything else rebuilds from committed files.)
 Writes reports/REPORT.md, CSV tables, charts and validation.json.
 """
 from collections import defaultdict
@@ -268,6 +270,17 @@ def premise(size=4000, pairs_per_job=20, window_s=300, idle_timeout_s=60, seed=0
             "same_job_within_idle_timeout_pct": within(same), "other_job_within_idle_timeout_pct": within(other)}
 
 
+def premise_check():
+    """Recompute the premise if the prepared inputs are present (they are git-ignored);
+    otherwise reuse the committed reports/premise_check.json, so a fresh clone can still
+    rebuild every report from committed files."""
+    if (PACKAGE / "instances.csv").exists():
+        return premise(), True
+    print("Prepared inputs not found: using the committed reports/premise_check.json "
+          "(prepare the inputs to recompute it; see RUSHI_Task/README.md).")
+    return json.loads((REPORTS / "premise_check.json").read_text(encoding="utf-8")), False
+
+
 def predictions(verdicts, mix):
     """Check each prediction written in DESIGN.md before the runs."""
     v = {r["comparison"]: r for r in verdicts}
@@ -520,9 +533,10 @@ def build():
     runs, new, status = load()
     rows, verdicts = compare(runs)
     mix = job_mix(new)
+    checked, recomputed = premise_check()
     result = {"status": status, "runs": runs, "rows": rows, "verdicts": verdicts, "job_mix": mix,
               "lowest": lowest(runs), "sizes": size_rows(runs), "quality": quality(runs), "splits": splits(runs),
-              "types": types(runs), "premise": premise(), "predictions": predictions(verdicts, mix)}
+              "types": types(runs), "premise": checked, "predictions": predictions(verdicts, mix)}
     REPORTS.mkdir(parents=True, exist_ok=True)
     write_csv(REPORTS / "comparisons.csv", rows)
     write_csv(REPORTS / "verdicts.csv", verdicts)
@@ -532,8 +546,9 @@ def build():
     write_csv(REPORTS / "quality_4000.csv", result["quality"])
     write_csv(REPORTS / "energy_split_4000.csv", result["splits"])
     write_csv(REPORTS / "by_task_type_4000.csv", result["types"])
-    (REPORTS / "premise_check.json").write_text(json.dumps(result["premise"], indent=2) + "\n",
-                                                encoding="utf-8", newline="\n")
+    if recomputed:
+        (REPORTS / "premise_check.json").write_text(json.dumps(result["premise"], indent=2) + "\n",
+                                                    encoding="utf-8", newline="\n")
     (REPORTS / "validation.json").write_text(json.dumps(
         {"passed": True, **status, "data": "team's prepared inputs only (RAW_Alibaba/prepared)",
          "limits_source": "POLICY_Improvement/config.json success_limits", "limits": LIMITS,
