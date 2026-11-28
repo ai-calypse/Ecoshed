@@ -1,0 +1,12 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}}
+\caption{Workload groups and individual instances}\
+\toprule
+Groups With Variable Observed Runtime & Instance Resource Skew Counts & Instances & Task Groups \\
+\midrule\endhead
+128 & \{"balanced":\allowbreak{}15217,"memor\allowbreak{}y\_heavy":131\allowbreak{}7\} & 16534 & 250 \\
+527 & \{"balanced":\allowbreak{}52062,"cpu\_h\allowbreak{}eavy":98,"me\allowbreak{}mory\_heavy":\allowbreak{}16297\} & 68457 & 1000 \\
+2074 & \{"balanced":\allowbreak{}303807,"cpu\_\allowbreak{}heavy":748,"\allowbreak{}memory\_heavy\allowbreak{}":73730\} & 378285 & 4000 \\
+\bottomrule\end{longtable}
+% Groups preserve original instance multiplicity. Skew counts are population counts, not category-specific performance outcomes.
+% Sources: RAW_Alibaba/prepared/manifest.json

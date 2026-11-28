@@ -1,0 +1,15 @@
+{
+  "schema_version": 1,
+  "bootstrap_servers": "127.0.0.1:19092",
+  "topic": "ecosched.workload.arrivals.v1",
+  "group_prefix": "ecosched.d6.replay",
+  "database": "ARNAV_Task/.runtime/kafka/replay.sqlite3",
+  "runtime_directory": "ARNAV_Task/.runtime/kafka",
+  "delivery_timeout_ms": 30000,
+  "request_timeout_ms": 10000,
+  "batch_events": 250,
+  "max_pending": 500,
+  "consumer_poll_ms": 200,
+  "completion_timeout_s": 90,
+  "logical_bucket_s": 900
+}

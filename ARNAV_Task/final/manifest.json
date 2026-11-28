@@ -1,0 +1,598 @@
+{
+  "base": "b0c48284a48407b1b14242c579f39a1f27248e5f",
+  "branch": "arnav/d6-final-package",
+  "build_commands": [
+    "python -m ARNAV_Task.documentation.build_report",
+    "python -m ARNAV_Task.documentation.build_presentation --render",
+    "python -m ARNAV_Task.documentation.build_support",
+    "python -m ARNAV_Task.documentation.validate_final --render --write-manifest"
+  ],
+  "dependencies": {
+    "matplotlib": "3.11.2",
+    "pymupdf": "1.27.2",
+    "pypdf": "7.2.0",
+    "python-docx": "1.2.0",
+    "python-pptx": "1.0.2",
+    "reportlab": "5.1.2"
+  },
+  "evolved_documentation_references": [
+    {
+      "current_sha256": "aae36d3550c8f5cf2cd1fec14385e7335651ea098ddd3d612ac29990288ac9d3",
+      "interpretation": "Documentation evolved after the frozen publication build; outputs are unchanged.",
+      "path": "ARNAV_Task/README.md",
+      "phase6_sha256": "9d9a51710673e0f2b50f1ec79c2fe96427260d83c4852622bd668dc682edd9a1"
+    }
+  ],
+  "figure_ids": [
+    "A01",
+    "R04",
+    "R03",
+    "R01",
+    "R06",
+    "R07",
+    "R09",
+    "R05",
+    "R11",
+    "R13",
+    "A02",
+    "S01",
+    "A04"
+  ],
+  "limitations": [
+    "Three historical research metadata references remain unresolved.",
+    "No full scheduler matrix rerun in D6.",
+    "Mixed A4/A3 foldout report pages preserve figure readability; DOCX pagination may vary by Word installation.",
+    "Native PowerPoint PDF metadata may differ between renders; editable Office ZIPs are normalized.",
+    "Presenter allocation/time budget are provisional; no professor-specific rubric found locally."
+  ],
+  "output_sha256": {
+    "README.md": "f8376b299a7147713cd292cbed12885edd602b4834bc93682470cade68c692df",
+    "demo/defense_preparation.md": "4e789cf0adcb89fe2d66238e7f5229c20f5cc951f641b440aac173e552a54d86",
+    "demo/demo_checklist.md": "6a942a354d9c2775293b4b4d3d103fdc742eb14cd5e6297ceb4a73a7325c579d",
+    "demo/demo_runbook.md": "855b64160b2619490fd2a6caac71fd5c7f60915af275ef284a52a97b1150dd19",
+    "demo/troubleshooting.md": "4a6329a713cac1e62f6d3840eab984ee0f99067919f5488e38aaced23f248eae",
+    "presentation/EcoSched_Final_Presentation.pdf": "cccfbd9a9869cdb23487f8125b7befd1daca749ced976c3f0613b2e59386db63",
+    "presentation/EcoSched_Final_Presentation.pptx": "f9b73b75ad61dc7905807beca12e4fe837d821a8b2c3d6535d0bc5322a59f554",
+    "presentation/build_receipt.json": "f73110211063c4d29e6bd6145a467fe3c9db7eb5ed90db8315961292006b31fa",
+    "presentation/claims.json": "399546ee4ed408a6e3a47e8ad2d83a82ffab402527b027593bc2254278714d8f",
+    "presentation/previews/slide_01.png": "2675ba6fccba3aa41677b86f84a3d9885143aed1cbd4e0bda51a80709c707cde",
+    "presentation/previews/slide_02.png": "8599e64e160e70ad20bbdc12cd2a7c1a5f24da66252c828a681a1096d7c63c7d",
+    "presentation/previews/slide_03.png": "e37da21f3a88229d99d23f47de722331dea4eb8e35e478ce65dcb4205a2c5b6c",
+    "presentation/previews/slide_04.png": "aeceffc07a7d3e4a7eef2bba407a5603676066de40f7b867aa79f1846dadedc7",
+    "presentation/previews/slide_05.png": "bee78709413f93d3a15fdec9d1f75f14c82dd801de2f75ade9377e7837cb08d2",
+    "presentation/previews/slide_06.png": "97e19ad9c446c1051643fe4732a2e28b0793c059dcf21e775b8e9ee8c9081379",
+    "presentation/previews/slide_07.png": "c66ad7419e334934e1a05d04888a2bc1fdfcd8638119bce334f139d9f7738040",
+    "presentation/previews/slide_08.png": "11e1a5e146e3f0e6f8f218c0659be1ae5ec0394c7c09d916535324bba37458e2",
+    "presentation/previews/slide_09.png": "fd71d3c66f32c517f3e8982102d80a905cdd973fb342fe994f116e06091ed34a",
+    "presentation/previews/slide_10.png": "7e40b351c1e61d64a745018fa42272a270def379847e5d8d60d124f74ecbc524",
+    "presentation/previews/slide_11.png": "0c26eb185de85675c4ddbcc8becb34db49bb05cfb62eddf6dd3aba242e64690c",
+    "presentation/previews/slide_12.png": "9e8aa6d306c482868426ed66fd60248942da9ae4211741331fb40575d7ce7085",
+    "presentation/previews/slide_13.png": "28d8c64bf71f4d8541a14b390fa592fa4e231f02dde035b5c239e9508b462089",
+    "presentation/previews/slide_14.png": "a2e8c1a2936a21a49b7581bc389e9f3da726168fa695df3fb6523e7f90f2e5ee",
+    "presentation/previews/slide_15.png": "73740df0e4d18f1125fc4abfec2e1f93b3cd4587307fd326e9f7ff4bc7567791",
+    "presentation/previews/slide_16.png": "e4de73eee32c7682da574832776d95439c698b5c221ea6efc8ace6ac66448f47",
+    "presentation/previews/slide_17.png": "f0bc52380e3d4037b5fc72b466efaa08737abffa31a4a71bbf22c7915e7e4670",
+    "presentation/previews/slide_18.png": "193f6eb891ad5c31cb08c45754ded40009e280eafb37372fdcfeda6620603135",
+    "presentation/previews/slide_19.png": "440cdeb866d5798e9dd01180eeb978a4d775ae0361b85b0dfe45065e8f601d49",
+    "presentation/previews/slide_20.png": "df99679f974b2b3c27f2289ae3e871bebb8079f04fca82fd761ff4ea36d7e79b",
+    "presentation/source/slides.json": "63044478262d8372ce718e46dd0ea69f9cc7eb925f7099cd254a2e588807112e",
+    "presentation/speaker_notes.md": "021af95cd907455bebfa3a56ee865125c6a19e554e74096c6754245138940de6",
+    "report/EcoSched_Final_Report.docx": "c9989db4ce5d2356678bb32777b075cfec36c4b53e2daa951bbd90d2dee1424d",
+    "report/EcoSched_Final_Report.md": "6d41dc3528ae95098a7eddbb0b91539262284bf34f51db29e05bcb18d1847f61",
+    "report/EcoSched_Final_Report.pdf": "7ed900a910fbeb55cc4eac293b2e62f11620642578ca8ce1f88afcc0808495b8",
+    "report/build_receipt.json": "7de3cff450c2f9cdd5fb10addd522eaf1de30eede9a929612ab655e0e28acb78",
+    "report/claims.json": "399546ee4ed408a6e3a47e8ad2d83a82ffab402527b027593bc2254278714d8f",
+    "report/previews/page_01.png": "14cc1aca8556cff9aedd46dad4cd9acafe411c5db6d3080932ac904d9e828be3",
+    "report/previews/page_02.png": "60997c1d947c008afe35af29f79337f870b1add07c67d5c888cba04c57735231",
+    "report/previews/page_03.png": "a93f8f8b55a9433b05b62b4b4633f590ad27f0458453e92b69aad2df49bf91eb",
+    "report/previews/page_04.png": "9cdaa1ee140505c167fe397862849fd7c4164b4568fbbd18ecd941586813ff52",
+    "report/previews/page_05.png": "c462f3263e7ff09a4caa2777b25c5fae35d267ee5913327ccab165d900bfdb01",
+    "report/previews/page_06.png": "3e132dc42898bceeb8f0a569082d70db33d937e705498c78c41cc90f916c1dbe",
+    "report/previews/page_07.png": "a838e1f33dd5c5709774534960ae7294c9ec4b5febc0e1d9412dced68504fb4f",
+    "report/previews/page_08.png": "8684da436777de13fc338bc9de73a8f87dd4d041d3120eeb640d991ee2f83b10",
+    "report/previews/page_09.png": "a3c2f2a0955802e6b1f7ecc0f2ab247bfcef39cbe3fc28154c2e04de1e7200f4",
+    "report/previews/page_10.png": "21bc2d877b3f0a21c408c09ca6e3f9dd7b60fb0947e8111cf5fb50faecdaa298",
+    "report/previews/page_11.png": "1ec43609e93d48efaa13d8a9258a22ab5605c3d07be1ff4e590db160206fd870",
+    "report/previews/page_12.png": "ed7a7e86a8788c12ba8412f1edaf2179a48a691ced96cbc9cb52de26db87228c",
+    "report/previews/page_13.png": "d9fcc6fb21414308e3c47dc0a78ab29f2830262a79580d552877b4f696186ece",
+    "report/previews/page_14.png": "33bbdfa85b547abb93bce6f3ba0c0fbcb711efa69aa5f5519083bbd2fb472f33",
+    "report/previews/page_15.png": "997a58ca5ede8f19cfd8d92c28c9fcd8a149759d299f9fcfa2917c22b6b48add",
+    "report/previews/page_16.png": "7a61a6b3663ba8972a1dd77be530eac6605ac45021913609cf3edaf454f23128",
+    "report/previews/page_17.png": "2103cfdce51d073357e5ab5c9ec0988b487779f95d4d6ba84c5aceb141d1505a",
+    "report/previews/page_18.png": "cc903d371ec83e7281c9511e176b6a4623af7d66514a6678a8a0054cee8d22a7",
+    "report/previews/page_19.png": "892c6fd8077c5ed0d23cd260ee6278d448938f5f33e53a5d0fa5ad5f21baa582",
+    "report/previews/page_20.png": "c3346b1ff442b41b1338b0199691eb9cfbc9be33fc99cd19b9cc6faa74a350f6",
+    "report/previews/page_21.png": "315a632c4a3596dda1923e135125ba8fb00ad8a8d6b040a14fe6456fe87e0c20",
+    "report/previews/page_22.png": "dcf8749eda966d7122df0667fc0652d541bf9273a68164d464b92936e20171fb",
+    "report/previews/page_23.png": "ec1a4622338bc21825d8221fb2d89b9d8768911c607136769fca93f195f2318f",
+    "report/previews/page_24.png": "d75ed38c57aa99cee98734ee33c585cc3513bc1cd6334a11e3c64429f6c82c32",
+    "report/previews/page_25.png": "1c261602bbad00a0da24f576fa4822dc700bf5d8dacee1941e2c38311281d13f",
+    "report/previews/page_26.png": "7514a8b95c00f09d64d3894ef118db13b1ad8eb8b6133f32db5c4f6859d25bb1",
+    "report/previews/page_27.png": "91fa4e756ae16cb75d2251c8960e62cf8303ab9fc9af6df5d3fda06d28ded813",
+    "report/previews/page_28.png": "ada7e4f0e056d185bd3c7806002d23d201e8937bd18b11ddc1b6e9241bcbf382",
+    "report/references.bib": "74e59b0a46f203023100ae827985c4bc494bdd7986f6840119c0202788d448df",
+    "report/source/references.json": "f6f1ec13031533a42a30da8637b7e3aabc3e227c907a0f854056507676491e06",
+    "report/source/report.json": "1a9fed379f9f97260253d3129cc81212463a683ba759622727c31ebd94e0bd9e"
+  },
+  "presentation": {
+    "format": "16:9",
+    "main_slides": 15,
+    "native_charts": true,
+    "pdf_rendering": {
+      "pptx_unchanged": true,
+      "renderer": "Microsoft PowerPoint for Mac",
+      "version": "16.115.2"
+    },
+    "presentation_figures": "Editable readable variants use the Phase 1 adapter and Phase 6 diagram data; actual Phase 5 screenshot embedded.",
+    "slide_count": 20,
+    "slides": [
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "title",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 1,
+        "title": "EcoSched"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "motivation",
+        "presenter_provisional": "Brave Desai",
+        "slide": 2,
+        "title": "Balanced resources do not automatically mean lower energy"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "ablation",
+        "presenter_provisional": "Rohan Rane",
+        "slide": 3,
+        "title": "Change placement; hold the controller fixed"
+      },
+      {
+        "appendix": false,
+        "figure": "A01",
+        "kind": "architecture",
+        "presenter_provisional": "Brave Desai",
+        "slide": 4,
+        "title": "One evidence pipeline, from raw rows to research outputs"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "dataset",
+        "presenter_provisional": "Yaksh Gandhi",
+        "slide": 5,
+        "title": "Preserve each task group\u2019s individual instances"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "algorithms",
+        "presenter_provisional": "Rohan Rane",
+        "slide": 6,
+        "title": "A common feasibility rule; one extra scoring term"
+      },
+      {
+        "appendix": false,
+        "figure": "R04",
+        "kind": "power",
+        "presenter_provisional": "Brave Desai",
+        "slide": 7,
+        "title": "SPECpower supplies a surrogate, not Alibaba electricity"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "method",
+        "presenter_provisional": "Rohan Rane",
+        "slide": 8,
+        "title": "36 outcomes; 9 primary paired comparisons"
+      },
+      {
+        "appendix": false,
+        "figure": "R03",
+        "kind": "primary",
+        "presenter_provisional": "Rushi Jhala",
+        "slide": 9,
+        "title": "Memory-aware placement saves energy in 4/9 cases"
+      },
+      {
+        "appendix": false,
+        "figure": "R06",
+        "kind": "tradeoff",
+        "presenter_provisional": "Rushi Jhala",
+        "slide": 10,
+        "title": "A larger powered footprint buys modest performance gains"
+      },
+      {
+        "appendix": false,
+        "figure": "R05",
+        "kind": "mechanism",
+        "presenter_provisional": "Rushi Jhala",
+        "slide": 11,
+        "title": "Extra busy-host on-time explains the largest-case penalty"
+      },
+      {
+        "appendix": false,
+        "figure": "A02",
+        "kind": "kafka",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 12,
+        "title": "Kafka transports arrivals; it does not run the scheduler"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "demo",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 13,
+        "title": "Classroom demo: inspect results, then replay real arrivals"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "validation",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 14,
+        "title": "Verified numbers; unresolved historical metadata"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "conclusion",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 15,
+        "title": "The defensible result is an energy/performance trade-off"
+      },
+      {
+        "appendix": true,
+        "figure": null,
+        "kind": "primary_table",
+        "presenter_provisional": "Rushi Jhala",
+        "slide": 16,
+        "title": "Appendix \u00b7 all primary energy comparisons"
+      },
+      {
+        "appendix": true,
+        "figure": null,
+        "kind": "settings",
+        "presenter_provisional": "Rohan Rane",
+        "slide": 17,
+        "title": "Appendix \u00b7 fixed controls and resource-skew scope"
+      },
+      {
+        "appendix": true,
+        "figure": "S01",
+        "kind": "streaming",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 18,
+        "title": "Appendix \u00b7 verified Kafka fast-mode sessions"
+      },
+      {
+        "appendix": true,
+        "figure": null,
+        "kind": "provenance",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 19,
+        "title": "Appendix \u00b7 unresolved metadata references"
+      },
+      {
+        "appendix": true,
+        "figure": null,
+        "kind": "references",
+        "presenter_provisional": "All team members",
+        "slide": 20,
+        "title": "Appendix \u00b7 references and individual contribution evidence"
+      }
+    ]
+  },
+  "publication_table_ids": [
+    "T02",
+    "T07",
+    "T08",
+    "T09",
+    "T10",
+    "T11",
+    "T12",
+    "T14",
+    "T18",
+    "T19"
+  ],
+  "python_version": "3.12.15",
+  "report": {
+    "docx": "EcoSched_Final_Report.docx",
+    "figures": [
+      "A01",
+      "R04",
+      "R03",
+      "R01",
+      "R06",
+      "R07",
+      "R09",
+      "R05",
+      "R11",
+      "R13",
+      "A02",
+      "S01",
+      "A04"
+    ],
+    "page_count": 28,
+    "pages": [
+      {
+        "page": 1,
+        "size": "A4",
+        "title": "EcoSched"
+      },
+      {
+        "page": 2,
+        "size": "A4",
+        "title": "Abstract and reading guide"
+      },
+      {
+        "page": 3,
+        "size": "A4",
+        "title": "1. Introduction and 2. Related work"
+      },
+      {
+        "page": 4,
+        "size": "A3L",
+        "title": "3. Research gap and 4. System architecture"
+      },
+      {
+        "page": 5,
+        "size": "A4",
+        "title": "5. Dataset and preprocessing"
+      },
+      {
+        "page": 6,
+        "size": "A4",
+        "title": "5.1 Deterministic sampling, releases and recovery"
+      },
+      {
+        "page": 7,
+        "size": "A4",
+        "title": "6. Scheduling algorithms: admission and placement"
+      },
+      {
+        "page": 8,
+        "size": "A4",
+        "title": "6.3 Shared LR/MMT controller and migration safeguards"
+      },
+      {
+        "page": 9,
+        "size": "A4",
+        "title": "7. SPECpower energy model"
+      },
+      {
+        "page": 10,
+        "size": "A4",
+        "title": "8. Experimental methodology and metric definitions"
+      },
+      {
+        "page": 11,
+        "size": "A3L",
+        "title": "9. Primary energy results"
+      },
+      {
+        "page": 12,
+        "size": "A4L",
+        "title": "9.1 Workload and power sensitivity; additional baselines"
+      },
+      {
+        "page": 13,
+        "size": "A4L",
+        "title": "9.2 Active-host footprint"
+      },
+      {
+        "page": 14,
+        "size": "A4L",
+        "title": "9.3 Waiting, migration and completion"
+      },
+      {
+        "page": 15,
+        "size": "A4L",
+        "title": "9.4 Pressure, fragmentation and interpretation"
+      },
+      {
+        "page": 16,
+        "size": "A4L",
+        "title": "10. D5 mechanism analysis: where the penalty arises"
+      },
+      {
+        "page": 17,
+        "size": "A3",
+        "title": "10.1 Energy/performance trade-offs and descriptive Pareto sets"
+      },
+      {
+        "page": 18,
+        "size": "A3",
+        "title": "10.2 Resource-skew findings and placement decisions"
+      },
+      {
+        "page": 19,
+        "size": "A3L",
+        "title": "11. D6 Kafka and monitoring architecture"
+      },
+      {
+        "page": 20,
+        "size": "A4",
+        "title": "11.1 Dashboard implementation and data separation"
+      },
+      {
+        "page": 21,
+        "size": "A3L",
+        "title": "12. Streaming evaluation and recovery evidence"
+      },
+      {
+        "page": 22,
+        "size": "A3L",
+        "title": "13. Reproducibility and layered validation"
+      },
+      {
+        "page": 23,
+        "size": "A4",
+        "title": "14. Limitations; 15. Conclusion; 16. Contributions"
+      },
+      {
+        "page": 24,
+        "size": "A4",
+        "title": "17. References"
+      },
+      {
+        "page": 25,
+        "size": "A4",
+        "title": "Appendix A. Complete energy and efficiency results"
+      },
+      {
+        "page": 26,
+        "size": "A3L",
+        "title": "Appendix B. Complete host, migration and waiting results"
+      },
+      {
+        "page": 27,
+        "size": "A3",
+        "title": "Appendix C. Complete supported resource-skew outcomes"
+      },
+      {
+        "page": 28,
+        "size": "A3",
+        "title": "Appendix D. Fingerprints, configuration, schema and commands"
+      }
+    ],
+    "pdf": "EcoSched_Final_Report.pdf",
+    "source": "ARNAV_Task/final/report/source/report.json",
+    "tables": [
+      "workloads",
+      "metrics",
+      "primary",
+      "efficiency_primary",
+      "mechanism",
+      "streaming",
+      "contributions",
+      "energy_all",
+      "performance_all",
+      "skew_all"
+    ],
+    "vector_publication_figures": true
+  },
+  "schema_version": 1,
+  "source_sha256": {
+    "AGENTS.md": "bf365fdeb42836fdb90f8e8fbf422674fd3ffd2141f0921b26509e6122e5562e",
+    "ARNAV_Task/README.md": "aae36d3550c8f5cf2cd1fec14385e7335651ea098ddd3d612ac29990288ac9d3",
+    "ARNAV_Task/config/artifacts.json": "3b3bd1c5be07ed523a9b2d382bb35e4c30495b75bd6d6efef1b1981604472c16",
+    "ARNAV_Task/documentation/__init__.py": "2a635d6d43e778f6effd11be5e026e30ffd164c9734f9d6e6a200f8fe2e92014",
+    "ARNAV_Task/documentation/build_presentation.py": "16aa408e410383637fa4cabb52a49efcb08a7defb98e72b6154ac39f8b4b5b37",
+    "ARNAV_Task/documentation/build_report.py": "36b739e4edc25e9191922b0c7e374482d87cc0e9d133c5897f74a32d0ab7dad6",
+    "ARNAV_Task/documentation/build_support.py": "886b0220a147cb7d417402e98fa54d65be43a2660fcf314fed189d0d738fe3c9",
+    "ARNAV_Task/documentation/evidence.py": "9ab10aed10a0af1a63661e5345ca52fa76b11c305e58135f493023c68b15b672",
+    "ARNAV_Task/documentation/tables.py": "50f7660afc76eefca7f299ce08a4ee51b3f64443da0be003a263aea6a69f515d",
+    "ARNAV_Task/documentation/validate_final.py": "486b28002a6ea706c787e48d3f3937282c7f1a5f148e83aa76922766f95a4de3",
+    "ARNAV_Task/reports/phase3_verification.json": "ee23a15de88d877bf2e1ab7fd22f0903dca80b60638085d2df168ff56495f2f6",
+    "ARNAV_Task/reports/phase4_verification.json": "87796835c4ef8bc8adc4c28af361936c5aaf14c1b1be5f1e407e7215ac77d068",
+    "ARNAV_Task/reports/phase5_screenshots/completed_verified_replay.png": "7cbd12607cf26c2ec8d2e3ca642eefcfb752be72d491fb59b18c4b3da9d1a541",
+    "ARNAV_Task/reports/phase5_verification.json": "c07ff93187c1b20d1ef127cb2798e03c659f1b3d010d4ee8a4ed6c08dc65733b",
+    "ARNAV_Task/reports/phase6_verification.json": "0fe4bdfc474870313eb9bf97e454a3ba6b994974314611ba9fd4bcbe703a2a81",
+    "ARNAV_Task/reports/provenance_reconciliation.md": "e0728d2033c1243a4a44ade9131d0dce5d08d7d2baa9dc074b7162dc3555d8c2",
+    "ARNAV_Task/reports/publication/figure_manifest.json": "98c94f84f4cd4785470a14b0f2a84130d4b7677135c3135e4616902b7f06b9bf",
+    "ARNAV_Task/reports/publication/table_manifest.json": "32ff362a5e6f24ec144854bdac93bb41cb1bb5df9edadc5fa594fe23d5a513a3",
+    "ARNAV_Task/requirements.txt": "bb2198311a8a1c9e5394b8b809b3e9278a0e34f8c217c44adccef34951f614ad",
+    "ARNAV_Task/tests/test_documentation.py": "5517ebcf8b1fd9f7b5ac26d5106fd549e15b40b8673f5a24f415a8eed850e226",
+    "BASELINE_Comparison/reports/all_pairwise_comparisons.csv": "9bc5c77564d0d4c8bf112150130e5beccd44258a61f6db4a96fb141cff4bf7c7",
+    "BASELINE_Comparison/reports/proposal_pairs.csv": "8f8b25619ddf945458eec86437ebb51deb338007609889b2c3e54635a65a39a0",
+    "BASELINE_Comparison/reports/summaries.json": "88cc588af6508257e4bbda9302328b4d992f803862bf19d0608beea5b1a461bd",
+    "BASELINE_Comparison/reports/validation.json": "54ed4bcd94db316dd01aff393521523ae4f1d6cf6677c10056a645db213d34ce",
+    "RAW_Alibaba/archive_audit.json": "031795105541b003dc73ceae2d8027de9f934edc444173a4b3c284c1a9a31e6c",
+    "RAW_Alibaba/archive_content_corroboration.json": "315f9717b273c2b56b73269b7d1dcaf32bebe5e4effdbd59b7683b3f681ec5de",
+    "RAW_Alibaba/config.json": "c202ff0da61c273f2a136566ff7e273512553f93327235c5b801109c555e9e19",
+    "RAW_Alibaba/data_validation.json": "5d143eee4379c6906ccbe7de218adee4e188fff23745c10f62b367a450b61e55",
+    "RAW_Alibaba/prepared/manifest.json": "91de65a667ac2fbc30f5c803819602f829b230f45a23d7ba66e04f089e7e6ce5",
+    "RAW_Alibaba/reports/comparison.csv": "6a542f3b0f17cdd8afc52242a07b93815bb1e9071bd4e1db9c8758da1c02a29d",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_1000/hpe_dl360_gen9/best_fit/summary.json": "8c1f9dd00f7016a4d5bcde2fda03874813bcf35483c5a948bed5adb282f7809e",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_1000/hpe_dl360_gen9/first_fit/summary.json": "a750db70a4e8ac41d5039172811d5a973f11cae7981b5346c404c7a9263ea12d",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_1000/hpe_dl360_gen9/lr_mmt/summary.json": "8ffc0d4a5ba0eef58f5e25eb42333711955c35bfc22eea4972908b5b02af344c",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_1000/hpe_dl360_gen9/lr_mmt_memory/summary.json": "ba99783273a03030f025cb133acf47424904ba6ade85c4b786da55ca95c8cb7b",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_250/hpe_dl360_gen9/best_fit/summary.json": "0872278f4ca819a719c92b2f38f629a28b888076c453f3b94bf8ff58666e0122",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_250/hpe_dl360_gen9/first_fit/summary.json": "9ee117fdeb3b2fbe261ca81a585d51da91bde22379f0f94f3d23ece8e9908f1a",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_250/hpe_dl360_gen9/lr_mmt/summary.json": "38c138fcabbe62fbbf822bf4e2fe325e189c3883c1be237f21bf2152867aa775",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_250/hpe_dl360_gen9/lr_mmt_memory/summary.json": "7ec7e40bebb333e5830c1934187644228b09bf7eee44ca88800ecb77b31063b8",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_4000/hpe_dl360_gen9/best_fit/summary.json": "46a06a67154a87cec1c4fca5715f8858b6c26dd8a73eb76ef3ee57e3a349f48e",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_4000/hpe_dl360_gen9/first_fit/summary.json": "526c7deb413dcc538cb0c4c3cbd30ffddcb1ebce5e7abda5a5d27fb2d59ea67c",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_4000/hpe_dl360_gen9/lr_mmt/summary.json": "f262e4f0a1657f2a19841403272286770aa88faa1c946d81e0d4496c98353c85",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_4000/hpe_dl360_gen9/lr_mmt_memory/summary.json": "1a8db871f58e06f8978f25317d28cf9424a47b87308316d1cb67ed17d7168d41",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_1000/huawei_rh2288h_v3/best_fit/summary.json": "7ad8e17ec77773a259cc81dc35fe497079ac39d1cbbb580a4c57a954071d0ccd",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_1000/huawei_rh2288h_v3/first_fit/summary.json": "d8076a129f166f20ce424b8c8d49343de62147dab86382051c68d2804f60f1ae",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_1000/huawei_rh2288h_v3/lr_mmt/summary.json": "1e3c0a347dd87bea3aefc584fb7606f4aaea5f5a064390e6e01ebb3f4bb1d849",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_1000/huawei_rh2288h_v3/lr_mmt_memory/summary.json": "c9ea47a47ba3c1e089cd9bf01d8ed9e50bb62228fe70a8e29aa6a5d1a105f68c",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_250/huawei_rh2288h_v3/best_fit/summary.json": "fbbcd8ec33590269374414d7a2ba3c80df562f67ef7216d2af87af4200d02568",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_250/huawei_rh2288h_v3/first_fit/summary.json": "84cbe12fe68f31b0e89c9da6a1a456c0530e0c2acbbdd85fe19388bfec3da5c5",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_250/huawei_rh2288h_v3/lr_mmt/summary.json": "9c25a0d53474b1da170a73dff82bfaffe3b0256ecc328e4f3d17ac32a6bf6f49",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_250/huawei_rh2288h_v3/lr_mmt_memory/summary.json": "092d4a3e41dd057ee0d56eb735df0b0893abe926ed59c75c7adee411440450c3",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_4000/huawei_rh2288h_v3/best_fit/summary.json": "ab3d555b34f30ec9983b96cd000d521a7209efd46374d3cf7866839de67c314d",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_4000/huawei_rh2288h_v3/first_fit/summary.json": "3b70e90f72b2ba36009f15cacdad7cb40abef235391b7ead828bef9b85b1d448",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_4000/huawei_rh2288h_v3/lr_mmt/summary.json": "96eeb9dfa377bf694cb48e198e242f230ac08259b01f78554f1307c33928a5fd",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_4000/huawei_rh2288h_v3/lr_mmt_memory/summary.json": "687093219b3d473578668ca53bd79b52e4432f0d7097542e596555720a91d51d",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_1000/quanta_d51b_2u/best_fit/summary.json": "2e64ab969438475aa861861ab0bfc779b8e42d1b91fcf266f13239fa9686ad1f",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_1000/quanta_d51b_2u/first_fit/summary.json": "d54ba9550e46092e4e7d5716926c0b16894bb92f76acdf06e901c33b8e84e28b",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_1000/quanta_d51b_2u/lr_mmt/summary.json": "c14c0b74084ec5baf29f5654610111f17ca6517317d72a17d4737b1795a990d2",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_1000/quanta_d51b_2u/lr_mmt_memory/summary.json": "6fe30df0a750a052e3829d890e7fa87d9286c7ed6c365170687c689ac8ec8b8f",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_250/quanta_d51b_2u/best_fit/summary.json": "fe2678c64a1b3b3771c7a5bd56264918ceeac6f77e497c8f692e2d27ef46dbfa",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_250/quanta_d51b_2u/first_fit/summary.json": "dc80e72ea1c1e93e63710670307ca16d0b20040006d3f0a0babb426b94ea3851",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_250/quanta_d51b_2u/lr_mmt/summary.json": "4fd8e2850f26ec128396f2a906f590f3145ed0ebb59fd115afa93fd0762f526e",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_250/quanta_d51b_2u/lr_mmt_memory/summary.json": "7c76ec407139a8a99a82c678e038cf0daedb3a1b6db4159c31405bb7b43cf36d",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_4000/quanta_d51b_2u/best_fit/summary.json": "ce6ae76517941bc4581cd993bbbfc6497e5be01812bd799291618ebedfac0997",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_4000/quanta_d51b_2u/first_fit/summary.json": "e04797d50174451c37b0895367514e7d5c9fe1ea0e2af3aabfda7e48d3ddb556",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_4000/quanta_d51b_2u/lr_mmt/summary.json": "ff260416edd815750bf171fb2444164a513827fd9a66c3dd855f64c4bb5f444e",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_4000/quanta_d51b_2u/lr_mmt_memory/summary.json": "0492f6cba481388463d16bd3a572767a3366c712d5f6da3727edcf308559729d",
+    "RAW_Alibaba/reports/summaries.json": "479d3c44747f114e8c793362ff382e455a2b09470ef0d86ae2f775f02fd917d9",
+    "RAW_Alibaba/reports/validation.json": "4914c85d338b3c0e83741b746db0d364c4139e148a872b4c1618e3498d6698ea",
+    "ROHAN_Task/config/default.json": "67bd8f4e13a5875a5ee19c13f55cf3afe53fd1cd9fc79b27b5620e56136e9bd2",
+    "RUSHI_Task/reports/controller_diagnostics.csv": "db18276f48c56a8a3e83b4fffff286e71e6afd1a98d4ba3edcb659f4f2f0ce93",
+    "RUSHI_Task/reports/curve_band_watts.csv": "ad37ed6158b32eecbb00500e6a168ece62dfa693c40794c9cbcc2cf78ba44ac4",
+    "RUSHI_Task/reports/outcomes_by_task_type.csv": "fbc7e27bff8df9adce20c715f24793f47fd2294c8cbaf91b7279cad0a9902fbc",
+    "RUSHI_Task/reports/pair_energy_gap.csv": "4933674c57a87c152e7572177b42da281ffc2ab41a79aca7b27f0fd1ec7f88f3",
+    "RUSHI_Task/reports/placement_decisions.csv": "7389f4b5a2e5f7ed64cf740d3a7ddc69216b092c7ea33300a68bcfda3db3a5d7",
+    "RUSHI_Task/reports/placement_load_bands.csv": "7f2aaa8150d0e0b6003cb797d97bb3a405ab19ad9f1ccd87bc55d35663f97d8a",
+    "RUSHI_Task/reports/placement_score_arithmetic.csv": "bc181823a11de7850df24b89ad72555e10cb28dc674ab489142dbf4c0fe1de67",
+    "RUSHI_Task/reports/run_energy_breakdown.csv": "65f569481a4e0b743a9ab199c74b23db79efbb828df56000032c4a16504ef8c1",
+    "RUSHI_Task/reports/runs/hpe_dl360_gen9/workload_1000/lr_mmt.json": "13afd4fe946f21725d956a8182396f338f54b642b1c8ea14a2cfff9c1fb7b102",
+    "RUSHI_Task/reports/runs/hpe_dl360_gen9/workload_1000/lr_mmt_memory.json": "f70190f343b600807eb640c17afeba95c64bacc4ef063b2cd9a685b40ae4de0a",
+    "RUSHI_Task/reports/runs/hpe_dl360_gen9/workload_250/lr_mmt.json": "b4116d90f825680f554b8027bbce8bad2d48906a1b3f8a276ab349554c5cac8e",
+    "RUSHI_Task/reports/runs/hpe_dl360_gen9/workload_250/lr_mmt_memory.json": "137072a5be77ad9adc2d3d6aa9959397d842ae084932bf61add0a69ee551ccbc",
+    "RUSHI_Task/reports/runs/hpe_dl360_gen9/workload_4000/lr_mmt.json": "3a5d8514a982082c4a5b50289c5612445f012359f844f69d9cdfae09fd485b8a",
+    "RUSHI_Task/reports/runs/hpe_dl360_gen9/workload_4000/lr_mmt_memory.json": "61a5121d3c092ce2b40df6307d20de4277a3b62cdbd78997d8aad5198b07f051",
+    "RUSHI_Task/reports/runs/huawei_rh2288h_v3/workload_1000/lr_mmt.json": "5c0b99444ee224bd3de4ae37f026212637ad9cb224fcd22a5eafa7e90b3fe3c2",
+    "RUSHI_Task/reports/runs/huawei_rh2288h_v3/workload_1000/lr_mmt_memory.json": "a128119b3eb7415452ccef9c41b559ebb7350db2a5e0039ded469563f4ea03a4",
+    "RUSHI_Task/reports/runs/huawei_rh2288h_v3/workload_250/lr_mmt.json": "1c48fad14637458d6fa416860ecbfd74faab7e30c29dca86e87d9dffc2e20997",
+    "RUSHI_Task/reports/runs/huawei_rh2288h_v3/workload_250/lr_mmt_memory.json": "2c2206e596a4227660f4d2940e0d25225f3059b9e103d2bbf0da985e5bbbf59d",
+    "RUSHI_Task/reports/runs/huawei_rh2288h_v3/workload_4000/lr_mmt.json": "6f5b0c88206b0263206098b9c2288624214c6a7a88747c32d026555010f5c187",
+    "RUSHI_Task/reports/runs/huawei_rh2288h_v3/workload_4000/lr_mmt_memory.json": "a1f3751935430ba7b91768163e18d676161cce87239314316c24253c5f4a8bbf",
+    "RUSHI_Task/reports/runs/quanta_d51b_2u/workload_1000/lr_mmt.json": "d81424e3c1c32c3574901a0c67b6699ed8b61dda8df8af543f7c8f11ec2c7e03",
+    "RUSHI_Task/reports/runs/quanta_d51b_2u/workload_1000/lr_mmt_memory.json": "83798f9cd641d42f9f0752a1727e1dad3dff2d836ecf2f8225c2523508eed065",
+    "RUSHI_Task/reports/runs/quanta_d51b_2u/workload_250/lr_mmt.json": "68ccaf459bf24e77c51bbe710b614b2f58142f36a0e33cb9b8f779d020a33c01",
+    "RUSHI_Task/reports/runs/quanta_d51b_2u/workload_250/lr_mmt_memory.json": "5587fe00434be617d2d96c56d6569b91a02208910cee6c44b29d8f030cc15bf9",
+    "RUSHI_Task/reports/runs/quanta_d51b_2u/workload_4000/lr_mmt.json": "8774790ef486aaf4532a858214a2635cb5b168f447f27b0056d64c937f41749c",
+    "RUSHI_Task/reports/runs/quanta_d51b_2u/workload_4000/lr_mmt_memory.json": "943e4be44f504a4bec26d8b81c4ef026ce8504d8d7e9b42869defae58deb11a6",
+    "RUSHI_Task/reports/servers_running_work.csv": "913966b4ee946d5532f5e9085a84f06fb4438757364354aeceedd9d99bac02a8",
+    "RUSHI_Task/reports/tradeoffs.csv": "087858bb9ff151883e5d753e1e88861f0fede9060ac76e4fe0e956512cebe68f",
+    "RUSHI_Task/reports/validation.json": "a5c7d2fe3a6204ece5a11b837f75e0940ff1f704fdb32672b4865f82d7e093c2",
+    "RUSHI_Task/reports/workload_mix.csv": "0982b2a19b5937183b57a0cc75bb5cbf659c26640c955a3c57aadb4490b95ef4",
+    "docs/EcoSched_Proposal.pdf": "d712461886b765ad12a78e6baef37c0dfb56fe49ed62612cfbee031c637592d1",
+    "docs/checkpoint/EcoSched_Midterm_Checkpoint.md": "3d4767ac014081f4151b606cb95176395fbd7d99099e2efeecca799c2fb6c5cc",
+    "ecosched/power_curves.json": "3740374e6ec09c0645bc7d3cf81daceba26648d7c37fbe7633acac1e6c7e9ca6"
+  },
+  "study": "EcoSched \u2014 AMS 560 Big Data, Stony Brook University",
+  "table_selections": [
+    "workloads",
+    "metrics",
+    "primary",
+    "efficiency_primary",
+    "mechanism",
+    "streaming",
+    "contributions",
+    "energy_all",
+    "performance_all",
+    "skew_all"
+  ]
+}

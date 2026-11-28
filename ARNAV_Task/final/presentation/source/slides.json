@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "format": "16:9",
+  "main_slides": 15,
+  "timing": "Provisional: adapt 12–15 minutes plus a 2–3 minute live demonstration; no course limit found.",
+  "slides": [
+    {
+      "title": "EcoSched",
+      "kind": "title",
+      "bullets": [
+        "Energy-aware data center scheduling",
+        "An isolated placement change reveals an energy/performance trade-off.",
+        "AMS 560 Big Data · Stony Brook University"
+      ],
+      "notes": "Introduce the team and the central question. We evaluate a specific CPU/memory placement change under shared conditions; we do not claim a universally better scheduler. The final package combines frozen scheduling evidence with a real, separately verified Kafka workload-arrival demonstration. The speaking allocation and suggested timing in these notes are provisional; no course presentation limit was found in the repository.",
+      "presenter_provisional": "Arnav Desai"
+    },
+    {
+      "title": "Balanced resources do not automatically mean lower energy",
+      "kind": "motivation",
+      "bullets": [
+        "Consolidation can let idle hosts sleep.",
+        "CPU and memory constraints can strand usable capacity.",
+        "Balancing more hosts can preserve performance while raising on-time."
+      ],
+      "notes": "Start with the competing mechanisms. Packing can reduce the number of powered servers, while balancing requests can improve feasibility and initial waiting. A machine can be CPU-light yet memory-constrained. Neither balanced occupancy nor a lower migration count is itself an energy objective. Our experiment was designed to retain a negative result if the proposed balance term spreads work too far.",
+      "presenter_provisional": "Brave Desai"
+    },
+    {
+      "title": "Change placement; hold the controller fixed",
+      "kind": "ablation",
+      "bullets": [
+        "Primary pair: CPU LR-MMT ↔ CPU/memory LR-MMT",
+        "Same workload, hosts, simulator and SPECpower mapping",
+        "Same LR detector, MMT selector, FIFO and migration assumptions",
+        "First Fit and Best Fit are additional baselines."
+      ],
+      "notes": "Explain the controlled ablation before showing results. CPU-oriented placement still enforces memory feasibility; only its scoring term omits explicit balance. Both primary variants share one LR/MMT implementation and its settings. The additional baselines do not consolidate, so their comparison is broader than placement alone. No same-job, payback or later controller extension enters the active conclusions.",
+      "presenter_provisional": "Rohan Rane"
+    },
+    {
+      "title": "One evidence pipeline, from raw rows to research outputs",
+      "kind": "architecture",
+      "bullets": [],
+      "notes": "Follow the architecture from the independent raw pipeline into validated workload instances, the event engine and four policies. Power is a surrogate SPECpower mapping. Baseline analysis selects the active outcomes and D5 explains mechanisms; D6 makes them inspectable and reproducible. The report reuses original vector assets. This slide uses editable shapes derived from the same A01 diagram data.",
+      "presenter_provisional": "Brave Desai",
+      "figure": "A01"
+    },
+    {
+      "title": "Preserve each task group’s individual instances",
+      "kind": "dataset",
+      "bullets": [
+        "Seed {seed}; fixed {hosts}-host pool",
+        "Original requests, task-create arrivals and multiplicity",
+        "Individual observed first-attempt durations; engine-private",
+        "Historical seed-560 package is a different dataset."
+      ],
+      "notes": "Yaksh delivered the earlier reproducible handoff. The active study independently prepares raw Alibaba observations with seed {seed}. The three samples contain {instances_250:,}, {instances_1000:,} and {instances_4000:,} instances. Every group keeps its declared multiplicity. Missing optional utilization is not filled with zero, and observed future durations are not sent to policies or Kafka. Filtering complete observations introduces selection bias.",
+      "presenter_provisional": "Yaksh Gandhi"
+    },
+    {
+      "title": "A common feasibility rule; one extra scoring term",
+      "kind": "algorithms",
+      "bullets": [
+        "First Fit: powered-host-first feasible host",
+        "Best Fit: fullest feasible CPU host, preferring powered hosts",
+        "CPU LR-MMT: normalized incremental power",
+        "Memory-aware: power score + 0.25 × |CPU − memory|"
+      ],
+      "notes": "Both resources must physically fit for every policy, and FIFO admission remains shared. LR uses past/current aggregate reservations; MMT selects the smallest eligible memory request under a common copy-time model. Safe shadow reservations, all-or-nothing evacuations, cooldown and a per-tick budget prevent contradictory plans. This is an online batch-instance adaptation, not an exact CloudSim/PABFD reproduction. The score is a placement heuristic; the engine accounts for actual modeled transitions.",
+      "presenter_provisional": "Rohan Rane"
+    },
+    {
+      "title": "SPECpower supplies a surrogate, not Alibaba electricity",
+      "kind": "power",
+      "bullets": [
+        "Three curves applied separately; no physical pooling",
+        "Interpolate whole-server watts from requested CPU fraction",
+        "Integrate watts × event-interval seconds",
+        "Positive energy reduction means savings."
+      ],
+      "notes": "Describe the actual SPECpower points and linear interpolation. Active idle and sleeping are different states. The same selected curve is applied to each sampled host without scaling for CPU core count or RAM, so this is a hardware sensitivity model. kWh equals joules divided by 3.6 million. Wh per completed instance uses completed individual instances, never task groups. These curves are not statistical replications.",
+      "presenter_provisional": "Brave Desai",
+      "figure": "R04"
+    },
+    {
+      "title": "{runs} outcomes; {pairs} primary paired comparisons",
+      "kind": "method",
+      "bullets": [
+        "4 approved policies × 3 sizes × 3 power curves",
+        "Fresh simulator per case; fixed configurations and inputs",
+        "Energy + waiting + hosts + migrations + pressure",
+        "Deterministic, overlapping samples: no significance claim."
+      ],
+      "notes": "The full grid has {runs} active outcomes rather than the historical six-policy grid. The nine primary pairs match workload size and power curve exactly. All active runs complete identical offered work without rejected or unfinished instances. Pressure is requested-resource time above a threshold, not measured application SLA failure. We never average P95 quantiles across runs or categories.",
+      "presenter_provisional": "Rohan Rane"
+    },
+    {
+      "title": "Memory-aware placement saves energy in {wins}/{pairs} cases",
+      "kind": "primary",
+      "bullets": [
+        "Largest workload: {penalty_lo:.2f}–{penalty_hi:.2f}% more modeled energy",
+        "Positive reduction = savings; negative = penalty",
+        "All small cases improve; only medium Huawei improves."
+      ],
+      "notes": "Pause on the negative bars. The proposed rule saves energy in four of nine conditions, but all largest-workload cases are worse by {penalty_lo:.2f}–{penalty_hi:.2f}%. The small medium Huawei gain is not statistically significant evidence because this is a deterministic grid without independent replications. We preserve each curve separately. This editable chart reproduces the Phase 6 R03 values and sign convention.",
+      "presenter_provisional": "Rushi Jhala",
+      "figure": "R03"
+    },
+    {
+      "title": "A larger powered footprint buys modest performance gains",
+      "kind": "tradeoff",
+      "bullets": [
+        "Selected condition: 4,000 groups · HPE curve",
+        "Compare energy, mean powered hosts, waiting and pressure",
+        "No single objective establishes scheduler superiority."
+      ],
+      "notes": "Use this one matched condition to explain the trade-off. The energy penalty accompanies more mean active hosts, slightly lower mean initial waiting and lower reservation pressure. All values come from the same two original run summaries. Pressure remains a modeled proxy. Peak hosts, migration pause and P95 outcomes are in the report, not hidden. Pareto comparisons are descriptive only within one size/curve and objective pair.",
+      "presenter_provisional": "Rushi Jhala",
+      "figure": "R06"
+    },
+    {
+      "title": "Extra busy-host on-time explains the largest-case penalty",
+      "kind": "mechanism",
+      "bullets": [
+        "HPE: {hpe_on_share:.2f}% of its own net gap",
+        "Huawei: {huawei_on_share:.2f}%; Quanta: {quanta_on_share:.2f}%",
+        "Balance can outweigh power preference among already-on hosts."
+      ],
+      "notes": "D5 decomposes each curve’s net candidate-minus-baseline gap. About 88% in the earlier summary is a pooled descriptive ratio of component sums to gap sums; it is not one physical energy experiment. The separate shares are shown here. The proposed rule wakes fewer servers, but spreads work across more already-on hosts. Extra time with work dominates; idle-empty time contributes little, while fewer wakes offset some cost. This is supported mechanism analysis, not universal production causality.",
+      "presenter_provisional": "Rushi Jhala",
+      "figure": "R05"
+    },
+    {
+      "title": "Kafka transports arrivals; it does not run the scheduler",
+      "kind": "kafka",
+      "bullets": [],
+      "notes": "Follow validated input, ordered producer, one Kafka partition, validating consumer, SQLite WAL and Streamlit monitoring. The external controller survives browser reruns and navigation. Persist before manual offset commit. Exact duplicates do not inflate unique instances, while conflicts fail verification. The guarantee is at least once with idempotent persistence; no distributed exactly-once or high availability is claimed.",
+      "presenter_provisional": "Arnav Desai",
+      "figure": "A02"
+    },
+    {
+      "title": "Classroom demo: inspect results, then replay real arrivals",
+      "kind": "demo",
+      "bullets": [
+        "250 groups · 600× speed · {instances_250:,} expected instances",
+        "Watch publication, distinct consumption, throughput and lag",
+        "Finish only after complete event-level verification",
+        "Recorded Phase 5 duration: {timed_duration:.1f} s (not a promise)."
+      ],
+      "notes": "The screenshot is recorded Phase 5 evidence, not an active session in this deck. Switch to localhost:8501, show the offline overview/primary comparison, then open Live Workload Replay. Select 250 groups at 600× and start once. Count distinct instances separately from deliveries. Show offered CPU/memory requests, logical time and actual Kafka lag, never live energy or hosts. Let event-level verification finish. If unavailable, clearly label the historical-session/screenshot fallback; do not fake a live demonstration.",
+      "presenter_provisional": "Arnav Desai",
+      "screenshot": "ARNAV_Task/reports/phase5_screenshots/completed_verified_replay.png"
+    },
+    {
+      "title": "Verified numbers; unresolved historical metadata",
+      "kind": "validation",
+      "bullets": [
+        "{raw_members} raw-member + {prepared_outputs} prepared-output hash matches",
+        "{runs} active results numerically reconciled",
+        "{prior_tests} passing tests recorded at Phase 6",
+        "{unresolved} historical manifest/summary/audit references unresolved"
+      ],
+      "notes": "Distinguish compressed archive identity, extracted-member identity, prepared-output equivalence, source fingerprints and numerical consistency. Recovering exact CSVs does not recreate three historical metadata versions. We have not rerun the complete scheduler matrix in D6, so we do not claim fresh end-to-end simulation reproduction. Phase 6 also records 167 byte-identical compared publication files. Later documentation edits are tracked separately from those historical receipts.",
+      "presenter_provisional": "Arnav Desai"
+    },
+    {
+      "title": "The defensible result is an energy/performance trade-off",
+      "kind": "conclusion",
+      "bullets": [
+        "{wins}/{pairs} energy wins; no consistent energy improvement",
+        "Largest workloads pay {penalty_lo:.2f}–{penalty_hi:.2f}% more energy",
+        "Modest performance gains require an explicit energy budget",
+        "D6: validated artifacts, recovery, dashboard and real Kafka replay"
+      ],
+      "notes": "Conclude with the actual scientific result: balance-aware placement can improve some performance outcomes but can work against consolidation. Negative findings are useful because the ablation and D5 explain why. Future work should freeze settings and test independent windows, calibrate power/migration assumptions and define application-level acceptability. The team’s code ownership is documented separately from imported commit authorship. Invite questions, then use appendices for exact values and provenance.",
+      "presenter_provisional": "Arnav Desai"
+    },
+    {
+      "title": "Appendix · all primary energy comparisons",
+      "kind": "primary_table",
+      "bullets": [],
+      "notes": "Each row is a matched workload/curve pair. The memory-aware column is a candidate, CPU LR-MMT is baseline, and positive reduction means savings. All values are from the active raw-derived study; historical scheduler reports used different prepared data and must not be substituted.",
+      "presenter_provisional": "Rushi Jhala",
+      "appendix": true
+    },
+    {
+      "title": "Appendix · fixed controls and resource-skew scope",
+      "kind": "settings",
+      "bullets": [
+        "Control tick 300 s; LR history 10; safety multiplier 1.2",
+        "Memory guard/fallback 0.9; balance weight 0.25",
+        "Sleep 5 W; idle timeout 60 s; wake latency 10 s",
+        "No CPU-heavy outcomes at 250 groups; primary-policy skew data only."
+      ],
+      "notes": "These fixed settings come from RAW_Alibaba/config.json and ROHAN_Task/config/default.json. Migration uses an assumed normalized-memory conversion and per-transfer bandwidth. Resource categories are fixed by prepared request fractions relative to median host capacity. Full tables preserve absent observations and individual P95 quantiles. No whole-run energy is attributed to skew categories.",
+      "presenter_provisional": "Rohan Rane",
+      "appendix": true
+    },
+    {
+      "title": "Appendix · verified Kafka fast-mode sessions",
+      "kind": "streaming",
+      "bullets": [],
+      "notes": "These are the original Phase 4 fast-mode measurements. Session duration includes controller completion/verification and is not isolated verifier time. Timed browser replay has a different purpose and must not be merged into this throughput chart. Duplicate redelivery doubled deliveries without changing unique counts; consumer restart and broker restoration were verified. One laptop and one broker do not establish distributed scalability.",
+      "presenter_provisional": "Arnav Desai",
+      "appendix": true,
+      "figure": "S01"
+    },
+    {
+      "title": "Appendix · unresolved metadata references",
+      "kind": "provenance",
+      "bullets": [
+        "Prepared manifest: expected 110e6497…; current 91de65a6…",
+        "Raw summaries: expected b64f374f…; current 479d3c44…",
+        "Archive audit: expected 711dc211…; current 03179510…",
+        "Exact prepared CSVs match; historical metadata remains unresolved."
+      ],
+      "notes": "Do not repair this slide by replacing old expected hashes. They are evidence of the historical lineage gap. Full hashes, source references and search scope are in the report appendix and reconciliation document. The active archive matches its own recorded compressed checksum; the released legacy compressed archive is different even though raw payloads corroborate.",
+      "presenter_provisional": "Arnav Desai",
+      "appendix": true
+    },
+    {
+      "title": "Appendix · references and individual contribution evidence",
+      "kind": "references",
+      "bullets": [],
+      "notes": "Academic references were checked against the author manuscript or publisher record. Tetris uses the conference DOI printed in the paper. Dataset, SPECpower and software references are included in the report bibliography. Implementation ownership follows teammate handoffs and code paths; Rohan’s module was imported in a Brave-authored commit. Arnav’s D6 work remains uncommitted, and no commit attribution is invented.",
+      "presenter_provisional": "All team members",
+      "appendix": true
+    }
+  ]
+}

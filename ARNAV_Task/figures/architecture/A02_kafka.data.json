@@ -1,0 +1,83 @@
+{
+  "edges": [
+    [
+      "input",
+      "producer"
+    ],
+    [
+      "producer",
+      "topic"
+    ],
+    [
+      "topic",
+      "consumer"
+    ],
+    [
+      "consumer",
+      "state"
+    ],
+    [
+      "consumer",
+      "topic",
+      "Manual commit after persistence"
+    ],
+    [
+      "controller",
+      "producer",
+      "Manage"
+    ],
+    [
+      "controller",
+      "consumer",
+      "Manage"
+    ],
+    [
+      "state",
+      "monitor"
+    ]
+  ],
+  "nodes": [
+    [
+      "input",
+      "Validated Alibaba\narrival stream",
+      0,
+      2
+    ],
+    [
+      "producer",
+      "Python producer\nordered arrivals",
+      1,
+      2
+    ],
+    [
+      "topic",
+      "Kafka topic\n1 partition / 1 replica",
+      2,
+      2
+    ],
+    [
+      "consumer",
+      "Python consumer\nvalidate + deduplicate",
+      3,
+      2
+    ],
+    [
+      "controller",
+      "External controller\nworkers + lifecycle",
+      1,
+      1
+    ],
+    [
+      "state",
+      "SQLite WAL\nevents + aggregates",
+      3,
+      1
+    ],
+    [
+      "monitor",
+      "Streamlit monitor\nread-only snapshots",
+      2,
+      0
+    ]
+  ]
+}

@@ -1,0 +1,5 @@
+# Overlay only: preserve the exact multi-architecture image index and settings.
+# docker compose -f ARNAV_Task/docker-compose.yml -f ARNAV_Task/config/compose.amd64.yml ...
+services:
+  kafka:
+    platform: linux/amd64

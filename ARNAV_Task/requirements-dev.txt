@@ -1,0 +1,3 @@
+# Optional CI/type/workflow checks, separate from application dependencies.
+ty==0.0.112
+PyYAML==6.0.4

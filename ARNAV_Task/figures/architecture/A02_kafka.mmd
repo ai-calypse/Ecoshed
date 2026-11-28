@@ -1,0 +1,16 @@
+flowchart LR
+    input["Validated Alibaba<br/>arrival stream"]
+    producer["Python producer<br/>ordered arrivals"]
+    topic["Kafka topic<br/>1 partition / 1 replica"]
+    consumer["Python consumer<br/>validate + deduplicate"]
+    controller["External controller<br/>workers + lifecycle"]
+    state["SQLite WAL<br/>events + aggregates"]
+    monitor["Streamlit monitor<br/>read-only snapshots"]
+    input --> producer
+    producer --> topic
+    topic --> consumer
+    consumer --> state
+    consumer -->|"Manual commit after persistence"| topic
+    controller -->|"Manage"| producer
+    controller -->|"Manage"| consumer
+    state --> monitor

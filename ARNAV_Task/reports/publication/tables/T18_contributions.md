@@ -1,0 +1,13 @@
+# Individual contributions and Git evidence
+
+Current ownership is checked against path-specific Git history, not the original proposal ownership table. Git authors and directory owners are distinguished. D6 is uncommitted.
+
+| Owner | Area | Paths | Commits | Git Authors | Evidence | Source |
+| --- | --- | --- | --- | --- | --- | --- |
+| Yaksh Gandhi | Historical D1 workload package; not active-study inputs | YAKSH_Task | d307337f6903c81013e469b40bc4fbf0a35fa1ad; bb176f496740b190d1dad9947724c0dbccb64dc5 | Yaksh Gandhi | Git path history; directory ownership does not establish commit authorship | git log --all -- YAKSH_Task |
+| Brave Desai | D2 simulator/power; active raw preparation and D4 integration | BRAVE_Task, RAW_Alibaba, ecosched, BASELINE_Comparison | 320da27c1b9ac7db7c61fd1c66f0820c0804bc6c | brave | Git path history; directory ownership does not establish commit authorship | git log --all -- BRAVE_Task RAW_Alibaba ecosched BASELINE_Comparison |
+| Rohan Rane | D3 scheduling policies; inspect author vs owner attribution | ROHAN_Task | 320da27c1b9ac7db7c61fd1c66f0820c0804bc6c | brave | Git path history; directory ownership does not establish commit authorship | git log --all -- ROHAN_Task |
+| Rushi Jhala | D5 analysis only; same-job extension excluded | RUSHI_Task | 202bfdfd1480366b9ee8829e3d81cb926ac41778; 6d8edb29b129e7648c35e401f50f1f347d9d6367; 04701b67345bf707309753ee74da727f8944569d; a71f9e5170e54dd5e4d8d65efee4bdba8de627a2; 8fba3086b1fb667d10f135c5d49f3c1abf0fc07c | Rushi0070 | Git path history; directory ownership does not establish commit authorship | git log --all -- RUSHI_Task |
+| Arnav Desai | D6 final package: adapters, dashboard, recovered inputs, Kafka, publication exports | ARNAV_Task/ | Uncommitted D6 working tree | Not committed | Current implementation and Phase 1–5 verification receipts; no D6 commit claimed | ARNAV_Task/README.md |
+
+Sources: `docs/EcoSched_Proposal.pdf`, `ARNAV_Task/README.md`, `RUSHI_Task/README.md`, `ROHAN_Task/README.md`, `YAKSH_Task/README.md`.

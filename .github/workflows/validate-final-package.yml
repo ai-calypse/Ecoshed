@@ -1,0 +1,50 @@
+name: D6 final package
+on:
+  pull_request:
+  push:
+    branches: [main, arnav/d6-final-package]
+  workflow_dispatch:
+    inputs:
+      broker_smoke:
+        description: Also start the pinned single-node broker (no dataset replay)
+        type: boolean
+        default: false
+permissions:
+  contents: read
+jobs:
+  offline:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - name: Install complete Python-only build and QA dependencies
+        run: python -m pip install -r ARNAV_Task/requirements.txt -r ARNAV_Task/requirements-dev.txt
+      - name: Offline tests, numerical checks, isolated builds and current release gate
+        run: python -m ARNAV_Task.scripts.final_qa
+      - name: Confirm QA preserved tracked evidence
+        run: git diff --exit-code
+  optional-broker:
+    if: github.event_name == 'workflow_dispatch' && inputs.broker_smoke
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install -r ARNAV_Task/requirements-runtime.txt
+      - name: Start the same pinned multiarch index with explicit AMD64 override
+        run: docker compose -f ARNAV_Task/docker-compose.yml -f ARNAV_Task/config/compose.amd64.yml up -d --wait
+      - run: python -m ARNAV_Task.kafka.admin --ensure-topic
+      - run: python -m ARNAV_Task.kafka.admin --status
+      - name: Stop this project's broker; keep its data volume
+        if: always()
+        run: docker compose -f ARNAV_Task/docker-compose.yml -f ARNAV_Task/config/compose.amd64.yml down
+# Numerical consistency passes independently of strict historical lineage.
+# final_qa explicitly expects strict validation to exit 1 and records the issue.
+# This optional broker smoke is NOT the authentic-input Kafka integration suite.

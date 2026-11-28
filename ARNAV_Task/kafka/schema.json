@@ -1,0 +1,82 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "EcoSched workload arrival v1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "const": 1,
+      "type": "integer"
+    },
+    "replay_id": {
+      "type": "string",
+      "format": "uuid",
+      "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$"
+    },
+    "event_type": {
+      "const": "workload_arrival"
+    },
+    "sequence": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "instance_id": {
+      "type": "string",
+      "pattern": "^raw_attempt_row_[1-9][0-9]*$"
+    },
+    "task_group_id": {
+      "type": "string",
+      "pattern": "^j[0-9]+_t[0-9]+$"
+    },
+    "job_id": {
+      "type": "string",
+      "pattern": "^[0-9]+$"
+    },
+    "arrival_time_s": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "cpu_request_cores": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "memory_request_normalized": {
+      "type": "number",
+      "exclusiveMinimum": 0
+    },
+    "workload_groups": {
+      "enum": [
+        250,
+        1000,
+        4000
+      ],
+      "type": "integer"
+    },
+    "input_manifest_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "resource_skew": {
+      "enum": [
+        "balanced",
+        "cpu_heavy",
+        "memory_heavy"
+      ]
+    }
+  },
+  "required": [
+    "schema_version",
+    "replay_id",
+    "event_type",
+    "sequence",
+    "instance_id",
+    "task_group_id",
+    "job_id",
+    "arrival_time_s",
+    "cpu_request_cores",
+    "memory_request_normalized",
+    "workload_groups",
+    "input_manifest_sha256",
+    "resource_skew"
+  ]
+}

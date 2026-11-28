@@ -1,0 +1,9 @@
+{
+  "schema_version": 1,
+  "package": "ARNAV_Task/.runtime/raw_rebuild/prepared",
+  "recorded_manifest": "RAW_Alibaba/prepared/manifest.json",
+  "verification": "ARNAV_Task/.runtime/raw_rebuild/data_validation.json",
+  "replay_directory": "ARNAV_Task/.runtime/replay",
+  "dataset": "Alibaba cluster-trace-v2017, active RAW_Alibaba preparation",
+  "source_repository": "https://github.com/alibaba/clusterdata/tree/master/cluster-trace-v2017"
+}

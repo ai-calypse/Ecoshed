@@ -1,0 +1,20 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.400\linewidth}>{\raggedright\arraybackslash}p{0.400\linewidth}}
+\caption{Dataset characteristics}\
+\toprule
+Characteristic & Value \\
+\midrule\endhead
+Dataset & fresh\_user\_a\allowbreak{}rchive\_aliba\allowbreak{}ba\_v2017 \\
+Source & https://gith\allowbreak{}ub.com/aliba\allowbreak{}ba/clusterda\allowbreak{}ta/tree/mast\allowbreak{}er/cluster-t\allowbreak{}race-v2017 \\
+Archive bytes & 243321159 \\
+Archive SHA-256 & b7efe9dc9caa\allowbreak{}75352de41b9a\allowbreak{}c34b329602cd\allowbreak{}e3414fd7cab8\allowbreak{}7c1d21a9a987\allowbreak{}1d66 \\
+Sampling seed & 2026 \\
+Host pool & 64 \\
+Logical arrival window (s) & 43200 \\
+Runtime model & individual\_o\allowbreak{}bserved\_comp\allowbreak{}leted\_first\_\allowbreak{}attempt\_dura\allowbreak{}tion\_complet\allowbreak{}e\_groups\_onl\allowbreak{}y \\
+Arrival model & task\_create\_\allowbreak{}time\_release\allowbreak{}\_for\_all\_dec\allowbreak{}lared\_instan\allowbreak{}ces \\
+Raw rows independently verified & True \\
+Exact prepared outputs recovered & True \\
+\bottomrule\end{longtable}
+% Active raw-derived Alibaba v2017 package. Individual observed durations support offline simulation; arrival replay events do not expose future durations.
+% Sources: RAW_Alibaba/prepared/manifest.json, RAW_Alibaba/config.json, ARNAV_Task/reports/phase3_verification.json

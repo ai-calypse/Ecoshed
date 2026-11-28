@@ -1,0 +1,77 @@
+{
+  "commands": [
+    "python -B -m unittest discover -s ARNAV_Task/tests -v",
+    "Teammate unit discovery commands in ARNAV_Task/README.md",
+    "ECOSCHED_KAFKA_INTEGRATION=1 python -B -m unittest ARNAV_Task.tests.test_kafka_integration -v"
+  ],
+  "counts": {
+    "d6_ordinary_passed": 213,
+    "new_phase6_tests": 32,
+    "real_kafka_integration_passed": 10,
+    "teammate_passed": 84,
+    "total_distinct_passed": 307
+  },
+  "kafka": {
+    "elapsed_s": 145.1511613749899,
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "skipped": 0,
+    "tests": 10
+  },
+  "log_sha256": {
+    "ARNAV_Task/.runtime/phase6_kafka_tests.log": "7a7bfc60dac66e234cc2df2b69c949b8b4295bd065a79a1091c46a71e80022bc",
+    "ARNAV_Task/.runtime/phase6_ordinary_tests.log": "bfcc9e7287f9e6294010a87cb16293a6b123c2ed430f3047028040af4dfda3c0",
+    "ARNAV_Task/.runtime/phase6_teammate_tests.log": "ed237e738386feaecd3f3de7ec7acad08a01a4e7b476c1b3d1103604834309ac",
+    "ARNAV_Task/.runtime/phase6_tests_new_final.log": "9c4dd63e9b78f6b6f2465dbc6767e39ab0e39a6e81f938c408a6abb5be4f8737"
+  },
+  "ordinary": {
+    "elapsed_s": 24.747241666074842,
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "skipped": 10,
+    "tests": 223
+  },
+  "passed": true,
+  "phase": 6,
+  "schema_version": 1,
+  "scope": "Executed regression receipts; test timing is not research or Kafka performance evidence.",
+  "teammate": {
+    "elapsed_s": 3.2167084580287337,
+    "passed": true,
+    "suites": [
+      {
+        "folder": "tests",
+        "passed": true,
+        "tests": 18
+      },
+      {
+        "folder": "ROHAN_Task/tests",
+        "passed": true,
+        "tests": 14
+      },
+      {
+        "folder": "RAW_Alibaba/tests",
+        "passed": true,
+        "tests": 6
+      },
+      {
+        "folder": "ENERGY_Study/tests",
+        "passed": true,
+        "tests": 14
+      },
+      {
+        "folder": "RUSHI_Task/tests",
+        "passed": true,
+        "tests": 17
+      },
+      {
+        "folder": "YAKSH_Task/scripts",
+        "passed": true,
+        "tests": 15
+      }
+    ],
+    "tests": 84
+  }
+}

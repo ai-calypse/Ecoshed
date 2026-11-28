@@ -1,0 +1,254 @@
+[
+  {
+    "cpu_stranded_by_memory_core_seconds": 62721.5,
+    "memory_stranded_by_cpu_unit_seconds": 38.14934382522716,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 74615.5,
+    "memory_stranded_by_cpu_unit_seconds": 38.15067429399738,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 70352.78215311008,
+    "memory_stranded_by_cpu_unit_seconds": 38.15067429399738,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 36037.5,
+    "memory_stranded_by_cpu_unit_seconds": 65.41281288018021,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 62721.5,
+    "memory_stranded_by_cpu_unit_seconds": 38.14934382522716,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 74615.5,
+    "memory_stranded_by_cpu_unit_seconds": 38.15067429399738,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 69847.78215311008,
+    "memory_stranded_by_cpu_unit_seconds": 38.15067429399738,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 36037.5,
+    "memory_stranded_by_cpu_unit_seconds": 65.41281288018021,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 62721.5,
+    "memory_stranded_by_cpu_unit_seconds": 38.14934382522716,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 74615.5,
+    "memory_stranded_by_cpu_unit_seconds": 38.15067429399738,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 70352.78215311008,
+    "memory_stranded_by_cpu_unit_seconds": 38.15067429399738,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 36037.5,
+    "memory_stranded_by_cpu_unit_seconds": 65.7601532368701,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 1291818.85,
+    "memory_stranded_by_cpu_unit_seconds": 73.74645510315015,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 1332661.2000000007,
+    "memory_stranded_by_cpu_unit_seconds": 70.92539538736318,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 1180678.9387557504,
+    "memory_stranded_by_cpu_unit_seconds": 74.21810369373337,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 857536.0920635391,
+    "memory_stranded_by_cpu_unit_seconds": 166.21973442393823,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 1291818.85,
+    "memory_stranded_by_cpu_unit_seconds": 73.74645510315015,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 1332661.2000000007,
+    "memory_stranded_by_cpu_unit_seconds": 70.92539538736318,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 1149543.6364122857,
+    "memory_stranded_by_cpu_unit_seconds": 120.86604194073061,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 868046.7451603425,
+    "memory_stranded_by_cpu_unit_seconds": 159.1845572438072,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 1291818.85,
+    "memory_stranded_by_cpu_unit_seconds": 73.74645510315015,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 1332661.2000000007,
+    "memory_stranded_by_cpu_unit_seconds": 70.92539538736318,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 1171837.2809873144,
+    "memory_stranded_by_cpu_unit_seconds": 84.95808246835608,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 863872.8185294071,
+    "memory_stranded_by_cpu_unit_seconds": 165.639753578547,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 18995249.749999937,
+    "memory_stranded_by_cpu_unit_seconds": 969.6905754148029,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 19178693.79999959,
+    "memory_stranded_by_cpu_unit_seconds": 830.492734190975,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 18220174.088328954,
+    "memory_stranded_by_cpu_unit_seconds": 756.8165777442866,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 15091424.747147353,
+    "memory_stranded_by_cpu_unit_seconds": 454.5196852431874,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 18995249.749999937,
+    "memory_stranded_by_cpu_unit_seconds": 969.6905754148029,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 19178693.79999959,
+    "memory_stranded_by_cpu_unit_seconds": 830.492734190975,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 17395788.774438433,
+    "memory_stranded_by_cpu_unit_seconds": 820.3475147078583,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 15091012.73593156,
+    "memory_stranded_by_cpu_unit_seconds": 492.0882536299289,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 18995249.749999937,
+    "memory_stranded_by_cpu_unit_seconds": 969.6905754148029,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 19178693.79999959,
+    "memory_stranded_by_cpu_unit_seconds": 830.492734190975,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 17787821.326965954,
+    "memory_stranded_by_cpu_unit_seconds": 805.8352471859197,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  },
+  {
+    "cpu_stranded_by_memory_core_seconds": 15160431.168999312,
+    "memory_stranded_by_cpu_unit_seconds": 433.14532918709415,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  }
+]

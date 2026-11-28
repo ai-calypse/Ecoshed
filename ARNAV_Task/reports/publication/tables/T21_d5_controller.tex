@@ -1,0 +1,75 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{D5 controller diagnostics}\
+\toprule
+Workload Groups & Power Curve & Policy & Consolidation Migrations & Evacuated Host Plans & Evacuations Over Budget & Evacuations Rolled Back \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & lr\_mmt & 80 & 22 & 0 & 13 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 76 & 23 & 0 & 13 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & 583 & 87 & 0 & 15 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 531 & 107 & 0 & 12 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & 2524 & 464 & 1 & 2 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 4871 & 931 & 17 & 2 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & 112 & 26 & 0 & 13 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 76 & 23 & 0 & 13 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & 711 & 103 & 0 & 12 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 503 & 105 & 0 & 12 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & 4588 & 725 & 22 & 3 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 4807 & 915 & 5 & 2 \\
+250 & quanta\_d51b\_2u & lr\_mmt & 80 & 22 & 0 & 13 \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & 76 & 23 & 0 & 13 \\
+1000 & quanta\_d51b\_2u & lr\_mmt & 490 & 80 & 0 & 15 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & 545 & 106 & 0 & 13 \\
+4000 & quanta\_d51b\_2u & lr\_mmt & 2420 & 460 & 0 & 1 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & 4790 & 930 & 11 & 2 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{D5 controller diagnostics}\
+\toprule
+Workload Groups & Power Curve & Policy & Fallback Host Checks & Lr Host Checks & Overload Migrations & Overloaded Host Ticks \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & lr\_mmt & 576 & 8704 & 195 & 39 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 576 & 8704 & 200 & 35 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & 576 & 8704 & 1051 & 176 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 576 & 8704 & 951 & 141 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & 576 & 8704 & 5171 & 1827 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 576 & 8704 & 2351 & 1377 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & 576 & 8704 & 195 & 39 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 576 & 8704 & 200 & 35 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & 576 & 8704 & 1035 & 174 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 576 & 8704 & 940 & 140 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & 576 & 8704 & 4515 & 1707 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 576 & 8704 & 2288 & 1352 \\
+250 & quanta\_d51b\_2u & lr\_mmt & 576 & 8704 & 195 & 39 \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & 576 & 8704 & 200 & 35 \\
+1000 & quanta\_d51b\_2u & lr\_mmt & 576 & 8704 & 1050 & 176 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & 576 & 8704 & 924 & 139 \\
+4000 & quanta\_d51b\_2u & lr\_mmt & 576 & 8704 & 4917 & 1785 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & 576 & 8704 & 2348 & 1376 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.160\linewidth}>{\raggedright\arraybackslash}p{0.160\linewidth}>{\raggedright\arraybackslash}p{0.160\linewidth}>{\raggedright\arraybackslash}p{0.160\linewidth}>{\raggedright\arraybackslash}p{0.160\linewidth}}
+\caption{D5 controller diagnostics}\
+\toprule
+Workload Groups & Power Curve & Policy & Ticks & Unplaced Overload Candidates \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & lr\_mmt & 145 & 0 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 145 & 0 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & 145 & 0 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 145 & 0 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & 145 & 20895 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 145 & 21178 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & 145 & 0 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 145 & 0 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & 145 & 0 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 145 & 0 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & 145 & 20694 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 145 & 21063 \\
+250 & quanta\_d51b\_2u & lr\_mmt & 145 & 0 \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & 145 & 0 \\
+1000 & quanta\_d51b\_2u & lr\_mmt & 145 & 0 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & 145 & 0 \\
+4000 & quanta\_d51b\_2u & lr\_mmt & 145 & 20659 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & 145 & 21198 \\
+\bottomrule\end{longtable}
+% Existing D5 analysis, restricted to the active study. Energy change in D5 means candidate minus baseline; positive indicates a penalty, unlike energy reduction.
+% Sources: RUSHI_Task/reports/controller_diagnostics.csv

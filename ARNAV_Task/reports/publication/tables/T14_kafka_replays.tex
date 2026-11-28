@@ -1,0 +1,23 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{Complete replay and event-level verification results}\
+\toprule
+Mode & Size & Replay Id & Speed & Distinct Instances & Groups & Elapsed Wall S (seconds) \\
+\midrule\endhead
+Phase 4 fast & 250 & 72306d47-074\allowbreak{}a-492f-8ece-\allowbreak{}334195b12df6 & 0 & 16534 & 250 & 3.93423 \\
+Phase 4 fast & 1000 & 9a097df0-12b\allowbreak{}e-4651-9007-\allowbreak{}35242d78aa8a & 0 & 68457 & 1000 & 11.3928 \\
+Phase 4 fast & 4000 & 1f2aee4c-432\allowbreak{}3-43a4-a6a6-\allowbreak{}2b3acebf4e20 & 0 & 378285 & 4000 & 54.6003 \\
+Phase 5 browser timed & 250 & 49dc2730-14b\allowbreak{}9-48a1-b05b-\allowbreak{}d2c3eb290b38 & 600 & 16534 & 250 & 72.6981 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.160\linewidth}>{\raggedright\arraybackslash}p{0.160\linewidth}>{\raggedright\arraybackslash}p{0.160\linewidth}>{\raggedright\arraybackslash}p{0.160\linewidth}>{\raggedright\arraybackslash}p{0.160\linewidth}}
+\caption{Complete replay and event-level verification results}\
+\toprule
+Average Instances Per S (distinct instances/second) & Complete & Integrity Passed & Invalid & Sequence Gaps \\
+\midrule\endhead
+4,202.6 & True & True & 0 & 0 \\
+6,008.79 & True & True & 0 & 0 \\
+6,928.26 & True & True & 0 & 0 \\
+227.434 & True & True & 0 & 0 \\
+\bottomrule\end{longtable}
+% Fast and timed runs are explicitly separate. Session durations are controller lifecycle measurements, not isolated verifier time or scheduler benchmark time.
+% Sources: ARNAV_Task/reports/phase4_verification.json, ARNAV_Task/reports/phase5_verification.json

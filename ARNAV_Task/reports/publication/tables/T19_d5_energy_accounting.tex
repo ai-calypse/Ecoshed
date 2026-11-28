@@ -1,0 +1,63 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{D5 pair energy gap}\
+\toprule
+Workload Groups & Power Curve & Cpu Lr Mmt Kwh & Memory Aware Kwh & Energy Change Kwh & Energy Change Pct & On Running Work Kwh \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & 5.21723 & 5.19695 & -0.0202776 & -0.388666 & -0.00917631 \\
+1000 & hpe\_dl360\_gen9 & 9.03205 & 9.15286 & 0.12081 & 1.33757 & 0.132023 \\
+4000 & hpe\_dl360\_gen9 & 34.27 & 39.1361 & 4.86613 & 14.1994 & 4.23773 \\
+250 & huawei\_rh2288h\_v3 & 5.18914 & 5.15875 & -0.0303865 & -0.585579 & -0.0146782 \\
+1000 & huawei\_rh2288h\_v3 & 8.96977 & 8.96469 & -0.00508199 & -0.0566569 & 0.0321241 \\
+4000 & huawei\_rh2288h\_v3 & 34.017 & 37.7453 & 3.72831 & 10.9602 & 3.29039 \\
+250 & quanta\_d51b\_2u & 5.2706 & 5.24449 & -0.0261137 & -0.495459 & -0.00990948 \\
+1000 & quanta\_d51b\_2u & 9.23047 & 9.35672 & 0.12625 & 1.36775 & 0.146675 \\
+4000 & quanta\_d51b\_2u & 35.3332 & 40.4776 & 5.14442 & 14.5598 & 4.55783 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{D5 pair energy gap}\
+\toprule
+Workload Groups & Power Curve & On Without Work Kwh & Load Dependent Kwh & Wakeups Kwh & Longer Run Kwh & Extra Transition Kwh \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & -0.00765955 & 0.0123666 & -0.0158083 & 0 & 0 \\
+1000 & hpe\_dl360\_gen9 & 0.0241784 & 0.0504254 & -0.0858167 & 0 & 0 \\
+4000 & hpe\_dl360\_gen9 & 0.00316904 & 1.2666 & -0.641367 & 0 & 0 \\
+250 & huawei\_rh2288h\_v3 & -0.00946753 & 0.00898419 & -0.015225 & 0 & 0 \\
+1000 & huawei\_rh2288h\_v3 & 0.00707412 & 0.0166198 & -0.0609 & 0 & 0 \\
+4000 & huawei\_rh2288h\_v3 & -0.0604519 & 0.8906 & -0.392225 & 0 & 0 \\
+250 & quanta\_d51b\_2u & -0.00888729 & 0.00825809 & -0.015575 & 0 & 0 \\
+1000 & quanta\_d51b\_2u & 0.0265661 & 0.0375581 & -0.08455 & 0 & 0 \\
+4000 & quanta\_d51b\_2u & 0.0322317 & 1.15437 & -0.600008 & 0 & 0 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{D5 pair energy gap}\
+\toprule
+Workload Groups & Power Curve & Servers On Hours Change & On Running Work Hours Change & On Without Work Hours Change & Wakeups Cpu Lr Mmt & Wakeups Memory Aware \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & -0.420897 & -0.229408 & -0.191489 & 295 & 274 \\
+1000 & hpe\_dl360\_gen9 & 3.90504 & 3.30058 & 0.60446 & 729 & 615 \\
+4000 & hpe\_dl360\_gen9 & 106.022 & 105.943 & 0.0792259 & 1974 & 1122 \\
+250 & huawei\_rh2288h\_v3 & -0.606676 & -0.368799 & -0.237878 & 295 & 274 \\
+1000 & huawei\_rh2288h\_v3 & 0.984879 & 0.807137 & 0.177742 & 694 & 610 \\
+4000 & huawei\_rh2288h\_v3 & 81.1543 & 82.6732 & -1.51889 & 1674 & 1133 \\
+250 & quanta\_d51b\_2u & -0.421452 & -0.222186 & -0.199267 & 295 & 274 \\
+1000 & quanta\_d51b\_2u & 3.88434 & 3.28869 & 0.595654 & 729 & 615 \\
+4000 & quanta\_d51b\_2u & 102.916 & 102.194 & 0.722684 & 1941 & 1132 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}}
+\caption{D5 pair energy gap}\
+\toprule
+Workload Groups & Power Curve & Mean Powered Servers Cpu Lr Mmt & Mean Powered Servers Memory Aware \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & 1.23448 & 1.19454 \\
+1000 & hpe\_dl360\_gen9 & 4.42319 & 4.72222 \\
+4000 & hpe\_dl360\_gen9 & 23.9685 & 32.6065 \\
+250 & huawei\_rh2288h\_v3 & 1.24996 & 1.19454 \\
+1000 & huawei\_rh2288h\_v3 & 4.65277 & 4.7154 \\
+4000 & huawei\_rh2288h\_v3 & 25.8588 & 32.4964 \\
+250 & quanta\_d51b\_2u & 1.23448 & 1.19449 \\
+1000 & quanta\_d51b\_2u & 4.44013 & 4.73743 \\
+4000 & quanta\_d51b\_2u & 24.1834 & 32.5724 \\
+\bottomrule\end{longtable}
+% Existing D5 analysis, restricted to the active study. Energy change in D5 means candidate minus baseline; positive indicates a penalty, unlike energy reduction.
+% Sources: RUSHI_Task/reports/pair_energy_gap.csv

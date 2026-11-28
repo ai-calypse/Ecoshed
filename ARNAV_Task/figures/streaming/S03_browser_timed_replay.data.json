@@ -1,0 +1,213 @@
+{
+  "average_instances_per_s": 227.43374473662848,
+  "elapsed_wall_s": 72.6980950832367,
+  "final_verification": {
+    "bounded_partial": false,
+    "compared_events": 16534,
+    "complete": true,
+    "confirmed_published": 16534,
+    "consumed_deliveries": 16534,
+    "consumer_status": "completed",
+    "distinct_instances": 16534,
+    "duplicate_deliveries": 0,
+    "errors": [],
+    "expected_instances": 16534,
+    "expected_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+    "groups": 250,
+    "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+    "invalid_messages": 0,
+    "passed": true,
+    "persisted_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+    "producer_status": "completed",
+    "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+    "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+    "sequence_gaps": 0,
+    "size": 250,
+    "verified_at": 1795754498.291146
+  },
+  "observations": [
+    {
+      "confirmed": 1000,
+      "consumed": 1190,
+      "distinct_count": 1190,
+      "elapsed_wall_s": 5.468252182006836,
+      "last_arrival": 3083,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 1000,
+      "consumed": 1477,
+      "distinct_count": 1477,
+      "elapsed_wall_s": 10.034510135650635,
+      "last_arrival": 5900,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 1500,
+      "consumed": 1997,
+      "distinct_count": 1997,
+      "elapsed_wall_s": 14.042119026184082,
+      "last_arrival": 8121,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 3500,
+      "consumed": 3848,
+      "distinct_count": 3848,
+      "elapsed_wall_s": 18.04679799079895,
+      "last_arrival": 10611,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 4500,
+      "consumed": 4626,
+      "distinct_count": 4626,
+      "elapsed_wall_s": 22.054483890533447,
+      "last_arrival": 13154,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 5000,
+      "consumed": 5322,
+      "distinct_count": 5322,
+      "elapsed_wall_s": 26.06154203414917,
+      "last_arrival": 15568,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 6000,
+      "consumed": 6192,
+      "distinct_count": 6192,
+      "elapsed_wall_s": 30.064772129058838,
+      "last_arrival": 17929,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 6500,
+      "consumed": 6571,
+      "distinct_count": 6571,
+      "elapsed_wall_s": 34.068947076797485,
+      "last_arrival": 20369,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 7500,
+      "consumed": 7794,
+      "distinct_count": 7794,
+      "elapsed_wall_s": 38.07080388069153,
+      "last_arrival": 22792,
+      "observed_lag": 191,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 8500,
+      "consumed": 8696,
+      "distinct_count": 8696,
+      "elapsed_wall_s": 42.07666301727295,
+      "last_arrival": 25174,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 9000,
+      "consumed": 9066,
+      "distinct_count": 9066,
+      "elapsed_wall_s": 46.07922005653381,
+      "last_arrival": 27582,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 9500,
+      "consumed": 9985,
+      "distinct_count": 9985,
+      "elapsed_wall_s": 50.08507013320923,
+      "last_arrival": 29820,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 10500,
+      "consumed": 10995,
+      "distinct_count": 10995,
+      "elapsed_wall_s": 54.08788514137268,
+      "last_arrival": 31678,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 11500,
+      "consumed": 11651,
+      "distinct_count": 11651,
+      "elapsed_wall_s": 58.09379601478577,
+      "last_arrival": 34690,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 12000,
+      "consumed": 12156,
+      "distinct_count": 12156,
+      "elapsed_wall_s": 62.09974408149719,
+      "last_arrival": 37017,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 14500,
+      "consumed": 14500,
+      "distinct_count": 14500,
+      "elapsed_wall_s": 66.10450291633606,
+      "last_arrival": 39627,
+      "observed_lag": 66,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 16000,
+      "consumed": 16006,
+      "distinct_count": 16006,
+      "elapsed_wall_s": 70.1094241142273,
+      "last_arrival": 41996,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "running"
+    },
+    {
+      "confirmed": 16534,
+      "consumed": 16534,
+      "distinct_count": 16534,
+      "elapsed_wall_s": 72.6980950832367,
+      "last_arrival": 42983,
+      "observed_lag": 0,
+      "session_lag": 0,
+      "status": "complete"
+    }
+  ],
+  "refresh_and_navigation_preserved_session": true,
+  "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+  "speed": 600
+}

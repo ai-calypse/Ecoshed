@@ -1,0 +1,32 @@
+[
+  {
+    "balanced_instances": 15217,
+    "balanced_pct": 92.03459537921859,
+    "cpu_heavy_instances": 0,
+    "cpu_heavy_pct": 0.0,
+    "instances": 16534,
+    "memory_heavy_instances": 1317,
+    "memory_heavy_pct": 7.96540462078142,
+    "workload_groups": 250
+  },
+  {
+    "balanced_instances": 52062,
+    "balanced_pct": 76.05065953810421,
+    "cpu_heavy_instances": 98,
+    "cpu_heavy_pct": 0.1431555575032502,
+    "instances": 68457,
+    "memory_heavy_instances": 16297,
+    "memory_heavy_pct": 23.806184904392538,
+    "workload_groups": 1000
+  },
+  {
+    "balanced_instances": 303807,
+    "balanced_pct": 80.31166977279035,
+    "cpu_heavy_instances": 748,
+    "cpu_heavy_pct": 0.1977345123385807,
+    "instances": 378285,
+    "memory_heavy_instances": 73730,
+    "memory_heavy_pct": 19.490595714871063,
+    "workload_groups": 4000
+  }
+]

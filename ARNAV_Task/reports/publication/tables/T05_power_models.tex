@@ -1,0 +1,21 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{SPECpower model configuration}\
+\toprule
+Power Curve & Role & Model & Result Id & Source & Hardware Available & Published \\
+\midrule\endhead
+hpe\_dl360\_gen9 & primary & HPE ProLiant DL360 Gen9 & 20151215-00708 & https://www.\allowbreak{}spec.org/pow\allowbreak{}er\_ssj2008/r\allowbreak{}esults/res20\allowbreak{}16q1/power\_s\allowbreak{}sj2008-20151\allowbreak{}215-00708.ht\allowbreak{}ml & 2015-11 & 2016-01-07 \\
+huawei\_rh2288h\_v3 & secondary & Huawei Fusion Server RH2288H V3 & 20150829-00703 & https://www.\allowbreak{}spec.org/pow\allowbreak{}er\_ssj2008/r\allowbreak{}esults/res20\allowbreak{}15q3/power\_s\allowbreak{}sj2008-20150\allowbreak{}829-00703.ht\allowbreak{}ml & 2015-05 & 2015-09-25 \\
+quanta\_d51b\_2u & third & QuantaGrid D51B-2U & 20141124-00679 & https://www.\allowbreak{}spec.org/pow\allowbreak{}er\_ssj2008/r\allowbreak{}esults/res20\allowbreak{}14q4/power\_s\allowbreak{}sj2008-20141\allowbreak{}124-00679.ht\allowbreak{}ml & 2014-09 & 2014-12-10 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{SPECpower model configuration}\
+\toprule
+Power Curve & Sockets & Cores & Threads & Memory Gb & Watts & Mapping \\
+\midrule\endhead
+hpe\_dl360\_gen9 & 2 & 36 & 72 & 64 & [45.0,83.7,1\allowbreak{}01,118,133,1\allowbreak{}45,162,188,2\allowbreak{}18,248,276] & Same selected curve on every sampled host at requested CPU / source CPU capacity. No core-count or memory scaling. This is a surrogate sensitivity model, not Alibaba hardware calibration. \\
+huawei\_rh2288h\_v3 & 2 & 36 & 72 & 64 & [44.8,83.2,9\allowbreak{}6.6,110,125,\allowbreak{}141,160,183,\allowbreak{}208,237,266] & Same selected curve on every sampled host at requested CPU / source CPU capacity. No core-count or memory scaling. This is a surrogate sensitivity model, not Alibaba hardware calibration. \\
+quanta\_d51b\_2u & 2 & 36 & 72 & 64 & [49.6,88.0,1\allowbreak{}04,120,137,1\allowbreak{}48,169,190,2\allowbreak{}17,245,272] & Same selected curve on every sampled host at requested CPU / source CPU capacity. No core-count or memory scaling. This is a surrogate sensitivity model, not Alibaba hardware calibration. \\
+\bottomrule\end{longtable}
+% Separate measured SPECpower curves drive a CPU-request-based surrogate, with no RAM/core-count scaling. Raw watt-point arrays are retained.
+% Sources: ecosched/power_curves.json

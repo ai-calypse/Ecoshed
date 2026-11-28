@@ -1,0 +1,1081 @@
+{
+  "archive": {
+    "archive_bytes": 243321159,
+    "archive_file": "alibaba-trace-2017.tar.gz",
+    "archive_sha256": "b7efe9dc9caa75352de41b9ac34b329602cde3414fd7cab87c1d21a9a9871d66",
+    "checksum_discrepancy_reference": "https://github.com/alibaba/clusterdata/issues/209",
+    "gzip_crc_and_tar_members_valid": true,
+    "matches_published_legacy_archive": false,
+    "matches_recorded_active_archive": true,
+    "published_legacy_archive_sha256": "02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df",
+    "source_files": {
+      "batch_instance.csv": {
+        "archive_member": "alibaba-trace-2017/batch_instance.csv",
+        "bytes": 858546781,
+        "sha256": "195f25ef36484a2da9bb92c08e203224ed34a32f48fcbe11c01d94ecf308d817"
+      },
+      "batch_task.csv": {
+        "archive_member": "alibaba-trace-2017/batch_task.csv",
+        "bytes": 4631973,
+        "sha256": "50f3c50ab4a917ad06c1cee6ec601e1356708774d7962503e8eafdd720b2286d"
+      },
+      "container_event.csv": {
+        "archive_member": "alibaba-trace-2017/container_event.csv",
+        "bytes": 875035,
+        "sha256": "8e2c2776983fb0867f5088352849773186eab22de9d878e10978b5018c68aeda"
+      },
+      "container_usage.csv": {
+        "archive_member": "alibaba-trace-2017/container_usage.csv",
+        "bytes": 275992839,
+        "sha256": "9ccb7abafdc492b173eb87b49c9cec3df30cb6e8fbfce09e7023be826de3a10a"
+      },
+      "server_event.csv": {
+        "archive_member": "alibaba-trace-2017/server_event.csv",
+        "bytes": 47615,
+        "sha256": "336f7255add3ae3c08bf5163b15319f542365a3c7814ed3f712699560933968b"
+      },
+      "server_usage.csv": {
+        "archive_member": "alibaba-trace-2017/server_usage.csv",
+        "bytes": 19030775,
+        "sha256": "032fa4193f4b426941fb1eecef5add3d8b0632aaf7cbd7663b0051ceb8a4637a"
+      }
+    },
+    "source_url": "https://github.com/alibaba/clusterdata/tree/master/cluster-trace-v2017"
+  },
+  "committed_manifest_sha256": "91de65a667ac2fbc30f5c803819602f829b230f45a23d7ba66e04f089e7e6ce5",
+  "configuration": {
+    "arrival_bin_s": 900,
+    "arrival_model": "task_create_time_release_for_all_declared_instances",
+    "background_online_load": false,
+    "cpu_request_divisor": 100.0,
+    "host_count": 64,
+    "policies": [
+      "first_fit",
+      "best_fit",
+      "lr_mmt",
+      "lr_mmt_memory",
+      "energy_first_cpu",
+      "energy_first_memory"
+    ],
+    "power_curves": [
+      "hpe_dl360_gen9",
+      "huawei_rh2288h_v3",
+      "quanta_d51b_2u"
+    ],
+    "replay_failures": false,
+    "runtime_model": "individual_observed_completed_first_attempt_duration_complete_groups_only",
+    "seed": 2026,
+    "simulation": {
+      "arrival_window_s": 43200,
+      "control_interval_s": 300,
+      "idle_timeout_s": 60,
+      "memory_unit_bytes": 68719476736,
+      "migration_bandwidth_bytes_s": 125000000,
+      "migration_extra_watts": 0,
+      "overload_threshold": 0.9,
+      "sleep_watts": 5,
+      "wake_energy_j": 0,
+      "wake_latency_s": 10
+    },
+    "source": "user_downloaded_alibaba_v2017_archive",
+    "source_repository": "https://github.com/alibaba/clusterdata/tree/master/cluster-trace-v2017",
+    "window_end_s": 43200,
+    "window_start_s": 0,
+    "workload_group_counts": [
+      250,
+      1000,
+      4000
+    ]
+  },
+  "dataset_source": {
+    "copied_to": "ARNAV_Task/.runtime/raw_rebuild/archive/alibaba-trace-2017.tar.gz",
+    "downloaded_bytes_this_phase": 0,
+    "filename": "alibaba-trace-2017.tar.gz",
+    "method": "existing local user archive; no network data download",
+    "release_inventory": "ARNAV_Task/reports/release_inventory.json",
+    "upstream": "https://github.com/alibaba/clusterdata/tree/master/cluster-trace-v2017"
+  },
+  "deterministic_repreparation": {
+    "manifest_matches": true,
+    "performed": true,
+    "prepared_outputs": [
+      {
+        "bytes": 2166,
+        "expected_bytes": 2166,
+        "expected_sha256": "9d4a52c8a85f404a5f7ac3494f8e377defa7e5912e5aea149d6f5f45d72d2896",
+        "file": "hosts.csv",
+        "matches": true,
+        "sha256": "9d4a52c8a85f404a5f7ac3494f8e377defa7e5912e5aea149d6f5f45d72d2896"
+      },
+      {
+        "bytes": 36654556,
+        "expected_bytes": 36654556,
+        "expected_sha256": "af98184ffd6895c5077f74ed6fabf523bcbd4e5627c5da58c34599a7eff63557",
+        "file": "instances.csv",
+        "matches": true,
+        "sha256": "af98184ffd6895c5077f74ed6fabf523bcbd4e5627c5da58c34599a7eff63557"
+      },
+      {
+        "bytes": 103362,
+        "expected_bytes": 103362,
+        "expected_sha256": "bd209c77f06b5a706204d2becbd6af79cebffc09e97eb715d67e6c68109f819e",
+        "file": "workload_1000.csv",
+        "matches": true,
+        "sha256": "bd209c77f06b5a706204d2becbd6af79cebffc09e97eb715d67e6c68109f819e"
+      },
+      {
+        "bytes": 25902,
+        "expected_bytes": 25902,
+        "expected_sha256": "4057404c1d09ed964af35911409dd16b2d775c6951d2077bdb2371af6899254f",
+        "file": "workload_250.csv",
+        "matches": true,
+        "sha256": "4057404c1d09ed964af35911409dd16b2d775c6951d2077bdb2371af6899254f"
+      },
+      {
+        "bytes": 412713,
+        "expected_bytes": 412713,
+        "expected_sha256": "06e2519db449ed83b136318d95d64e938f4864588a9a5053c1452d1302464e84",
+        "file": "workload_4000.csv",
+        "matches": true,
+        "sha256": "06e2519db449ed83b136318d95d64e938f4864588a9a5053c1452d1302464e84"
+      }
+    ],
+    "verified": true
+  },
+  "full_simulation_reproduction": false,
+  "historical_discrepancies": [
+    {
+      "current_sha256": "91de65a667ac2fbc30f5c803819602f829b230f45a23d7ba66e04f089e7e6ce5",
+      "earlier_matching_version_found": false,
+      "exact_expected_candidate_recovered": false,
+      "expected_sha256": [
+        "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b"
+      ],
+      "history": {
+        "matching_versions": [],
+        "scope": "All fetched local Git refs at this path; excludes deleted/unfetched refs and unreachable objects.",
+        "search_available": true,
+        "shallow_repository": false,
+        "versions_checked": 1
+      },
+      "id": "prepared_manifest_reference",
+      "implication": "Result/input lineage cannot be certified by the recorded manifest reference. Numerical copies can still agree.",
+      "recovered_candidate": "ARNAV_Task/.runtime/raw_rebuild/prepared/manifest.json",
+      "recovered_candidate_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+      "references": [
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[0].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[1].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[2].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[3].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[4].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[5].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[6].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[7].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[8].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[9].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[10].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[11].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[12].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[13].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[14].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[15].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[16].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[17].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[18].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[19].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[20].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[21].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[22].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[23].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[24].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[25].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[26].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[27].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[28].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[29].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[30].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[31].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[32].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[33].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[34].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[35].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[36].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[37].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[38].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[39].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[40].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[41].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[42].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[43].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[44].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[45].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[46].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[47].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[48].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[49].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[50].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[51].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[52].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "[53].manifest_sha256",
+          "file": "RAW_Alibaba/reports/summaries.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "manifest_sha256",
+          "file": "RAW_Alibaba/data_validation.json"
+        },
+        {
+          "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+          "field": "input_manifest_sha256",
+          "file": "BASELINE_Comparison/reports/validation.json"
+        }
+      ],
+      "status": "unresolved",
+      "target": "RAW_Alibaba/prepared/manifest.json"
+    },
+    {
+      "current_sha256": "479d3c44747f114e8c793362ff382e455a2b09470ef0d86ae2f775f02fd917d9",
+      "earlier_matching_version_found": false,
+      "exact_expected_candidate_recovered": false,
+      "expected_sha256": [
+        "b64f374f1884cdb8c4bd0a0be540cdca69be842fc7d3e2ca18e03d5fb91c7f0c"
+      ],
+      "history": {
+        "matching_versions": [],
+        "scope": "All fetched local Git refs at this path; excludes deleted/unfetched refs and unreachable objects.",
+        "search_available": true,
+        "shallow_repository": false,
+        "versions_checked": 1
+      },
+      "id": "raw_summaries_reference",
+      "implication": "The baseline validation does not identify the current raw-summary bytes. Compare the selected rows directly.",
+      "recovered_candidate": "RAW_Alibaba/reports/summaries.json",
+      "recovered_candidate_sha256": "479d3c44747f114e8c793362ff382e455a2b09470ef0d86ae2f775f02fd917d9",
+      "references": [
+        {
+          "expected_sha256": "b64f374f1884cdb8c4bd0a0be540cdca69be842fc7d3e2ca18e03d5fb91c7f0c",
+          "field": "source_summary_sha256",
+          "file": "BASELINE_Comparison/reports/validation.json"
+        }
+      ],
+      "status": "unresolved",
+      "target": "RAW_Alibaba/reports/summaries.json"
+    },
+    {
+      "current_sha256": "031795105541b003dc73ceae2d8027de9f934edc444173a4b3c284c1a9a31e6c",
+      "earlier_matching_version_found": false,
+      "exact_expected_candidate_recovered": false,
+      "expected_sha256": [
+        "711dc21157f2a5cd06378d086ece853786e1359e8063bcf5e67fd54813d960b6"
+      ],
+      "history": {
+        "matching_versions": [],
+        "scope": "All fetched local Git refs at this path; excludes deleted/unfetched refs and unreachable objects.",
+        "search_available": true,
+        "shallow_repository": false,
+        "versions_checked": 1
+      },
+      "id": "archive_audit_reference",
+      "implication": "The manifest does not identify the current archive-audit bytes. Raw-member records corroborate content, not this broken link.",
+      "recovered_candidate": "ARNAV_Task/.runtime/raw_rebuild/archive_audit.json",
+      "recovered_candidate_sha256": "031795105541b003dc73ceae2d8027de9f934edc444173a4b3c284c1a9a31e6c",
+      "references": [
+        {
+          "expected_sha256": "711dc21157f2a5cd06378d086ece853786e1359e8063bcf5e67fd54813d960b6",
+          "field": "archive_audit_sha256",
+          "file": "RAW_Alibaba/prepared/manifest.json"
+        }
+      ],
+      "status": "unresolved",
+      "target": "RAW_Alibaba/archive_audit.json"
+    }
+  ],
+  "historical_lineage_status": "unresolved",
+  "independent_validation": {
+    "checked_groups": 4000,
+    "checked_hosts": 64,
+    "checked_instances": 378285,
+    "checks": [
+      "raw/output hashes",
+      "exact original task-row equality",
+      "raw host capacities",
+      "unique observed raw attempt rows",
+      "individual observed duration equality",
+      "no mean-runtime imputation",
+      "complete original multiplicity",
+      "sorted releases"
+    ],
+    "independent_raw_row_verification": true,
+    "manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+    "passed": true,
+    "published_legacy_archive_hash_matches": false,
+    "synthetic_workloads": false,
+    "uses_yaksh_cleaned_inputs": false
+  },
+  "independent_validation_sha256": "ec4049da26488d9a96155410d08b639f46295e01aa228546b83563ff2a9cd307",
+  "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+  "interpretation": "All five prepared CSVs and all six raw payloads match recorded active-study bytes. Fresh independent raw-row verification and repeat preparation are separate from unresolved historical metadata references. The legacy compressed checksum is not passed and no experiment matrix was rerun.",
+  "limitations": [
+    "completed/complete-window/complete-observation selection bias",
+    "task creation is modeled release; original start staggering not replayed",
+    "no DAG reconstruction or empirical batch demand time series",
+    "instance IDs identify raw attempt rows, not recovered production instance IDs",
+    "normalized memory and surrogate SPECpower assumptions",
+    "published legacy compressed-archive hash mismatch recorded, not passed"
+  ],
+  "manifest_top_level_differences": [
+    "archive_audit_sha256"
+  ],
+  "new_simulations": 0,
+  "numerical_experiment_validation": {
+    "active_outcomes": 36,
+    "checks": [
+      "manifest and recorded validation coverage",
+      "run (250, 'hpe_dl360_gen9', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'hpe_dl360_gen9', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'hpe_dl360_gen9', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (250, 'hpe_dl360_gen9', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (250, 'huawei_rh2288h_v3', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'huawei_rh2288h_v3', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'huawei_rh2288h_v3', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (250, 'huawei_rh2288h_v3', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (250, 'quanta_d51b_2u', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'quanta_d51b_2u', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'quanta_d51b_2u', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (250, 'quanta_d51b_2u', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (1000, 'hpe_dl360_gen9', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'hpe_dl360_gen9', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'hpe_dl360_gen9', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (1000, 'hpe_dl360_gen9', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (1000, 'huawei_rh2288h_v3', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'huawei_rh2288h_v3', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'huawei_rh2288h_v3', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (1000, 'huawei_rh2288h_v3', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (1000, 'quanta_d51b_2u', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'quanta_d51b_2u', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'quanta_d51b_2u', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (1000, 'quanta_d51b_2u', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (4000, 'hpe_dl360_gen9', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'hpe_dl360_gen9', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'hpe_dl360_gen9', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (4000, 'hpe_dl360_gen9', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (4000, 'huawei_rh2288h_v3', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'huawei_rh2288h_v3', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'huawei_rh2288h_v3', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (4000, 'huawei_rh2288h_v3', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (4000, 'quanta_d51b_2u', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'quanta_d51b_2u', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'quanta_d51b_2u', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (4000, 'quanta_d51b_2u', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "nine primary pairs, 144 ordered comparisons and raw CSV consistency",
+      "D5 recordings, resource-skew outcomes, sampled series and energy accounting"
+    ],
+    "checks_passed": 39,
+    "completed_instance_replays": 5559312,
+    "d5": {
+      "recordings": 18,
+      "resource_skew_rows": 48,
+      "table_rows": {
+        "controller_diagnostics": 18,
+        "curve_band_watts": 30,
+        "outcomes_by_task_type": 48,
+        "pair_energy_gap": 9,
+        "placement_decisions": 18,
+        "placement_load_bands": 48,
+        "placement_score_arithmetic": 3,
+        "run_energy_breakdown": 36,
+        "servers_running_work": 18,
+        "tradeoffs": 9,
+        "workload_mix": 3
+      }
+    },
+    "errors": [],
+    "missing_optional_metrics": {},
+    "passed": true,
+    "per_curve_outcomes": {
+      "hpe_dl360_gen9": 12,
+      "huawei_rh2288h_v3": 12,
+      "quanta_d51b_2u": 12
+    },
+    "policy_comparisons": 144,
+    "primary_comparisons": 9,
+    "rejected_instances": 0,
+    "unfinished_instances": 0
+  },
+  "passed": true,
+  "phase": "D6 Phase 3 input recovery only",
+  "prepared_outputs": [
+    {
+      "bytes": 2166,
+      "expected_bytes": 2166,
+      "expected_sha256": "9d4a52c8a85f404a5f7ac3494f8e377defa7e5912e5aea149d6f5f45d72d2896",
+      "file": "hosts.csv",
+      "matches": true,
+      "sha256": "9d4a52c8a85f404a5f7ac3494f8e377defa7e5912e5aea149d6f5f45d72d2896"
+    },
+    {
+      "bytes": 36654556,
+      "expected_bytes": 36654556,
+      "expected_sha256": "af98184ffd6895c5077f74ed6fabf523bcbd4e5627c5da58c34599a7eff63557",
+      "file": "instances.csv",
+      "matches": true,
+      "sha256": "af98184ffd6895c5077f74ed6fabf523bcbd4e5627c5da58c34599a7eff63557"
+    },
+    {
+      "bytes": 103362,
+      "expected_bytes": 103362,
+      "expected_sha256": "bd209c77f06b5a706204d2becbd6af79cebffc09e97eb715d67e6c68109f819e",
+      "file": "workload_1000.csv",
+      "matches": true,
+      "sha256": "bd209c77f06b5a706204d2becbd6af79cebffc09e97eb715d67e6c68109f819e"
+    },
+    {
+      "bytes": 25902,
+      "expected_bytes": 25902,
+      "expected_sha256": "4057404c1d09ed964af35911409dd16b2d775c6951d2077bdb2371af6899254f",
+      "file": "workload_250.csv",
+      "matches": true,
+      "sha256": "4057404c1d09ed964af35911409dd16b2d775c6951d2077bdb2371af6899254f"
+    },
+    {
+      "bytes": 412713,
+      "expected_bytes": 412713,
+      "expected_sha256": "06e2519db449ed83b136318d95d64e938f4864588a9a5053c1452d1302464e84",
+      "file": "workload_4000.csv",
+      "matches": true,
+      "sha256": "06e2519db449ed83b136318d95d64e938f4864588a9a5053c1452d1302464e84"
+    }
+  ],
+  "prepared_outputs_match_active_study": true,
+  "prepared_total_bytes": 37198699,
+  "python_version": "3.12.15",
+  "raw_members": [
+    {
+      "bytes": 858546781,
+      "expected_bytes": 858546781,
+      "expected_sha256": "195f25ef36484a2da9bb92c08e203224ed34a32f48fcbe11c01d94ecf308d817",
+      "file": "batch_instance.csv",
+      "matches": true,
+      "sha256": "195f25ef36484a2da9bb92c08e203224ed34a32f48fcbe11c01d94ecf308d817"
+    },
+    {
+      "bytes": 4631973,
+      "expected_bytes": 4631973,
+      "expected_sha256": "50f3c50ab4a917ad06c1cee6ec601e1356708774d7962503e8eafdd720b2286d",
+      "file": "batch_task.csv",
+      "matches": true,
+      "sha256": "50f3c50ab4a917ad06c1cee6ec601e1356708774d7962503e8eafdd720b2286d"
+    },
+    {
+      "bytes": 875035,
+      "expected_bytes": 875035,
+      "expected_sha256": "8e2c2776983fb0867f5088352849773186eab22de9d878e10978b5018c68aeda",
+      "file": "container_event.csv",
+      "matches": true,
+      "sha256": "8e2c2776983fb0867f5088352849773186eab22de9d878e10978b5018c68aeda"
+    },
+    {
+      "bytes": 275992839,
+      "expected_bytes": 275992839,
+      "expected_sha256": "9ccb7abafdc492b173eb87b49c9cec3df30cb6e8fbfce09e7023be826de3a10a",
+      "file": "container_usage.csv",
+      "matches": true,
+      "sha256": "9ccb7abafdc492b173eb87b49c9cec3df30cb6e8fbfce09e7023be826de3a10a"
+    },
+    {
+      "bytes": 47615,
+      "expected_bytes": 47615,
+      "expected_sha256": "336f7255add3ae3c08bf5163b15319f542365a3c7814ed3f712699560933968b",
+      "file": "server_event.csv",
+      "matches": true,
+      "sha256": "336f7255add3ae3c08bf5163b15319f542365a3c7814ed3f712699560933968b"
+    },
+    {
+      "bytes": 19030775,
+      "expected_bytes": 19030775,
+      "expected_sha256": "032fa4193f4b426941fb1eecef5add3d8b0632aaf7cbd7663b0051ceb8a4637a",
+      "file": "server_usage.csv",
+      "matches": true,
+      "sha256": "032fa4193f4b426941fb1eecef5add3d8b0632aaf7cbd7663b0051ceb8a4637a"
+    }
+  ],
+  "raw_total_bytes": 1159125018,
+  "replay_workloads": [
+    {
+      "arrival_window": {
+        "first_observed_arrival_s": 77,
+        "last_observed_arrival_s": 42983,
+        "logical_end_s": 43200,
+        "logical_start_s": 0
+      },
+      "checks": [
+        "prepared fingerprints",
+        "independent raw-row verification identity",
+        "active-study prepared-output equivalence",
+        "unique instance IDs",
+        "stable original arrival/tie ordering",
+        "original group multiplicity",
+        "original requests and job identities",
+        "resource-skew coverage",
+        "no future completion fields"
+      ],
+      "dataset": "Alibaba cluster-trace-v2017, active RAW_Alibaba preparation",
+      "event_schema": {
+        "encoding": "UTF-8 JSON, sorted keys, compact separators, LF per event",
+        "event_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+        "fields": [
+          "schema_version",
+          "sequence",
+          "instance_id",
+          "task_group_id",
+          "job_id",
+          "arrival_time_s",
+          "cpu_request_cores",
+          "memory_request_normalized",
+          "workload_groups",
+          "input_manifest_sha256",
+          "resource_skew"
+        ],
+        "future_completion_information_exposed": false,
+        "ordering": [
+          "arrival_time_s",
+          "task_group_id",
+          "numeric source_instance_row"
+        ],
+        "sequence": "one-based integer"
+      },
+      "host_count": 64,
+      "independent_validation": {
+        "passed": true,
+        "sha256": "ec4049da26488d9a96155410d08b639f46295e01aa228546b83563ff2a9cd307",
+        "source": "ARNAV_Task/.runtime/raw_rebuild/data_validation.json"
+      },
+      "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+      "input_package": "ARNAV_Task/.runtime/raw_rebuild/prepared",
+      "instance_count": 16534,
+      "instance_resource_skew_counts": {
+        "balanced": 15217,
+        "memory_heavy": 1317
+      },
+      "limitations": [
+        "completed/complete-window/complete-observation selection bias",
+        "task creation is modeled release; original start staggering not replayed",
+        "no DAG reconstruction or empirical batch demand time series",
+        "instance IDs identify raw attempt rows, not recovered production instance IDs",
+        "normalized memory and surrogate SPECpower assumptions",
+        "published legacy compressed-archive hash mismatch recorded, not passed",
+        "Exact prepared CSV equivalence does not repair historical manifest, archive-audit or result-summary hash links.",
+        "Replay events are arrivals, not scheduler execution or live simulation metrics.",
+        "Memory remains normalized, not GB. Instance IDs refer to raw attempt rows."
+      ],
+      "passed": true,
+      "prepared_outputs": {
+        "hosts.csv": {
+          "bytes": 2166,
+          "sha256": "9d4a52c8a85f404a5f7ac3494f8e377defa7e5912e5aea149d6f5f45d72d2896"
+        },
+        "instances.csv": {
+          "bytes": 36654556,
+          "sha256": "af98184ffd6895c5077f74ed6fabf523bcbd4e5627c5da58c34599a7eff63557"
+        },
+        "workload_1000.csv": {
+          "bytes": 103362,
+          "sha256": "bd209c77f06b5a706204d2becbd6af79cebffc09e97eb715d67e6c68109f819e"
+        },
+        "workload_250.csv": {
+          "bytes": 25902,
+          "sha256": "4057404c1d09ed964af35911409dd16b2d775c6951d2077bdb2371af6899254f"
+        },
+        "workload_4000.csv": {
+          "bytes": 412713,
+          "sha256": "06e2519db449ed83b136318d95d64e938f4864588a9a5053c1452d1302464e84"
+        }
+      },
+      "prepared_outputs_match_active_study": true,
+      "provenance": {
+        "archive_sha256": "b7efe9dc9caa75352de41b9ac34b329602cde3414fd7cab87c1d21a9a9871d66",
+        "config_sha256": "c202ff0da61c273f2a136566ff7e273512553f93327235c5b801109c555e9e19",
+        "historical_hash_discrepancies": "unresolved",
+        "preparation_source_sha256": "e4ca1bb06435f7706b0b72381c81b3ab6356d7071cfdeeda12e228498c98931c",
+        "raw_member_sha256": {
+          "batch_instance.csv": "195f25ef36484a2da9bb92c08e203224ed34a32f48fcbe11c01d94ecf308d817",
+          "batch_task.csv": "50f3c50ab4a917ad06c1cee6ec601e1356708774d7962503e8eafdd720b2286d",
+          "container_event.csv": "8e2c2776983fb0867f5088352849773186eab22de9d878e10978b5018c68aeda",
+          "container_usage.csv": "9ccb7abafdc492b173eb87b49c9cec3df30cb6e8fbfce09e7023be826de3a10a",
+          "server_event.csv": "336f7255add3ae3c08bf5163b15319f542365a3c7814ed3f712699560933968b",
+          "server_usage.csv": "032fa4193f4b426941fb1eecef5add3d8b0632aaf7cbd7663b0051ceb8a4637a"
+        },
+        "simulation_rerun": false
+      },
+      "recorded_manifest_sha256": "91de65a667ac2fbc30f5c803819602f829b230f45a23d7ba66e04f089e7e6ce5",
+      "resource_demand": {
+        "interpretation": "Sums of per-instance requests, not simultaneous demand or utilization.",
+        "sum_cpu_request_cores_across_instances": 9989.499999999998,
+        "sum_memory_request_normalized_across_instances": 137.62435741463423
+      },
+      "sampling_seed": 2026,
+      "schema_version": 1,
+      "task_group_count": 250,
+      "workload_groups": 250
+    },
+    {
+      "arrival_window": {
+        "first_observed_arrival_s": 42,
+        "last_observed_arrival_s": 43183,
+        "logical_end_s": 43200,
+        "logical_start_s": 0
+      },
+      "checks": [
+        "prepared fingerprints",
+        "independent raw-row verification identity",
+        "active-study prepared-output equivalence",
+        "unique instance IDs",
+        "stable original arrival/tie ordering",
+        "original group multiplicity",
+        "original requests and job identities",
+        "resource-skew coverage",
+        "no future completion fields"
+      ],
+      "dataset": "Alibaba cluster-trace-v2017, active RAW_Alibaba preparation",
+      "event_schema": {
+        "encoding": "UTF-8 JSON, sorted keys, compact separators, LF per event",
+        "event_stream_sha256": "21e3f18050086c1579847e20ff54991f4ee992f0c89cf9cbdf90c3433a86576e",
+        "fields": [
+          "schema_version",
+          "sequence",
+          "instance_id",
+          "task_group_id",
+          "job_id",
+          "arrival_time_s",
+          "cpu_request_cores",
+          "memory_request_normalized",
+          "workload_groups",
+          "input_manifest_sha256",
+          "resource_skew"
+        ],
+        "future_completion_information_exposed": false,
+        "ordering": [
+          "arrival_time_s",
+          "task_group_id",
+          "numeric source_instance_row"
+        ],
+        "sequence": "one-based integer"
+      },
+      "host_count": 64,
+      "independent_validation": {
+        "passed": true,
+        "sha256": "ec4049da26488d9a96155410d08b639f46295e01aa228546b83563ff2a9cd307",
+        "source": "ARNAV_Task/.runtime/raw_rebuild/data_validation.json"
+      },
+      "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+      "input_package": "ARNAV_Task/.runtime/raw_rebuild/prepared",
+      "instance_count": 68457,
+      "instance_resource_skew_counts": {
+        "balanced": 52062,
+        "cpu_heavy": 98,
+        "memory_heavy": 16297
+      },
+      "limitations": [
+        "completed/complete-window/complete-observation selection bias",
+        "task creation is modeled release; original start staggering not replayed",
+        "no DAG reconstruction or empirical batch demand time series",
+        "instance IDs identify raw attempt rows, not recovered production instance IDs",
+        "normalized memory and surrogate SPECpower assumptions",
+        "published legacy compressed-archive hash mismatch recorded, not passed",
+        "Exact prepared CSV equivalence does not repair historical manifest, archive-audit or result-summary hash links.",
+        "Replay events are arrivals, not scheduler execution or live simulation metrics.",
+        "Memory remains normalized, not GB. Instance IDs refer to raw attempt rows."
+      ],
+      "passed": true,
+      "prepared_outputs": {
+        "hosts.csv": {
+          "bytes": 2166,
+          "sha256": "9d4a52c8a85f404a5f7ac3494f8e377defa7e5912e5aea149d6f5f45d72d2896"
+        },
+        "instances.csv": {
+          "bytes": 36654556,
+          "sha256": "af98184ffd6895c5077f74ed6fabf523bcbd4e5627c5da58c34599a7eff63557"
+        },
+        "workload_1000.csv": {
+          "bytes": 103362,
+          "sha256": "bd209c77f06b5a706204d2becbd6af79cebffc09e97eb715d67e6c68109f819e"
+        },
+        "workload_250.csv": {
+          "bytes": 25902,
+          "sha256": "4057404c1d09ed964af35911409dd16b2d775c6951d2077bdb2371af6899254f"
+        },
+        "workload_4000.csv": {
+          "bytes": 412713,
+          "sha256": "06e2519db449ed83b136318d95d64e938f4864588a9a5053c1452d1302464e84"
+        }
+      },
+      "prepared_outputs_match_active_study": true,
+      "provenance": {
+        "archive_sha256": "b7efe9dc9caa75352de41b9ac34b329602cde3414fd7cab87c1d21a9a9871d66",
+        "config_sha256": "c202ff0da61c273f2a136566ff7e273512553f93327235c5b801109c555e9e19",
+        "historical_hash_discrepancies": "unresolved",
+        "preparation_source_sha256": "e4ca1bb06435f7706b0b72381c81b3ab6356d7071cfdeeda12e228498c98931c",
+        "raw_member_sha256": {
+          "batch_instance.csv": "195f25ef36484a2da9bb92c08e203224ed34a32f48fcbe11c01d94ecf308d817",
+          "batch_task.csv": "50f3c50ab4a917ad06c1cee6ec601e1356708774d7962503e8eafdd720b2286d",
+          "container_event.csv": "8e2c2776983fb0867f5088352849773186eab22de9d878e10978b5018c68aeda",
+          "container_usage.csv": "9ccb7abafdc492b173eb87b49c9cec3df30cb6e8fbfce09e7023be826de3a10a",
+          "server_event.csv": "336f7255add3ae3c08bf5163b15319f542365a3c7814ed3f712699560933968b",
+          "server_usage.csv": "032fa4193f4b426941fb1eecef5add3d8b0632aaf7cbd7663b0051ceb8a4637a"
+        },
+        "simulation_rerun": false
+      },
+      "recorded_manifest_sha256": "91de65a667ac2fbc30f5c803819602f829b230f45a23d7ba66e04f089e7e6ce5",
+      "resource_demand": {
+        "interpretation": "Sums of per-instance requests, not simultaneous demand or utilization.",
+        "sum_cpu_request_cores_across_instances": 39565.400000001806,
+        "sum_memory_request_normalized_across_instances": 632.1485828178674
+      },
+      "sampling_seed": 2026,
+      "schema_version": 1,
+      "task_group_count": 1000,
+      "workload_groups": 1000
+    },
+    {
+      "arrival_window": {
+        "first_observed_arrival_s": 23,
+        "last_observed_arrival_s": 43184,
+        "logical_end_s": 43200,
+        "logical_start_s": 0
+      },
+      "checks": [
+        "prepared fingerprints",
+        "independent raw-row verification identity",
+        "active-study prepared-output equivalence",
+        "unique instance IDs",
+        "stable original arrival/tie ordering",
+        "original group multiplicity",
+        "original requests and job identities",
+        "resource-skew coverage",
+        "no future completion fields"
+      ],
+      "dataset": "Alibaba cluster-trace-v2017, active RAW_Alibaba preparation",
+      "event_schema": {
+        "encoding": "UTF-8 JSON, sorted keys, compact separators, LF per event",
+        "event_stream_sha256": "4d1db311c51d44d993c27340d9e5790b76ff73bf380c646e5bf0788b5fc1600b",
+        "fields": [
+          "schema_version",
+          "sequence",
+          "instance_id",
+          "task_group_id",
+          "job_id",
+          "arrival_time_s",
+          "cpu_request_cores",
+          "memory_request_normalized",
+          "workload_groups",
+          "input_manifest_sha256",
+          "resource_skew"
+        ],
+        "future_completion_information_exposed": false,
+        "ordering": [
+          "arrival_time_s",
+          "task_group_id",
+          "numeric source_instance_row"
+        ],
+        "sequence": "one-based integer"
+      },
+      "host_count": 64,
+      "independent_validation": {
+        "passed": true,
+        "sha256": "ec4049da26488d9a96155410d08b639f46295e01aa228546b83563ff2a9cd307",
+        "source": "ARNAV_Task/.runtime/raw_rebuild/data_validation.json"
+      },
+      "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+      "input_package": "ARNAV_Task/.runtime/raw_rebuild/prepared",
+      "instance_count": 378285,
+      "instance_resource_skew_counts": {
+        "balanced": 303807,
+        "cpu_heavy": 748,
+        "memory_heavy": 73730
+      },
+      "limitations": [
+        "completed/complete-window/complete-observation selection bias",
+        "task creation is modeled release; original start staggering not replayed",
+        "no DAG reconstruction or empirical batch demand time series",
+        "instance IDs identify raw attempt rows, not recovered production instance IDs",
+        "normalized memory and surrogate SPECpower assumptions",
+        "published legacy compressed-archive hash mismatch recorded, not passed",
+        "Exact prepared CSV equivalence does not repair historical manifest, archive-audit or result-summary hash links.",
+        "Replay events are arrivals, not scheduler execution or live simulation metrics.",
+        "Memory remains normalized, not GB. Instance IDs refer to raw attempt rows."
+      ],
+      "passed": true,
+      "prepared_outputs": {
+        "hosts.csv": {
+          "bytes": 2166,
+          "sha256": "9d4a52c8a85f404a5f7ac3494f8e377defa7e5912e5aea149d6f5f45d72d2896"
+        },
+        "instances.csv": {
+          "bytes": 36654556,
+          "sha256": "af98184ffd6895c5077f74ed6fabf523bcbd4e5627c5da58c34599a7eff63557"
+        },
+        "workload_1000.csv": {
+          "bytes": 103362,
+          "sha256": "bd209c77f06b5a706204d2becbd6af79cebffc09e97eb715d67e6c68109f819e"
+        },
+        "workload_250.csv": {
+          "bytes": 25902,
+          "sha256": "4057404c1d09ed964af35911409dd16b2d775c6951d2077bdb2371af6899254f"
+        },
+        "workload_4000.csv": {
+          "bytes": 412713,
+          "sha256": "06e2519db449ed83b136318d95d64e938f4864588a9a5053c1452d1302464e84"
+        }
+      },
+      "prepared_outputs_match_active_study": true,
+      "provenance": {
+        "archive_sha256": "b7efe9dc9caa75352de41b9ac34b329602cde3414fd7cab87c1d21a9a9871d66",
+        "config_sha256": "c202ff0da61c273f2a136566ff7e273512553f93327235c5b801109c555e9e19",
+        "historical_hash_discrepancies": "unresolved",
+        "preparation_source_sha256": "e4ca1bb06435f7706b0b72381c81b3ab6356d7071cfdeeda12e228498c98931c",
+        "raw_member_sha256": {
+          "batch_instance.csv": "195f25ef36484a2da9bb92c08e203224ed34a32f48fcbe11c01d94ecf308d817",
+          "batch_task.csv": "50f3c50ab4a917ad06c1cee6ec601e1356708774d7962503e8eafdd720b2286d",
+          "container_event.csv": "8e2c2776983fb0867f5088352849773186eab22de9d878e10978b5018c68aeda",
+          "container_usage.csv": "9ccb7abafdc492b173eb87b49c9cec3df30cb6e8fbfce09e7023be826de3a10a",
+          "server_event.csv": "336f7255add3ae3c08bf5163b15319f542365a3c7814ed3f712699560933968b",
+          "server_usage.csv": "032fa4193f4b426941fb1eecef5add3d8b0632aaf7cbd7663b0051ceb8a4637a"
+        },
+        "simulation_rerun": false
+      },
+      "recorded_manifest_sha256": "91de65a667ac2fbc30f5c803819602f829b230f45a23d7ba66e04f089e7e6ce5",
+      "resource_demand": {
+        "interpretation": "Sums of per-instance requests, not simultaneous demand or utilization.",
+        "sum_cpu_request_cores_across_instances": 220487.29999996343,
+        "sum_memory_request_normalized_across_instances": 3235.939005514846
+      },
+      "sampling_seed": 2026,
+      "schema_version": 1,
+      "task_group_count": 4000,
+      "workload_groups": 4000
+    }
+  ],
+  "schema_version": 1,
+  "source_code_sha256": {
+    "RAW_Alibaba/config.json": "c202ff0da61c273f2a136566ff7e273512553f93327235c5b801109c555e9e19",
+    "RAW_Alibaba/data.py": "71fbc35957fe7def7c3be619a3b37b802d771158da5541c69dc5086735a8ae6b",
+    "RAW_Alibaba/extract.py": "963c5792da64bb49c8aedc76fbf24d6fe83e9c4816bfa149c247bff5199fcbab",
+    "RAW_Alibaba/prepare.py": "e4ca1bb06435f7706b0b72381c81b3ab6356d7071cfdeeda12e228498c98931c",
+    "RAW_Alibaba/verify_data.py": "ca8de3a89520164d0247cfc47574aee3b5f3fe0e2ae51a1465364505f1a72977"
+  },
+  "source_fingerprints_match_recorded_study": true
+}

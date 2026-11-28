@@ -1,0 +1,2966 @@
+{
+  "acceptance_checklist": "ARNAV_Task/final/SUBMISSION_CHECKLIST.md",
+  "browser": {
+    "broker_offline": {
+      "broker_unavailable_disclosed": true,
+      "exceptions": [],
+      "offline_overview_still_available": true,
+      "overview_exceptions": [],
+      "recorded_session_retained": true,
+      "start_disabled": true
+    },
+    "broker_restored": {
+      "brokers": [
+        {
+          "broker_id": 1,
+          "host": "127.0.0.1",
+          "is_fenced": false,
+          "port": 19092,
+          "rack": null
+        }
+      ],
+      "connected": true,
+      "partitions": 1,
+      "replication_factor": 1,
+      "topic": "ecosched.workload.arrivals.v1"
+    },
+    "candidate_dashboard_port": 18765,
+    "filters_and_actual_csv_download": {
+      "csv_headers": [
+        "Policy ID",
+        "Scheduler",
+        "Workload (task groups)",
+        "Power curve ID",
+        "Modeled energy (kWh)",
+        "Rank in selected case",
+        "Baseline policy ID",
+        "Baseline value (kWh)",
+        "Change vs baseline (kWh)",
+        "Energy reduction (%) \u00b7 positive saves",
+        "Source \u00b7 individual summary"
+      ],
+      "download_rows": 4,
+      "exceptions": [],
+      "passed": true,
+      "plots": [
+        [
+          {
+            "name": "First Fit",
+            "x": [
+              "First Fit"
+            ],
+            "y": {
+              "_inputArray": {
+                "0": 5.160143591145846,
+                "bdata": "p4p6rvyjFEA=",
+                "dtype": "f8",
+                "shape": "1"
+              },
+              "bdata": "p4p6rvyjFEA=",
+              "dtype": "f8"
+            }
+          },
+          {
+            "name": "Best Fit",
+            "x": [
+              "Best Fit"
+            ],
+            "y": {
+              "_inputArray": {
+                "0": 5.16641816666668,
+                "bdata": "tywdhmmqFEA=",
+                "dtype": "f8",
+                "shape": "1"
+              },
+              "bdata": "tywdhmmqFEA=",
+              "dtype": "f8"
+            }
+          },
+          {
+            "name": "CPU-oriented LR-MMT",
+            "x": [
+              "CPU-oriented LR-MMT"
+            ],
+            "y": {
+              "_inputArray": {
+                "0": 5.189138230910783,
+                "bdata": "jb3Qc63BFEA=",
+                "dtype": "f8",
+                "shape": "1"
+              },
+              "bdata": "jb3Qc63BFEA=",
+              "dtype": "f8"
+            }
+          },
+          {
+            "name": "LR-MMT + CPU/Memory-Aware Placement",
+            "x": [
+              "LR-MMT + CPU/Memory-Aware Placement"
+            ],
+            "y": {
+              "_inputArray": {
+                "0": 5.158751707278637,
+                "bdata": "nci7zo+iFEA=",
+                "dtype": "f8",
+                "shape": "1"
+              },
+              "bdata": "nci7zo+iFEA=",
+              "dtype": "f8"
+            }
+          }
+        ],
+        [
+          {
+            "name": "",
+            "x": [
+              "First Fit",
+              "Best Fit",
+              "CPU-oriented LR-MMT",
+              "LR-MMT + CPU/Memory-Aware Placement"
+            ],
+            "y": {
+              "_inputArray": {
+                "0": 0,
+                "1": -0.12159691702378922,
+                "2": -0.5618959870552465,
+                "3": 0.026973742932211678,
+                "bdata": "AAAAAAAAAACkXum9+SC/v1L9BEsN++G/BG76PgGfmz8=",
+                "dtype": "f8",
+                "shape": "4"
+              },
+              "bdata": "AAAAAAAAAACkXum9+SC/v1L9BEsN++G/BG76PgGfmz8=",
+              "dtype": "f8"
+            }
+          }
+        ]
+      ],
+      "resource_skew_missing_observations_disclosed": true,
+      "selected_baseline": "first_fit",
+      "selected_curve": "huawei_rh2288h_v3",
+      "selected_size": 250
+    },
+    "offline_all_pages": [
+      {
+        "body_chars": 3292,
+        "exceptions": [],
+        "navigation_count": 8,
+        "offline_label": true,
+        "page": "overview"
+      },
+      {
+        "body_chars": 1734,
+        "exceptions": [],
+        "navigation_count": 8,
+        "offline_label": true,
+        "page": "scheduler_comparison"
+      },
+      {
+        "body_chars": 3262,
+        "exceptions": [],
+        "navigation_count": 8,
+        "offline_label": true,
+        "page": "energy_analysis"
+      },
+      {
+        "body_chars": 1978,
+        "exceptions": [],
+        "navigation_count": 8,
+        "offline_label": true,
+        "page": "performance_analysis"
+      },
+      {
+        "body_chars": 2177,
+        "exceptions": [],
+        "navigation_count": 8,
+        "offline_label": true,
+        "page": "resource_skew"
+      },
+      {
+        "body_chars": 2701,
+        "exceptions": [],
+        "navigation_count": 8,
+        "offline_label": true,
+        "page": "research_findings"
+      },
+      {
+        "body_chars": 3830,
+        "exceptions": [],
+        "navigation_count": 8,
+        "offline_label": true,
+        "page": "reproducibility"
+      },
+      {
+        "body_chars": 2546,
+        "exceptions": [],
+        "navigation_count": 8,
+        "no_input_or_broker_disclosed": true,
+        "offline_label": true,
+        "page": "live_replay",
+        "start_disabled": true
+      }
+    ],
+    "regular_dashboard_port": 8501,
+    "rehearsal": {
+      "actual_session_download": {
+        "distinct_count": 16534,
+        "replay_id": "668dbb0d-0fc8-44ea-a463-4037f62beb2f"
+      },
+      "browser_cancelled_session": {
+        "confirmed": 562,
+        "distinct_count": 562,
+        "gaps": 0,
+        "invalid": 0,
+        "replay_id": "197cc85e-f051-49a7-a90f-e1e2e8dcaa65",
+        "status": "cancelled",
+        "verification": null
+      },
+      "cancelled_history_visible": true,
+      "complete_session": {
+        "attempted": 16534,
+        "average_instances_per_s": 225.49893186171357,
+        "bootstrap": "127.0.0.1:19092",
+        "broker_end": 17096,
+        "confirmed": 16534,
+        "conflicting_duplicates": 0,
+        "consumed": 16534,
+        "consumer_status": "completed",
+        "controller_pid": 2581,
+        "distinct_count": 16534,
+        "duplicates": 0,
+        "elapsed_wall_s": 73.32185506820679,
+        "end_offset": 17096,
+        "ended_at": 1795817487.990437,
+        "errors": [],
+        "expected": 16534,
+        "gaps": 0,
+        "group_id": "ecosched.d6.replay.668dbb0d-0fc8-44ea-a463-4037f62beb2f",
+        "groups_encountered": 250,
+        "invalid": 0,
+        "lag_scope": "observed_lag is topic-partition lag at last consumer heartbeat; session_lag stops at this replay producer boundary.",
+        "last_arrival": 42983,
+        "last_group": "j7376_t44656",
+        "last_source": 4498314,
+        "limit_events": null,
+        "manifest": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+        "max_drift": 0.08445379137992859,
+        "metric_scope": "Live offered arrivals only; no allocated resources, energy, SLA or host utilization.",
+        "next_offset": 17096,
+        "next_sequence": 16535,
+        "observed_lag": 0,
+        "offered_cpu": 9989.499999999998,
+        "offered_memory": 137.62435741463423,
+        "producer_elapsed": 71.65957891603466,
+        "producer_status": "completed",
+        "progress_fraction": 1.0,
+        "recent_10s_instances_per_s": 256.5,
+        "recent_window_s": 10,
+        "replay_id": "668dbb0d-0fc8-44ea-a463-4037f62beb2f",
+        "session_lag": 0,
+        "size": 250,
+        "speed": 600.0,
+        "start_offset": 562,
+        "started_at": 1795817414.668582,
+        "status": "complete",
+        "stop_requested": 0,
+        "topic": "ecosched.workload.arrivals.v1",
+        "verification": {
+          "bounded_partial": false,
+          "compared_events": 16534,
+          "complete": true,
+          "confirmed_published": 16534,
+          "consumed_deliveries": 16534,
+          "consumer_status": "completed",
+          "distinct_instances": 16534,
+          "duplicate_deliveries": 0,
+          "errors": [],
+          "expected_instances": 16534,
+          "expected_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+          "groups": 250,
+          "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+          "invalid_messages": 0,
+          "passed": true,
+          "persisted_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+          "producer_status": "completed",
+          "replay_id": "668dbb0d-0fc8-44ea-a463-4037f62beb2f",
+          "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+          "sequence_gaps": 0,
+          "size": 250,
+          "verified_at": 1795817487.9901
+        },
+        "workers": [
+          {
+            "at": 1795817486.8588731,
+            "replay_id": "668dbb0d-0fc8-44ea-a463-4037f62beb2f",
+            "status": "completed",
+            "worker": "consumer"
+          },
+          {
+            "at": 1795817487.990664,
+            "replay_id": "668dbb0d-0fc8-44ea-a463-4037f62beb2f",
+            "status": "complete",
+            "worker": "controller"
+          },
+          {
+            "at": 1795817486.352,
+            "replay_id": "668dbb0d-0fc8-44ea-a463-4037f62beb2f",
+            "status": "completed",
+            "worker": "producer"
+          }
+        ]
+      },
+      "duplicate_controller_attempt": {
+        "error": "ERROR: Controller exited 1; see 0ccb1a18-5e2b-4319-b0c1-f8ef044a1b0b.log",
+        "exit": 1
+      },
+      "exceptions": [],
+      "history_lengths": {
+        "demand": 48,
+        "offset_history": 73,
+        "throughput": 70
+      },
+      "navigation_refresh_preserved_pid": true,
+      "observations": [
+        {
+          "confirmed": 1500,
+          "distinct_count": 1806,
+          "elapsed_wall_s": 12.076879978179932,
+          "last_arrival": 6709,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 124.4,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 1500,
+          "distinct_count": 1969,
+          "elapsed_wall_s": 13.083092212677002,
+          "last_arrival": 7737,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 135.2,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 1500,
+          "distinct_count": 1997,
+          "elapsed_wall_s": 14.0889310836792,
+          "last_arrival": 8121,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 86.3,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 2500,
+          "distinct_count": 2508,
+          "elapsed_wall_s": 15.090801000595093,
+          "last_arrival": 8696,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 131.8,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 3500,
+          "distinct_count": 3513,
+          "elapsed_wall_s": 16.095844984054565,
+          "last_arrival": 9607,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 210.9,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 3500,
+          "distinct_count": 3691,
+          "elapsed_wall_s": 17.69314694404602,
+          "last_arrival": 10109,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 228.6,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 3500,
+          "distinct_count": 3861,
+          "elapsed_wall_s": 18.695214986801147,
+          "last_arrival": 11042,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 244.4,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 4000,
+          "distinct_count": 4227,
+          "elapsed_wall_s": 19.70103693008423,
+          "last_arrival": 11595,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 275.0,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 4000,
+          "distinct_count": 4304,
+          "elapsed_wall_s": 20.70349621772766,
+          "last_arrival": 12388,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 249.8,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 4500,
+          "distinct_count": 4625,
+          "elapsed_wall_s": 21.709316968917847,
+          "last_arrival": 12854,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 280.2,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 5000,
+          "distinct_count": 4980,
+          "elapsed_wall_s": 22.71215295791626,
+          "last_arrival": 13582,
+          "observed_lag": 20,
+          "recent_10s_instances_per_s": 301.1,
+          "session_lag": 20,
+          "status": "running"
+        },
+        {
+          "confirmed": 5000,
+          "distinct_count": 5176,
+          "elapsed_wall_s": 23.715275049209595,
+          "last_arrival": 14176,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 317.8,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 5000,
+          "distinct_count": 5319,
+          "elapsed_wall_s": 24.719528198242188,
+          "last_arrival": 14575,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 281.0,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 5000,
+          "distinct_count": 5321,
+          "elapsed_wall_s": 25.72309398651123,
+          "last_arrival": 15231,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 180.8,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 5500,
+          "distinct_count": 5547,
+          "elapsed_wall_s": 26.725164890289307,
+          "last_arrival": 15836,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 185.6,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 5500,
+          "distinct_count": 5890,
+          "elapsed_wall_s": 27.728396892547607,
+          "last_arrival": 16442,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 203.6,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 5500,
+          "distinct_count": 5912,
+          "elapsed_wall_s": 28.73125910758972,
+          "last_arrival": 17085,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 205.0,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 6000,
+          "distinct_count": 6191,
+          "elapsed_wall_s": 29.733964920043945,
+          "last_arrival": 17607,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 196.3,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 6000,
+          "distinct_count": 6204,
+          "elapsed_wall_s": 30.739854097366333,
+          "last_arrival": 18301,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 158.1,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 6000,
+          "distinct_count": 6205,
+          "elapsed_wall_s": 31.745784044265747,
+          "last_arrival": 18683,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 133.2,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 6000,
+          "distinct_count": 6205,
+          "elapsed_wall_s": 32.75165891647339,
+          "last_arrival": 18683,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 103.1,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 6000,
+          "distinct_count": 6382,
+          "elapsed_wall_s": 33.75713086128235,
+          "last_arrival": 20211,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 106.5,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 6500,
+          "distinct_count": 6629,
+          "elapsed_wall_s": 34.760586977005005,
+          "last_arrival": 20771,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 130.9,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 7000,
+          "distinct_count": 7162,
+          "elapsed_wall_s": 35.766523122787476,
+          "last_arrival": 21017,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 184.0,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 7500,
+          "distinct_count": 7558,
+          "elapsed_wall_s": 36.76965594291687,
+          "last_arrival": 21693,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 199.9,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 7500,
+          "distinct_count": 7659,
+          "elapsed_wall_s": 37.77500510215759,
+          "last_arrival": 22545,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 174.9,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 8000,
+          "distinct_count": 8082,
+          "elapsed_wall_s": 38.780969858169556,
+          "last_arrival": 22899,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 191.6,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 8000,
+          "distinct_count": 8107,
+          "elapsed_wall_s": 39.78689408302307,
+          "last_arrival": 23448,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 190.4,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 8000,
+          "distinct_count": 8406,
+          "elapsed_wall_s": 40.78886795043945,
+          "last_arrival": 24384,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 220.1,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 8000,
+          "distinct_count": 8408,
+          "elapsed_wall_s": 41.79035520553589,
+          "last_arrival": 24660,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 220.3,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 8500,
+          "distinct_count": 8719,
+          "elapsed_wall_s": 42.79245710372925,
+          "last_arrival": 25504,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 243.0,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 8500,
+          "distinct_count": 8852,
+          "elapsed_wall_s": 43.79754590988159,
+          "last_arrival": 26083,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 223.6,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 8500,
+          "distinct_count": 8861,
+          "elapsed_wall_s": 44.80263805389404,
+          "last_arrival": 26640,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 169.9,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 9000,
+          "distinct_count": 9063,
+          "elapsed_wall_s": 45.80869388580322,
+          "last_arrival": 27261,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 150.5,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 9000,
+          "distinct_count": 9075,
+          "elapsed_wall_s": 46.814730167388916,
+          "last_arrival": 27970,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 151.7,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 9500,
+          "distinct_count": 9799,
+          "elapsed_wall_s": 47.81812906265259,
+          "last_arrival": 28204,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 171.7,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 9500,
+          "distinct_count": 9979,
+          "elapsed_wall_s": 48.823683977127075,
+          "last_arrival": 29014,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 187.2,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 9500,
+          "distinct_count": 9985,
+          "elapsed_wall_s": 49.827863931655884,
+          "last_arrival": 29820,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 158.5,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 9500,
+          "distinct_count": 9985,
+          "elapsed_wall_s": 50.83289098739624,
+          "last_arrival": 29820,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 157.7,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 10500,
+          "distinct_count": 10651,
+          "elapsed_wall_s": 51.8388729095459,
+          "last_arrival": 30899,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 193.5,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 10500,
+          "distinct_count": 10995,
+          "elapsed_wall_s": 52.844932079315186,
+          "last_arrival": 31678,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 214.4,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 10500,
+          "distinct_count": 10995,
+          "elapsed_wall_s": 53.84885811805725,
+          "last_arrival": 31678,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 214.3,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 10500,
+          "distinct_count": 10996,
+          "elapsed_wall_s": 54.854872941970825,
+          "last_arrival": 32488,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 206.3,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 11500,
+          "distinct_count": 11574,
+          "elapsed_wall_s": 55.860870122909546,
+          "last_arrival": 33420,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 250.8,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 11500,
+          "distinct_count": 11614,
+          "elapsed_wall_s": 56.866925954818726,
+          "last_arrival": 33911,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 181.5,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 11500,
+          "distinct_count": 11651,
+          "elapsed_wall_s": 57.86877703666687,
+          "last_arrival": 34690,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 184.9,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 11500,
+          "distinct_count": 11944,
+          "elapsed_wall_s": 58.870934009552,
+          "last_arrival": 35156,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 196.0,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 11500,
+          "distinct_count": 11952,
+          "elapsed_wall_s": 59.87703323364258,
+          "last_arrival": 35710,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 196.7,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 12000,
+          "distinct_count": 12147,
+          "elapsed_wall_s": 60.88308501243591,
+          "last_arrival": 36484,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 168.5,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 12000,
+          "distinct_count": 12156,
+          "elapsed_wall_s": 61.88909101486206,
+          "last_arrival": 37017,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 149.3,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 12500,
+          "distinct_count": 12980,
+          "elapsed_wall_s": 62.89508295059204,
+          "last_arrival": 37495,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 198.5,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 13500,
+          "distinct_count": 13174,
+          "elapsed_wall_s": 63.89733600616455,
+          "last_arrival": 38233,
+          "observed_lag": 392,
+          "recent_10s_instances_per_s": 217.8,
+          "session_lag": 326,
+          "status": "running"
+        },
+        {
+          "confirmed": 13500,
+          "distinct_count": 13971,
+          "elapsed_wall_s": 64.90489196777344,
+          "last_arrival": 38599,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 275.2,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 14000,
+          "distinct_count": 14480,
+          "elapsed_wall_s": 65.90651416778564,
+          "last_arrival": 39380,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 290.6,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 14500,
+          "distinct_count": 14969,
+          "elapsed_wall_s": 66.91672015190125,
+          "last_arrival": 40008,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 332.2,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 15000,
+          "distinct_count": 15020,
+          "elapsed_wall_s": 67.91927790641785,
+          "last_arrival": 40705,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 336.9,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 15000,
+          "distinct_count": 15400,
+          "elapsed_wall_s": 68.92538213729858,
+          "last_arrival": 41319,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 345.6,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 16000,
+          "distinct_count": 16005,
+          "elapsed_wall_s": 69.93142318725586,
+          "last_arrival": 41856,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 385.9,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 16000,
+          "distinct_count": 16031,
+          "elapsed_wall_s": 70.93756103515625,
+          "last_arrival": 42474,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 388.3,
+          "session_lag": 0,
+          "status": "running"
+        },
+        {
+          "confirmed": 16534,
+          "distinct_count": 16534,
+          "elapsed_wall_s": 71.93969511985779,
+          "last_arrival": 42983,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 437.7,
+          "session_lag": 0,
+          "status": "draining"
+        },
+        {
+          "confirmed": 16534,
+          "distinct_count": 16534,
+          "elapsed_wall_s": 72.94629287719727,
+          "last_arrival": 42983,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 349.3,
+          "session_lag": 0,
+          "status": "verifying"
+        },
+        {
+          "confirmed": 16534,
+          "distinct_count": 16534,
+          "elapsed_wall_s": 73.32185506820679,
+          "last_arrival": 42983,
+          "observed_lag": 0,
+          "recent_10s_instances_per_s": 256.5,
+          "session_lag": 0,
+          "status": "complete"
+        }
+      ],
+      "recorded_demand_totals": {
+        "cpu": 9989.5,
+        "events": 16534,
+        "memory": 137.6243574146454
+      },
+      "replay_id": "668dbb0d-0fc8-44ea-a463-4037f62beb2f",
+      "second_browser_start_disabled": true
+    },
+    "screenshots": [
+      "ARNAV_Task/reports/phase8_screenshots/01_offline_overview.png",
+      "ARNAV_Task/reports/phase8_screenshots/02_missing_inputs_and_broker.png",
+      "ARNAV_Task/reports/phase8_screenshots/03_comparison_laptop.png",
+      "ARNAV_Task/reports/phase8_screenshots/04_ready_to_replay.png",
+      "ARNAV_Task/reports/phase8_screenshots/05_active_replay.png",
+      "ARNAV_Task/reports/phase8_screenshots/06_measured_transport_charts.png",
+      "ARNAV_Task/reports/phase8_screenshots/07_complete_verified.png",
+      "ARNAV_Task/reports/phase8_screenshots/08_cancelled_session_history.png",
+      "ARNAV_Task/reports/phase8_screenshots/09_broker_unavailable_with_recorded_session.png"
+    ],
+    "widths_px": [
+      1440,
+      1152
+    ]
+  },
+  "ci": {
+    "actionlint": "Official 1.7.12 checksum verified; syntax passes",
+    "github_hosted_executed": false,
+    "local_equivalent": true,
+    "optional_broker_job": "Manual AMD64 broker health/topic smoke only, not authentic-data integration",
+    "strict_failure_reported_separately": true,
+    "workflow": ".github/workflows/validate-final-package.yml"
+  },
+  "clean_clone": {
+    "candidate_clone_files": 376,
+    "candidate_temporary_commit": "b21968fe0f88acd43af06c4477efd462d4b1aeb0",
+    "first_attempt": "Two unit tests failed because they depended on private restored inputs. Both were made self-contained; second fresh candidate passed. Final candidate reruns all checks.",
+    "fresh_install": true,
+    "historical_tracked_samples": "Preserved with the exact teammate base for original tests; excluded from active D6 replay.",
+    "initial_failure_commit": "77ed0dc8c743988c442624fd1ccaa014cdc2b98f",
+    "isolated_virtualenv": true,
+    "pip_cache_reused": false,
+    "python": "3.12.15",
+    "qa": {
+      "checks": [
+        {
+          "check": "dependencies",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "d6_tests",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "simulator",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "policies",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "raw",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "energy_unit",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "d5",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "data",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "numerical",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "strict_lineage_expected_failure",
+          "exit_code": 1,
+          "expected_exit": 1,
+          "passed": true
+        },
+        {
+          "check": "analysis_exports",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "publication",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "report",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "presentation",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "release_gate",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "types",
+          "exit_code": 0,
+          "expected_exit": 0,
+          "passed": true
+        },
+        {
+          "check": "syntax",
+          "passed": true
+        }
+      ],
+      "full_simulation_reproduction": false,
+      "passed": true,
+      "real_kafka_tests": "not executed by this offline command",
+      "strict_lineage": "UNRESOLVED; exit 1 explicitly checked, not counted as reproducible"
+    },
+    "raw_inputs_reused": false,
+    "receipt_scope": "Final QA receipts/current manifest/staging inventory are excluded from their own hash graph and may be refreshed after candidate checks.",
+    "source_scope": "Temporary commits exist only in isolated candidate repositories; actual working branch remains uncommitted.",
+    "sqlite_state_reused": false,
+    "streamlit_cache_reused": false,
+    "successful_offline_attempt_commit": "d3da6e4afc0a80372c4f3765c69dc938e914fa64"
+  },
+  "dataset": {
+    "active_archive_bytes": 243321159,
+    "active_archive_sha256": "b7efe9dc9caa75352de41b9ac34b329602cde3414fd7cab87c1d21a9a9871d66",
+    "active_independent_validation": {
+      "checked_groups": 4000,
+      "checked_hosts": 64,
+      "checked_instances": 378285,
+      "checks": [
+        "raw/output hashes",
+        "exact original task-row equality",
+        "raw host capacities",
+        "unique observed raw attempt rows",
+        "individual observed duration equality",
+        "no mean-runtime imputation",
+        "complete original multiplicity",
+        "sorted releases"
+      ],
+      "independent_raw_row_verification": true,
+      "manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+      "passed": true,
+      "published_legacy_archive_hash_matches": false,
+      "synthetic_workloads": false,
+      "uses_yaksh_cleaned_inputs": false
+    },
+    "active_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+    "active_prepared_matches": {
+      "hosts.csv": true,
+      "instances.csv": true,
+      "workload_1000.csv": true,
+      "workload_250.csv": true,
+      "workload_4000.csv": true
+    },
+    "active_raw_matches": {
+      "batch_instance.csv": true,
+      "batch_task.csv": true,
+      "container_event.csv": true,
+      "container_usage.csv": true,
+      "server_event.csv": true,
+      "server_usage.csv": true
+    },
+    "distribution_approval": "Team/licensing review required; no release uploaded",
+    "downloaded_bytes_this_phase": 0,
+    "extracted_member_bytes": 1159125018,
+    "historical_metadata": "UNRESOLVED",
+    "legacy_archive_bytes": 243323702,
+    "legacy_archive_sha256": "02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df",
+    "legacy_independent_validation": {
+      "checked_groups": 4000,
+      "checked_hosts": 64,
+      "checked_instances": 378285,
+      "checks": [
+        "raw/output hashes",
+        "exact original task-row equality",
+        "raw host capacities",
+        "unique observed raw attempt rows",
+        "individual observed duration equality",
+        "no mean-runtime imputation",
+        "complete original multiplicity",
+        "sorted releases"
+      ],
+      "independent_raw_row_verification": true,
+      "manifest_sha256": "5e5c283b874ad5f4fa6ce21862d38df53b7bb7bb8135b77301ed74089b396c8f",
+      "passed": true,
+      "published_legacy_archive_hash_matches": true,
+      "synthetic_workloads": false,
+      "uses_yaksh_cleaned_inputs": false
+    },
+    "legacy_manifest_sha256": "5e5c283b874ad5f4fa6ce21862d38df53b7bb7bb8135b77301ed74089b396c8f",
+    "legacy_prepared_matches": {
+      "hosts.csv": true,
+      "instances.csv": true,
+      "workload_1000.csv": true,
+      "workload_250.csv": true,
+      "workload_4000.csv": true
+    },
+    "legacy_raw_matches": {
+      "batch_instance.csv": true,
+      "batch_task.csv": true,
+      "container_event.csv": true,
+      "container_usage.csv": true,
+      "server_event.csv": true,
+      "server_usage.csv": true
+    },
+    "legacy_repeat_deterministic": true,
+    "prepared_csv_bytes": 37198699,
+    "prepared_outputs": {
+      "hosts.csv": {
+        "bytes": 2166,
+        "sha256": "9d4a52c8a85f404a5f7ac3494f8e377defa7e5912e5aea149d6f5f45d72d2896"
+      },
+      "instances.csv": {
+        "bytes": 36654556,
+        "sha256": "af98184ffd6895c5077f74ed6fabf523bcbd4e5627c5da58c34599a7eff63557"
+      },
+      "workload_1000.csv": {
+        "bytes": 103362,
+        "sha256": "bd209c77f06b5a706204d2becbd6af79cebffc09e97eb715d67e6c68109f819e"
+      },
+      "workload_250.csv": {
+        "bytes": 25902,
+        "sha256": "4057404c1d09ed964af35911409dd16b2d775c6951d2077bdb2371af6899254f"
+      },
+      "workload_4000.csv": {
+        "bytes": 412713,
+        "sha256": "06e2519db449ed83b136318d95d64e938f4864588a9a5053c1452d1302464e84"
+      }
+    },
+    "raw_member_sha256": {
+      "batch_instance.csv": "195f25ef36484a2da9bb92c08e203224ed34a32f48fcbe11c01d94ecf308d817",
+      "batch_task.csv": "50f3c50ab4a917ad06c1cee6ec601e1356708774d7962503e8eafdd720b2286d",
+      "container_event.csv": "8e2c2776983fb0867f5088352849773186eab22de9d878e10978b5018c68aeda",
+      "container_usage.csv": "9ccb7abafdc492b173eb87b49c9cec3df30cb6e8fbfce09e7023be826de3a10a",
+      "server_event.csv": "336f7255add3ae3c08bf5163b15319f542365a3c7814ed3f712699560933968b",
+      "server_usage.csv": "032fa4193f4b426941fb1eecef5add3d8b0632aaf7cbd7663b0051ceb8a4637a"
+    },
+    "source": "Existing authentic user-supplied active archive and checksum-matching official data-v1.0.0 legacy release copy.",
+    "workloads": [
+      {
+        "host_count": 64,
+        "instance_count": 16534,
+        "sampling_seed": 2026,
+        "task_group_count": 250,
+        "workload_groups": 250
+      },
+      {
+        "host_count": 64,
+        "instance_count": 68457,
+        "sampling_seed": 2026,
+        "task_group_count": 1000,
+        "workload_groups": 1000
+      },
+      {
+        "host_count": 64,
+        "instance_count": 378285,
+        "sampling_seed": 2026,
+        "task_group_count": 4000,
+        "workload_groups": 4000
+      }
+    ]
+  },
+  "documents": {
+    "all_67_frozen_final_output_hashes_verified": true,
+    "all_pages_rendered_and_contact_sheets_reviewed": true,
+    "appendix_slides": 5,
+    "approval": "Mixed A4/A3 format, time/rubric and speaking allocation pending professor/team review",
+    "main_slides": 15,
+    "private_student_ids_in_documents": false,
+    "publication_figures": 23,
+    "publication_tables": 22,
+    "report_page_formats": {
+      "A3_landscape": 6,
+      "A3_portrait": 4,
+      "A4_landscape": 5,
+      "A4_portrait": 13
+    },
+    "report_pages": 28,
+    "slides": 20
+  },
+  "footprint": {
+    "d6_allocated_kib": 6511632,
+    "final_candidate_tracked_bytes": 44345524,
+    "fresh_candidate_tracked_bytes": 44314440,
+    "ignored_d6_runtime_allocated_kib": 6488832,
+    "working_tree_allocated_kib": 6777000
+  },
+  "git": {
+    "actual_working_branch_committed": false,
+    "base": "b0c48284a48407b1b14242c579f39a1f27248e5f",
+    "branch": "arnav/d6-final-package",
+    "branches": [
+      "* arnav/d6-final-package",
+      "  main",
+      "  remotes/origin/HEAD -> origin/main",
+      "  remotes/origin/brave/current-research-version",
+      "  remotes/origin/main",
+      "  remotes/origin/rushi/d5-same-job"
+    ],
+    "head": "b0c48284a48407b1b14242c579f39a1f27248e5f",
+    "integration_operations": 0,
+    "main_changed": false,
+    "merged_prs": [
+      1,
+      2
+    ],
+    "open_prs": 0,
+    "origin_main": "b0c48284a48407b1b14242c579f39a1f27248e5f",
+    "staged_files": 0,
+    "working_tree": [
+      " M README.md",
+      "?? .agents/",
+      "?? .github/workflows/validate-final-package.yml",
+      "?? ARNAV_Task/"
+    ]
+  },
+  "hygiene": {
+    "deletions": [],
+    "document_files_scanned": 27,
+    "document_warnings": [],
+    "empty_files": [],
+    "errors": [],
+    "ignore_checks": {
+      "ARNAV_Task/.env": true,
+      "ARNAV_Task/.runtime/archive.tgz": true,
+      "ARNAV_Task/.runtime/secret.env": true,
+      "ARNAV_Task/.streamlit/secrets.toml": true,
+      "ARNAV_Task/__pycache__/x.pyc": true,
+      "ARNAV_Task/controller.pid": true,
+      "ARNAV_Task/local.log": true,
+      "ARNAV_Task/replay.sqlite3": true
+    },
+    "largest_files": [
+      {
+        "bytes": 2447244,
+        "path": "ARNAV_Task/final/report/EcoSched_Final_Report.docx"
+      },
+      {
+        "bytes": 573541,
+        "path": "ARNAV_Task/final/report/EcoSched_Final_Report.pdf"
+      },
+      {
+        "bytes": 554669,
+        "path": "ARNAV_Task/final/presentation/EcoSched_Final_Presentation.pdf"
+      },
+      {
+        "bytes": 525147,
+        "path": "ARNAV_Task/figures/research/R11_pareto_tradeoffs.png"
+      },
+      {
+        "bytes": 437009,
+        "path": "ARNAV_Task/reports/research_summary.json"
+      },
+      {
+        "bytes": 405580,
+        "path": "ARNAV_Task/figures/research/R13_resource_outcomes.png"
+      },
+      {
+        "bytes": 374276,
+        "path": "ARNAV_Task/figures/research/R02_efficiency_sensitivity.png"
+      },
+      {
+        "bytes": 340008,
+        "path": "ARNAV_Task/figures/research/R14_offline_host_timelines.png"
+      },
+      {
+        "bytes": 272255,
+        "path": "ARNAV_Task/final/report/previews/page_27.png"
+      },
+      {
+        "bytes": 253000,
+        "path": "ARNAV_Task/figures/streaming/S04_recorded_transport_history.png"
+      },
+      {
+        "bytes": 247795,
+        "path": "ARNAV_Task/final/presentation/EcoSched_Final_Presentation.pptx"
+      },
+      {
+        "bytes": 238696,
+        "path": "ARNAV_Task/final/report/previews/page_28.png"
+      }
+    ],
+    "passed": true,
+    "path_disclosures": [
+      "Recorded local path; inspect public suitability: ARNAV_Task/reports/phase8_verification.md",
+      "Recorded local path; inspect public suitability: ARNAV_Task/scripts/release_candidate.py"
+    ],
+    "scope": "Candidate text files; PDF/Office text checked separately. Pattern scan is not a guarantee of absence.",
+    "unnecessary_student_ids": "Report and slide text have no student IDs. Two frozen source/test guards contain proposal IDs solely to assert exclusion from documents; original proposal is preserved."
+  },
+  "inventory": {
+    "agent_settings_excluded": true,
+    "bytes": 21920048,
+    "files": 376,
+    "largest_file_bytes": 2447244,
+    "runtime_excluded": true
+  },
+  "kafka": {
+    "amd64_cli_emulation_tested": true,
+    "amd64_cli_version": "4.4.0",
+    "arm64_broker_tested": true,
+    "broker_image": "apache/kafka:4.4.0@sha256:833b867a9585a141da455dc2b57431c65cbccb27f11c91f694444cca9f777e0f",
+    "existing_volumes_preserved": true,
+    "integration_evidence": {
+      "actual_kafka_message": {
+        "arrival_time_s": 77,
+        "cpu_request_cores": 0.5,
+        "event_type": "workload_arrival",
+        "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+        "instance_id": "raw_attempt_row_3382192",
+        "job_id": "7030",
+        "memory_request_normalized": 0.0040587062873709,
+        "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+        "resource_skew": "balanced",
+        "schema_version": 1,
+        "sequence": 1,
+        "task_group_id": "j7030_t41458",
+        "workload_groups": 250
+      },
+      "broker": {
+        "architecture": "arm64",
+        "health": "healthy",
+        "image": "apache/kafka:4.4.0@sha256:833b867a9585a141da455dc2b57431c65cbccb27f11c91f694444cca9f777e0f",
+        "memory_limit_bytes": 1610612736,
+        "topic": {
+          "brokers": [
+            {
+              "broker_id": 1,
+              "host": "127.0.0.1",
+              "is_fenced": false,
+              "port": 19092,
+              "rack": null
+            }
+          ],
+          "connected": true,
+          "partitions": 1,
+          "replication_factor": 1,
+          "topic": "ecosched.workload.arrivals.v1"
+        }
+      },
+      "database": "ARNAV_Task/.runtime/kafka/integration-ab0ef068-fed6-4c54-9f7c-235f5d2d70c3.sqlite3",
+      "tests": {
+        "bounded_timed_replay": {
+          "metrics": {
+            "attempted": 250,
+            "average_instances_per_s": 139.73389452048295,
+            "bootstrap": "127.0.0.1:19092",
+            "broker_end": 3073575,
+            "confirmed": 250,
+            "conflicting_duplicates": 0,
+            "consumed": 250,
+            "consumer_status": "stopped",
+            "controller_pid": 2802,
+            "demand": [
+              {
+                "count": 250,
+                "cpu": 125.0,
+                "logical_bucket": 0,
+                "memory": 2.1551523309087957,
+                "replay_id": "7ca9593e-b6e2-4bbd-b4bf-7674493a7177"
+              }
+            ],
+            "distinct_count": 250,
+            "duplicates": 0,
+            "elapsed_wall_s": 1.7891149520874023,
+            "end_offset": 3073575,
+            "ended_at": 1795817646.212687,
+            "errors": [],
+            "expected": 16534,
+            "gaps": 0,
+            "group_id": "ecosched.d6.replay-integration.7ca9593e-b6e2-4bbd-b4bf-7674493a7177",
+            "groups_encountered": 5,
+            "invalid": 0,
+            "lag_scope": "observed_lag is topic-partition lag at last consumer heartbeat; session_lag stops at this replay producer boundary.",
+            "last_arrival": 691,
+            "last_group": "j5972_t36424",
+            "last_source": 3577949,
+            "limit_events": 250,
+            "manifest": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+            "max_drift": 0.005249792360700667,
+            "metric_scope": "Live offered arrivals only; no allocated resources, energy, SLA or host utilization.",
+            "next_offset": 3073575,
+            "next_sequence": 251,
+            "observed_lag": 0,
+            "offered_cpu": 125.0,
+            "offered_memory": 2.1551523309087957,
+            "offset_history": [
+              {
+                "broker_end": 3073345,
+                "next_offset": 3073345,
+                "replay_id": "7ca9593e-b6e2-4bbd-b4bf-7674493a7177",
+                "session_lag": 0,
+                "topic_lag": 0,
+                "wall_second": 1795817644
+              },
+              {
+                "broker_end": 3073575,
+                "next_offset": 3073513,
+                "replay_id": "7ca9593e-b6e2-4bbd-b4bf-7674493a7177",
+                "session_lag": 62,
+                "topic_lag": 62,
+                "wall_second": 1795817645
+              },
+              {
+                "broker_end": 3073575,
+                "next_offset": 3073575,
+                "replay_id": "7ca9593e-b6e2-4bbd-b4bf-7674493a7177",
+                "session_lag": 0,
+                "topic_lag": 0,
+                "wall_second": 1795817646
+              }
+            ],
+            "producer_elapsed": 1.198081250069663,
+            "producer_status": "partial",
+            "progress_fraction": 0.015120358050078626,
+            "recent_10s_instances_per_s": 25.0,
+            "recent_window_s": 10,
+            "replay_id": "7ca9593e-b6e2-4bbd-b4bf-7674493a7177",
+            "session_lag": 0,
+            "size": 250,
+            "speed": 600.0,
+            "start_offset": 3073325,
+            "started_at": 1795817644.423572,
+            "status": "partial",
+            "stop_requested": 0,
+            "throughput": [
+              {
+                "count": 20,
+                "replay_id": "7ca9593e-b6e2-4bbd-b4bf-7674493a7177",
+                "wall_second": 1795817644
+              },
+              {
+                "count": 230,
+                "replay_id": "7ca9593e-b6e2-4bbd-b4bf-7674493a7177",
+                "wall_second": 1795817645
+              }
+            ],
+            "topic": "ecosched.workload.arrivals.v1",
+            "verification": {
+              "bounded_partial": true,
+              "compared_events": 250,
+              "complete": false,
+              "confirmed_published": 250,
+              "consumed_deliveries": 250,
+              "consumer_status": "stopped",
+              "distinct_instances": 250,
+              "duplicate_deliveries": 0,
+              "errors": [],
+              "expected_instances": 16534,
+              "expected_source_stream_sha256": "ca5615da4c1a3f250cea73389d82b179451ca6e6762eb133b5cd8e1c1e3d037b",
+              "groups": 5,
+              "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+              "invalid_messages": 0,
+              "passed": true,
+              "persisted_source_stream_sha256": "ca5615da4c1a3f250cea73389d82b179451ca6e6762eb133b5cd8e1c1e3d037b",
+              "producer_status": "partial",
+              "replay_id": "7ca9593e-b6e2-4bbd-b4bf-7674493a7177",
+              "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+              "sequence_gaps": 0,
+              "size": 250,
+              "verified_at": 1795817646.212512
+            },
+            "workers": [
+              {
+                "at": 1795817646.170588,
+                "replay_id": "7ca9593e-b6e2-4bbd-b4bf-7674493a7177",
+                "status": "stopped",
+                "worker": "consumer"
+              },
+              {
+                "at": 1795817646.212963,
+                "replay_id": "7ca9593e-b6e2-4bbd-b4bf-7674493a7177",
+                "status": "partial",
+                "worker": "controller"
+              },
+              {
+                "at": 1795817645.6554382,
+                "replay_id": "7ca9593e-b6e2-4bbd-b4bf-7674493a7177",
+                "status": "partial",
+                "worker": "producer"
+              }
+            ]
+          },
+          "test_elapsed_s": 1.9664698750711977,
+          "verification": {
+            "bounded_partial": true,
+            "compared_events": 250,
+            "complete": false,
+            "confirmed_published": 250,
+            "consumed_deliveries": 250,
+            "consumer_status": "stopped",
+            "distinct_instances": 250,
+            "duplicate_deliveries": 0,
+            "errors": [],
+            "expected_instances": 16534,
+            "expected_source_stream_sha256": "ca5615da4c1a3f250cea73389d82b179451ca6e6762eb133b5cd8e1c1e3d037b",
+            "groups": 5,
+            "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+            "invalid_messages": 0,
+            "passed": true,
+            "persisted_source_stream_sha256": "ca5615da4c1a3f250cea73389d82b179451ca6e6762eb133b5cd8e1c1e3d037b",
+            "producer_status": "partial",
+            "replay_id": "7ca9593e-b6e2-4bbd-b4bf-7674493a7177",
+            "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+            "sequence_gaps": 0,
+            "size": 250
+          }
+        },
+        "broker_health_arm64_and_idempotent_admin": true,
+        "broker_unavailable_then_restarted": true,
+        "consumer_restart": {
+          "offset_before_restart": 3057059,
+          "persisted_before_restart": 268,
+          "verification": {
+            "bounded_partial": false,
+            "compared_events": 16534,
+            "complete": true,
+            "confirmed_published": 16534,
+            "consumed_deliveries": 16534,
+            "consumer_status": "completed",
+            "distinct_instances": 16534,
+            "duplicate_deliveries": 0,
+            "errors": [],
+            "expected_instances": 16534,
+            "expected_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+            "groups": 250,
+            "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+            "invalid_messages": 0,
+            "passed": true,
+            "persisted_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+            "producer_status": "completed",
+            "replay_id": "9e5cca06-e972-4ab2-b091-73d8de91a9d2",
+            "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+            "sequence_gaps": 0,
+            "size": 250
+          }
+        },
+        "controller_stop_and_duplicate_rejection": {
+          "confirmed": 20,
+          "distinct": 20,
+          "status": "cancelled",
+          "worker_running": false
+        },
+        "duplicate_redelivery": {
+          "next_offset": 3056791,
+          "verification": {
+            "bounded_partial": false,
+            "compared_events": 16534,
+            "complete": true,
+            "confirmed_published": 16534,
+            "consumed_deliveries": 33068,
+            "consumer_status": "completed",
+            "distinct_instances": 16534,
+            "duplicate_deliveries": 16534,
+            "errors": [],
+            "expected_instances": 16534,
+            "expected_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+            "groups": 250,
+            "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+            "invalid_messages": 0,
+            "passed": true,
+            "persisted_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+            "producer_status": "completed",
+            "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+            "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+            "sequence_gaps": 0,
+            "size": 250
+          }
+        },
+        "full_250_verified": true,
+        "session_isolation": true
+      },
+      "workloads": [
+        {
+          "metrics": {
+            "attempted": 16534,
+            "average_instances_per_s": 2683.642263495796,
+            "bootstrap": "127.0.0.1:19092",
+            "broker_end": 3056791,
+            "confirmed": 16534,
+            "conflicting_duplicates": 0,
+            "consumed": 16534,
+            "consumer_status": "completed",
+            "controller_pid": 2802,
+            "demand": [
+              {
+                "count": 263,
+                "cpu": 131.5,
+                "logical_bucket": 0,
+                "memory": 2.26054409442703,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 347,
+                "cpu": 174.5,
+                "logical_bucket": 900,
+                "memory": 2.7425154660523368,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 543,
+                "cpu": 533.0,
+                "logical_bucket": 1800,
+                "memory": 3.064768462195511,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 189,
+                "cpu": 170.5,
+                "logical_bucket": 2700,
+                "memory": 1.116910413377167,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 63,
+                "cpu": 62.5,
+                "logical_bucket": 3600,
+                "memory": 0.34049646675122275,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 12,
+                "cpu": 11.5,
+                "logical_bucket": 4500,
+                "memory": 0.06345352418916472,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 224,
+                "cpu": 179.5,
+                "logical_bucket": 5400,
+                "memory": 1.4399554784769506,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 165,
+                "cpu": 161.5,
+                "logical_bucket": 6300,
+                "memory": 0.8826961406051848,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 163,
+                "cpu": 84.0,
+                "logical_bucket": 7200,
+                "memory": 1.2903786917919915,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 539,
+                "cpu": 535.5,
+                "logical_bucket": 8100,
+                "memory": 2.926063210208869,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 1175,
+                "cpu": 611.5,
+                "logical_bucket": 9000,
+                "memory": 8.9237801879224,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 165,
+                "cpu": 82.4,
+                "logical_bucket": 9900,
+                "memory": 1.3368622680092181,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 379,
+                "cpu": 378.0,
+                "logical_bucket": 10800,
+                "memory": 3.9846763129966725,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 393,
+                "cpu": 391.0,
+                "logical_bucket": 11700,
+                "memory": 4.14258794295034,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 293,
+                "cpu": 167.0,
+                "logical_bucket": 12600,
+                "memory": 2.227240959801193,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 274,
+                "cpu": 139.0,
+                "logical_bucket": 13500,
+                "memory": 1.6747081510625532,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 134,
+                "cpu": 68.0,
+                "logical_bucket": 14400,
+                "memory": 1.0448424921699089,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 237,
+                "cpu": 118.5,
+                "logical_bucket": 15300,
+                "memory": 1.41242461108378,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 354,
+                "cpu": 177.5,
+                "logical_bucket": 16200,
+                "memory": 2.9423756891776556,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 280,
+                "cpu": 139.9,
+                "logical_bucket": 17100,
+                "memory": 2.700069888437333,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 13,
+                "cpu": 7.0,
+                "logical_bucket": 18000,
+                "memory": 0.09812854295550434,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 84,
+                "cpu": 83.4,
+                "logical_bucket": 18900,
+                "memory": 1.3326430771620124,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 328,
+                "cpu": 291.5,
+                "logical_bucket": 19800,
+                "memory": 2.158444852846008,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 545,
+                "cpu": 278.0,
+                "logical_bucket": 20700,
+                "memory": 4.529045116869016,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 496,
+                "cpu": 248.5,
+                "logical_bucket": 21600,
+                "memory": 4.104335671576096,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 424,
+                "cpu": 212.5,
+                "logical_bucket": 22500,
+                "memory": 2.9927367794372803,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 321,
+                "cpu": 173.0,
+                "logical_bucket": 23400,
+                "memory": 3.107177801361523,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 293,
+                "cpu": 148.0,
+                "logical_bucket": 24300,
+                "memory": 2.5278958403437297,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 156,
+                "cpu": 77.9,
+                "logical_bucket": 25200,
+                "memory": 1.9952424093391563,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 10,
+                "cpu": 5.5,
+                "logical_bucket": 26100,
+                "memory": 0.07776253462066111,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 204,
+                "cpu": 155.0,
+                "logical_bucket": 27000,
+                "memory": 1.7204669582998922,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 734,
+                "cpu": 372.0,
+                "logical_bucket": 27900,
+                "memory": 5.886092200968101,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 184,
+                "cpu": 180.5,
+                "logical_bucket": 28800,
+                "memory": 1.0181813475526136,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 12,
+                "cpu": 12.0,
+                "logical_bucket": 29700,
+                "memory": 0.06485646985737584,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 964,
+                "cpu": 482.0,
+                "logical_bucket": 30600,
+                "memory": 11.63371211140733,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 35,
+                "cpu": 35.0,
+                "logical_bucket": 31500,
+                "memory": 0.18916470375067942,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 236,
+                "cpu": 118.0,
+                "logical_bucket": 32400,
+                "memory": 1.922387596096597,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 383,
+                "cpu": 191.5,
+                "logical_bucket": 33300,
+                "memory": 2.971552817539391,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 212,
+                "cpu": 124.0,
+                "logical_bucket": 34200,
+                "memory": 1.5974684854916772,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 178,
+                "cpu": 147.5,
+                "logical_bucket": 35100,
+                "memory": 1.184427820774984,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 144,
+                "cpu": 91.5,
+                "logical_bucket": 36000,
+                "memory": 1.0720679212072572,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 843,
+                "cpu": 421.5,
+                "logical_bucket": 36900,
+                "memory": 8.48619573939365,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 980,
+                "cpu": 491.5,
+                "logical_bucket": 37800,
+                "memory": 9.313110553153898,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 509,
+                "cpu": 254.5,
+                "logical_bucket": 38700,
+                "memory": 4.320580850568186,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 490,
+                "cpu": 258.0,
+                "logical_bucket": 39600,
+                "memory": 4.542743250588892,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 433,
+                "cpu": 239.0,
+                "logical_bucket": 40500,
+                "memory": 3.999145807988012,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 607,
+                "cpu": 303.5,
+                "logical_bucket": 41400,
+                "memory": 5.894944736365333,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              },
+              {
+                "count": 524,
+                "cpu": 270.4,
+                "logical_bucket": 42300,
+                "memory": 2.3664949654440526,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c"
+              }
+            ],
+            "distinct_count": 16534,
+            "duplicates": 0,
+            "elapsed_wall_s": 6.161029815673828,
+            "end_offset": 3056791,
+            "ended_at": 1795817633.643446,
+            "errors": [],
+            "expected": 16534,
+            "gaps": 0,
+            "group_id": "ecosched.d6.replay-integration.989f2156-a409-40ef-90c7-e67ea9fbd04c",
+            "groups_encountered": 250,
+            "invalid": 0,
+            "lag_scope": "observed_lag is topic-partition lag at last consumer heartbeat; session_lag stops at this replay producer boundary.",
+            "last_arrival": 42983,
+            "last_group": "j7376_t44656",
+            "last_source": 4498314,
+            "limit_events": null,
+            "manifest": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+            "max_drift": 0.0,
+            "metric_scope": "Live offered arrivals only; no allocated resources, energy, SLA or host utilization.",
+            "next_offset": 3056791,
+            "next_sequence": 16535,
+            "observed_lag": 0,
+            "offered_cpu": 9989.499999999998,
+            "offered_memory": 137.62435741463423,
+            "offset_history": [
+              {
+                "broker_end": 3041257,
+                "next_offset": 3040560,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "session_lag": 697,
+                "topic_lag": 697,
+                "wall_second": 1795817627
+              },
+              {
+                "broker_end": 3045257,
+                "next_offset": 3043324,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "session_lag": 1933,
+                "topic_lag": 1933,
+                "wall_second": 1795817628
+              },
+              {
+                "broker_end": 3050226,
+                "next_offset": 3045957,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "session_lag": 3800,
+                "topic_lag": 4269,
+                "wall_second": 1795817629
+              },
+              {
+                "broker_end": 3054757,
+                "next_offset": 3048842,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "session_lag": 5915,
+                "topic_lag": 5915,
+                "wall_second": 1795817630
+              },
+              {
+                "broker_end": 3056791,
+                "next_offset": 3055455,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "session_lag": 1336,
+                "topic_lag": 1336,
+                "wall_second": 1795817631
+              },
+              {
+                "broker_end": 3056791,
+                "next_offset": 3056791,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "session_lag": 0,
+                "topic_lag": 0,
+                "wall_second": 1795817632
+              }
+            ],
+            "producer_elapsed": 3.8055730829946697,
+            "producer_status": "completed",
+            "progress_fraction": 1.0,
+            "recent_10s_instances_per_s": 1653.4,
+            "recent_window_s": 10,
+            "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+            "session_lag": 0,
+            "size": 250,
+            "speed": 0.0,
+            "start_offset": 3040257,
+            "started_at": 1795817627.4824162,
+            "status": "complete",
+            "stop_requested": 0,
+            "throughput": [
+              {
+                "count": 303,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "wall_second": 1795817627
+              },
+              {
+                "count": 2764,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "wall_second": 1795817628
+              },
+              {
+                "count": 2883,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "wall_second": 1795817629
+              },
+              {
+                "count": 2885,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "wall_second": 1795817630
+              },
+              {
+                "count": 6363,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "wall_second": 1795817631
+              },
+              {
+                "count": 1336,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "wall_second": 1795817632
+              }
+            ],
+            "topic": "ecosched.workload.arrivals.v1",
+            "verification": {
+              "bounded_partial": false,
+              "compared_events": 16534,
+              "complete": true,
+              "confirmed_published": 16534,
+              "consumed_deliveries": 16534,
+              "consumer_status": "completed",
+              "distinct_instances": 16534,
+              "duplicate_deliveries": 0,
+              "errors": [],
+              "expected_instances": 16534,
+              "expected_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+              "groups": 250,
+              "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+              "invalid_messages": 0,
+              "passed": true,
+              "persisted_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+              "producer_status": "completed",
+              "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+              "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+              "sequence_gaps": 0,
+              "size": 250,
+              "verified_at": 1795817633.6432698
+            },
+            "workers": [
+              {
+                "at": 1795817632.641206,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "status": "completed",
+                "worker": "consumer"
+              },
+              {
+                "at": 1795817633.643703,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "status": "complete",
+                "worker": "controller"
+              },
+              {
+                "at": 1795817631.332364,
+                "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+                "status": "completed",
+                "worker": "producer"
+              }
+            ]
+          },
+          "verification": {
+            "bounded_partial": false,
+            "compared_events": 16534,
+            "complete": true,
+            "confirmed_published": 16534,
+            "consumed_deliveries": 16534,
+            "consumer_status": "completed",
+            "distinct_instances": 16534,
+            "duplicate_deliveries": 0,
+            "errors": [],
+            "expected_instances": 16534,
+            "expected_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+            "groups": 250,
+            "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+            "invalid_messages": 0,
+            "passed": true,
+            "persisted_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+            "producer_status": "completed",
+            "replay_id": "989f2156-a409-40ef-90c7-e67ea9fbd04c",
+            "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+            "sequence_gaps": 0,
+            "size": 250
+          }
+        }
+      ]
+    },
+    "integration_tests": {
+      "errors": 0,
+      "executed": 8,
+      "failures": 0,
+      "not_repeated": [
+        "test_03_full_1000",
+        "test_04_full_4000"
+      ],
+      "passed": true,
+      "reason": "Both unchanged larger workloads retain complete prior evidence; Phase 8 rehearses authentic 250-group transport and all failure/recovery contracts.",
+      "skipped": 0
+    },
+    "native_amd64_host_broker_tested": false,
+    "separate_candidate_named_volume": true
+  },
+  "limitations": [
+    "Three historical metadata discrepancies remain unresolved.",
+    "No full scheduler experiment matrix was rerun.",
+    "One deterministic overlapping sample per size and request-based energy modeling; no statistical significance claim.",
+    "Kafka is a single laptop/broker transport demonstration with at-least-once delivery and idempotent persistence.",
+    "AMD64 image CLI executed under emulation; native host broker/Linux CI execution remains unverified.",
+    "Cross-platform fonts/DOCX pagination/native slide renderer can differ.",
+    "Frozen Phase 6/7 source freshness can flag later README/dependency development; current gate records this without rewriting history."
+  ],
+  "passed": true,
+  "pending_approvals": [
+    "Arnav approval to stage, commit, push or create PR",
+    "Team contribution/claim review",
+    "Professor submission format, A3 foldouts and presentation time/rubric",
+    "Dataset redistribution permission before release assets",
+    "GitHub-hosted CI after approved push"
+  ],
+  "phase": 8,
+  "portability": {
+    "direct_dependencies": "requirements-{runtime,publication,documents,dev}.txt; requirements.txt is the full Python build entry point",
+    "external_cwd_streamlit_launch_tested": true,
+    "linux_amd64_binary_dependency_resolution": "passed; resolution only, not native execution",
+    "native_linux_ci": "not yet run",
+    "office_required_for": "Optional native presentation PDF regeneration only",
+    "python_only_offline": true
+  },
+  "preservation": {
+    "existing_four_workflows_preserved": true,
+    "frozen_phase_receipts_unchanged": true,
+    "intentional_original_change": "README.md",
+    "new_root_workflow": ".github/workflows/validate-final-package.yml",
+    "original_experiment_results_unchanged": true,
+    "original_files": 508,
+    "phase1_exports_unchanged": true,
+    "previous_d6_files_intentionally_refined": [
+      "ARNAV_Task/.gitignore",
+      "ARNAV_Task/README.md",
+      "ARNAV_Task/dashboard/views/reproducibility.py",
+      "ARNAV_Task/requirements.txt",
+      "ARNAV_Task/tests/test_live_replay.py",
+      "ARNAV_Task/tests/test_replay_controller.py"
+    ],
+    "removed_files": [],
+    "unchanged_original_files": 507
+  },
+  "replay_source_identity": {
+    "files": 32,
+    "passed": true,
+    "sha256": {
+      "ARNAV_Task/dashboard/__init__.py": "865a0d7df9ac18dc2b431125ec1e0415fd7fa1720deae4ffcd2e949cfd672115",
+      "ARNAV_Task/dashboard/app.py": "1f4b394c543492b8496455a9413adf1f69941b735f8081844c0f262121dfa473",
+      "ARNAV_Task/dashboard/components/__init__.py": "b095b22f047b6a6edd5e971df182a82515b38006708a421552f1ecd417da23f3",
+      "ARNAV_Task/dashboard/components/charts.py": "6e9ce0e6c05d8ea79ba37c8682e96752c05338d5c075cba9b900a798192cbdd8",
+      "ARNAV_Task/dashboard/components/filters.py": "dd4f981e65646ea9ed70294909e9c0f3618795d193b7797ea9b4f2e82a4a52c1",
+      "ARNAV_Task/dashboard/components/metrics.py": "206cd027d301eca542b5401d0a4c437ca8bafec7afc6ca7768804bb2d9a5342d",
+      "ARNAV_Task/dashboard/components/navigation.py": "d605b98102c1731a8450631ae3796249f452645542b8c255a58f7f7df3c43240",
+      "ARNAV_Task/dashboard/components/replay_charts.py": "36ae9dad63851a7914d093b1d7cbc6698a67a169930776d86f3550495d961ef3",
+      "ARNAV_Task/dashboard/components/tables.py": "80e6dbadc61769f9bf5297ea48980b033e432cac303527d8a70014e7ba317645",
+      "ARNAV_Task/dashboard/constants.py": "a64428f94d5d53bc817960e66dda489001dc9582ae156dc4fdf2ea239d2253d0",
+      "ARNAV_Task/dashboard/data_service.py": "3b4700ae782402b86dba447eb7b7eabe81858705e72435c896821ae787f5ab19",
+      "ARNAV_Task/dashboard/replay_service.py": "8519a4acb44d2f03f767d3f1dcc7fe16c03dadb46ae8ab31c6ee02ca761ffb89",
+      "ARNAV_Task/dashboard/views/__init__.py": "de734bc28ab40b70490839cccb5315b515133f6e6b28e012778ec3ca46a9a441",
+      "ARNAV_Task/dashboard/views/energy_analysis.py": "548f50bf488553b67d33a3c05a597103f289885b9487902986b2b2f97c74bbbd",
+      "ARNAV_Task/dashboard/views/live_replay.py": "aaf13eec8d97b7bbf803c769af1ceabceddb3213367be9369075aac8f306b1e0",
+      "ARNAV_Task/dashboard/views/overview.py": "8639525cb87084548f96f617c27c10f3bb478fc7d7d3ea95409676379b9ad6b1",
+      "ARNAV_Task/dashboard/views/performance_analysis.py": "87c33642279cbc074460121fa97f748266c27f20b94859d4cd27988da19eb7cd",
+      "ARNAV_Task/dashboard/views/reproducibility.py": "3e400113c97dc928dfb2aefa1947e842a2277fa8ab8eaa355cdcc0bc143d10d4",
+      "ARNAV_Task/dashboard/views/research_findings.py": "b357fc6aaa71a04c6bae3890e69ac930c24b0a7a2c6fd3d181cd36a3abf69c5d",
+      "ARNAV_Task/dashboard/views/resource_skew.py": "5804641f1acb2c7ad1c69f6aef47481b993d04281812fbdaa261ffbbbf64346e",
+      "ARNAV_Task/dashboard/views/scheduler_comparison.py": "3b282eeb9e3207fbc05efabb96ce6fd423f38ef32c709cf9792f251c4ee52a53",
+      "ARNAV_Task/kafka/__init__.py": "b0dd5e27beb093ec20004f9d57f13ebdf329b9a1c1f7efed7268af5fa1ebf44d",
+      "ARNAV_Task/kafka/admin.py": "65247bbce5b16f5c21c85aecdc9e128f69ea80a58fd71e4fa1b890f5006479c1",
+      "ARNAV_Task/kafka/consumer.py": "9fb7793411b478ab6a3f2377df5e96b4466a7ac00c69a0b5aaffcd92e6549171",
+      "ARNAV_Task/kafka/controller.py": "e2e0bbc86cc00a64e8b41d946767ed6dfbae481870fdf01e830ec0c391d5e4a0",
+      "ARNAV_Task/kafka/events.py": "42e83cc525ca2caf0522a8a54be069a73a0413dec809be852a768c8b70cc6de7",
+      "ARNAV_Task/kafka/producer.py": "4799492a094811838029409c044437f540998dc9fb45784bec3b9a1071327320",
+      "ARNAV_Task/kafka/state.py": "c4802f72e1bac956d35a2f61c3ac3bae553f003312c5319fab593c789ed8b364",
+      "ARNAV_Task/workload/__init__.py": "e502f4b4750e5d1a0f76a358dfb2b1edbfbf15dc27bdc880fdb7e1d159fc6920",
+      "ARNAV_Task/workload/prepare_replay.py": "c1f64027e4f52acf82b6e4eabed59eb4b147c65dbad0a1b4245e924604f4a55f",
+      "ARNAV_Task/workload/source.py": "a23a5d330d1f80e15405228c8466e78f49f38efb9d5b26a474f94810c6f20dca",
+      "ARNAV_Task/workload/validation.py": "896c728fb27d7e5f7d388e5ee23946a8a3751a605211ffd3f9674e401b9504c6"
+    }
+  },
+  "reproduction": {
+    "EcoSched_Final_Presentation.pptx": {
+      "byte_identical_to_frozen": true,
+      "frozen_sha256": "f9b73b75ad61dc7905807beca12e4fe837d821a8b2c3d6535d0bc5322a59f554",
+      "rebuilt_sha256": "f9b73b75ad61dc7905807beca12e4fe837d821a8b2c3d6535d0bc5322a59f554"
+    },
+    "EcoSched_Final_Report.docx": {
+      "byte_identical_to_frozen": true,
+      "frozen_sha256": "c9989db4ce5d2356678bb32777b075cfec36c4b53e2daa951bbd90d2dee1424d",
+      "rebuilt_sha256": "c9989db4ce5d2356678bb32777b075cfec36c4b53e2daa951bbd90d2dee1424d"
+    },
+    "EcoSched_Final_Report.pdf": {
+      "byte_identical_to_frozen": true,
+      "frozen_sha256": "7ed900a910fbeb55cc4eac293b2e62f11620642578ca8ce1f88afcc0808495b8",
+      "rebuilt_sha256": "7ed900a910fbeb55cc4eac293b2e62f11620642578ca8ce1f88afcc0808495b8"
+    },
+    "experiment_summary.csv": {
+      "byte_identical_to_frozen": true
+    },
+    "figure_outputs": {
+      "byte_matches": 96,
+      "count": 96
+    },
+    "policy_comparisons.csv": {
+      "byte_identical_to_frozen": true
+    },
+    "primary_comparisons.csv": {
+      "byte_identical_to_frozen": true
+    },
+    "research_summary.json": {
+      "byte_identical_to_frozen": true
+    }
+  },
+  "research": {
+    "active_outcomes": 36,
+    "full_simulation_matrix_rerun": false,
+    "historical_hash_discrepancies": [
+      {
+        "current_sha256": "91de65a667ac2fbc30f5c803819602f829b230f45a23d7ba66e04f089e7e6ce5",
+        "earlier_matching_version_found": false,
+        "expected_sha256": [
+          "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b"
+        ],
+        "history": {
+          "matching_versions": [],
+          "scope": "All fetched local Git refs at this path; excludes deleted/unfetched refs and unreachable objects.",
+          "search_available": true,
+          "shallow_repository": false,
+          "versions_checked": 1
+        },
+        "id": "prepared_manifest_reference",
+        "implication": "Result/input lineage cannot be certified by the recorded manifest reference. Numerical copies can still agree.",
+        "references": [
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[0].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[1].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[2].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[3].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[4].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[5].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[6].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[7].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[8].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[9].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[10].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[11].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[12].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[13].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[14].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[15].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[16].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[17].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[18].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[19].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[20].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[21].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[22].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[23].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[24].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[25].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[26].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[27].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[28].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[29].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[30].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[31].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[32].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[33].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[34].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[35].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[36].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[37].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[38].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[39].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[40].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[41].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[42].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[43].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[44].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[45].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[46].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[47].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[48].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[49].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[50].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[51].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[52].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[53].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "manifest_sha256",
+            "file": "RAW_Alibaba/data_validation.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "input_manifest_sha256",
+            "file": "BASELINE_Comparison/reports/validation.json"
+          }
+        ],
+        "status": "unresolved",
+        "target": "RAW_Alibaba/prepared/manifest.json"
+      },
+      {
+        "current_sha256": "479d3c44747f114e8c793362ff382e455a2b09470ef0d86ae2f775f02fd917d9",
+        "earlier_matching_version_found": false,
+        "expected_sha256": [
+          "b64f374f1884cdb8c4bd0a0be540cdca69be842fc7d3e2ca18e03d5fb91c7f0c"
+        ],
+        "history": {
+          "matching_versions": [],
+          "scope": "All fetched local Git refs at this path; excludes deleted/unfetched refs and unreachable objects.",
+          "search_available": true,
+          "shallow_repository": false,
+          "versions_checked": 1
+        },
+        "id": "raw_summaries_reference",
+        "implication": "The baseline validation does not identify the current raw-summary bytes. Compare the selected rows directly.",
+        "references": [
+          {
+            "expected_sha256": "b64f374f1884cdb8c4bd0a0be540cdca69be842fc7d3e2ca18e03d5fb91c7f0c",
+            "field": "source_summary_sha256",
+            "file": "BASELINE_Comparison/reports/validation.json"
+          }
+        ],
+        "status": "unresolved",
+        "target": "RAW_Alibaba/reports/summaries.json"
+      },
+      {
+        "current_sha256": "031795105541b003dc73ceae2d8027de9f934edc444173a4b3c284c1a9a31e6c",
+        "earlier_matching_version_found": false,
+        "expected_sha256": [
+          "711dc21157f2a5cd06378d086ece853786e1359e8063bcf5e67fd54813d960b6"
+        ],
+        "history": {
+          "matching_versions": [],
+          "scope": "All fetched local Git refs at this path; excludes deleted/unfetched refs and unreachable objects.",
+          "search_available": true,
+          "shallow_repository": false,
+          "versions_checked": 1
+        },
+        "id": "archive_audit_reference",
+        "implication": "The manifest does not identify the current archive-audit bytes. Raw-member records corroborate content, not this broken link.",
+        "references": [
+          {
+            "expected_sha256": "711dc21157f2a5cd06378d086ece853786e1359e8063bcf5e67fd54813d960b6",
+            "field": "archive_audit_sha256",
+            "file": "RAW_Alibaba/prepared/manifest.json"
+          }
+        ],
+        "status": "unresolved",
+        "target": "RAW_Alibaba/archive_audit.json"
+      }
+    ],
+    "numerical_checks": {
+      "active_outcomes": 36,
+      "checks": [
+        "manifest and recorded validation coverage",
+        "run (250, 'hpe_dl360_gen9', 'first_fit'): counts, units, energy, timing and assumptions",
+        "run (250, 'hpe_dl360_gen9', 'best_fit'): counts, units, energy, timing and assumptions",
+        "run (250, 'hpe_dl360_gen9', 'lr_mmt'): counts, units, energy, timing and assumptions",
+        "run (250, 'hpe_dl360_gen9', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+        "run (250, 'huawei_rh2288h_v3', 'first_fit'): counts, units, energy, timing and assumptions",
+        "run (250, 'huawei_rh2288h_v3', 'best_fit'): counts, units, energy, timing and assumptions",
+        "run (250, 'huawei_rh2288h_v3', 'lr_mmt'): counts, units, energy, timing and assumptions",
+        "run (250, 'huawei_rh2288h_v3', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+        "run (250, 'quanta_d51b_2u', 'first_fit'): counts, units, energy, timing and assumptions",
+        "run (250, 'quanta_d51b_2u', 'best_fit'): counts, units, energy, timing and assumptions",
+        "run (250, 'quanta_d51b_2u', 'lr_mmt'): counts, units, energy, timing and assumptions",
+        "run (250, 'quanta_d51b_2u', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+        "run (1000, 'hpe_dl360_gen9', 'first_fit'): counts, units, energy, timing and assumptions",
+        "run (1000, 'hpe_dl360_gen9', 'best_fit'): counts, units, energy, timing and assumptions",
+        "run (1000, 'hpe_dl360_gen9', 'lr_mmt'): counts, units, energy, timing and assumptions",
+        "run (1000, 'hpe_dl360_gen9', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+        "run (1000, 'huawei_rh2288h_v3', 'first_fit'): counts, units, energy, timing and assumptions",
+        "run (1000, 'huawei_rh2288h_v3', 'best_fit'): counts, units, energy, timing and assumptions",
+        "run (1000, 'huawei_rh2288h_v3', 'lr_mmt'): counts, units, energy, timing and assumptions",
+        "run (1000, 'huawei_rh2288h_v3', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+        "run (1000, 'quanta_d51b_2u', 'first_fit'): counts, units, energy, timing and assumptions",
+        "run (1000, 'quanta_d51b_2u', 'best_fit'): counts, units, energy, timing and assumptions",
+        "run (1000, 'quanta_d51b_2u', 'lr_mmt'): counts, units, energy, timing and assumptions",
+        "run (1000, 'quanta_d51b_2u', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+        "run (4000, 'hpe_dl360_gen9', 'first_fit'): counts, units, energy, timing and assumptions",
+        "run (4000, 'hpe_dl360_gen9', 'best_fit'): counts, units, energy, timing and assumptions",
+        "run (4000, 'hpe_dl360_gen9', 'lr_mmt'): counts, units, energy, timing and assumptions",
+        "run (4000, 'hpe_dl360_gen9', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+        "run (4000, 'huawei_rh2288h_v3', 'first_fit'): counts, units, energy, timing and assumptions",
+        "run (4000, 'huawei_rh2288h_v3', 'best_fit'): counts, units, energy, timing and assumptions",
+        "run (4000, 'huawei_rh2288h_v3', 'lr_mmt'): counts, units, energy, timing and assumptions",
+        "run (4000, 'huawei_rh2288h_v3', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+        "run (4000, 'quanta_d51b_2u', 'first_fit'): counts, units, energy, timing and assumptions",
+        "run (4000, 'quanta_d51b_2u', 'best_fit'): counts, units, energy, timing and assumptions",
+        "run (4000, 'quanta_d51b_2u', 'lr_mmt'): counts, units, energy, timing and assumptions",
+        "run (4000, 'quanta_d51b_2u', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+        "nine primary pairs, 144 ordered comparisons and raw CSV consistency",
+        "D5 recordings, resource-skew outcomes, sampled series and energy accounting"
+      ],
+      "checks_passed": 39,
+      "completed_instance_replays": 5559312,
+      "d5": {
+        "recordings": 18,
+        "resource_skew_rows": 48,
+        "table_rows": {
+          "controller_diagnostics": 18,
+          "curve_band_watts": 30,
+          "outcomes_by_task_type": 48,
+          "pair_energy_gap": 9,
+          "placement_decisions": 18,
+          "placement_load_bands": 48,
+          "placement_score_arithmetic": 3,
+          "run_energy_breakdown": 36,
+          "servers_running_work": 18,
+          "tradeoffs": 9,
+          "workload_mix": 3
+        }
+      },
+      "errors": [],
+      "missing_optional_metrics": {},
+      "passed": true,
+      "per_curve_outcomes": {
+        "hpe_dl360_gen9": 12,
+        "huawei_rh2288h_v3": 12,
+        "quanta_d51b_2u": 12
+      },
+      "policy_comparisons": 144,
+      "primary_comparisons": 9,
+      "rejected_instances": 0,
+      "unfinished_instances": 0
+    },
+    "primary_energy_wins": 4,
+    "primary_pairs": 9,
+    "source_fingerprints": {
+      "conflicting_references": [],
+      "consistent": true,
+      "files": [
+        {
+          "current_sha256": "1a2b4879cb0fcbae73c2f8514a8944159cb48541117e71067bc75ed93602b86b",
+          "expected_sha256": "1a2b4879cb0fcbae73c2f8514a8944159cb48541117e71067bc75ed93602b86b",
+          "hash_matches": true,
+          "path": "BASELINE_Comparison/build.py",
+          "present": true
+        },
+        {
+          "current_sha256": "ce3b1ee1790477ee8252bdbf11fc0f1beacc6f5409a81702e00326938e50b937",
+          "expected_sha256": "ce3b1ee1790477ee8252bdbf11fc0f1beacc6f5409a81702e00326938e50b937",
+          "hash_matches": true,
+          "path": "ENERGY_Study/instrumentation.py",
+          "present": true
+        },
+        {
+          "current_sha256": "73231d5f32109c87c81d29d1ca4b2370a9e75aad074f3383dd345d579b1fc2bc",
+          "expected_sha256": "73231d5f32109c87c81d29d1ca4b2370a9e75aad074f3383dd345d579b1fc2bc",
+          "hash_matches": true,
+          "path": "ENERGY_Study/policies.py",
+          "present": true
+        },
+        {
+          "current_sha256": "b79631c1e876456f529c35b5c18d0ef7fd20bf1213f030759aab69016a00c33e",
+          "expected_sha256": "b79631c1e876456f529c35b5c18d0ef7fd20bf1213f030759aab69016a00c33e",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/__init__.py",
+          "present": true
+        },
+        {
+          "current_sha256": "c202ff0da61c273f2a136566ff7e273512553f93327235c5b801109c555e9e19",
+          "expected_sha256": "c202ff0da61c273f2a136566ff7e273512553f93327235c5b801109c555e9e19",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/config.json",
+          "present": true
+        },
+        {
+          "current_sha256": "71fbc35957fe7def7c3be619a3b37b802d771158da5541c69dc5086735a8ae6b",
+          "expected_sha256": "71fbc35957fe7def7c3be619a3b37b802d771158da5541c69dc5086735a8ae6b",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/data.py",
+          "present": true
+        },
+        {
+          "current_sha256": "963c5792da64bb49c8aedc76fbf24d6fe83e9c4816bfa149c247bff5199fcbab",
+          "expected_sha256": "963c5792da64bb49c8aedc76fbf24d6fe83e9c4816bfa149c247bff5199fcbab",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/extract.py",
+          "present": true
+        },
+        {
+          "current_sha256": "e4ca1bb06435f7706b0b72381c81b3ab6356d7071cfdeeda12e228498c98931c",
+          "expected_sha256": "e4ca1bb06435f7706b0b72381c81b3ab6356d7071cfdeeda12e228498c98931c",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/prepare.py",
+          "present": true
+        },
+        {
+          "current_sha256": "f17793dcb1af8aa7c88e240f5d3deb0e47ea91b73ddec269268e73a2c28b27d0",
+          "expected_sha256": "f17793dcb1af8aa7c88e240f5d3deb0e47ea91b73ddec269268e73a2c28b27d0",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/run.py",
+          "present": true
+        },
+        {
+          "current_sha256": "2b36f546f65aac034d8adff4bda6da1cefd5b54531fae463251408308a5f9f54",
+          "expected_sha256": "2b36f546f65aac034d8adff4bda6da1cefd5b54531fae463251408308a5f9f54",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/verify.py",
+          "present": true
+        },
+        {
+          "current_sha256": "ca8de3a89520164d0247cfc47574aee3b5f3fe0e2ae51a1465364505f1a72977",
+          "expected_sha256": "ca8de3a89520164d0247cfc47574aee3b5f3fe0e2ae51a1465364505f1a72977",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/verify_data.py",
+          "present": true
+        },
+        {
+          "current_sha256": "a0e2d66ee85e960731389370ccf41cc3d20f91b392307da16f4e3d7ff05a43bc",
+          "expected_sha256": "a0e2d66ee85e960731389370ccf41cc3d20f91b392307da16f4e3d7ff05a43bc",
+          "hash_matches": true,
+          "path": "ROHAN_Task/policies.py",
+          "present": true
+        },
+        {
+          "current_sha256": "11c973711c7658766ed169007c17c83523d5cf9f64464a557355a42379cf427a",
+          "expected_sha256": "11c973711c7658766ed169007c17c83523d5cf9f64464a557355a42379cf427a",
+          "hash_matches": true,
+          "path": "RUSHI_Task/__init__.py",
+          "present": true
+        },
+        {
+          "current_sha256": "fd48e740f47e4c5f1cfd63ee12d48b37f0aebb05d9ea1e57127cdd0db407c2a0",
+          "expected_sha256": "fd48e740f47e4c5f1cfd63ee12d48b37f0aebb05d9ea1e57127cdd0db407c2a0",
+          "hash_matches": true,
+          "path": "RUSHI_Task/accounting.py",
+          "present": true
+        },
+        {
+          "current_sha256": "9bcf03a2662e4018f6d7a8af54aee8ebe6ace43d3244aeb0032f974b13a570c5",
+          "expected_sha256": "9bcf03a2662e4018f6d7a8af54aee8ebe6ace43d3244aeb0032f974b13a570c5",
+          "hash_matches": true,
+          "path": "RUSHI_Task/analyze.py",
+          "present": true
+        },
+        {
+          "current_sha256": "54e5a7481e9228b0a9e29ec19af538517561e294595e86bd0dcb2d0573836e5b",
+          "expected_sha256": "54e5a7481e9228b0a9e29ec19af538517561e294595e86bd0dcb2d0573836e5b",
+          "hash_matches": true,
+          "path": "RUSHI_Task/charts.py",
+          "present": true
+        },
+        {
+          "current_sha256": "af652febe06f82f29787da1d2c464eca1f928a0591126152b7d35a6b71d9c0d6",
+          "expected_sha256": "af652febe06f82f29787da1d2c464eca1f928a0591126152b7d35a6b71d9c0d6",
+          "hash_matches": true,
+          "path": "RUSHI_Task/observer.py",
+          "present": true
+        },
+        {
+          "current_sha256": "cf09b3dba25875630db5c50f4c38c97411f810538d342294f1b69ac862272a03",
+          "expected_sha256": "cf09b3dba25875630db5c50f4c38c97411f810538d342294f1b69ac862272a03",
+          "hash_matches": true,
+          "path": "RUSHI_Task/rerun.py",
+          "present": true
+        },
+        {
+          "current_sha256": "4ca0a98f4b1795517424ecd4c7a9fa1d181dd0d7a255c3db6930de06659aeef8",
+          "expected_sha256": "4ca0a98f4b1795517424ecd4c7a9fa1d181dd0d7a255c3db6930de06659aeef8",
+          "hash_matches": true,
+          "path": "ecosched/__init__.py",
+          "present": true
+        },
+        {
+          "current_sha256": "e9e1271c2548d9b55b2db058baf62e7c1c2f8acaf31af937cb06f4d4abd3e0d7",
+          "expected_sha256": "e9e1271c2548d9b55b2db058baf62e7c1c2f8acaf31af937cb06f4d4abd3e0d7",
+          "hash_matches": true,
+          "path": "ecosched/__main__.py",
+          "present": true
+        },
+        {
+          "current_sha256": "1f468124cd751c21c57c87e525049e1453cbdd5d4bb49b9aeb6e05a09505dbd3",
+          "expected_sha256": "1f468124cd751c21c57c87e525049e1453cbdd5d4bb49b9aeb6e05a09505dbd3",
+          "hash_matches": true,
+          "path": "ecosched/engine.py",
+          "present": true
+        },
+        {
+          "current_sha256": "f0627674b71cba2ff918551bd19a83e760b206f6ac8e31abb725855f293482fb",
+          "expected_sha256": "f0627674b71cba2ff918551bd19a83e760b206f6ac8e31abb725855f293482fb",
+          "hash_matches": true,
+          "path": "ecosched/models.py",
+          "present": true
+        },
+        {
+          "current_sha256": "15360788f03f676ec09590624f37a1074fb068cd105356ad4c9f4b371dcd81b4",
+          "expected_sha256": "15360788f03f676ec09590624f37a1074fb068cd105356ad4c9f4b371dcd81b4",
+          "hash_matches": true,
+          "path": "ecosched/policies.py",
+          "present": true
+        },
+        {
+          "current_sha256": "8d269e0b7749f7346268b9ebeb6df54e76f2c75307405ae13fd34a87aef66442",
+          "expected_sha256": "8d269e0b7749f7346268b9ebeb6df54e76f2c75307405ae13fd34a87aef66442",
+          "hash_matches": true,
+          "path": "ecosched/power.py",
+          "present": true
+        },
+        {
+          "current_sha256": "3740374e6ec09c0645bc7d3cf81daceba26648d7c37fbe7633acac1e6c7e9ca6",
+          "expected_sha256": "3740374e6ec09c0645bc7d3cf81daceba26648d7c37fbe7633acac1e6c7e9ca6",
+          "hash_matches": true,
+          "path": "ecosched/power_curves.json",
+          "present": true
+        }
+      ]
+    },
+    "strict_validation": "Expected exit 1; historical lineage unresolved; not full reproducibility"
+  },
+  "schema_version": 1,
+  "status": "LOCAL_RELEASE_CANDIDATE_READY_FOR_REVIEW",
+  "tested_core_identity": {
+    "differences": [],
+    "excluded_refreshed_receipts": [
+      "ARNAV_Task/final/release_candidate_manifest.json",
+      "ARNAV_Task/reports/phase8_verification.json",
+      "ARNAV_Task/reports/phase8_verification.md",
+      "ARNAV_Task/reports/staging_plan.json"
+    ],
+    "files": 372,
+    "passed": true
+  },
+  "tests": {
+    "catalog_distinct": 336,
+    "distinct_passed": 334,
+    "failures": 0,
+    "not_repeated_real_broker_tests": [
+      "test_03_full_1000",
+      "test_04_full_4000"
+    ],
+    "not_repeated_reason": "Both unchanged larger workloads retain complete prior evidence; Phase 8 rehearses authentic 250-group transport and all failure/recovery contracts.",
+    "ordinary_broker_skips": 10,
+    "ordinary_d6": 242,
+    "real_kafka": 8,
+    "repeated_runs_not_double_counted": true,
+    "teammate": 84
+  }
+}

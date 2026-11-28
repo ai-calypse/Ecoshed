@@ -1,0 +1,1314 @@
+{
+  "demand": [
+    {
+      "count": 263,
+      "cpu": 131.5,
+      "logical_bucket": 0,
+      "memory": 2.26054409442703,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 347,
+      "cpu": 174.5,
+      "logical_bucket": 900,
+      "memory": 2.7425154660523368,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 543,
+      "cpu": 533.0,
+      "logical_bucket": 1800,
+      "memory": 3.064768462195511,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 189,
+      "cpu": 170.5,
+      "logical_bucket": 2700,
+      "memory": 1.116910413377167,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 63,
+      "cpu": 62.5,
+      "logical_bucket": 3600,
+      "memory": 0.34049646675122275,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 12,
+      "cpu": 11.5,
+      "logical_bucket": 4500,
+      "memory": 0.06345352418916472,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 224,
+      "cpu": 179.5,
+      "logical_bucket": 5400,
+      "memory": 1.4399554784769506,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 165,
+      "cpu": 161.5,
+      "logical_bucket": 6300,
+      "memory": 0.8826961406051848,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 163,
+      "cpu": 84.0,
+      "logical_bucket": 7200,
+      "memory": 1.2903786917919915,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 539,
+      "cpu": 535.5,
+      "logical_bucket": 8100,
+      "memory": 2.926063210208869,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 1175,
+      "cpu": 611.5,
+      "logical_bucket": 9000,
+      "memory": 8.9237801879224,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 165,
+      "cpu": 82.4,
+      "logical_bucket": 9900,
+      "memory": 1.3368622680092181,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 379,
+      "cpu": 378.0,
+      "logical_bucket": 10800,
+      "memory": 3.9846763129966725,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 393,
+      "cpu": 391.0,
+      "logical_bucket": 11700,
+      "memory": 4.14258794295034,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 293,
+      "cpu": 167.0,
+      "logical_bucket": 12600,
+      "memory": 2.227240959801193,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 274,
+      "cpu": 139.0,
+      "logical_bucket": 13500,
+      "memory": 1.6747081510625532,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 134,
+      "cpu": 68.0,
+      "logical_bucket": 14400,
+      "memory": 1.0448424921699089,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 237,
+      "cpu": 118.5,
+      "logical_bucket": 15300,
+      "memory": 1.41242461108378,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 354,
+      "cpu": 177.5,
+      "logical_bucket": 16200,
+      "memory": 2.9423756891776556,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 280,
+      "cpu": 139.9,
+      "logical_bucket": 17100,
+      "memory": 2.700069888437333,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 13,
+      "cpu": 7.0,
+      "logical_bucket": 18000,
+      "memory": 0.09812854295550434,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 84,
+      "cpu": 83.4,
+      "logical_bucket": 18900,
+      "memory": 1.3326430771620124,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 328,
+      "cpu": 291.5,
+      "logical_bucket": 19800,
+      "memory": 2.158444852846008,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 545,
+      "cpu": 278.0,
+      "logical_bucket": 20700,
+      "memory": 4.529045116869016,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 496,
+      "cpu": 248.5,
+      "logical_bucket": 21600,
+      "memory": 4.104335671576096,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 424,
+      "cpu": 212.5,
+      "logical_bucket": 22500,
+      "memory": 2.9927367794372803,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 321,
+      "cpu": 173.0,
+      "logical_bucket": 23400,
+      "memory": 3.107177801361523,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 293,
+      "cpu": 148.0,
+      "logical_bucket": 24300,
+      "memory": 2.5278958403437297,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 156,
+      "cpu": 77.9,
+      "logical_bucket": 25200,
+      "memory": 1.9952424093391563,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 10,
+      "cpu": 5.5,
+      "logical_bucket": 26100,
+      "memory": 0.07776253462066111,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 204,
+      "cpu": 155.0,
+      "logical_bucket": 27000,
+      "memory": 1.7204669582998922,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 734,
+      "cpu": 372.0,
+      "logical_bucket": 27900,
+      "memory": 5.886092200968101,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 184,
+      "cpu": 180.5,
+      "logical_bucket": 28800,
+      "memory": 1.0181813475526136,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 12,
+      "cpu": 12.0,
+      "logical_bucket": 29700,
+      "memory": 0.06485646985737584,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 964,
+      "cpu": 482.0,
+      "logical_bucket": 30600,
+      "memory": 11.63371211140733,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 35,
+      "cpu": 35.0,
+      "logical_bucket": 31500,
+      "memory": 0.18916470375067942,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 236,
+      "cpu": 118.0,
+      "logical_bucket": 32400,
+      "memory": 1.922387596096597,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 383,
+      "cpu": 191.5,
+      "logical_bucket": 33300,
+      "memory": 2.971552817539391,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 212,
+      "cpu": 124.0,
+      "logical_bucket": 34200,
+      "memory": 1.5974684854916772,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 178,
+      "cpu": 147.5,
+      "logical_bucket": 35100,
+      "memory": 1.184427820774984,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 144,
+      "cpu": 91.5,
+      "logical_bucket": 36000,
+      "memory": 1.0720679212072572,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 843,
+      "cpu": 421.5,
+      "logical_bucket": 36900,
+      "memory": 8.48619573939365,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 980,
+      "cpu": 491.5,
+      "logical_bucket": 37800,
+      "memory": 9.313110553153898,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 509,
+      "cpu": 254.5,
+      "logical_bucket": 38700,
+      "memory": 4.320580850568186,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 490,
+      "cpu": 258.0,
+      "logical_bucket": 39600,
+      "memory": 4.542743250588892,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 433,
+      "cpu": 239.0,
+      "logical_bucket": 40500,
+      "memory": 3.999145807988012,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 607,
+      "cpu": 303.5,
+      "logical_bucket": 41400,
+      "memory": 5.894944736365333,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    {
+      "count": 524,
+      "cpu": 270.4,
+      "logical_bucket": 42300,
+      "memory": 2.3664949654440526,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    }
+  ],
+  "distinct_count": 16534,
+  "ended_at": 1795754498.291414,
+  "expected": 16534,
+  "history_scope": "Recorded complete Phase 5 browser replay; not current/live monitoring",
+  "offset_history": [
+    {
+      "broker_end": 1439971,
+      "next_offset": 1439971,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754425
+    },
+    {
+      "broker_end": 1440214,
+      "next_offset": 1440139,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 75,
+      "topic_lag": 75,
+      "wall_second": 1795754426
+    },
+    {
+      "broker_end": 1440513,
+      "next_offset": 1440512,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754427
+    },
+    {
+      "broker_end": 1440583,
+      "next_offset": 1440583,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754428
+    },
+    {
+      "broker_end": 1441086,
+      "next_offset": 1441085,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754429
+    },
+    {
+      "broker_end": 1441141,
+      "next_offset": 1441140,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754430
+    },
+    {
+      "broker_end": 1441355,
+      "next_offset": 1441354,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754431
+    },
+    {
+      "broker_end": 1441356,
+      "next_offset": 1441355,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754432
+    },
+    {
+      "broker_end": 1441356,
+      "next_offset": 1441356,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754433
+    },
+    {
+      "broker_end": 1441369,
+      "next_offset": 1441369,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754434
+    },
+    {
+      "broker_end": 1441428,
+      "next_offset": 1441428,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754435
+    },
+    {
+      "broker_end": 1441757,
+      "next_offset": 1441752,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 5,
+      "wall_second": 1795754436
+    },
+    {
+      "broker_end": 1441774,
+      "next_offset": 1441773,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754437
+    },
+    {
+      "broker_end": 1441920,
+      "next_offset": 1441919,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754438
+    },
+    {
+      "broker_end": 1441950,
+      "next_offset": 1441950,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754439
+    },
+    {
+      "broker_end": 1442494,
+      "next_offset": 1442460,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 34,
+      "wall_second": 1795754440
+    },
+    {
+      "broker_end": 1443621,
+      "next_offset": 1443596,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 25,
+      "wall_second": 1795754441
+    },
+    {
+      "broker_end": 1443642,
+      "next_offset": 1443642,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754442
+    },
+    {
+      "broker_end": 1443805,
+      "next_offset": 1443800,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 5,
+      "wall_second": 1795754443
+    },
+    {
+      "broker_end": 1444083,
+      "next_offset": 1443951,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 132,
+      "wall_second": 1795754444
+    },
+    {
+      "broker_end": 1444179,
+      "next_offset": 1444179,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754445
+    },
+    {
+      "broker_end": 1444575,
+      "next_offset": 1444574,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754446
+    },
+    {
+      "broker_end": 1444864,
+      "next_offset": 1444824,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 40,
+      "wall_second": 1795754447
+    },
+    {
+      "broker_end": 1445125,
+      "next_offset": 1445125,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754448
+    },
+    {
+      "broker_end": 1445270,
+      "next_offset": 1445268,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 2,
+      "wall_second": 1795754449
+    },
+    {
+      "broker_end": 1445271,
+      "next_offset": 1445270,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754450
+    },
+    {
+      "broker_end": 1445273,
+      "next_offset": 1445273,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754451
+    },
+    {
+      "broker_end": 1445576,
+      "next_offset": 1445510,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 66,
+      "wall_second": 1795754452
+    },
+    {
+      "broker_end": 1445861,
+      "next_offset": 1445841,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 20,
+      "wall_second": 1795754453
+    },
+    {
+      "broker_end": 1446142,
+      "next_offset": 1446117,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 25,
+      "wall_second": 1795754454
+    },
+    {
+      "broker_end": 1446154,
+      "next_offset": 1446143,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 11,
+      "wall_second": 1795754455
+    },
+    {
+      "broker_end": 1446156,
+      "next_offset": 1446156,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754456
+    },
+    {
+      "broker_end": 1446156,
+      "next_offset": 1446156,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754457
+    },
+    {
+      "broker_end": 1446266,
+      "next_offset": 1446240,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 26,
+      "wall_second": 1795754458
+    },
+    {
+      "broker_end": 1446568,
+      "next_offset": 1446567,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754459
+    },
+    {
+      "broker_end": 1447113,
+      "next_offset": 1447112,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754460
+    },
+    {
+      "broker_end": 1447509,
+      "next_offset": 1447451,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 58,
+      "wall_second": 1795754461
+    },
+    {
+      "broker_end": 1447509,
+      "next_offset": 1447509,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754462
+    },
+    {
+      "broker_end": 1448033,
+      "next_offset": 1448017,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 16,
+      "wall_second": 1795754463
+    },
+    {
+      "broker_end": 1448058,
+      "next_offset": 1448033,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 25,
+      "wall_second": 1795754464
+    },
+    {
+      "broker_end": 1448354,
+      "next_offset": 1448351,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 3,
+      "wall_second": 1795754465
+    },
+    {
+      "broker_end": 1448359,
+      "next_offset": 1448358,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754466
+    },
+    {
+      "broker_end": 1448667,
+      "next_offset": 1448648,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 19,
+      "wall_second": 1795754467
+    },
+    {
+      "broker_end": 1448802,
+      "next_offset": 1448802,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754468
+    },
+    {
+      "broker_end": 1448803,
+      "next_offset": 1448803,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754469
+    },
+    {
+      "broker_end": 1448909,
+      "next_offset": 1448884,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 25,
+      "wall_second": 1795754470
+    },
+    {
+      "broker_end": 1449017,
+      "next_offset": 1449016,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754471
+    },
+    {
+      "broker_end": 1449750,
+      "next_offset": 1449678,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 72,
+      "wall_second": 1795754472
+    },
+    {
+      "broker_end": 1449820,
+      "next_offset": 1449753,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 67,
+      "wall_second": 1795754473
+    },
+    {
+      "broker_end": 1449935,
+      "next_offset": 1449935,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754474
+    },
+    {
+      "broker_end": 1449936,
+      "next_offset": 1449936,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754475
+    },
+    {
+      "broker_end": 1450543,
+      "next_offset": 1450517,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 26,
+      "wall_second": 1795754476
+    },
+    {
+      "broker_end": 1450680,
+      "next_offset": 1450614,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 66,
+      "wall_second": 1795754477
+    },
+    {
+      "broker_end": 1450946,
+      "next_offset": 1450946,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754478
+    },
+    {
+      "broker_end": 1450947,
+      "next_offset": 1450946,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754479
+    },
+    {
+      "broker_end": 1451182,
+      "next_offset": 1451171,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 11,
+      "wall_second": 1795754480
+    },
+    {
+      "broker_end": 1451525,
+      "next_offset": 1451525,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754481
+    },
+    {
+      "broker_end": 1451598,
+      "next_offset": 1451565,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 33,
+      "wall_second": 1795754482
+    },
+    {
+      "broker_end": 1451602,
+      "next_offset": 1451602,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754483
+    },
+    {
+      "broker_end": 1451895,
+      "next_offset": 1451895,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754484
+    },
+    {
+      "broker_end": 1452097,
+      "next_offset": 1452058,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 39,
+      "wall_second": 1795754485
+    },
+    {
+      "broker_end": 1452099,
+      "next_offset": 1452098,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754486
+    },
+    {
+      "broker_end": 1452108,
+      "next_offset": 1452107,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754487
+    },
+    {
+      "broker_end": 1452992,
+      "next_offset": 1452951,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 41,
+      "wall_second": 1795754488
+    },
+    {
+      "broker_end": 1453922,
+      "next_offset": 1453920,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 2,
+      "wall_second": 1795754489
+    },
+    {
+      "broker_end": 1453925,
+      "next_offset": 1453922,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 3,
+      "wall_second": 1795754490
+    },
+    {
+      "broker_end": 1454543,
+      "next_offset": 1454518,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 25,
+      "wall_second": 1795754491
+    },
+    {
+      "broker_end": 1454920,
+      "next_offset": 1454920,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754492
+    },
+    {
+      "broker_end": 1455350,
+      "next_offset": 1455296,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 54,
+      "wall_second": 1795754493
+    },
+    {
+      "broker_end": 1455492,
+      "next_offset": 1455451,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 41,
+      "wall_second": 1795754494
+    },
+    {
+      "broker_end": 1455961,
+      "next_offset": 1455960,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754495
+    },
+    {
+      "broker_end": 1455983,
+      "next_offset": 1455982,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 1,
+      "wall_second": 1795754496
+    },
+    {
+      "broker_end": 1456485,
+      "next_offset": 1456485,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "session_lag": 0,
+      "topic_lag": 0,
+      "wall_second": 1795754497
+    }
+  ],
+  "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+  "schema_version": 1,
+  "size": 250,
+  "source_database": "ARNAV_Task/.runtime/kafka/replay.sqlite3",
+  "source_query": "read_metrics(history_limit=10000), read-only WAL snapshot",
+  "source_receipt": "ARNAV_Task/reports/phase5_verification.json",
+  "source_receipt_sha256": "c07ff93187c1b20d1ef127cb2798e03c659f1b3d010d4ee8a4ed6c08dc65733b",
+  "started_at": 1795754425.593319,
+  "throughput": [
+    {
+      "count": 20,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754425
+    },
+    {
+      "count": 243,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754426
+    },
+    {
+      "count": 299,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754427
+    },
+    {
+      "count": 70,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754428
+    },
+    {
+      "count": 503,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754429
+    },
+    {
+      "count": 55,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754430
+    },
+    {
+      "count": 214,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754431
+    },
+    {
+      "count": 1,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754432
+    },
+    {
+      "count": 13,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754434
+    },
+    {
+      "count": 59,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754435
+    },
+    {
+      "count": 329,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754436
+    },
+    {
+      "count": 17,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754437
+    },
+    {
+      "count": 146,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754438
+    },
+    {
+      "count": 30,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754439
+    },
+    {
+      "count": 544,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754440
+    },
+    {
+      "count": 1127,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754441
+    },
+    {
+      "count": 21,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754442
+    },
+    {
+      "count": 163,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754443
+    },
+    {
+      "count": 146,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754444
+    },
+    {
+      "count": 228,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754445
+    },
+    {
+      "count": 396,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754446
+    },
+    {
+      "count": 289,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754447
+    },
+    {
+      "count": 261,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754448
+    },
+    {
+      "count": 145,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754449
+    },
+    {
+      "count": 1,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754450
+    },
+    {
+      "count": 2,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754451
+    },
+    {
+      "count": 303,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754452
+    },
+    {
+      "count": 285,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754453
+    },
+    {
+      "count": 281,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754454
+    },
+    {
+      "count": 12,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754455
+    },
+    {
+      "count": 2,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754456
+    },
+    {
+      "count": 110,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754458
+    },
+    {
+      "count": 302,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754459
+    },
+    {
+      "count": 545,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754460
+    },
+    {
+      "count": 396,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754461
+    },
+    {
+      "count": 524,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754463
+    },
+    {
+      "count": 25,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754464
+    },
+    {
+      "count": 296,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754465
+    },
+    {
+      "count": 5,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754466
+    },
+    {
+      "count": 308,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754467
+    },
+    {
+      "count": 135,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754468
+    },
+    {
+      "count": 1,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754469
+    },
+    {
+      "count": 106,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754470
+    },
+    {
+      "count": 108,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754471
+    },
+    {
+      "count": 733,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754472
+    },
+    {
+      "count": 3,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754473
+    },
+    {
+      "count": 182,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754474
+    },
+    {
+      "count": 1,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754475
+    },
+    {
+      "count": 607,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754476
+    },
+    {
+      "count": 137,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754477
+    },
+    {
+      "count": 266,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754478
+    },
+    {
+      "count": 1,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754479
+    },
+    {
+      "count": 235,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754480
+    },
+    {
+      "count": 343,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754481
+    },
+    {
+      "count": 73,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754482
+    },
+    {
+      "count": 4,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754483
+    },
+    {
+      "count": 293,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754484
+    },
+    {
+      "count": 202,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754485
+    },
+    {
+      "count": 2,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754486
+    },
+    {
+      "count": 9,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754487
+    },
+    {
+      "count": 884,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754488
+    },
+    {
+      "count": 930,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754489
+    },
+    {
+      "count": 3,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754490
+    },
+    {
+      "count": 618,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754491
+    },
+    {
+      "count": 377,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754492
+    },
+    {
+      "count": 430,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754493
+    },
+    {
+      "count": 142,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754494
+    },
+    {
+      "count": 469,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754495
+    },
+    {
+      "count": 22,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754496
+    },
+    {
+      "count": 502,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "wall_second": 1795754497
+    }
+  ],
+  "verification": {
+    "bounded_partial": false,
+    "compared_events": 16534,
+    "complete": true,
+    "confirmed_published": 16534,
+    "consumed_deliveries": 16534,
+    "consumer_status": "completed",
+    "distinct_instances": 16534,
+    "duplicate_deliveries": 0,
+    "errors": [],
+    "expected_instances": 16534,
+    "expected_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+    "groups": 250,
+    "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+    "invalid_messages": 0,
+    "passed": true,
+    "persisted_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+    "producer_status": "completed",
+    "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+    "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+    "sequence_gaps": 0,
+    "size": 250,
+    "verified_at": 1795754498.291146
+  }
+}

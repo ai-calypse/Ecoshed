@@ -1,0 +1,63 @@
+{
+  "edges": [
+    [
+      "fingerprint",
+      "independent"
+    ],
+    [
+      "independent",
+      "prepared"
+    ],
+    [
+      "prepared",
+      "result"
+    ],
+    [
+      "result",
+      "exports"
+    ],
+    [
+      "unresolved",
+      "exports",
+      "Disclose separately"
+    ]
+  ],
+  "nodes": [
+    [
+      "fingerprint",
+      "Archive + raw-member\nfingerprints",
+      0,
+      2
+    ],
+    [
+      "independent",
+      "Independent raw-row\nvalidation",
+      1,
+      2
+    ],
+    [
+      "prepared",
+      "Prepared outputs\n5 exact hash matches",
+      2,
+      2
+    ],
+    [
+      "result",
+      "Result reconciliation\n36 outcomes / 9 pairs",
+      2,
+      1
+    ],
+    [
+      "exports",
+      "Reproducible exports\nsource + output hashes",
+      1,
+      0
+    ],
+    [
+      "unresolved",
+      "Historical metadata\n3 unresolved references",
+      0,
+      0
+    ]
+  ]
+}

@@ -1,0 +1,19 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{Duplicate delivery and interruption recovery}\
+\toprule
+Test & Replay Id & Consumed Deliveries & Distinct Instances & Duplicate Deliveries & Invalid Messages & Sequence Gaps \\
+\midrule\endhead
+duplicate\_redelivery & 72306d47-074\allowbreak{}a-492f-8ece-\allowbreak{}334195b12df6 & 33068 & 16534 & 16534 & 0 & 0 \\
+consumer\_restart & fc186769-43e\allowbreak{}a-4e89-b10d-\allowbreak{}e560f1f0e0ac & 16534 & 16534 & 0 & 0 & 0 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.267\linewidth}>{\raggedright\arraybackslash}p{0.267\linewidth}>{\raggedright\arraybackslash}p{0.267\linewidth}}
+\caption{Duplicate delivery and interruption recovery}\
+\toprule
+Passed & Persisted Before Restart & Offset Before Restart \\
+\midrule\endhead
+True & — & — \\
+True & 317 & 1406930 \\
+\bottomrule\end{longtable}
+% Exact duplicates increase accepted deliveries without increasing unique-instance counts. Consumer restart resumes from durable offsets after SQLite persistence.
+% Sources: ARNAV_Task/reports/phase4_verification.json

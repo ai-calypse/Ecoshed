@@ -1,0 +1,25 @@
+{
+  "active_outcomes": 36,
+  "completed_instance_replays": 5559312,
+  "environment": {
+    "dependencies": {
+      "matplotlib": "3.11.2",
+      "numpy": "2.5.5",
+      "pandas": "3.1.1",
+      "pillow": "13.0.0",
+      "pypdf": "7.2.0"
+    },
+    "git_head": "b0c48284a48407b1b14242c579f39a1f27248e5f",
+    "python": "3.12.15"
+  },
+  "errors": [],
+  "full_historical_lineage": "UNRESOLVED",
+  "historical_policies_included": false,
+  "original_tracked_files_unchanged": 508,
+  "output_files_checked": 162,
+  "passed": true,
+  "primary_comparisons": 9,
+  "primary_energy_savings_cases": 4,
+  "raw_archive_or_broker_required": false,
+  "statistical_error_bars": false
+}

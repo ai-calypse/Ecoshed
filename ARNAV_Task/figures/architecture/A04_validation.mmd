@@ -1,0 +1,12 @@
+flowchart LR
+    fingerprint["Archive + raw-member<br/>fingerprints"]
+    independent["Independent raw-row<br/>validation"]
+    prepared["Prepared outputs<br/>5 exact hash matches"]
+    result["Result reconciliation<br/>36 outcomes / 9 pairs"]
+    exports["Reproducible exports<br/>source + output hashes"]
+    unresolved["Historical metadata<br/>3 unresolved references"]
+    fingerprint --> independent
+    independent --> prepared
+    prepared --> result
+    result --> exports
+    unresolved -->|"Disclose separately"| exports

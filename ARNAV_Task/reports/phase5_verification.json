@@ -1,0 +1,3034 @@
+{
+  "additional_real_visual_capture_session": {
+    "confirmed": 1153,
+    "distinct_count": 1153,
+    "elapsed_wall_s": 4.958047866821289,
+    "replay_id": "2d8299be-df68-478c-872a-fa316f455e23",
+    "status": "cancelled"
+  },
+  "application_url": "http://localhost:8501/live_replay",
+  "base": "b0c48284a48407b1b14242c579f39a1f27248e5f",
+  "branch": "arnav/d6-final-package",
+  "browser_all_eight_pages": [
+    {
+      "exceptions": 0,
+      "page": "Research overview"
+    },
+    {
+      "exceptions": 0,
+      "page": "Scheduler comparison"
+    },
+    {
+      "exceptions": 0,
+      "page": "Energy analysis"
+    },
+    {
+      "exceptions": 0,
+      "page": "Performance analysis"
+    },
+    {
+      "exceptions": 0,
+      "page": "Resource-skew analysis"
+    },
+    {
+      "exceptions": 0,
+      "page": "Research findings"
+    },
+    {
+      "exceptions": 0,
+      "page": "Reproducibility"
+    },
+    {
+      "exceptions": 0,
+      "page": "Live Workload Replay"
+    }
+  ],
+  "browser_failure_recovery": {
+    "broker_restored": true,
+    "broker_unavailable": {
+      "exceptions": 0,
+      "start_disabled": true
+    },
+    "cancelled": {
+      "confirmed": 3684,
+      "distinct_count": 3684,
+      "elapsed_wall_s": 33.97940397262573,
+      "replay_id": "ddf43e21-6b0b-4f31-96cd-e90ed77b9e8d",
+      "status": "cancelled"
+    },
+    "fast_1000": {
+      "average_instances_per_s": 6230.588239705514,
+      "distinct_count": 68457,
+      "elapsed_wall_s": 10.987245082855225,
+      "replay_id": "53cba36e-b1bd-49df-ac2e-8e88b9b49399",
+      "status": "complete"
+    },
+    "historical_download": {
+      "csv": true,
+      "distinct_count": 16534,
+      "json": true,
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38"
+    },
+    "offline_page_without_broker": true,
+    "second_browser": {
+      "exceptions": 0,
+      "start_disabled": true
+    }
+  },
+  "browser_full_250_at_600x": {
+    "average_instances_per_s": 227.43374473662848,
+    "elapsed_wall_s": 72.6980950832367,
+    "final_verification": {
+      "bounded_partial": false,
+      "compared_events": 16534,
+      "complete": true,
+      "confirmed_published": 16534,
+      "consumed_deliveries": 16534,
+      "consumer_status": "completed",
+      "distinct_instances": 16534,
+      "duplicate_deliveries": 0,
+      "errors": [],
+      "expected_instances": 16534,
+      "expected_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+      "groups": 250,
+      "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+      "invalid_messages": 0,
+      "passed": true,
+      "persisted_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+      "producer_status": "completed",
+      "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+      "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+      "sequence_gaps": 0,
+      "size": 250,
+      "verified_at": 1795754498.291146
+    },
+    "observations": [
+      {
+        "confirmed": 1000,
+        "consumed": 1190,
+        "distinct_count": 1190,
+        "elapsed_wall_s": 5.468252182006836,
+        "last_arrival": 3083,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 1000,
+        "consumed": 1477,
+        "distinct_count": 1477,
+        "elapsed_wall_s": 10.034510135650635,
+        "last_arrival": 5900,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 1500,
+        "consumed": 1997,
+        "distinct_count": 1997,
+        "elapsed_wall_s": 14.042119026184082,
+        "last_arrival": 8121,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 3500,
+        "consumed": 3848,
+        "distinct_count": 3848,
+        "elapsed_wall_s": 18.04679799079895,
+        "last_arrival": 10611,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 4500,
+        "consumed": 4626,
+        "distinct_count": 4626,
+        "elapsed_wall_s": 22.054483890533447,
+        "last_arrival": 13154,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 5000,
+        "consumed": 5322,
+        "distinct_count": 5322,
+        "elapsed_wall_s": 26.06154203414917,
+        "last_arrival": 15568,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 6000,
+        "consumed": 6192,
+        "distinct_count": 6192,
+        "elapsed_wall_s": 30.064772129058838,
+        "last_arrival": 17929,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 6500,
+        "consumed": 6571,
+        "distinct_count": 6571,
+        "elapsed_wall_s": 34.068947076797485,
+        "last_arrival": 20369,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 7500,
+        "consumed": 7794,
+        "distinct_count": 7794,
+        "elapsed_wall_s": 38.07080388069153,
+        "last_arrival": 22792,
+        "observed_lag": 191,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 8500,
+        "consumed": 8696,
+        "distinct_count": 8696,
+        "elapsed_wall_s": 42.07666301727295,
+        "last_arrival": 25174,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 9000,
+        "consumed": 9066,
+        "distinct_count": 9066,
+        "elapsed_wall_s": 46.07922005653381,
+        "last_arrival": 27582,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 9500,
+        "consumed": 9985,
+        "distinct_count": 9985,
+        "elapsed_wall_s": 50.08507013320923,
+        "last_arrival": 29820,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 10500,
+        "consumed": 10995,
+        "distinct_count": 10995,
+        "elapsed_wall_s": 54.08788514137268,
+        "last_arrival": 31678,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 11500,
+        "consumed": 11651,
+        "distinct_count": 11651,
+        "elapsed_wall_s": 58.09379601478577,
+        "last_arrival": 34690,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 12000,
+        "consumed": 12156,
+        "distinct_count": 12156,
+        "elapsed_wall_s": 62.09974408149719,
+        "last_arrival": 37017,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 14500,
+        "consumed": 14500,
+        "distinct_count": 14500,
+        "elapsed_wall_s": 66.10450291633606,
+        "last_arrival": 39627,
+        "observed_lag": 66,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 16000,
+        "consumed": 16006,
+        "distinct_count": 16006,
+        "elapsed_wall_s": 70.1094241142273,
+        "last_arrival": 41996,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "running"
+      },
+      {
+        "confirmed": 16534,
+        "consumed": 16534,
+        "distinct_count": 16534,
+        "elapsed_wall_s": 72.6980950832367,
+        "last_arrival": 42983,
+        "observed_lag": 0,
+        "session_lag": 0,
+        "status": "complete"
+      }
+    ],
+    "refresh_and_navigation_preserved_session": true,
+    "replay_id": "49dc2730-14b9-48a1-b05b-d2c3eb290b38",
+    "speed": 600
+  },
+  "browser_layout": [
+    {
+      "exceptions": 0,
+      "horizontal_overflow": false,
+      "navigation_sections": 8,
+      "width": 1152
+    },
+    {
+      "exceptions": 0,
+      "horizontal_overflow": false,
+      "navigation_sections": 8,
+      "width": 1440
+    }
+  ],
+  "final_state": {
+    "active_replay_workers": false,
+    "broker_healthy": true,
+    "dashboard_running": true,
+    "ready_for_phase6": true
+  },
+  "implementation": {
+    "broker_health": "Reused locked Kafka admin client; 10-second observation interval; explicit reconnect bypasses interval",
+    "controller_integration": "Validated subprocess argument lists invoking existing controller start --background / stop and explicit verifier",
+    "ingestion_semantics_changed": false,
+    "new_page": "Live Workload Replay",
+    "queries": "Read-only coherent SQLite WAL snapshots; 25 sessions/page and 600 observations/chart; no event-table scans per refresh",
+    "refresh": "Native fragment: 2 s following an active session, 15 s inspecting history during another active replay, otherwise no automatic poll",
+    "schema_extensions": [
+      "offset_samples: actual broker offset observations",
+      "verifications: existing verifier result receipts"
+    ],
+    "worker_lifecycle": "External controller process; no producer or consumer loop in Streamlit"
+  },
+  "implementation_issue_fixed": "Mixed active/completed history converts missing end times to NaN in Pandas. Timestamp formatting now handles missing/nonfinite values and has a regression test.",
+  "known_limitations": [
+    "Three historical research provenance hash references remain unresolved.",
+    "Arrival transport is not live scheduling, energy measurement, utilization, allocation or observed SLA outcomes.",
+    "Publication throughput history is not recorded; the UI shows actual acknowledged totals rather than an invented series.",
+    "Resource-skew composition is the whole verified source population; consumed skew aggregates are not inferred.",
+    "Controller acknowledgement totals persist in batches and can temporarily trail consumption.",
+    "Broker reachability is an observed check cached up to ten seconds, with its timestamp shown.",
+    "Old sessions may have no lag samples or detailed receipt; absence stays explicit until optional verification.",
+    "A dead controller requires documented controller/CLI recovery; the UI does not erase history or silently clear active state.",
+    "At-least-once transport with idempotent SQLite persistence; single broker, no high availability.",
+    "Measured timing/throughput are local transport observations, not scheduler benchmarks."
+  ],
+  "live_runtime_agent_checks": [
+    {
+      "page": "Research overview",
+      "status": "ready"
+    },
+    {
+      "page": "Scheduler comparison",
+      "status": "ready"
+    },
+    {
+      "page": "Energy analysis",
+      "status": "ready"
+    },
+    {
+      "page": "Performance analysis",
+      "status": "ready"
+    },
+    {
+      "page": "Resource-skew analysis",
+      "status": "ready"
+    },
+    {
+      "page": "Research findings",
+      "status": "ready"
+    },
+    {
+      "page": "Reproducibility",
+      "status": "ready"
+    },
+    {
+      "page": "Live Workload Replay",
+      "status": "ready"
+    }
+  ],
+  "offline_numerical_validation": {
+    "active_outcomes": 36,
+    "checks": [
+      "manifest and recorded validation coverage",
+      "run (250, 'hpe_dl360_gen9', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'hpe_dl360_gen9', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'hpe_dl360_gen9', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (250, 'hpe_dl360_gen9', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (250, 'huawei_rh2288h_v3', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'huawei_rh2288h_v3', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'huawei_rh2288h_v3', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (250, 'huawei_rh2288h_v3', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (250, 'quanta_d51b_2u', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'quanta_d51b_2u', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'quanta_d51b_2u', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (250, 'quanta_d51b_2u', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (1000, 'hpe_dl360_gen9', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'hpe_dl360_gen9', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'hpe_dl360_gen9', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (1000, 'hpe_dl360_gen9', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (1000, 'huawei_rh2288h_v3', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'huawei_rh2288h_v3', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'huawei_rh2288h_v3', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (1000, 'huawei_rh2288h_v3', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (1000, 'quanta_d51b_2u', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'quanta_d51b_2u', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'quanta_d51b_2u', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (1000, 'quanta_d51b_2u', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (4000, 'hpe_dl360_gen9', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'hpe_dl360_gen9', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'hpe_dl360_gen9', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (4000, 'hpe_dl360_gen9', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (4000, 'huawei_rh2288h_v3', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'huawei_rh2288h_v3', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'huawei_rh2288h_v3', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (4000, 'huawei_rh2288h_v3', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (4000, 'quanta_d51b_2u', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'quanta_d51b_2u', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'quanta_d51b_2u', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (4000, 'quanta_d51b_2u', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "nine primary pairs, 144 ordered comparisons and raw CSV consistency",
+      "D5 recordings, resource-skew outcomes, sampled series and energy accounting"
+    ],
+    "checks_passed": 39,
+    "completed_instance_replays": 5559312,
+    "d5": {
+      "recordings": 18,
+      "resource_skew_rows": 48,
+      "table_rows": {
+        "controller_diagnostics": 18,
+        "curve_band_watts": 30,
+        "outcomes_by_task_type": 48,
+        "pair_energy_gap": 9,
+        "placement_decisions": 18,
+        "placement_load_bands": 48,
+        "placement_score_arithmetic": 3,
+        "run_energy_breakdown": 36,
+        "servers_running_work": 18,
+        "tradeoffs": 9,
+        "workload_mix": 3
+      }
+    },
+    "errors": [],
+    "missing_optional_metrics": {},
+    "passed": true,
+    "per_curve_outcomes": {
+      "hpe_dl360_gen9": 12,
+      "huawei_rh2288h_v3": 12,
+      "quanta_d51b_2u": 12
+    },
+    "policy_comparisons": 144,
+    "primary_comparisons": 9,
+    "rejected_instances": 0,
+    "unfinished_instances": 0
+  },
+  "passed": true,
+  "phase": "D6 Phase 5 \u2014 live arrival replay dashboard",
+  "preservation": {
+    "committed": false,
+    "existing_d6_files_changed": [
+      "ARNAV_Task/README.md",
+      "ARNAV_Task/tests/test_dashboard_app.py",
+      "ARNAV_Task/dashboard/constants.py",
+      "ARNAV_Task/dashboard/app.py",
+      "ARNAV_Task/kafka/admin.py",
+      "ARNAV_Task/kafka/consumer.py",
+      "ARNAV_Task/kafka/state.py",
+      "ARNAV_Task/scripts/verify_replay.py"
+    ],
+    "new_files_before_this_report": [
+      "ARNAV_Task/tests/test_live_replay.py",
+      "ARNAV_Task/dashboard/replay_service.py",
+      "ARNAV_Task/dashboard/components/replay_charts.py",
+      "ARNAV_Task/dashboard/views/live_replay.py",
+      "ARNAV_Task/reports/phase5_screenshots/active_replay.png",
+      "ARNAV_Task/reports/phase5_screenshots/session_history.png",
+      "ARNAV_Task/reports/phase5_screenshots/completed_verified_replay.png",
+      "ARNAV_Task/reports/phase5_screenshots/idle_configuration.png",
+      "ARNAV_Task/reports/phase5_screenshots/broker_unavailable.png",
+      "ARNAV_Task/reports/phase5_screenshots/laptop_1152.png",
+      "ARNAV_Task/reports/phase5_screenshots/live_throughput_and_demand.png"
+    ],
+    "new_scheduler_simulations": 0,
+    "original_seven_view_scripts_unchanged": true,
+    "original_tracked_files_unchanged": 508,
+    "phase1_exports_unchanged": true,
+    "phase3_inputs_and_reports_unchanged": true,
+    "phase4_reports_unchanged": true,
+    "pushed": false
+  },
+  "python_version": "3.12.15",
+  "real_kafka_regression": {
+    "actual_kafka_message": {
+      "arrival_time_s": 77,
+      "cpu_request_cores": 0.5,
+      "event_type": "workload_arrival",
+      "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+      "instance_id": "raw_attempt_row_3382192",
+      "job_id": "7030",
+      "memory_request_normalized": 0.0040587062873709,
+      "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+      "resource_skew": "balanced",
+      "schema_version": 1,
+      "sequence": 1,
+      "task_group_id": "j7030_t41458",
+      "workload_groups": 250
+    },
+    "broker": {
+      "architecture": "arm64",
+      "health": "healthy",
+      "image": "apache/kafka:4.4.0@sha256:833b867a9585a141da455dc2b57431c65cbccb27f11c91f694444cca9f777e0f",
+      "memory_limit_bytes": 1610612736,
+      "topic": {
+        "brokers": [
+          {
+            "broker_id": 1,
+            "host": "127.0.0.1",
+            "is_fenced": false,
+            "port": 19092,
+            "rack": null
+          }
+        ],
+        "connected": true,
+        "partitions": 1,
+        "replication_factor": 1,
+        "topic": "ecosched.workload.arrivals.v1"
+      }
+    },
+    "database": "ARNAV_Task/.runtime/kafka/integration-3da6dc8a-a9d4-46f6-abc6-5ce07652b008.sqlite3",
+    "tests": {
+      "bounded_timed_replay": {
+        "metrics": {
+          "attempted": 250,
+          "average_instances_per_s": 139.11426523008376,
+          "bootstrap": "127.0.0.1:19092",
+          "broker_end": 2008686,
+          "confirmed": 250,
+          "conflicting_duplicates": 0,
+          "consumed": 250,
+          "consumer_status": "stopped",
+          "controller_pid": 92144,
+          "demand": [
+            {
+              "count": 250,
+              "cpu": 125.0,
+              "logical_bucket": 0,
+              "memory": 2.1551523309087957,
+              "replay_id": "42f40804-c6f0-423f-bc66-0acdbe8822ed"
+            }
+          ],
+          "distinct_count": 250,
+          "duplicates": 0,
+          "elapsed_wall_s": 1.797083854675293,
+          "end_offset": 2008686,
+          "ended_at": 1795754788.514407,
+          "errors": [],
+          "expected": 16534,
+          "gaps": 0,
+          "group_id": "ecosched.d6.replay-integration.42f40804-c6f0-423f-bc66-0acdbe8822ed",
+          "groups_encountered": 5,
+          "invalid": 0,
+          "lag_scope": "observed_lag is topic-partition lag at last consumer heartbeat; session_lag stops at this replay producer boundary.",
+          "last_arrival": 691,
+          "last_group": "j5972_t36424",
+          "last_source": 3577949,
+          "limit_events": 250,
+          "manifest": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+          "max_drift": 0.00517320865765214,
+          "metric_scope": "Live offered arrivals only; no allocated resources, energy, SLA or host utilization.",
+          "next_offset": 2008686,
+          "next_sequence": 251,
+          "observed_lag": 0,
+          "offered_cpu": 125.0,
+          "offered_memory": 2.1551523309087957,
+          "offset_history": [
+            {
+              "broker_end": 2008456,
+              "next_offset": 2008456,
+              "replay_id": "42f40804-c6f0-423f-bc66-0acdbe8822ed",
+              "session_lag": 0,
+              "topic_lag": 0,
+              "wall_second": 1795754786
+            },
+            {
+              "broker_end": 2008686,
+              "next_offset": 2008615,
+              "replay_id": "42f40804-c6f0-423f-bc66-0acdbe8822ed",
+              "session_lag": 71,
+              "topic_lag": 71,
+              "wall_second": 1795754787
+            },
+            {
+              "broker_end": 2008686,
+              "next_offset": 2008686,
+              "replay_id": "42f40804-c6f0-423f-bc66-0acdbe8822ed",
+              "session_lag": 0,
+              "topic_lag": 0,
+              "wall_second": 1795754788
+            }
+          ],
+          "producer_elapsed": 1.205373541917652,
+          "producer_status": "partial",
+          "progress_fraction": 0.015120358050078626,
+          "recent_10s_instances_per_s": 25.0,
+          "recent_window_s": 10,
+          "replay_id": "42f40804-c6f0-423f-bc66-0acdbe8822ed",
+          "session_lag": 0,
+          "size": 250,
+          "speed": 600.0,
+          "start_offset": 2008436,
+          "started_at": 1795754786.717323,
+          "status": "partial",
+          "stop_requested": 0,
+          "throughput": [
+            {
+              "count": 20,
+              "replay_id": "42f40804-c6f0-423f-bc66-0acdbe8822ed",
+              "wall_second": 1795754786
+            },
+            {
+              "count": 230,
+              "replay_id": "42f40804-c6f0-423f-bc66-0acdbe8822ed",
+              "wall_second": 1795754787
+            }
+          ],
+          "topic": "ecosched.workload.arrivals.v1",
+          "verification": {
+            "bounded_partial": true,
+            "compared_events": 250,
+            "complete": false,
+            "confirmed_published": 250,
+            "consumed_deliveries": 250,
+            "consumer_status": "stopped",
+            "distinct_instances": 250,
+            "duplicate_deliveries": 0,
+            "errors": [],
+            "expected_instances": 16534,
+            "expected_source_stream_sha256": "ca5615da4c1a3f250cea73389d82b179451ca6e6762eb133b5cd8e1c1e3d037b",
+            "groups": 5,
+            "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+            "invalid_messages": 0,
+            "passed": true,
+            "persisted_source_stream_sha256": "ca5615da4c1a3f250cea73389d82b179451ca6e6762eb133b5cd8e1c1e3d037b",
+            "producer_status": "partial",
+            "replay_id": "42f40804-c6f0-423f-bc66-0acdbe8822ed",
+            "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+            "sequence_gaps": 0,
+            "size": 250,
+            "verified_at": 1795754788.5139148
+          },
+          "workers": [
+            {
+              "at": 1795754788.47017,
+              "replay_id": "42f40804-c6f0-423f-bc66-0acdbe8822ed",
+              "status": "stopped",
+              "worker": "consumer"
+            },
+            {
+              "at": 1795754788.514571,
+              "replay_id": "42f40804-c6f0-423f-bc66-0acdbe8822ed",
+              "status": "partial",
+              "worker": "controller"
+            },
+            {
+              "at": 1795754787.93775,
+              "replay_id": "42f40804-c6f0-423f-bc66-0acdbe8822ed",
+              "status": "partial",
+              "worker": "producer"
+            }
+          ]
+        },
+        "test_elapsed_s": 1.941667458973825,
+        "verification": {
+          "bounded_partial": true,
+          "compared_events": 250,
+          "complete": false,
+          "confirmed_published": 250,
+          "consumed_deliveries": 250,
+          "consumer_status": "stopped",
+          "distinct_instances": 250,
+          "duplicate_deliveries": 0,
+          "errors": [],
+          "expected_instances": 16534,
+          "expected_source_stream_sha256": "ca5615da4c1a3f250cea73389d82b179451ca6e6762eb133b5cd8e1c1e3d037b",
+          "groups": 5,
+          "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+          "invalid_messages": 0,
+          "passed": true,
+          "persisted_source_stream_sha256": "ca5615da4c1a3f250cea73389d82b179451ca6e6762eb133b5cd8e1c1e3d037b",
+          "producer_status": "partial",
+          "replay_id": "42f40804-c6f0-423f-bc66-0acdbe8822ed",
+          "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+          "sequence_gaps": 0,
+          "size": 250
+        }
+      },
+      "broker_health_arm64_and_idempotent_admin": true,
+      "broker_unavailable_then_restarted": true,
+      "consumer_restart": {
+        "offset_before_restart": 1992170,
+        "persisted_before_restart": 268,
+        "verification": {
+          "bounded_partial": false,
+          "compared_events": 16534,
+          "complete": true,
+          "confirmed_published": 16534,
+          "consumed_deliveries": 16534,
+          "consumer_status": "completed",
+          "distinct_instances": 16534,
+          "duplicate_deliveries": 0,
+          "errors": [],
+          "expected_instances": 16534,
+          "expected_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+          "groups": 250,
+          "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+          "invalid_messages": 0,
+          "passed": true,
+          "persisted_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+          "producer_status": "completed",
+          "replay_id": "c6777a2e-ceea-4c2c-b6ce-265094ebe081",
+          "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+          "sequence_gaps": 0,
+          "size": 250
+        }
+      },
+      "controller_stop_and_duplicate_rejection": {
+        "confirmed": 1,
+        "distinct": 1,
+        "status": "cancelled",
+        "worker_running": false
+      },
+      "duplicate_redelivery": {
+        "next_offset": 1545160,
+        "verification": {
+          "bounded_partial": false,
+          "compared_events": 16534,
+          "complete": true,
+          "confirmed_published": 16534,
+          "consumed_deliveries": 33068,
+          "consumer_status": "completed",
+          "distinct_instances": 16534,
+          "duplicate_deliveries": 16534,
+          "errors": [],
+          "expected_instances": 16534,
+          "expected_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+          "groups": 250,
+          "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+          "invalid_messages": 0,
+          "passed": true,
+          "persisted_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+          "producer_status": "completed",
+          "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+          "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+          "sequence_gaps": 0,
+          "size": 250
+        }
+      },
+      "full_1000_verified": true,
+      "full_250_verified": true,
+      "full_4000_verified": true,
+      "session_isolation": true
+    },
+    "workloads": [
+      {
+        "metrics": {
+          "attempted": 16534,
+          "average_instances_per_s": 4509.778762571461,
+          "bootstrap": "127.0.0.1:19092",
+          "broker_end": 1545160,
+          "confirmed": 16534,
+          "conflicting_duplicates": 0,
+          "consumed": 16534,
+          "consumer_status": "completed",
+          "controller_pid": 92144,
+          "demand": [
+            {
+              "count": 263,
+              "cpu": 131.5,
+              "logical_bucket": 0,
+              "memory": 2.26054409442703,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 347,
+              "cpu": 174.5,
+              "logical_bucket": 900,
+              "memory": 2.7425154660523368,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 543,
+              "cpu": 533.0,
+              "logical_bucket": 1800,
+              "memory": 3.064768462195511,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 189,
+              "cpu": 170.5,
+              "logical_bucket": 2700,
+              "memory": 1.116910413377167,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 63,
+              "cpu": 62.5,
+              "logical_bucket": 3600,
+              "memory": 0.34049646675122275,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 12,
+              "cpu": 11.5,
+              "logical_bucket": 4500,
+              "memory": 0.06345352418916472,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 224,
+              "cpu": 179.5,
+              "logical_bucket": 5400,
+              "memory": 1.4399554784769506,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 165,
+              "cpu": 161.5,
+              "logical_bucket": 6300,
+              "memory": 0.8826961406051848,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 163,
+              "cpu": 84.0,
+              "logical_bucket": 7200,
+              "memory": 1.2903786917919915,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 539,
+              "cpu": 535.5,
+              "logical_bucket": 8100,
+              "memory": 2.926063210208869,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 1175,
+              "cpu": 611.5,
+              "logical_bucket": 9000,
+              "memory": 8.9237801879224,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 165,
+              "cpu": 82.4,
+              "logical_bucket": 9900,
+              "memory": 1.3368622680092181,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 379,
+              "cpu": 378.0,
+              "logical_bucket": 10800,
+              "memory": 3.9846763129966725,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 393,
+              "cpu": 391.0,
+              "logical_bucket": 11700,
+              "memory": 4.14258794295034,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 293,
+              "cpu": 167.0,
+              "logical_bucket": 12600,
+              "memory": 2.227240959801193,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 274,
+              "cpu": 139.0,
+              "logical_bucket": 13500,
+              "memory": 1.6747081510625532,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 134,
+              "cpu": 68.0,
+              "logical_bucket": 14400,
+              "memory": 1.0448424921699089,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 237,
+              "cpu": 118.5,
+              "logical_bucket": 15300,
+              "memory": 1.41242461108378,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 354,
+              "cpu": 177.5,
+              "logical_bucket": 16200,
+              "memory": 2.9423756891776556,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 280,
+              "cpu": 139.9,
+              "logical_bucket": 17100,
+              "memory": 2.700069888437333,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 13,
+              "cpu": 7.0,
+              "logical_bucket": 18000,
+              "memory": 0.09812854295550434,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 84,
+              "cpu": 83.4,
+              "logical_bucket": 18900,
+              "memory": 1.3326430771620124,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 328,
+              "cpu": 291.5,
+              "logical_bucket": 19800,
+              "memory": 2.158444852846008,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 545,
+              "cpu": 278.0,
+              "logical_bucket": 20700,
+              "memory": 4.529045116869016,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 496,
+              "cpu": 248.5,
+              "logical_bucket": 21600,
+              "memory": 4.104335671576096,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 424,
+              "cpu": 212.5,
+              "logical_bucket": 22500,
+              "memory": 2.9927367794372803,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 321,
+              "cpu": 173.0,
+              "logical_bucket": 23400,
+              "memory": 3.107177801361523,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 293,
+              "cpu": 148.0,
+              "logical_bucket": 24300,
+              "memory": 2.5278958403437297,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 156,
+              "cpu": 77.9,
+              "logical_bucket": 25200,
+              "memory": 1.9952424093391563,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 10,
+              "cpu": 5.5,
+              "logical_bucket": 26100,
+              "memory": 0.07776253462066111,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 204,
+              "cpu": 155.0,
+              "logical_bucket": 27000,
+              "memory": 1.7204669582998922,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 734,
+              "cpu": 372.0,
+              "logical_bucket": 27900,
+              "memory": 5.886092200968101,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 184,
+              "cpu": 180.5,
+              "logical_bucket": 28800,
+              "memory": 1.0181813475526136,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 12,
+              "cpu": 12.0,
+              "logical_bucket": 29700,
+              "memory": 0.06485646985737584,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 964,
+              "cpu": 482.0,
+              "logical_bucket": 30600,
+              "memory": 11.63371211140733,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 35,
+              "cpu": 35.0,
+              "logical_bucket": 31500,
+              "memory": 0.18916470375067942,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 236,
+              "cpu": 118.0,
+              "logical_bucket": 32400,
+              "memory": 1.922387596096597,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 383,
+              "cpu": 191.5,
+              "logical_bucket": 33300,
+              "memory": 2.971552817539391,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 212,
+              "cpu": 124.0,
+              "logical_bucket": 34200,
+              "memory": 1.5974684854916772,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 178,
+              "cpu": 147.5,
+              "logical_bucket": 35100,
+              "memory": 1.184427820774984,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 144,
+              "cpu": 91.5,
+              "logical_bucket": 36000,
+              "memory": 1.0720679212072572,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 843,
+              "cpu": 421.5,
+              "logical_bucket": 36900,
+              "memory": 8.48619573939365,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 980,
+              "cpu": 491.5,
+              "logical_bucket": 37800,
+              "memory": 9.313110553153898,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 509,
+              "cpu": 254.5,
+              "logical_bucket": 38700,
+              "memory": 4.320580850568186,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 490,
+              "cpu": 258.0,
+              "logical_bucket": 39600,
+              "memory": 4.542743250588892,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 433,
+              "cpu": 239.0,
+              "logical_bucket": 40500,
+              "memory": 3.999145807988012,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 607,
+              "cpu": 303.5,
+              "logical_bucket": 41400,
+              "memory": 5.894944736365333,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            },
+            {
+              "count": 524,
+              "cpu": 270.4,
+              "logical_bucket": 42300,
+              "memory": 2.3664949654440526,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9"
+            }
+          ],
+          "distinct_count": 16534,
+          "duplicates": 0,
+          "elapsed_wall_s": 3.666255235671997,
+          "end_offset": 1545160,
+          "ended_at": 1795754717.0359712,
+          "errors": [],
+          "expected": 16534,
+          "gaps": 0,
+          "group_id": "ecosched.d6.replay-integration.917f9844-5a38-44c3-b193-b91fe7b009f9",
+          "groups_encountered": 250,
+          "invalid": 0,
+          "lag_scope": "observed_lag is topic-partition lag at last consumer heartbeat; session_lag stops at this replay producer boundary.",
+          "last_arrival": 42983,
+          "last_group": "j7376_t44656",
+          "last_source": 4498314,
+          "limit_events": null,
+          "manifest": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+          "max_drift": 0.0,
+          "metric_scope": "Live offered arrivals only; no allocated resources, energy, SLA or host utilization.",
+          "next_offset": 1545160,
+          "next_sequence": 16535,
+          "observed_lag": 0,
+          "offered_cpu": 9989.499999999998,
+          "offered_memory": 137.62435741463423,
+          "offset_history": [
+            {
+              "broker_end": 1531626,
+              "next_offset": 1530760,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+              "session_lag": 866,
+              "topic_lag": 866,
+              "wall_second": 1795754713
+            },
+            {
+              "broker_end": 1539956,
+              "next_offset": 1536376,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+              "session_lag": 3250,
+              "topic_lag": 3580,
+              "wall_second": 1795754714
+            },
+            {
+              "broker_end": 1545160,
+              "next_offset": 1545126,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+              "session_lag": 34,
+              "topic_lag": 34,
+              "wall_second": 1795754715
+            },
+            {
+              "broker_end": 1545160,
+              "next_offset": 1545160,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+              "session_lag": 0,
+              "topic_lag": 0,
+              "wall_second": 1795754716
+            }
+          ],
+          "producer_elapsed": 2.2234226251021028,
+          "producer_status": "completed",
+          "progress_fraction": 1.0,
+          "recent_10s_instances_per_s": 1653.4,
+          "recent_window_s": 10,
+          "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+          "session_lag": 0,
+          "size": 250,
+          "speed": 0.0,
+          "start_offset": 1528626,
+          "started_at": 1795754713.369716,
+          "status": "complete",
+          "stop_requested": 0,
+          "throughput": [
+            {
+              "count": 2134,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+              "wall_second": 1795754713
+            },
+            {
+              "count": 5616,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+              "wall_second": 1795754714
+            },
+            {
+              "count": 8784,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+              "wall_second": 1795754715
+            }
+          ],
+          "topic": "ecosched.workload.arrivals.v1",
+          "verification": {
+            "bounded_partial": false,
+            "compared_events": 16534,
+            "complete": true,
+            "confirmed_published": 16534,
+            "consumed_deliveries": 16534,
+            "consumer_status": "completed",
+            "distinct_instances": 16534,
+            "duplicate_deliveries": 0,
+            "errors": [],
+            "expected_instances": 16534,
+            "expected_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+            "groups": 250,
+            "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+            "invalid_messages": 0,
+            "passed": true,
+            "persisted_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+            "producer_status": "completed",
+            "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+            "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+            "sequence_gaps": 0,
+            "size": 250,
+            "verified_at": 1795754717.0358558
+          },
+          "workers": [
+            {
+              "at": 1795754716.492484,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+              "status": "completed",
+              "worker": "consumer"
+            },
+            {
+              "at": 1795754717.036099,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+              "status": "complete",
+              "worker": "controller"
+            },
+            {
+              "at": 1795754715.618753,
+              "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+              "status": "completed",
+              "worker": "producer"
+            }
+          ]
+        },
+        "verification": {
+          "bounded_partial": false,
+          "compared_events": 16534,
+          "complete": true,
+          "confirmed_published": 16534,
+          "consumed_deliveries": 16534,
+          "consumer_status": "completed",
+          "distinct_instances": 16534,
+          "duplicate_deliveries": 0,
+          "errors": [],
+          "expected_instances": 16534,
+          "expected_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+          "groups": 250,
+          "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+          "invalid_messages": 0,
+          "passed": true,
+          "persisted_source_stream_sha256": "bdd55b9e3e25240e953c6626c969905a5186e857fab9b87a443ab83195cc14fd",
+          "producer_status": "completed",
+          "replay_id": "917f9844-5a38-44c3-b193-b91fe7b009f9",
+          "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+          "sequence_gaps": 0,
+          "size": 250
+        }
+      },
+      {
+        "metrics": {
+          "attempted": 68457,
+          "average_instances_per_s": 6399.45375821672,
+          "bootstrap": "127.0.0.1:19092",
+          "broker_end": 1613617,
+          "confirmed": 68457,
+          "conflicting_duplicates": 0,
+          "consumed": 68457,
+          "consumer_status": "completed",
+          "controller_pid": 92144,
+          "demand": [
+            {
+              "count": 1576,
+              "cpu": 789.0,
+              "logical_bucket": 0,
+              "memory": 15.266751223047326,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1161,
+              "cpu": 633.5,
+              "logical_bucket": 900,
+              "memory": 10.846768306887995,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 2361,
+              "cpu": 1514.0,
+              "logical_bucket": 1800,
+              "memory": 21.1300287319129,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 855,
+              "cpu": 598.0,
+              "logical_bucket": 2700,
+              "memory": 7.319172727978688,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 403,
+              "cpu": 255.5,
+              "logical_bucket": 3600,
+              "memory": 3.7413817202909168,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 938,
+              "cpu": 475.0,
+              "logical_bucket": 4500,
+              "memory": 9.257225687883379,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 2124,
+              "cpu": 1491.5,
+              "logical_bucket": 5400,
+              "memory": 24.04981233660347,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 930,
+              "cpu": 561.5,
+              "logical_bucket": 6300,
+              "memory": 9.478611549711498,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1212,
+              "cpu": 610.0,
+              "logical_bucket": 7200,
+              "memory": 12.414914710221915,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1343,
+              "cpu": 1027.0,
+              "logical_bucket": 8100,
+              "memory": 11.248430098620355,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 2229,
+              "cpu": 1273.8999999999928,
+              "logical_bucket": 9000,
+              "memory": 17.88087386431284,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1013,
+              "cpu": 514.9,
+              "logical_bucket": 9900,
+              "memory": 9.408966427665412,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1397,
+              "cpu": 1181.0500000000002,
+              "logical_bucket": 10800,
+              "memory": 13.795480547718308,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 922,
+              "cpu": 780.9,
+              "logical_bucket": 11700,
+              "memory": 8.70061864209361,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 5593,
+              "cpu": 2835.0,
+              "logical_bucket": 12600,
+              "memory": 30.376315585122757,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 2329,
+              "cpu": 1736.0,
+              "logical_bucket": 13500,
+              "memory": 18.315264152408545,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 2119,
+              "cpu": 1087.7999999999997,
+              "logical_bucket": 14400,
+              "memory": 21.766060104056002,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1056,
+              "cpu": 656.5,
+              "logical_bucket": 15300,
+              "memory": 8.349260994486555,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 818,
+              "cpu": 477.0999999999996,
+              "logical_bucket": 16200,
+              "memory": 7.954691584914482,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 648,
+              "cpu": 380.9,
+              "logical_bucket": 17100,
+              "memory": 6.338725959671847,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 301,
+              "cpu": 237.5,
+              "logical_bucket": 18000,
+              "memory": 2.185623689591793,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 434,
+              "cpu": 264.4,
+              "logical_bucket": 18900,
+              "memory": 4.817399632438594,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1468,
+              "cpu": 865.5,
+              "logical_bucket": 19800,
+              "memory": 14.370108456501017,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1575,
+              "cpu": 806.5,
+              "logical_bucket": 20700,
+              "memory": 14.647322237465438,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1443,
+              "cpu": 809.3499999999957,
+              "logical_bucket": 21600,
+              "memory": 15.829596458986142,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1297,
+              "cpu": 674.5,
+              "logical_bucket": 22500,
+              "memory": 11.717226205575564,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 891,
+              "cpu": 503.0,
+              "logical_bucket": 23400,
+              "memory": 10.224988999042335,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1698,
+              "cpu": 855.5,
+              "logical_bucket": 24300,
+              "memory": 20.391080164625922,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1191,
+              "cpu": 645.9,
+              "logical_bucket": 25200,
+              "memory": 14.318706805063037,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1270,
+              "cpu": 636.5,
+              "logical_bucket": 26100,
+              "memory": 8.771071363859996,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1642,
+              "cpu": 878.0,
+              "logical_bucket": 27000,
+              "memory": 15.681319079543243,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1498,
+              "cpu": 835.75,
+              "logical_bucket": 27900,
+              "memory": 13.712256361142039,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 977,
+              "cpu": 736.5,
+              "logical_bucket": 28800,
+              "memory": 8.919219320270297,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 176,
+              "cpu": 102.0,
+              "logical_bucket": 29700,
+              "memory": 1.9518183936013167,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 2702,
+              "cpu": 1923.5,
+              "logical_bucket": 30600,
+              "memory": 23.902591049103037,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 749,
+              "cpu": 399.5,
+              "logical_bucket": 31500,
+              "memory": 8.413004426267777,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1061,
+              "cpu": 531.0,
+              "logical_bucket": 32400,
+              "memory": 9.311065669246497,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1132,
+              "cpu": 587.5,
+              "logical_bucket": 33300,
+              "memory": 7.837061579478869,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 697,
+              "cpu": 422.0,
+              "logical_bucket": 34200,
+              "memory": 7.550358501798984,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 619,
+              "cpu": 398.5,
+              "logical_bucket": 35100,
+              "memory": 5.730334170268924,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 878,
+              "cpu": 503.0,
+              "logical_bucket": 36000,
+              "memory": 8.269262029870987,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1523,
+              "cpu": 826.0,
+              "logical_bucket": 36900,
+              "memory": 14.385204358967405,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 2279,
+              "cpu": 1145.0,
+              "logical_bucket": 37800,
+              "memory": 27.2738539590506,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1693,
+              "cpu": 878.0500000000052,
+              "logical_bucket": 38700,
+              "memory": 15.556006522920839,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 2061,
+              "cpu": 1066.5,
+              "logical_bucket": 39600,
+              "memory": 21.85334817384207,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1752,
+              "cpu": 923.0,
+              "logical_bucket": 40500,
+              "memory": 17.471954028939404,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 3351,
+              "cpu": 1685.0,
+              "logical_bucket": 41400,
+              "memory": 31.732694846374585,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            },
+            {
+              "count": 1072,
+              "cpu": 546.9,
+              "logical_bucket": 42300,
+              "memory": 7.684751378355248,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491"
+            }
+          ],
+          "distinct_count": 68457,
+          "duplicates": 0,
+          "elapsed_wall_s": 10.697319269180298,
+          "end_offset": 1613617,
+          "ended_at": 1795754728.1475031,
+          "errors": [],
+          "expected": 68457,
+          "gaps": 0,
+          "group_id": "ecosched.d6.replay-integration.9ebc519c-cd37-4717-8099-303499561491",
+          "groups_encountered": 1000,
+          "invalid": 0,
+          "lag_scope": "observed_lag is topic-partition lag at last consumer heartbeat; session_lag stops at this replay producer boundary.",
+          "last_arrival": 43183,
+          "last_group": "j4153_t25037",
+          "last_source": 10253309,
+          "limit_events": null,
+          "manifest": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+          "max_drift": 0.0,
+          "metric_scope": "Live offered arrivals only; no allocated resources, energy, SLA or host utilization.",
+          "next_offset": 1613617,
+          "next_sequence": 68458,
+          "observed_lag": 0,
+          "offered_cpu": 39565.400000001806,
+          "offered_memory": 632.1485828178674,
+          "offset_history": [
+            {
+              "broker_end": 1547793,
+              "next_offset": 1547292,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "session_lag": 368,
+              "topic_lag": 501,
+              "wall_second": 1795754717
+            },
+            {
+              "broker_end": 1556160,
+              "next_offset": 1554042,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "session_lag": 1618,
+              "topic_lag": 2118,
+              "wall_second": 1795754718
+            },
+            {
+              "broker_end": 1566160,
+              "next_offset": 1559240,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "session_lag": 6920,
+              "topic_lag": 6920,
+              "wall_second": 1795754719
+            },
+            {
+              "broker_end": 1576726,
+              "next_offset": 1565292,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "session_lag": 11368,
+              "topic_lag": 11434,
+              "wall_second": 1795754720
+            },
+            {
+              "broker_end": 1586058,
+              "next_offset": 1571556,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "session_lag": 14104,
+              "topic_lag": 14502,
+              "wall_second": 1795754721
+            },
+            {
+              "broker_end": 1594660,
+              "next_offset": 1578424,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "session_lag": 15736,
+              "topic_lag": 16236,
+              "wall_second": 1795754722
+            },
+            {
+              "broker_end": 1603660,
+              "next_offset": 1585044,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "session_lag": 18616,
+              "topic_lag": 18616,
+              "wall_second": 1795754723
+            },
+            {
+              "broker_end": 1612660,
+              "next_offset": 1591872,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "session_lag": 20288,
+              "topic_lag": 20788,
+              "wall_second": 1795754724
+            },
+            {
+              "broker_end": 1613617,
+              "next_offset": 1605726,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "session_lag": 7891,
+              "topic_lag": 7891,
+              "wall_second": 1795754725
+            },
+            {
+              "broker_end": 1613617,
+              "next_offset": 1613410,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "session_lag": 207,
+              "topic_lag": 207,
+              "wall_second": 1795754726
+            },
+            {
+              "broker_end": 1613617,
+              "next_offset": 1613617,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "session_lag": 0,
+              "topic_lag": 0,
+              "wall_second": 1795754727
+            }
+          ],
+          "producer_elapsed": 7.600903333979659,
+          "producer_status": "completed",
+          "progress_fraction": 1.0,
+          "recent_10s_instances_per_s": 5932.5,
+          "recent_window_s": 10,
+          "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+          "session_lag": 0,
+          "size": 1000,
+          "speed": 0.0,
+          "start_offset": 1545160,
+          "started_at": 1795754717.4501839,
+          "status": "complete",
+          "stop_requested": 0,
+          "throughput": [
+            {
+              "count": 2382,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "wall_second": 1795754717
+            },
+            {
+              "count": 6750,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "wall_second": 1795754718
+            },
+            {
+              "count": 5198,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "wall_second": 1795754719
+            },
+            {
+              "count": 5802,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "wall_second": 1795754720
+            },
+            {
+              "count": 6264,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "wall_second": 1795754721
+            },
+            {
+              "count": 6868,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "wall_second": 1795754722
+            },
+            {
+              "count": 6620,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "wall_second": 1795754723
+            },
+            {
+              "count": 6828,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "wall_second": 1795754724
+            },
+            {
+              "count": 13983,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "wall_second": 1795754725
+            },
+            {
+              "count": 7762,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "wall_second": 1795754726
+            }
+          ],
+          "topic": "ecosched.workload.arrivals.v1",
+          "verification": {
+            "bounded_partial": false,
+            "compared_events": 68457,
+            "complete": true,
+            "confirmed_published": 68457,
+            "consumed_deliveries": 68457,
+            "consumer_status": "completed",
+            "distinct_instances": 68457,
+            "duplicate_deliveries": 0,
+            "errors": [],
+            "expected_instances": 68457,
+            "expected_source_stream_sha256": "21e3f18050086c1579847e20ff54991f4ee992f0c89cf9cbdf90c3433a86576e",
+            "groups": 1000,
+            "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+            "invalid_messages": 0,
+            "passed": true,
+            "persisted_source_stream_sha256": "21e3f18050086c1579847e20ff54991f4ee992f0c89cf9cbdf90c3433a86576e",
+            "producer_status": "completed",
+            "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+            "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+            "sequence_gaps": 0,
+            "size": 1000,
+            "verified_at": 1795754728.147207
+          },
+          "workers": [
+            {
+              "at": 1795754727.087728,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "status": "completed",
+              "worker": "consumer"
+            },
+            {
+              "at": 1795754728.147653,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "status": "complete",
+              "worker": "controller"
+            },
+            {
+              "at": 1795754725.097705,
+              "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+              "status": "completed",
+              "worker": "producer"
+            }
+          ]
+        },
+        "verification": {
+          "bounded_partial": false,
+          "compared_events": 68457,
+          "complete": true,
+          "confirmed_published": 68457,
+          "consumed_deliveries": 68457,
+          "consumer_status": "completed",
+          "distinct_instances": 68457,
+          "duplicate_deliveries": 0,
+          "errors": [],
+          "expected_instances": 68457,
+          "expected_source_stream_sha256": "21e3f18050086c1579847e20ff54991f4ee992f0c89cf9cbdf90c3433a86576e",
+          "groups": 1000,
+          "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+          "invalid_messages": 0,
+          "passed": true,
+          "persisted_source_stream_sha256": "21e3f18050086c1579847e20ff54991f4ee992f0c89cf9cbdf90c3433a86576e",
+          "producer_status": "completed",
+          "replay_id": "9ebc519c-cd37-4717-8099-303499561491",
+          "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+          "sequence_gaps": 0,
+          "size": 1000
+        }
+      },
+      {
+        "metrics": {
+          "attempted": 378285,
+          "average_instances_per_s": 7192.865121121361,
+          "bootstrap": "127.0.0.1:19092",
+          "broker_end": 1991902,
+          "confirmed": 378285,
+          "conflicting_duplicates": 0,
+          "consumed": 378285,
+          "consumer_status": "completed",
+          "controller_pid": 92144,
+          "demand": [
+            {
+              "count": 6130,
+              "cpu": 3174.5,
+              "logical_bucket": 0,
+              "memory": 52.50352807185422,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 7381,
+              "cpu": 4953.5,
+              "logical_bucket": 900,
+              "memory": 81.25300649703388,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 10202,
+              "cpu": 6409.999999999911,
+              "logical_bucket": 1800,
+              "memory": 99.65567778842232,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 3987,
+              "cpu": 2602.5,
+              "logical_bucket": 2700,
+              "memory": 33.56377190484836,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 4211,
+              "cpu": 2287.999999999997,
+              "logical_bucket": 3600,
+              "memory": 28.960054875368193,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 3645,
+              "cpu": 2087.0,
+              "logical_bucket": 4500,
+              "memory": 35.93552662231849,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 8879,
+              "cpu": 5247.700000000006,
+              "logical_bucket": 5400,
+              "memory": 100.55007377112187,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 10523,
+              "cpu": 5711.75,
+              "logical_bucket": 6300,
+              "memory": 72.816773224957,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 3379,
+              "cpu": 1973.750000000001,
+              "logical_bucket": 7200,
+              "memory": 30.647337768228837,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 36245,
+              "cpu": 19807.5,
+              "logical_bucket": 8100,
+              "memory": 184.74991846363457,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 12457,
+              "cpu": 7236.899999999885,
+              "logical_bucket": 9000,
+              "memory": 114.36904201069348,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 3808,
+              "cpu": 2376.4499999999953,
+              "logical_bucket": 9900,
+              "memory": 34.59388087904113,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 6045,
+              "cpu": 4876.250000000003,
+              "logical_bucket": 10800,
+              "memory": 55.60161002251922,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 7337,
+              "cpu": 4261.050000000014,
+              "logical_bucket": 11700,
+              "memory": 65.1331504154441,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 11898,
+              "cpu": 6785.949999999987,
+              "logical_bucket": 12600,
+              "memory": 86.46824217636261,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 12954,
+              "cpu": 7593.5,
+              "logical_bucket": 13500,
+              "memory": 96.60824683561408,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 7199,
+              "cpu": 5229.700000000053,
+              "logical_bucket": 14400,
+              "memory": 53.78985841120251,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 7443,
+              "cpu": 4303.5,
+              "logical_bucket": 15300,
+              "memory": 49.26119638650678,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 10055,
+              "cpu": 5307.599999999978,
+              "logical_bucket": 16200,
+              "memory": 61.47797996530942,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 5646,
+              "cpu": 4013.9,
+              "logical_bucket": 17100,
+              "memory": 119.97201874044833,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 2366,
+              "cpu": 1346.0,
+              "logical_bucket": 18000,
+              "memory": 16.92104677348398,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 1774,
+              "cpu": 1003.4,
+              "logical_bucket": 18900,
+              "memory": 18.8535914891414,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 7148,
+              "cpu": 4319.65,
+              "logical_bucket": 19800,
+              "memory": 60.845054745937105,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 6414,
+              "cpu": 3330.0,
+              "logical_bucket": 20700,
+              "memory": 53.26645096160523,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 7184,
+              "cpu": 3791.7500000000173,
+              "logical_bucket": 21600,
+              "memory": 73.67218699039381,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 12528,
+              "cpu": 6610.5,
+              "logical_bucket": 22500,
+              "memory": 74.7682861802065,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 8946,
+              "cpu": 4864.15,
+              "logical_bucket": 23400,
+              "memory": 58.78437087464698,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 5354,
+              "cpu": 2840.5000000000896,
+              "logical_bucket": 24300,
+              "memory": 53.21864209354739,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 7022,
+              "cpu": 3683.35,
+              "logical_bucket": 25200,
+              "memory": 74.6174255170434,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 3477,
+              "cpu": 1876.5,
+              "logical_bucket": 26100,
+              "memory": 28.705246809722027,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 6931,
+              "cpu": 4005.2499999999827,
+              "logical_bucket": 27000,
+              "memory": 61.200988791960484,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 7914,
+              "cpu": 4730.299999999999,
+              "logical_bucket": 27900,
+              "memory": 72.9837030517836,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 4994,
+              "cpu": 3258.0,
+              "logical_bucket": 28800,
+              "memory": 42.49372298294109,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 7405,
+              "cpu": 5897.29999999961,
+              "logical_bucket": 29700,
+              "memory": 69.38495586674249,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 13831,
+              "cpu": 7698.799999999999,
+              "logical_bucket": 30600,
+              "memory": 158.02071286205694,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 2131,
+              "cpu": 1151.4,
+              "logical_bucket": 31500,
+              "memory": 23.902461626070878,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 4782,
+              "cpu": 3072.3,
+              "logical_bucket": 32400,
+              "memory": 39.71407346051453,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 2788,
+              "cpu": 1606.4,
+              "logical_bucket": 33300,
+              "memory": 26.43989335542164,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 4376,
+              "cpu": 3566.5,
+              "logical_bucket": 34200,
+              "memory": 30.882033494680844,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 5671,
+              "cpu": 3324.0,
+              "logical_bucket": 35100,
+              "memory": 47.67864778816298,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 4761,
+              "cpu": 2725.199999999999,
+              "logical_bucket": 36000,
+              "memory": 41.741298889550976,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 13635,
+              "cpu": 7150.049999999975,
+              "logical_bucket": 36900,
+              "memory": 101.87134315224318,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 9353,
+              "cpu": 6752.0,
+              "logical_bucket": 37800,
+              "memory": 74.43726865633674,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 6400,
+              "cpu": 3283.5499999999893,
+              "logical_bucket": 38700,
+              "memory": 59.0044935676728,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 4194,
+              "cpu": 2277.0,
+              "logical_bucket": 39600,
+              "memory": 41.659249864107096,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 12304,
+              "cpu": 6916.5,
+              "logical_bucket": 40500,
+              "memory": 139.3798255377409,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 20413,
+              "cpu": 10531.0,
+              "logical_bucket": 41400,
+              "memory": 192.0232081381423,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            },
+            {
+              "count": 4765,
+              "cpu": 2634.9500000000958,
+              "logical_bucket": 42300,
+              "memory": 41.55792716071572,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39"
+            }
+          ],
+          "distinct_count": 378285,
+          "duplicates": 0,
+          "elapsed_wall_s": 52.59169936180115,
+          "end_offset": 1991902,
+          "ended_at": 1795754780.8887832,
+          "errors": [],
+          "expected": 378285,
+          "gaps": 0,
+          "group_id": "ecosched.d6.replay-integration.c0f0c0b2-8884-4816-873b-af1034306f39",
+          "groups_encountered": 4000,
+          "invalid": 0,
+          "lag_scope": "observed_lag is topic-partition lag at last consumer heartbeat; session_lag stops at this replay producer boundary.",
+          "last_arrival": 43184,
+          "last_group": "j7394_t44830",
+          "last_source": 3838801,
+          "limit_events": null,
+          "manifest": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+          "max_drift": 0.0,
+          "metric_scope": "Live offered arrivals only; no allocated resources, energy, SLA or host utilization.",
+          "next_offset": 1991902,
+          "next_sequence": 378286,
+          "observed_lag": 0,
+          "offered_cpu": 220487.29999996343,
+          "offered_memory": 3235.939005514846,
+          "offset_history": [
+            {
+              "broker_end": 1619117,
+              "next_offset": 1616815,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 2302,
+              "topic_lag": 2302,
+              "wall_second": 1795754728
+            },
+            {
+              "broker_end": 1629117,
+              "next_offset": 1623135,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 5982,
+              "topic_lag": 5982,
+              "wall_second": 1795754729
+            },
+            {
+              "broker_end": 1639184,
+              "next_offset": 1628999,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 10118,
+              "topic_lag": 10185,
+              "wall_second": 1795754730
+            },
+            {
+              "broker_end": 1648447,
+              "next_offset": 1635829,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 12288,
+              "topic_lag": 12618,
+              "wall_second": 1795754731
+            },
+            {
+              "broker_end": 1657684,
+              "next_offset": 1642617,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 15000,
+              "topic_lag": 15067,
+              "wall_second": 1795754732
+            },
+            {
+              "broker_end": 1667117,
+              "next_offset": 1650263,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 16854,
+              "topic_lag": 16854,
+              "wall_second": 1795754733
+            },
+            {
+              "broker_end": 1676617,
+              "next_offset": 1656315,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 20302,
+              "topic_lag": 20302,
+              "wall_second": 1795754734
+            },
+            {
+              "broker_end": 1686117,
+              "next_offset": 1663183,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 22934,
+              "topic_lag": 22934,
+              "wall_second": 1795754735
+            },
+            {
+              "broker_end": 1696117,
+              "next_offset": 1669831,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 26286,
+              "topic_lag": 26286,
+              "wall_second": 1795754736
+            },
+            {
+              "broker_end": 1705683,
+              "next_offset": 1676197,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 29420,
+              "topic_lag": 29486,
+              "wall_second": 1795754737
+            },
+            {
+              "broker_end": 1715117,
+              "next_offset": 1683197,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 31920,
+              "topic_lag": 31920,
+              "wall_second": 1795754738
+            },
+            {
+              "broker_end": 1725381,
+              "next_offset": 1689315,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 35802,
+              "topic_lag": 36066,
+              "wall_second": 1795754739
+            },
+            {
+              "broker_end": 1735117,
+              "next_offset": 1695579,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 39538,
+              "topic_lag": 39538,
+              "wall_second": 1795754740
+            },
+            {
+              "broker_end": 1745617,
+              "next_offset": 1701197,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 44420,
+              "topic_lag": 44420,
+              "wall_second": 1795754741
+            },
+            {
+              "broker_end": 1756617,
+              "next_offset": 1706818,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 49799,
+              "topic_lag": 49799,
+              "wall_second": 1795754742
+            },
+            {
+              "broker_end": 1766617,
+              "next_offset": 1712867,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 53250,
+              "topic_lag": 53750,
+              "wall_second": 1795754743
+            },
+            {
+              "broker_end": 1776117,
+              "next_offset": 1719513,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 56104,
+              "topic_lag": 56604,
+              "wall_second": 1795754744
+            },
+            {
+              "broker_end": 1786617,
+              "next_offset": 1725749,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 60868,
+              "topic_lag": 60868,
+              "wall_second": 1795754745
+            },
+            {
+              "broker_end": 1796617,
+              "next_offset": 1732199,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 63918,
+              "topic_lag": 64418,
+              "wall_second": 1795754746
+            },
+            {
+              "broker_end": 1807617,
+              "next_offset": 1738065,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 69552,
+              "topic_lag": 69552,
+              "wall_second": 1795754747
+            },
+            {
+              "broker_end": 1818617,
+              "next_offset": 1744367,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 73750,
+              "topic_lag": 74250,
+              "wall_second": 1795754748
+            },
+            {
+              "broker_end": 1828617,
+              "next_offset": 1750815,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 77302,
+              "topic_lag": 77802,
+              "wall_second": 1795754749
+            },
+            {
+              "broker_end": 1838617,
+              "next_offset": 1756763,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 81854,
+              "topic_lag": 81854,
+              "wall_second": 1795754750
+            },
+            {
+              "broker_end": 1848579,
+              "next_offset": 1762749,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 85368,
+              "topic_lag": 85830,
+              "wall_second": 1795754751
+            },
+            {
+              "broker_end": 1859579,
+              "next_offset": 1768447,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 90670,
+              "topic_lag": 91132,
+              "wall_second": 1795754752
+            },
+            {
+              "broker_end": 1869617,
+              "next_offset": 1774751,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 94866,
+              "topic_lag": 94866,
+              "wall_second": 1795754753
+            },
+            {
+              "broker_end": 1880072,
+              "next_offset": 1780867,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 99250,
+              "topic_lag": 99205,
+              "wall_second": 1795754754
+            },
+            {
+              "broker_end": 1890117,
+              "next_offset": 1786815,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 103302,
+              "topic_lag": 103302,
+              "wall_second": 1795754755
+            },
+            {
+              "broker_end": 1900117,
+              "next_offset": 1793579,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 106538,
+              "topic_lag": 106538,
+              "wall_second": 1795754756
+            },
+            {
+              "broker_end": 1909117,
+              "next_offset": 1798565,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 110052,
+              "topic_lag": 110552,
+              "wall_second": 1795754757
+            },
+            {
+              "broker_end": 1919249,
+              "next_offset": 1804013,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 115104,
+              "topic_lag": 115236,
+              "wall_second": 1795754758
+            },
+            {
+              "broker_end": 1929617,
+              "next_offset": 1809818,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 119299,
+              "topic_lag": 119799,
+              "wall_second": 1795754759
+            },
+            {
+              "broker_end": 1940117,
+              "next_offset": 1815684,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 124433,
+              "topic_lag": 124433,
+              "wall_second": 1795754760
+            },
+            {
+              "broker_end": 1950117,
+              "next_offset": 1821447,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 128670,
+              "topic_lag": 128670,
+              "wall_second": 1795754761
+            },
+            {
+              "broker_end": 1960617,
+              "next_offset": 1826867,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 133250,
+              "topic_lag": 133750,
+              "wall_second": 1795754762
+            },
+            {
+              "broker_end": 1971579,
+              "next_offset": 1832881,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 138236,
+              "topic_lag": 138698,
+              "wall_second": 1795754763
+            },
+            {
+              "broker_end": 1981579,
+              "next_offset": 1839117,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 142000,
+              "topic_lag": 142462,
+              "wall_second": 1795754764
+            },
+            {
+              "broker_end": 1991117,
+              "next_offset": 1844881,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 146236,
+              "topic_lag": 146236,
+              "wall_second": 1795754765
+            },
+            {
+              "broker_end": 1991902,
+              "next_offset": 1859197,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 132705,
+              "topic_lag": 132705,
+              "wall_second": 1795754766
+            },
+            {
+              "broker_end": 1991902,
+              "next_offset": 1873933,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 117969,
+              "topic_lag": 117969,
+              "wall_second": 1795754767
+            },
+            {
+              "broker_end": 1991902,
+              "next_offset": 1888377,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 103525,
+              "topic_lag": 103525,
+              "wall_second": 1795754768
+            },
+            {
+              "broker_end": 1991902,
+              "next_offset": 1902763,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 89139,
+              "topic_lag": 89139,
+              "wall_second": 1795754769
+            },
+            {
+              "broker_end": 1991902,
+              "next_offset": 1916947,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 74955,
+              "topic_lag": 74955,
+              "wall_second": 1795754770
+            },
+            {
+              "broker_end": 1991902,
+              "next_offset": 1931763,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 60139,
+              "topic_lag": 60139,
+              "wall_second": 1795754771
+            },
+            {
+              "broker_end": 1991902,
+              "next_offset": 1946184,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 45718,
+              "topic_lag": 45718,
+              "wall_second": 1795754772
+            },
+            {
+              "broker_end": 1991902,
+              "next_offset": 1960131,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 31771,
+              "topic_lag": 31771,
+              "wall_second": 1795754773
+            },
+            {
+              "broker_end": 1991902,
+              "next_offset": 1974947,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 16955,
+              "topic_lag": 16955,
+              "wall_second": 1795754774
+            },
+            {
+              "broker_end": 1991902,
+              "next_offset": 1989446,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 2456,
+              "topic_lag": 2456,
+              "wall_second": 1795754775
+            },
+            {
+              "broker_end": 1991902,
+              "next_offset": 1991902,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "session_lag": 0,
+              "topic_lag": 0,
+              "wall_second": 1795754776
+            }
+          ],
+          "producer_elapsed": 37.708089750027284,
+          "producer_status": "completed",
+          "progress_fraction": 1.0,
+          "recent_10s_instances_per_s": 7495.5,
+          "recent_window_s": 10,
+          "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+          "session_lag": 0,
+          "size": 4000,
+          "speed": 0.0,
+          "start_offset": 1613617,
+          "started_at": 1795754728.2970839,
+          "status": "complete",
+          "stop_requested": 0,
+          "throughput": [
+            {
+              "count": 3198,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754728
+            },
+            {
+              "count": 6320,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754729
+            },
+            {
+              "count": 5864,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754730
+            },
+            {
+              "count": 7080,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754731
+            },
+            {
+              "count": 6788,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754732
+            },
+            {
+              "count": 7396,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754733
+            },
+            {
+              "count": 6302,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754734
+            },
+            {
+              "count": 6868,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754735
+            },
+            {
+              "count": 6398,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754736
+            },
+            {
+              "count": 6616,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754737
+            },
+            {
+              "count": 6750,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754738
+            },
+            {
+              "count": 6368,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754739
+            },
+            {
+              "count": 6014,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754740
+            },
+            {
+              "count": 5618,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754741
+            },
+            {
+              "count": 5621,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754742
+            },
+            {
+              "count": 6049,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754743
+            },
+            {
+              "count": 6646,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754744
+            },
+            {
+              "count": 6486,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754745
+            },
+            {
+              "count": 6450,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754746
+            },
+            {
+              "count": 5616,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754747
+            },
+            {
+              "count": 6302,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754748
+            },
+            {
+              "count": 6448,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754749
+            },
+            {
+              "count": 6198,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754750
+            },
+            {
+              "count": 5986,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754751
+            },
+            {
+              "count": 5698,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754752
+            },
+            {
+              "count": 6250,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754753
+            },
+            {
+              "count": 5920,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754754
+            },
+            {
+              "count": 6198,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754755
+            },
+            {
+              "count": 6514,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754756
+            },
+            {
+              "count": 4986,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754757
+            },
+            {
+              "count": 5552,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754758
+            },
+            {
+              "count": 5701,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754759
+            },
+            {
+              "count": 5866,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754760
+            },
+            {
+              "count": 6013,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754761
+            },
+            {
+              "count": 5170,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754762
+            },
+            {
+              "count": 6014,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754763
+            },
+            {
+              "count": 6236,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754764
+            },
+            {
+              "count": 6014,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754765
+            },
+            {
+              "count": 14066,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754766
+            },
+            {
+              "count": 14736,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754767
+            },
+            {
+              "count": 14444,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754768
+            },
+            {
+              "count": 14386,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754769
+            },
+            {
+              "count": 14184,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754770
+            },
+            {
+              "count": 14816,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754771
+            },
+            {
+              "count": 14671,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754772
+            },
+            {
+              "count": 13697,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754773
+            },
+            {
+              "count": 14816,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754774
+            },
+            {
+              "count": 14499,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754775
+            },
+            {
+              "count": 2456,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "wall_second": 1795754776
+            }
+          ],
+          "topic": "ecosched.workload.arrivals.v1",
+          "verification": {
+            "bounded_partial": false,
+            "compared_events": 378285,
+            "complete": true,
+            "confirmed_published": 378285,
+            "consumed_deliveries": 378285,
+            "consumer_status": "completed",
+            "distinct_instances": 378285,
+            "duplicate_deliveries": 0,
+            "errors": [],
+            "expected_instances": 378285,
+            "expected_source_stream_sha256": "4d1db311c51d44d993c27340d9e5790b76ff73bf380c646e5bf0788b5fc1600b",
+            "groups": 4000,
+            "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+            "invalid_messages": 0,
+            "passed": true,
+            "persisted_source_stream_sha256": "4d1db311c51d44d993c27340d9e5790b76ff73bf380c646e5bf0788b5fc1600b",
+            "producer_status": "completed",
+            "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+            "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+            "sequence_gaps": 0,
+            "size": 4000,
+            "verified_at": 1795754780.888621
+          },
+          "workers": [
+            {
+              "at": 1795754776.6657019,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "status": "completed",
+              "worker": "consumer"
+            },
+            {
+              "at": 1795754780.889,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "status": "complete",
+              "worker": "controller"
+            },
+            {
+              "at": 1795754766.022769,
+              "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+              "status": "completed",
+              "worker": "producer"
+            }
+          ]
+        },
+        "verification": {
+          "bounded_partial": false,
+          "compared_events": 378285,
+          "complete": true,
+          "confirmed_published": 378285,
+          "consumed_deliveries": 378285,
+          "consumer_status": "completed",
+          "distinct_instances": 378285,
+          "duplicate_deliveries": 0,
+          "errors": [],
+          "expected_instances": 378285,
+          "expected_source_stream_sha256": "4d1db311c51d44d993c27340d9e5790b76ff73bf380c646e5bf0788b5fc1600b",
+          "groups": 4000,
+          "input_manifest_sha256": "4e295b76cacf10326cd5e81fbcdd6cd8ea2261244d5d01ceaca3f051fdccb42c",
+          "invalid_messages": 0,
+          "passed": true,
+          "persisted_source_stream_sha256": "4d1db311c51d44d993c27340d9e5790b76ff73bf380c646e5bf0788b5fc1600b",
+          "producer_status": "completed",
+          "replay_id": "c0f0c0b2-8884-4816-873b-af1034306f39",
+          "scope": "Actual Kafka arrival replay; no live scheduler execution or energy benchmark.",
+          "sequence_gaps": 0,
+          "size": 4000
+        }
+      }
+    ]
+  },
+  "schema_version": 1,
+  "scope": "Real Kafka workload arrival transport monitoring; offline scheduler results remain separate. No live scheduler or live energy model.",
+  "screenshots": [
+    {
+      "file": "ARNAV_Task/reports/phase5_screenshots/active_replay.png",
+      "height": 1050,
+      "sha256": "15751f807b3cd12f6fd4f9c732aa2cec7dcc78a2ff867bb26844ff465d699ccd",
+      "width": 1440
+    },
+    {
+      "file": "ARNAV_Task/reports/phase5_screenshots/broker_unavailable.png",
+      "height": 1050,
+      "sha256": "e277c188896ece60f34a188deb0fbe48727457bdc5fc244df160373ea7722428",
+      "width": 1440
+    },
+    {
+      "file": "ARNAV_Task/reports/phase5_screenshots/completed_verified_replay.png",
+      "height": 1050,
+      "sha256": "7cbd12607cf26c2ec8d2e3ca642eefcfb752be72d491fb59b18c4b3da9d1a541",
+      "width": 1440
+    },
+    {
+      "file": "ARNAV_Task/reports/phase5_screenshots/idle_configuration.png",
+      "height": 1050,
+      "sha256": "0763eea08d919a12cccd7c3bfad7f746f55f40f13e5ed53826b9452eae27d45d",
+      "width": 1440
+    },
+    {
+      "file": "ARNAV_Task/reports/phase5_screenshots/laptop_1152.png",
+      "height": 1050,
+      "sha256": "07e2940d3684dd9e2b8b5b44d10a3eaf2c1ccfd49e13225369c554fafbfae769",
+      "width": 1152
+    },
+    {
+      "file": "ARNAV_Task/reports/phase5_screenshots/live_throughput_and_demand.png",
+      "height": 1050,
+      "sha256": "67f1ec1a56db2b82594038cb701c48c77fcff88ac43b548ff4e37339af1af3c0",
+      "width": 1440
+    },
+    {
+      "file": "ARNAV_Task/reports/phase5_screenshots/session_history.png",
+      "height": 1050,
+      "sha256": "a04b988b635b63105709383ac5162e1d84c8cc69a1896366dba70e925e5800dc",
+      "width": 1440
+    }
+  ],
+  "source_sha256": {
+    "ARNAV_Task/README.md": "b04e8c8ca0ff066e3a1fa40f770e8a67924519a17227bb2d565a29d31a079899",
+    "ARNAV_Task/dashboard/app.py": "1f4b394c543492b8496455a9413adf1f69941b735f8081844c0f262121dfa473",
+    "ARNAV_Task/dashboard/components/replay_charts.py": "36ae9dad63851a7914d093b1d7cbc6698a67a169930776d86f3550495d961ef3",
+    "ARNAV_Task/dashboard/constants.py": "a64428f94d5d53bc817960e66dda489001dc9582ae156dc4fdf2ea239d2253d0",
+    "ARNAV_Task/dashboard/replay_service.py": "8519a4acb44d2f03f767d3f1dcc7fe16c03dadb46ae8ab31c6ee02ca761ffb89",
+    "ARNAV_Task/dashboard/views/live_replay.py": "aaf13eec8d97b7bbf803c769af1ceabceddb3213367be9369075aac8f306b1e0",
+    "ARNAV_Task/kafka/admin.py": "65247bbce5b16f5c21c85aecdc9e128f69ea80a58fd71e4fa1b890f5006479c1",
+    "ARNAV_Task/kafka/consumer.py": "9fb7793411b478ab6a3f2377df5e96b4466a7ac00c69a0b5aaffcd92e6549171",
+    "ARNAV_Task/kafka/state.py": "c4802f72e1bac956d35a2f61c3ac3bae553f003312c5319fab593c789ed8b364",
+    "ARNAV_Task/scripts/verify_replay.py": "0a68e12edabb15294ffd9ab9fe47fecd6fa4266b9b7dc2f848ec3a6473b95f23",
+    "ARNAV_Task/tests/test_dashboard_app.py": "4d7a3c8b57056c7609bcd889069eef367568d6b86e718941a681bd412566ec08"
+  },
+  "test_results": {
+    "dependency_check": "passed",
+    "new_phase5_tests": 27,
+    "ordinary_d6_passed": 181,
+    "original_248_preserved": true,
+    "real_kafka_integration_passed": 10,
+    "syntax_check": "passed",
+    "teammate_passed": 84,
+    "total_distinct_passed": 275,
+    "type_check": "passed"
+  },
+  "tested_dependencies": {
+    "kafka-python": "3.0.13",
+    "pandas": "3.1.1",
+    "plotly": "7.2.0",
+    "streamlit": "1.67.0"
+  }
+}

@@ -1,0 +1,26 @@
+[
+  {
+    "average_instances_per_s": 4202.5981199499265,
+    "distinct_count": 16534,
+    "elapsed_wall_s": 3.9342329502105713,
+    "expected": 16534,
+    "replay_id": "72306d47-074a-492f-8ece-334195b12df6",
+    "size": 250
+  },
+  {
+    "average_instances_per_s": 6008.785045566443,
+    "distinct_count": 68457,
+    "elapsed_wall_s": 11.392818927764893,
+    "expected": 68457,
+    "replay_id": "9a097df0-12be-4651-9007-35242d78aa8a",
+    "size": 1000
+  },
+  {
+    "average_instances_per_s": 6928.259655203253,
+    "distinct_count": 378285,
+    "elapsed_wall_s": 54.60029196739197,
+    "expected": 378285,
+    "replay_id": "1f2aee4c-4323-43a4-a6a6-2b3acebf4e20",
+    "size": 4000
+  }
+]

@@ -1,0 +1,46 @@
+# App-local configuration also loads when launched from the repository root.
+[theme]
+base = "dark"
+primaryColor = "#138779"
+backgroundColor = "#0B121C"
+secondaryBackgroundColor = "#132031"
+textColor = "#E5EDF6"
+borderColor = "#29394D"
+linkColor = "#63CFBF"
+codeBackgroundColor = "#101C2B"
+codeTextColor = "#B8D4E9"
+font = "sans-serif"
+baseFontSize = 15
+headingFontSizes = ["27px", "22px", "18px", "16px", "14px", "12px"]
+headingFontWeights = [600, 600, 600, 600, 600, 600]
+metricValueFontSize = "1.7rem"
+metricValueFontWeight = 600
+baseRadius = "6px"
+buttonRadius = "5px"
+showWidgetBorder = true
+showSidebarBorder = true
+paddingTop = "0.8rem"
+paddingBottom = "2rem"
+greenColor = "#2DBAA7"
+greenTextColor = "#70D6C6"
+greenBackgroundColor = "#142F30"
+redColor = "#CD7680"
+redTextColor = "#EDA4AA"
+redBackgroundColor = "#34212B"
+orangeColor = "#BA945E"
+orangeTextColor = "#D8C29F"
+orangeBackgroundColor = "#27251F"
+dataframeHeaderBackgroundColor = "#192A3D"
+dataframeHeaderTextColor = "#D7E5F1"
+dataframeBorderColor = "#29394D"
+chartCategoricalColors = ["#82A9D0", "#D2A56A", "#32B5A4", "#BA92CE"]
+
+[theme.sidebar]
+backgroundColor = "#0E1928"
+secondaryBackgroundColor = "#172A3C"
+textColor = "#D7E5F1"
+primaryColor = "#138779"
+linkColor = "#63CFBF"
+borderColor = "#29394D"
+paddingTop = "0.7rem"
+paddingBottom = "1rem"

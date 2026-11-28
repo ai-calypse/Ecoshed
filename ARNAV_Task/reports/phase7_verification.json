@@ -1,0 +1,872 @@
+{
+  "base": "b0c48284a48407b1b14242c579f39a1f27248e5f",
+  "branch": "arnav/d6-final-package",
+  "checks": {
+    "dependencies": "pip check passed",
+    "existing_307_tests_preserved": true,
+    "final_manifest": "67 output hashes verified; source/output mutation detection tested",
+    "syntax": "8 documentation/test Python files parsed successfully",
+    "types": "ty 0.0.112: all checks passed"
+  },
+  "course": "AMS 560 Big Data, Stony Brook University",
+  "course_requirements_search": {
+    "inspected": [
+      "AGENTS.md",
+      "docs/EcoSched_Proposal.pdf",
+      "docs/checkpoint/EcoSched_Midterm_Checkpoint.md",
+      "README.md",
+      "teammate READMEs/reports",
+      "D6 Phase 1\u20136 evidence"
+    ],
+    "presenter_allocation": "provisional",
+    "result": "No professor-specific rubric, report format/page limit or presentation duration found locally; suggested user defaults followed.",
+    "student_ids_omitted": true
+  },
+  "dashboard_runtime_checks": [
+    {
+      "exceptions": [],
+      "page": "",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "scheduler_comparison",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "energy_analysis",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "performance_analysis",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "resource_skew",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "research_findings",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "reproducibility",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "live_replay",
+      "status": "ready"
+    }
+  ],
+  "dependencies": {
+    "matplotlib": "3.11.2",
+    "pymupdf": "1.27.2",
+    "pypdf": "7.2.0",
+    "python-docx": "1.2.0",
+    "python-pptx": "1.0.2",
+    "reportlab": "5.1.2"
+  },
+  "files": {
+    "bibliography": "ARNAV_Task/final/report/references.bib",
+    "demo": "ARNAV_Task/final/demo",
+    "manifest": "ARNAV_Task/final/manifest.json",
+    "presentation_editable_source": "ARNAV_Task/final/presentation/source/slides.json",
+    "presentation_pdf": "ARNAV_Task/final/presentation/EcoSched_Final_Presentation.pdf",
+    "presentation_pptx": "ARNAV_Task/final/presentation/EcoSched_Final_Presentation.pptx",
+    "report_docx": "ARNAV_Task/final/report/EcoSched_Final_Report.docx",
+    "report_editable_source": "ARNAV_Task/final/report/source/report.json",
+    "report_pdf": "ARNAV_Task/final/report/EcoSched_Final_Report.pdf",
+    "speaker_notes": "ARNAV_Task/final/presentation/speaker_notes.md"
+  },
+  "final_manifest_sha256": "8caf9d8f6c722b0a7d5997ccd26eb4d845ba015d1eefdca9976f52c2f3fc6c23",
+  "kafka_scope": "Only existing 10-test real-broker regression suite rerun; original Phase 4/5 measurements remain authoritative in report/slides.",
+  "kafka_test_receipt": {
+    "elapsed_s": 95.00316454202402,
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "skipped": 0,
+    "tests": 10
+  },
+  "limitations": [
+    "Three historical research metadata references remain unresolved.",
+    "No full scheduler matrix rerun in D6.",
+    "Mixed A4/A3 foldout report pages preserve figure readability; DOCX pagination may vary by Word installation.",
+    "Native PowerPoint PDF metadata may differ between renders; editable Office ZIPs are normalized.",
+    "Presenter allocation/time budget are provisional; no professor-specific rubric found locally.",
+    "Three historical research provenance discrepancies remain unresolved.",
+    "No fresh full-matrix simulation reproduction, statistical significance, universal scheduler superiority or production-energy claim.",
+    "Recorded Kafka sessions are transport evidence, not live scheduling or distributed scalability."
+  ],
+  "log_sha256": {
+    "ARNAV_Task/.runtime/phase7_dashboard_runtime.log": "a67fc30059eec3934f6691d2751b7281d3e8439e13af26408440c63451fce0f4",
+    "ARNAV_Task/.runtime/phase7_dependency_check.log": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+    "ARNAV_Task/.runtime/phase7_kafka_tests.log": "fb560a9e73ff922302fff15d49f298cf3c067d1ac285e444c6fb0b47a06ba79e",
+    "ARNAV_Task/.runtime/phase7_new_tests_final.log": "424dc1a56ff39a7e326691c2b0f6109d3030e6a4f94e2f3c33b58447b623913e",
+    "ARNAV_Task/.runtime/phase7_ordinary_tests.log": "0594407fe7a6e33d4141a216465f17732afa98523c38a28652686fdaddd992dc",
+    "ARNAV_Task/.runtime/phase7_teammate_tests.log": "93c07adfa62ca965d8f5a54bda3e85e639f49ff9663199ab535549645252d1d9",
+    "ARNAV_Task/.runtime/phase7_typecheck.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+  },
+  "new_scheduler_experiments": 0,
+  "numerical_consistency": {
+    "checks": {
+      "abstract_words": 219,
+      "active_outcomes": 36,
+      "historical_lineage": "UNRESOLVED",
+      "native_chart_numerics": "verified",
+      "primary_comparisons": 9,
+      "primary_energy_savings_cases": 4,
+      "publication_output_hashes": "verified",
+      "report_pages": 28,
+      "slides": 20,
+      "source_documents": "Editable JSON templates + Markdown, DOCX and PPTX"
+    },
+    "errors": [],
+    "passed": true
+  },
+  "ordinary_test_receipt": {
+    "elapsed_s": 28.939192458055913,
+    "errors": 0,
+    "failures": 0,
+    "passed": true,
+    "skipped": 10,
+    "tests": 243
+  },
+  "passed": true,
+  "phase": 7,
+  "presentation": {
+    "format": "16:9",
+    "main_slides": 15,
+    "native_charts": true,
+    "pdf_rendering": {
+      "pptx_unchanged": true,
+      "renderer": "Microsoft PowerPoint for Mac",
+      "version": "16.115.2"
+    },
+    "presentation_figures": "Editable readable variants use the Phase 1 adapter and Phase 6 diagram data; actual Phase 5 screenshot embedded.",
+    "slide_count": 20,
+    "slides": [
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "title",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 1,
+        "title": "EcoSched"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "motivation",
+        "presenter_provisional": "Brave Desai",
+        "slide": 2,
+        "title": "Balanced resources do not automatically mean lower energy"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "ablation",
+        "presenter_provisional": "Rohan Rane",
+        "slide": 3,
+        "title": "Change placement; hold the controller fixed"
+      },
+      {
+        "appendix": false,
+        "figure": "A01",
+        "kind": "architecture",
+        "presenter_provisional": "Brave Desai",
+        "slide": 4,
+        "title": "One evidence pipeline, from raw rows to research outputs"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "dataset",
+        "presenter_provisional": "Yaksh Gandhi",
+        "slide": 5,
+        "title": "Preserve each task group\u2019s individual instances"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "algorithms",
+        "presenter_provisional": "Rohan Rane",
+        "slide": 6,
+        "title": "A common feasibility rule; one extra scoring term"
+      },
+      {
+        "appendix": false,
+        "figure": "R04",
+        "kind": "power",
+        "presenter_provisional": "Brave Desai",
+        "slide": 7,
+        "title": "SPECpower supplies a surrogate, not Alibaba electricity"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "method",
+        "presenter_provisional": "Rohan Rane",
+        "slide": 8,
+        "title": "36 outcomes; 9 primary paired comparisons"
+      },
+      {
+        "appendix": false,
+        "figure": "R03",
+        "kind": "primary",
+        "presenter_provisional": "Rushi Jhala",
+        "slide": 9,
+        "title": "Memory-aware placement saves energy in 4/9 cases"
+      },
+      {
+        "appendix": false,
+        "figure": "R06",
+        "kind": "tradeoff",
+        "presenter_provisional": "Rushi Jhala",
+        "slide": 10,
+        "title": "A larger powered footprint buys modest performance gains"
+      },
+      {
+        "appendix": false,
+        "figure": "R05",
+        "kind": "mechanism",
+        "presenter_provisional": "Rushi Jhala",
+        "slide": 11,
+        "title": "Extra busy-host on-time explains the largest-case penalty"
+      },
+      {
+        "appendix": false,
+        "figure": "A02",
+        "kind": "kafka",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 12,
+        "title": "Kafka transports arrivals; it does not run the scheduler"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "demo",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 13,
+        "title": "Classroom demo: inspect results, then replay real arrivals"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "validation",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 14,
+        "title": "Verified numbers; unresolved historical metadata"
+      },
+      {
+        "appendix": false,
+        "figure": null,
+        "kind": "conclusion",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 15,
+        "title": "The defensible result is an energy/performance trade-off"
+      },
+      {
+        "appendix": true,
+        "figure": null,
+        "kind": "primary_table",
+        "presenter_provisional": "Rushi Jhala",
+        "slide": 16,
+        "title": "Appendix \u00b7 all primary energy comparisons"
+      },
+      {
+        "appendix": true,
+        "figure": null,
+        "kind": "settings",
+        "presenter_provisional": "Rohan Rane",
+        "slide": 17,
+        "title": "Appendix \u00b7 fixed controls and resource-skew scope"
+      },
+      {
+        "appendix": true,
+        "figure": "S01",
+        "kind": "streaming",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 18,
+        "title": "Appendix \u00b7 verified Kafka fast-mode sessions"
+      },
+      {
+        "appendix": true,
+        "figure": null,
+        "kind": "provenance",
+        "presenter_provisional": "Arnav Desai",
+        "slide": 19,
+        "title": "Appendix \u00b7 unresolved metadata references"
+      },
+      {
+        "appendix": true,
+        "figure": null,
+        "kind": "references",
+        "presenter_provisional": "All team members",
+        "slide": 20,
+        "title": "Appendix \u00b7 references and individual contribution evidence"
+      }
+    ]
+  },
+  "preservation": {
+    "new_files": [
+      "ARNAV_Task/documentation/__init__.py",
+      "ARNAV_Task/documentation/build_presentation.py",
+      "ARNAV_Task/documentation/build_report.py",
+      "ARNAV_Task/documentation/build_support.py",
+      "ARNAV_Task/documentation/evidence.py",
+      "ARNAV_Task/documentation/tables.py",
+      "ARNAV_Task/documentation/validate_final.py",
+      "ARNAV_Task/final/README.md",
+      "ARNAV_Task/final/demo/defense_preparation.md",
+      "ARNAV_Task/final/demo/demo_checklist.md",
+      "ARNAV_Task/final/demo/demo_runbook.md",
+      "ARNAV_Task/final/demo/troubleshooting.md",
+      "ARNAV_Task/final/manifest.json",
+      "ARNAV_Task/final/presentation/EcoSched_Final_Presentation.pdf",
+      "ARNAV_Task/final/presentation/EcoSched_Final_Presentation.pptx",
+      "ARNAV_Task/final/presentation/build_receipt.json",
+      "ARNAV_Task/final/presentation/claims.json",
+      "ARNAV_Task/final/presentation/previews/slide_01.png",
+      "ARNAV_Task/final/presentation/previews/slide_02.png",
+      "ARNAV_Task/final/presentation/previews/slide_03.png",
+      "ARNAV_Task/final/presentation/previews/slide_04.png",
+      "ARNAV_Task/final/presentation/previews/slide_05.png",
+      "ARNAV_Task/final/presentation/previews/slide_06.png",
+      "ARNAV_Task/final/presentation/previews/slide_07.png",
+      "ARNAV_Task/final/presentation/previews/slide_08.png",
+      "ARNAV_Task/final/presentation/previews/slide_09.png",
+      "ARNAV_Task/final/presentation/previews/slide_10.png",
+      "ARNAV_Task/final/presentation/previews/slide_11.png",
+      "ARNAV_Task/final/presentation/previews/slide_12.png",
+      "ARNAV_Task/final/presentation/previews/slide_13.png",
+      "ARNAV_Task/final/presentation/previews/slide_14.png",
+      "ARNAV_Task/final/presentation/previews/slide_15.png",
+      "ARNAV_Task/final/presentation/previews/slide_16.png",
+      "ARNAV_Task/final/presentation/previews/slide_17.png",
+      "ARNAV_Task/final/presentation/previews/slide_18.png",
+      "ARNAV_Task/final/presentation/previews/slide_19.png",
+      "ARNAV_Task/final/presentation/previews/slide_20.png",
+      "ARNAV_Task/final/presentation/source/slides.json",
+      "ARNAV_Task/final/presentation/speaker_notes.md",
+      "ARNAV_Task/final/report/EcoSched_Final_Report.docx",
+      "ARNAV_Task/final/report/EcoSched_Final_Report.md",
+      "ARNAV_Task/final/report/EcoSched_Final_Report.pdf",
+      "ARNAV_Task/final/report/build_receipt.json",
+      "ARNAV_Task/final/report/claims.json",
+      "ARNAV_Task/final/report/previews/page_01.png",
+      "ARNAV_Task/final/report/previews/page_02.png",
+      "ARNAV_Task/final/report/previews/page_03.png",
+      "ARNAV_Task/final/report/previews/page_04.png",
+      "ARNAV_Task/final/report/previews/page_05.png",
+      "ARNAV_Task/final/report/previews/page_06.png",
+      "ARNAV_Task/final/report/previews/page_07.png",
+      "ARNAV_Task/final/report/previews/page_08.png",
+      "ARNAV_Task/final/report/previews/page_09.png",
+      "ARNAV_Task/final/report/previews/page_10.png",
+      "ARNAV_Task/final/report/previews/page_11.png",
+      "ARNAV_Task/final/report/previews/page_12.png",
+      "ARNAV_Task/final/report/previews/page_13.png",
+      "ARNAV_Task/final/report/previews/page_14.png",
+      "ARNAV_Task/final/report/previews/page_15.png",
+      "ARNAV_Task/final/report/previews/page_16.png",
+      "ARNAV_Task/final/report/previews/page_17.png",
+      "ARNAV_Task/final/report/previews/page_18.png",
+      "ARNAV_Task/final/report/previews/page_19.png",
+      "ARNAV_Task/final/report/previews/page_20.png",
+      "ARNAV_Task/final/report/previews/page_21.png",
+      "ARNAV_Task/final/report/previews/page_22.png",
+      "ARNAV_Task/final/report/previews/page_23.png",
+      "ARNAV_Task/final/report/previews/page_24.png",
+      "ARNAV_Task/final/report/previews/page_25.png",
+      "ARNAV_Task/final/report/previews/page_26.png",
+      "ARNAV_Task/final/report/previews/page_27.png",
+      "ARNAV_Task/final/report/previews/page_28.png",
+      "ARNAV_Task/final/report/references.bib",
+      "ARNAV_Task/final/report/source/references.json",
+      "ARNAV_Task/final/report/source/report.json",
+      "ARNAV_Task/reports/phase7_verification.json",
+      "ARNAV_Task/reports/phase7_verification.md",
+      "ARNAV_Task/tests/test_documentation.py"
+    ],
+    "only_previous_files_modified": [
+      "ARNAV_Task/README.md",
+      "ARNAV_Task/requirements.txt"
+    ],
+    "original_tracked_files_unchanged": 508,
+    "phase1_6_code_results_receipts_and_publication_outputs_unchanged": true,
+    "previous_d6_files_checked": 270,
+    "tracked_diff_empty": true
+  },
+  "publication_documentation_evolution": [
+    {
+      "current_sha256": "aae36d3550c8f5cf2cd1fec14385e7335651ea098ddd3d612ac29990288ac9d3",
+      "interpretation": "Documentation evolved after the frozen publication build; outputs are unchanged.",
+      "path": "ARNAV_Task/README.md",
+      "phase6_sha256": "9d9a51710673e0f2b50f1ec79c2fe96427260d83c4852622bd668dc682edd9a1"
+    }
+  ],
+  "publication_table_ids": [
+    "T02",
+    "T07",
+    "T08",
+    "T09",
+    "T10",
+    "T11",
+    "T12",
+    "T14",
+    "T18",
+    "T19"
+  ],
+  "python": "3.12.15",
+  "quantitative_claim_ledger": {
+    "d5_pooled_share": {
+      "source": "RUSHI_Task/analyze.py:407-411; RUSHI_Task/reports/pair_energy_gap.csv",
+      "value": 87.96903449570328
+    },
+    "fast_1000_average_instances_per_s": {
+      "source": "ARNAV_Task/reports/phase4_verification.json",
+      "value": 6008.785045566443
+    },
+    "fast_1000_elapsed_wall_s": {
+      "source": "ARNAV_Task/reports/phase4_verification.json",
+      "value": 11.392818927764893
+    },
+    "fast_250_average_instances_per_s": {
+      "source": "ARNAV_Task/reports/phase4_verification.json",
+      "value": 4202.5981199499265
+    },
+    "fast_250_elapsed_wall_s": {
+      "source": "ARNAV_Task/reports/phase4_verification.json",
+      "value": 3.9342329502105713
+    },
+    "fast_4000_average_instances_per_s": {
+      "source": "ARNAV_Task/reports/phase4_verification.json",
+      "value": 6928.259655203253
+    },
+    "fast_4000_elapsed_wall_s": {
+      "source": "ARNAV_Task/reports/phase4_verification.json",
+      "value": 54.60029196739197
+    },
+    "hosts": {
+      "source": "RAW_Alibaba/config.json",
+      "value": 64
+    },
+    "hpe_cpu_energy": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": 34.269961690439196
+    },
+    "hpe_mem_energy": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": 39.13609389593756
+    },
+    "hpe_on_share": {
+      "source": "RUSHI_Task/reports/pair_energy_gap.csv",
+      "value": 87.0861831733438
+    },
+    "hpe_reduction": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": -14.199409527953877
+    },
+    "huawei_cpu_energy": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": 34.017004368575485
+    },
+    "huawei_mem_energy": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": 37.74531934182412
+    },
+    "huawei_on_share": {
+      "source": "RUSHI_Task/reports/pair_energy_gap.csv",
+      "value": 88.25411983771595
+    },
+    "huawei_reduction": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": -10.960150790622855
+    },
+    "instances_1000": {
+      "source": "RAW_Alibaba/prepared/manifest.json",
+      "value": 68457
+    },
+    "instances_250": {
+      "source": "RAW_Alibaba/prepared/manifest.json",
+      "value": 16534
+    },
+    "instances_4000": {
+      "source": "RAW_Alibaba/prepared/manifest.json",
+      "value": 378285
+    },
+    "pairs": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": 9
+    },
+    "penalty_hi": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": 14.559762926102794
+    },
+    "penalty_lo": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": 10.960150790622855
+    },
+    "prepared_outputs": {
+      "source": "ARNAV_Task/reports/phase3_verification.json",
+      "value": 5
+    },
+    "prior_tests": {
+      "source": "ARNAV_Task/reports/phase6_verification.json",
+      "value": 307
+    },
+    "quanta_cpu_energy": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": 35.33316268746673
+    },
+    "quanta_mem_energy": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": 40.4775874090561
+    },
+    "quanta_on_share": {
+      "source": "RUSHI_Task/reports/pair_energy_gap.csv",
+      "value": 88.59751746087377
+    },
+    "quanta_reduction": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": -14.559762926102794
+    },
+    "raw_members": {
+      "source": "ARNAV_Task/reports/phase3_verification.json",
+      "value": 6
+    },
+    "replayed_instances": {
+      "source": "BASELINE_Comparison/reports/summaries.json",
+      "value": 5559312
+    },
+    "runs": {
+      "source": "BASELINE_Comparison/reports/summaries.json",
+      "value": 36
+    },
+    "seed": {
+      "source": "RAW_Alibaba/config.json",
+      "value": 2026
+    },
+    "timed_duration": {
+      "source": "ARNAV_Task/reports/phase5_verification.json",
+      "value": 72.6980950832367
+    },
+    "timed_rate": {
+      "source": "ARNAV_Task/reports/phase5_verification.json",
+      "value": 227.43374473662848
+    },
+    "unresolved": {
+      "source": "ARNAV_Task/reports/artifact_validation.json",
+      "value": 3
+    },
+    "wait_delta_hi": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": -1.0316071088522776
+    },
+    "wait_delta_lo": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": -1.5916546362087516
+    },
+    "wins": {
+      "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+      "value": 4
+    },
+    "wins_vs_best_fit": {
+      "source": "BASELINE_Comparison/reports/all_pairwise_comparisons.csv",
+      "value": 3
+    },
+    "wins_vs_first_fit": {
+      "source": "BASELINE_Comparison/reports/all_pairwise_comparisons.csv",
+      "value": 2
+    }
+  },
+  "readiness": "Ready for Phase 8 team/submission review; course format/time and presenter allocation still require confirmation. No commit, push, PR, release or submission performed.",
+  "recorded_at_utc": "2026-11-27T21:38:03.839893+00:00",
+  "rendering": {
+    "docx": "Readable editable counterpart verified structurally and against report source/table values; not independently rendered in Word. Pagination may vary.",
+    "issues_fixed": [
+      "Report cover title hierarchy",
+      "Native negative-bar inversion and numeric tick formatting",
+      "D5 signed components rendered with editable colored bars to avoid Office negative-fill inversion",
+      "Demo screenshot/caption overlap",
+      "Office nested workbook timestamps normalized"
+    ],
+    "presentation": "Actual Microsoft PowerPoint for Mac 16.115.2 native PDF export; all 20 slides raster-rendered with PyMuPDF.",
+    "report": "ReportLab with embedded fonts; original vector figure PDFs composed by PyMuPDF; no TeX.",
+    "report_pages_rendered": 28,
+    "slides_rendered": 20,
+    "visual_inspection": "All pages/slides reviewed in contact sheets; representative pages and slides inspected at larger size. Text retention, table rows and bounds checked automatically."
+  },
+  "report": {
+    "docx": "EcoSched_Final_Report.docx",
+    "figures": [
+      "A01",
+      "R04",
+      "R03",
+      "R01",
+      "R06",
+      "R07",
+      "R09",
+      "R05",
+      "R11",
+      "R13",
+      "A02",
+      "S01",
+      "A04"
+    ],
+    "page_count": 28,
+    "pages": [
+      {
+        "page": 1,
+        "size": "A4",
+        "title": "EcoSched"
+      },
+      {
+        "page": 2,
+        "size": "A4",
+        "title": "Abstract and reading guide"
+      },
+      {
+        "page": 3,
+        "size": "A4",
+        "title": "1. Introduction and 2. Related work"
+      },
+      {
+        "page": 4,
+        "size": "A3L",
+        "title": "3. Research gap and 4. System architecture"
+      },
+      {
+        "page": 5,
+        "size": "A4",
+        "title": "5. Dataset and preprocessing"
+      },
+      {
+        "page": 6,
+        "size": "A4",
+        "title": "5.1 Deterministic sampling, releases and recovery"
+      },
+      {
+        "page": 7,
+        "size": "A4",
+        "title": "6. Scheduling algorithms: admission and placement"
+      },
+      {
+        "page": 8,
+        "size": "A4",
+        "title": "6.3 Shared LR/MMT controller and migration safeguards"
+      },
+      {
+        "page": 9,
+        "size": "A4",
+        "title": "7. SPECpower energy model"
+      },
+      {
+        "page": 10,
+        "size": "A4",
+        "title": "8. Experimental methodology and metric definitions"
+      },
+      {
+        "page": 11,
+        "size": "A3L",
+        "title": "9. Primary energy results"
+      },
+      {
+        "page": 12,
+        "size": "A4L",
+        "title": "9.1 Workload and power sensitivity; additional baselines"
+      },
+      {
+        "page": 13,
+        "size": "A4L",
+        "title": "9.2 Active-host footprint"
+      },
+      {
+        "page": 14,
+        "size": "A4L",
+        "title": "9.3 Waiting, migration and completion"
+      },
+      {
+        "page": 15,
+        "size": "A4L",
+        "title": "9.4 Pressure, fragmentation and interpretation"
+      },
+      {
+        "page": 16,
+        "size": "A4L",
+        "title": "10. D5 mechanism analysis: where the penalty arises"
+      },
+      {
+        "page": 17,
+        "size": "A3",
+        "title": "10.1 Energy/performance trade-offs and descriptive Pareto sets"
+      },
+      {
+        "page": 18,
+        "size": "A3",
+        "title": "10.2 Resource-skew findings and placement decisions"
+      },
+      {
+        "page": 19,
+        "size": "A3L",
+        "title": "11. D6 Kafka and monitoring architecture"
+      },
+      {
+        "page": 20,
+        "size": "A4",
+        "title": "11.1 Dashboard implementation and data separation"
+      },
+      {
+        "page": 21,
+        "size": "A3L",
+        "title": "12. Streaming evaluation and recovery evidence"
+      },
+      {
+        "page": 22,
+        "size": "A3L",
+        "title": "13. Reproducibility and layered validation"
+      },
+      {
+        "page": 23,
+        "size": "A4",
+        "title": "14. Limitations; 15. Conclusion; 16. Contributions"
+      },
+      {
+        "page": 24,
+        "size": "A4",
+        "title": "17. References"
+      },
+      {
+        "page": 25,
+        "size": "A4",
+        "title": "Appendix A. Complete energy and efficiency results"
+      },
+      {
+        "page": 26,
+        "size": "A3L",
+        "title": "Appendix B. Complete host, migration and waiting results"
+      },
+      {
+        "page": 27,
+        "size": "A3",
+        "title": "Appendix C. Complete supported resource-skew outcomes"
+      },
+      {
+        "page": 28,
+        "size": "A3",
+        "title": "Appendix D. Fingerprints, configuration, schema and commands"
+      }
+    ],
+    "pdf": "EcoSched_Final_Report.pdf",
+    "source": "ARNAV_Task/final/report/source/report.json",
+    "tables": [
+      "workloads",
+      "metrics",
+      "primary",
+      "efficiency_primary",
+      "mechanism",
+      "streaming",
+      "contributions",
+      "energy_all",
+      "performance_all",
+      "skew_all"
+    ],
+    "vector_publication_figures": true
+  },
+  "reproducibility": {
+    "byte_identical": true,
+    "files": [
+      {
+        "byte_identical": true,
+        "path": "report/EcoSched_Final_Report.pdf"
+      },
+      {
+        "byte_identical": true,
+        "path": "report/EcoSched_Final_Report.docx"
+      },
+      {
+        "byte_identical": true,
+        "path": "report/EcoSched_Final_Report.md"
+      },
+      {
+        "byte_identical": true,
+        "path": "presentation/EcoSched_Final_Presentation.pptx"
+      },
+      {
+        "byte_identical": true,
+        "path": "presentation/speaker_notes.md"
+      }
+    ],
+    "native_pdf_byte_identical": false,
+    "native_pdf_semantic_identity": true,
+    "native_pdf_slides_compared": 20,
+    "native_pdf_visual_identity": true
+  },
+  "schema_version": 1,
+  "source_sha256": {
+    "ARNAV_Task/README.md": "aae36d3550c8f5cf2cd1fec14385e7335651ea098ddd3d612ac29990288ac9d3",
+    "ARNAV_Task/documentation/__init__.py": "2a635d6d43e778f6effd11be5e026e30ffd164c9734f9d6e6a200f8fe2e92014",
+    "ARNAV_Task/documentation/build_presentation.py": "16aa408e410383637fa4cabb52a49efcb08a7defb98e72b6154ac39f8b4b5b37",
+    "ARNAV_Task/documentation/build_report.py": "36b739e4edc25e9191922b0c7e374482d87cc0e9d133c5897f74a32d0ab7dad6",
+    "ARNAV_Task/documentation/build_support.py": "886b0220a147cb7d417402e98fa54d65be43a2660fcf314fed189d0d738fe3c9",
+    "ARNAV_Task/documentation/evidence.py": "9ab10aed10a0af1a63661e5345ca52fa76b11c305e58135f493023c68b15b672",
+    "ARNAV_Task/documentation/tables.py": "50f7660afc76eefca7f299ce08a4ee51b3f64443da0be003a263aea6a69f515d",
+    "ARNAV_Task/documentation/validate_final.py": "486b28002a6ea706c787e48d3f3937282c7f1a5f148e83aa76922766f95a4de3",
+    "ARNAV_Task/final/presentation/source/slides.json": "63044478262d8372ce718e46dd0ea69f9cc7eb925f7099cd254a2e588807112e",
+    "ARNAV_Task/final/report/source/references.json": "f6f1ec13031533a42a30da8637b7e3aabc3e227c907a0f854056507676491e06",
+    "ARNAV_Task/final/report/source/report.json": "1a9fed379f9f97260253d3129cc81212463a683ba759622727c31ebd94e0bd9e",
+    "ARNAV_Task/requirements.txt": "bb2198311a8a1c9e5394b8b809b3e9278a0e34f8c217c44adccef34951f614ad",
+    "ARNAV_Task/tests/test_documentation.py": "5517ebcf8b1fd9f7b5ac26d5106fd549e15b40b8673f5a24f415a8eed850e226"
+  },
+  "teammate_test_receipt": {
+    "elapsed_s": 1.9820235419319943,
+    "passed": true,
+    "suites": [
+      {
+        "folder": "tests",
+        "passed": true,
+        "tests": 18
+      },
+      {
+        "folder": "ROHAN_Task/tests",
+        "passed": true,
+        "tests": 14
+      },
+      {
+        "folder": "RAW_Alibaba/tests",
+        "passed": true,
+        "tests": 6
+      },
+      {
+        "folder": "ENERGY_Study/tests",
+        "passed": true,
+        "tests": 14
+      },
+      {
+        "folder": "RUSHI_Task/tests",
+        "passed": true,
+        "tests": 17
+      },
+      {
+        "folder": "YAKSH_Task/scripts",
+        "passed": true,
+        "tests": 15
+      }
+    ],
+    "tests": 84
+  },
+  "test_results": {
+    "new_phase7_tests": 20,
+    "ordinary_d6_passed": 233,
+    "real_kafka_integration_passed": 10,
+    "teammate_passed": 84,
+    "total_distinct_passed": 327
+  }
+}
