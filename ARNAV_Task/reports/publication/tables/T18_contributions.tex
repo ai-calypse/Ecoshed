@@ -1,0 +1,14 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{Individual contributions and Git evidence}\
+\toprule
+Owner & Area & Paths & Commits & Git Authors & Evidence & Source \\
+\midrule\endhead
+Yaksh Gandhi & Historical D1 workload package; not active-study inputs & YAKSH\_Task & d307337f6903\allowbreak{}c81013e469b4\allowbreak{}0bc4fbf0a35f\allowbreak{}a1ad; bb176f496740\allowbreak{}b190d1dad994\allowbreak{}7724c0dbccb6\allowbreak{}4dc5 & Yaksh Gandhi & Git path history; directory ownership does not establish commit authorship & git log --all -- YAKSH\_Task \\
+Brave Desai & D2 simulator/power; active raw preparation and D4 integration & BRAVE\_Task, RAW\_Alibaba, ecosched, BASELINE\_Comparison & 320da27c1b9a\allowbreak{}c7db7c61fd1c\allowbreak{}66f0820c0804\allowbreak{}bc6c & brave & Git path history; directory ownership does not establish commit authorship & git log --all -- BRAVE\_Task RAW\_Alibaba ecosched BASELINE\_Comparison \\
+Rohan Rane & D3 scheduling policies; inspect author vs owner attribution & ROHAN\_Task & 320da27c1b9a\allowbreak{}c7db7c61fd1c\allowbreak{}66f0820c0804\allowbreak{}bc6c & brave & Git path history; directory ownership does not establish commit authorship & git log --all -- ROHAN\_Task \\
+Rushi Jhala & D5 analysis only; same-job extension excluded & RUSHI\_Task & 202bfdfd1480\allowbreak{}366b9ee8829e\allowbreak{}3d81cb926ac4\allowbreak{}1778; 6d8edb29b129\allowbreak{}e7648c35e401\allowbreak{}f50f1f347d9d\allowbreak{}6367; 04701b67345b\allowbreak{}f707309753ee\allowbreak{}74da727f8944\allowbreak{}569d; a71f9e5170e5\allowbreak{}4dd5e4d8d65e\allowbreak{}fee4bdba8de6\allowbreak{}27a2; 8fba3086b1fb\allowbreak{}667d10f135c5\allowbreak{}d49f3c1abf0f\allowbreak{}c07c & Rushi0070 & Git path history; directory ownership does not establish commit authorship & git log --all -- RUSHI\_Task \\
+Arnav Desai & D6 final package: adapters, dashboard, recovered inputs, Kafka, publication exports & ARNAV\_Task/ & Uncommitted D6 working tree & Not committed & Current implementation and Phase 1–5 verification receipts; no D6 commit claimed & ARNAV\_Task/README.md \\
+\bottomrule\end{longtable}
+% Current ownership is checked against path-specific Git history, not the original proposal ownership table. Git authors and directory owners are distinguished. D6 is uncommitted.
+% Sources: docs/EcoSched_Proposal.pdf, ARNAV_Task/README.md, RUSHI_Task/README.md, ROHAN_Task/README.md, YAKSH_Task/README.md

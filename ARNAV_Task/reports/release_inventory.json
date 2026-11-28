@@ -1,0 +1,45 @@
+{
+  "source": "https://api.github.com/repos/ai-calypse/Ecoshed/releases",
+  "releases": [
+    {
+      "tag": "data-v1.1.0",
+      "url": "https://github.com/ai-calypse/Ecoshed/releases/tag/data-v1.1.0",
+      "title": "D1 review fixes: weighted sampling and read-only validation",
+      "description": "## Review fixes: weighted sampling and read-only validation\n\nBoth findings from the D1 review are fixed. Start with [Yaksh's handoff](https://github.com/ai-calypse/Ecoshed/blob/main/YAKSH_Task/README.md) and the [sampling quality explanation](https://github.com/ai-calypse/Ecoshed/blob/main/YAKSH_Task/docs/SAMPLING_QUALITY.md).\n\n### What changed\n\n- Workload selection now calibrates whole source task groups against instance, CPU, memory and estimated work arrival profiles. Original group timestamps, requests and instance counts are unchanged.\n- Build and independent validation enforce explicit quality limits. For the 250-group input, instance-arrival TV improved from 0.314 to 0.040 and memory-request arrival TV from 0.390 to 0.066.\n- Validation is read-only by default. Writing a report requires --output, so quick checks preserve the recorded full-source report and package checksums.\n- Documentation, reports, configs, manifests and checksums are refreshed. The original 64 hosts and cleaned population are unchanged.\n\n### Verification\n\n15 regression tests and 117 full-source/output checks passed. A fresh rebuild produced all 20 generated files and the manifest byte for byte. The instance loader reconciles the new workloads to 40,381 / 160,813 / 638,647 instances. Regression tests and CI check that validation does not modify tracked files.\n\n### Next teammate\n\nUse all policy inputs from this release together. The selected workload rows changed; results using v1.0.0 inputs should not be mixed into the same controlled comparison. The 4,000-group input remains a stress case. The project acceptance limits describe an approximation, not exact production replay.\n\nThe attached ZIP contains the current code, prepared datasets, documentation, reports and proposal PDF. The unmodified raw trace archive and proposal video remain available in [data-v1.0.0](https://github.com/ai-calypse/Ecoshed/releases/tag/data-v1.0.0).\n",
+      "assets": [
+        {
+          "name": "EcoSched_Yaksh_D1_Handoff.zip",
+          "bytes": 2281683,
+          "sha256": "sha256:43fb8b4aead5234139a10a96a24ee97b897e49c59421069d081d55579c09e628",
+          "url": "https://github.com/ai-calypse/Ecoshed/releases/download/data-v1.1.0/EcoSched_Yaksh_D1_Handoff.zip"
+        }
+      ]
+    },
+    {
+      "tag": "data-v1.0.0",
+      "url": "https://github.com/ai-calypse/Ecoshed/releases/tag/data-v1.0.0",
+      "title": "Yaksh's data preparation and teammate handoff",
+      "description": "## Yaksh's completed data-preparation handoff\n\nThe project overview is in the repository README. The next teammate should start with [YAKSH_Task/README.md](https://github.com/ai-calypse/Ecoshed/blob/main/YAKSH_Task/README.md).\n\nIncluded: verified Alibaba v2017 inputs, 39,861 cleaned task groups, a fixed 64-host pool, three deterministic workload samples, reproducible scripts, configs, reports and simulator integration instructions.\n\nValidation: 9 unit tests and 59 full-source/output checks passed; all 18 generated files and the manifest matched a fresh rebuild byte for byte. The largest workload is documented as a heavy burst stress case.\n\n### Downloads\n\n- `EcoSched_Yaksh_D1_Handoff.zip`: portable repository snapshot, including the project/task READMEs, cleaned inputs, code, reports and proposal PDF.\n- `trace_201708.tgz`: original Alibaba archive containing all six unmodified source CSVs. Published SHA-256: `02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df`.\n- `Project_Proposal.mp4`: original proposal video.\n\nRaw data is unnecessary to begin simulator integration. Large originals are release assets to keep Git checkouts small. Ownership of the completed data work is credited to Yaksh Gandhi; the original proposal PDF/video remain unchanged.\n",
+      "assets": [
+        {
+          "name": "EcoSched_Yaksh_D1_Handoff.zip",
+          "bytes": 2249581,
+          "sha256": "sha256:154c4facb0c24b8e5f0f3cc9935acf83c2ec9fa235d1dd6d1d43ee40934b0692",
+          "url": "https://github.com/ai-calypse/Ecoshed/releases/download/data-v1.0.0/EcoSched_Yaksh_D1_Handoff.zip"
+        },
+        {
+          "name": "Project_Proposal.mp4",
+          "bytes": 23410486,
+          "sha256": "sha256:95764fa7e88a3d6bcc49674bb99f1f05848f7dd540dd270231c4d2319ef6de78",
+          "url": "https://github.com/ai-calypse/Ecoshed/releases/download/data-v1.0.0/Project_Proposal.mp4"
+        },
+        {
+          "name": "trace_201708.tgz",
+          "bytes": 243323702,
+          "sha256": "sha256:02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df",
+          "url": "https://github.com/ai-calypse/Ecoshed/releases/download/data-v1.0.0/trace_201708.tgz"
+        }
+      ]
+    }
+  ]
+}

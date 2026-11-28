@@ -1,0 +1,58 @@
+{
+  "edges": [
+    [
+      "offline",
+      "adapter"
+    ],
+    [
+      "adapter",
+      "research"
+    ],
+    [
+      "kafka",
+      "sqlite"
+    ],
+    [
+      "sqlite",
+      "live"
+    ]
+  ],
+  "nodes": [
+    [
+      "offline",
+      "Offline simulator\ncommitted outcomes",
+      0,
+      2
+    ],
+    [
+      "adapter",
+      "Artifact adapter\nnumerical validation",
+      1,
+      2
+    ],
+    [
+      "research",
+      "7 research pages\nenergy + performance",
+      2,
+      2
+    ],
+    [
+      "kafka",
+      "Live Kafka\narrival replay",
+      0,
+      0
+    ],
+    [
+      "sqlite",
+      "SQLite transport state\ncounts + demand + lag",
+      1,
+      0
+    ],
+    [
+      "live",
+      "Live replay page\ncontroller + monitoring",
+      2,
+      0
+    ]
+  ]
+}

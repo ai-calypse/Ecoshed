@@ -1,0 +1,434 @@
+[
+  {
+    "energy_kwh": 34.15182195334158,
+    "objective": "mean_wait_s",
+    "pareto_efficient": true,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 55.95919478699922,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.198513597438655,
+    "objective": "mean_wait_s",
+    "pareto_efficient": false,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 56.02777535456072,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.269961690439196,
+    "objective": "mean_wait_s",
+    "pareto_efficient": false,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 56.06168260236098,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 39.13609389593756,
+    "objective": "mean_wait_s",
+    "pareto_efficient": true,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 54.47002796615223,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 32.828992511284234,
+    "objective": "mean_wait_s",
+    "pareto_efficient": true,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 55.95919478699922,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 32.87093465755169,
+    "objective": "mean_wait_s",
+    "pareto_efficient": false,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 56.02777535456072,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.017004368575485,
+    "objective": "mean_wait_s",
+    "pareto_efficient": true,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 55.588257598169356,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 37.74531934182412,
+    "objective": "mean_wait_s",
+    "pareto_efficient": true,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 54.55665048931708,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 35.03658824696317,
+    "objective": "mean_wait_s",
+    "pareto_efficient": true,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "value": 55.95919478699922,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 35.08509804600893,
+    "objective": "mean_wait_s",
+    "pareto_efficient": false,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "value": 56.02777535456072,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 35.33316268746673,
+    "objective": "mean_wait_s",
+    "pareto_efficient": false,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "value": 55.99105055316684,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 40.4775874090561,
+    "objective": "mean_wait_s",
+    "pareto_efficient": true,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "value": 54.479242302177965,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.15182195334158,
+    "objective": "overload_host_time_fraction",
+    "pareto_efficient": true,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 0.19624602141203704,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.198513597438655,
+    "objective": "overload_host_time_fraction",
+    "pareto_efficient": false,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 0.19800274884259259,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.269961690439196,
+    "objective": "overload_host_time_fraction",
+    "pareto_efficient": true,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 0.1846622668529748,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 39.13609389593756,
+    "objective": "overload_host_time_fraction",
+    "pareto_efficient": true,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 0.14069164233928466,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 32.828992511284234,
+    "objective": "overload_host_time_fraction",
+    "pareto_efficient": true,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 0.19624602141203704,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 32.87093465755169,
+    "objective": "overload_host_time_fraction",
+    "pareto_efficient": false,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 0.19800274884259259,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.017004368575485,
+    "objective": "overload_host_time_fraction",
+    "pareto_efficient": true,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 0.1725559974162478,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 37.74531934182412,
+    "objective": "overload_host_time_fraction",
+    "pareto_efficient": true,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 0.14020062387454582,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 35.03658824696317,
+    "objective": "overload_host_time_fraction",
+    "pareto_efficient": true,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "value": 0.19624602141203704,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 35.08509804600893,
+    "objective": "overload_host_time_fraction",
+    "pareto_efficient": false,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "value": 0.19800274884259259,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 35.33316268746673,
+    "objective": "overload_host_time_fraction",
+    "pareto_efficient": true,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "value": 0.17869207881322952,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 40.4775874090561,
+    "objective": "overload_host_time_fraction",
+    "pareto_efficient": true,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "value": 0.14120704932888853,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.15182195334158,
+    "objective": "migrations",
+    "pareto_efficient": true,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 0,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.198513597438655,
+    "objective": "migrations",
+    "pareto_efficient": false,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 0,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.269961690439196,
+    "objective": "migrations",
+    "pareto_efficient": false,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 7695,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 39.13609389593756,
+    "objective": "migrations",
+    "pareto_efficient": false,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 7222,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 32.828992511284234,
+    "objective": "migrations",
+    "pareto_efficient": true,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 0,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 32.87093465755169,
+    "objective": "migrations",
+    "pareto_efficient": false,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 0,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.017004368575485,
+    "objective": "migrations",
+    "pareto_efficient": false,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 9103,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 37.74531934182412,
+    "objective": "migrations",
+    "pareto_efficient": false,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 7095,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 35.03658824696317,
+    "objective": "migrations",
+    "pareto_efficient": true,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "value": 0,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 35.08509804600893,
+    "objective": "migrations",
+    "pareto_efficient": false,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "value": 0,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 35.33316268746673,
+    "objective": "migrations",
+    "pareto_efficient": false,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "value": 7337,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 40.4775874090561,
+    "objective": "migrations",
+    "pareto_efficient": false,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "value": 7138,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.15182195334158,
+    "objective": "mean_active_hosts",
+    "pareto_efficient": true,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 23.867083333333333,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.198513597438655,
+    "objective": "mean_active_hosts",
+    "pareto_efficient": false,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 23.925925925925927,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.269961690439196,
+    "objective": "mean_active_hosts",
+    "pareto_efficient": false,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 23.96847400922622,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 39.13609389593756,
+    "objective": "mean_active_hosts",
+    "pareto_efficient": false,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "value": 32.60645562801615,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 32.828992511284234,
+    "objective": "mean_active_hosts",
+    "pareto_efficient": true,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 23.867083333333333,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 32.87093465755169,
+    "objective": "mean_active_hosts",
+    "pareto_efficient": false,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 23.925925925925927,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 34.017004368575485,
+    "objective": "mean_active_hosts",
+    "pareto_efficient": false,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 25.85882522752998,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 37.74531934182412,
+    "objective": "mean_active_hosts",
+    "pareto_efficient": false,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "value": 32.496448969974935,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 35.03658824696317,
+    "objective": "mean_active_hosts",
+    "pareto_efficient": true,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "value": 23.867083333333333,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 35.08509804600893,
+    "objective": "mean_active_hosts",
+    "pareto_efficient": false,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "value": 23.925925925925927,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 35.33316268746673,
+    "objective": "mean_active_hosts",
+    "pareto_efficient": false,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "value": 24.18336354314303,
+    "workload_groups": 4000
+  },
+  {
+    "energy_kwh": 40.4775874090561,
+    "objective": "mean_active_hosts",
+    "pareto_efficient": false,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "value": 32.572448340198214,
+    "workload_groups": 4000
+  }
+]

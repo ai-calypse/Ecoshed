@@ -1,0 +1,254 @@
+[
+  {
+    "mean_wait_s": 8.454276037256562,
+    "p95_wait_s": 10.0,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "mean_wait_s": 8.482097496068707,
+    "p95_wait_s": 10.0,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "mean_wait_s": 8.420950768114189,
+    "p95_wait_s": 10.0,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "mean_wait_s": 8.404499818555703,
+    "p95_wait_s": 10.0,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "mean_wait_s": 8.454276037256562,
+    "p95_wait_s": 10.0,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "mean_wait_s": 8.482097496068707,
+    "p95_wait_s": 10.0,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "mean_wait_s": 8.420950768114189,
+    "p95_wait_s": 10.0,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "mean_wait_s": 8.404499818555703,
+    "p95_wait_s": 10.0,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "mean_wait_s": 8.454276037256562,
+    "p95_wait_s": 10.0,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "mean_wait_s": 8.482097496068707,
+    "p95_wait_s": 10.0,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "mean_wait_s": 8.420950768114189,
+    "p95_wait_s": 10.0,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "mean_wait_s": 8.404499818555703,
+    "p95_wait_s": 10.0,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "mean_wait_s": 5.662284353681874,
+    "p95_wait_s": 10.0,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "mean_wait_s": 5.676453832332705,
+    "p95_wait_s": 10.0,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "mean_wait_s": 5.677330294929664,
+    "p95_wait_s": 10.0,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "mean_wait_s": 5.09459952963174,
+    "p95_wait_s": 10.0,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "mean_wait_s": 5.662284353681874,
+    "p95_wait_s": 10.0,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "mean_wait_s": 5.676453832332705,
+    "p95_wait_s": 10.0,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "mean_wait_s": 5.3460858641190825,
+    "p95_wait_s": 10.0,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "mean_wait_s": 5.055889098266065,
+    "p95_wait_s": 10.0,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "mean_wait_s": 5.662284353681874,
+    "p95_wait_s": 10.0,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "mean_wait_s": 5.676453832332705,
+    "p95_wait_s": 10.0,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "mean_wait_s": 5.677637056838599,
+    "p95_wait_s": 10.0,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "mean_wait_s": 5.10200563857604,
+    "p95_wait_s": 10.0,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "mean_wait_s": 55.95919478699922,
+    "p95_wait_s": 465.0,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "mean_wait_s": 56.02777535456072,
+    "p95_wait_s": 465.0,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "mean_wait_s": 56.06168260236098,
+    "p95_wait_s": 466.0,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "mean_wait_s": 54.47002796615223,
+    "p95_wait_s": 465.0,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "mean_wait_s": 55.95919478699922,
+    "p95_wait_s": 465.0,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "mean_wait_s": 56.02777535456072,
+    "p95_wait_s": 465.0,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "mean_wait_s": 55.588257598169356,
+    "p95_wait_s": 466.0,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "mean_wait_s": 54.55665048931708,
+    "p95_wait_s": 465.0,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "mean_wait_s": 55.95919478699922,
+    "p95_wait_s": 465.0,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  },
+  {
+    "mean_wait_s": 56.02777535456072,
+    "p95_wait_s": 465.0,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  },
+  {
+    "mean_wait_s": 55.99105055316684,
+    "p95_wait_s": 465.0,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  },
+  {
+    "mean_wait_s": 54.479242302177965,
+    "p95_wait_s": 465.0,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  }
+]

@@ -1,0 +1,254 @@
+[
+  {
+    "mean_active_hosts": 1.2101157407407408,
+    "peak_active_hosts": 13,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "mean_active_hosts": 1.2184027777777777,
+    "peak_active_hosts": 14,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "mean_active_hosts": 1.2344752105825099,
+    "peak_active_hosts": 15,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "mean_active_hosts": 1.1945393740933437,
+    "peak_active_hosts": 14,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "mean_active_hosts": 1.2101157407407408,
+    "peak_active_hosts": 13,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "mean_active_hosts": 1.2184027777777777,
+    "peak_active_hosts": 14,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "mean_active_hosts": 1.2499568386555502,
+    "peak_active_hosts": 15,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "mean_active_hosts": 1.1945393740933437,
+    "peak_active_hosts": 14,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "mean_active_hosts": 1.2101157407407408,
+    "peak_active_hosts": 13,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "mean_active_hosts": 1.2184027777777777,
+    "peak_active_hosts": 14,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "mean_active_hosts": 1.2344752105825099,
+    "peak_active_hosts": 15,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "mean_active_hosts": 1.1944930777970473,
+    "peak_active_hosts": 14,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "mean_active_hosts": 4.35488425925926,
+    "peak_active_hosts": 34,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "mean_active_hosts": 4.375115740740741,
+    "peak_active_hosts": 34,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "mean_active_hosts": 4.423193149468259,
+    "peak_active_hosts": 34,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "mean_active_hosts": 4.72222441692369,
+    "peak_active_hosts": 34,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "mean_active_hosts": 4.35488425925926,
+    "peak_active_hosts": 34,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "mean_active_hosts": 4.375115740740741,
+    "peak_active_hosts": 34,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "mean_active_hosts": 4.652769636441616,
+    "peak_active_hosts": 34,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "mean_active_hosts": 4.715398439429517,
+    "peak_active_hosts": 34,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "mean_active_hosts": 4.35488425925926,
+    "peak_active_hosts": 34,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "mean_active_hosts": 4.375115740740741,
+    "peak_active_hosts": 34,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "mean_active_hosts": 4.440127549730894,
+    "peak_active_hosts": 34,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "mean_active_hosts": 4.737433732190171,
+    "peak_active_hosts": 34,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "mean_active_hosts": 23.867083333333333,
+    "peak_active_hosts": 64,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "mean_active_hosts": 23.925925925925927,
+    "peak_active_hosts": 64,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "mean_active_hosts": 23.96847400922622,
+    "peak_active_hosts": 64,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "mean_active_hosts": 32.60645562801615,
+    "peak_active_hosts": 64,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "mean_active_hosts": 23.867083333333333,
+    "peak_active_hosts": 64,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "mean_active_hosts": 23.925925925925927,
+    "peak_active_hosts": 64,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "mean_active_hosts": 25.85882522752998,
+    "peak_active_hosts": 64,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "mean_active_hosts": 32.496448969974935,
+    "peak_active_hosts": 64,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "mean_active_hosts": 23.867083333333333,
+    "peak_active_hosts": 64,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  },
+  {
+    "mean_active_hosts": 23.925925925925927,
+    "peak_active_hosts": 64,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  },
+  {
+    "mean_active_hosts": 24.18336354314303,
+    "peak_active_hosts": 64,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  },
+  {
+    "mean_active_hosts": 32.572448340198214,
+    "peak_active_hosts": 64,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  }
+]

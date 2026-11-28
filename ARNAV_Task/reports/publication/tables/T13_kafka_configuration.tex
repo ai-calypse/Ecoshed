@@ -1,0 +1,17 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.400\linewidth}>{\raggedright\arraybackslash}p{0.400\linewidth}}
+\caption{Tested Kafka infrastructure}\
+\toprule
+Parameter & Value \\
+\midrule\endhead
+version & 4.4.0 \\
+image & apache/kafka\allowbreak{}:4.4.0@sha25\allowbreak{}6:833b867a95\allowbreak{}85a141da455d\allowbreak{}c2b57431c65c\allowbreak{}bccb27f11c91\allowbreak{}f694444cca9f\allowbreak{}777e0f \\
+architecture & arm64 \\
+immutable\_index\_digest & sha256:833b8\allowbreak{}67a9585a141d\allowbreak{}a455dc2b5743\allowbreak{}1c65cbccb27f\allowbreak{}11c91f694444\allowbreak{}cca9f777e0f \\
+arm64\_manifest\_digest & sha256:77b56\allowbreak{}ddfb7104fc58\allowbreak{}14a3d0127fcf\allowbreak{}f49983220c7c\allowbreak{}7ad9bfc1f0af\allowbreak{}4d439228329 \\
+heap & -Xms256m -Xmx512m \\
+container\_me\allowbreak{}mory\_limit\_b\allowbreak{}ytes & 1610612736 \\
+topic & \{"brokers":[\allowbreak{}\{"broker\_id"\allowbreak{}:1,"host":"1\allowbreak{}27.0.0.1","i\allowbreak{}s\_fenced":fa\allowbreak{}lse,"port":1\allowbreak{}9092,"rack":\allowbreak{}null\}],"conn\allowbreak{}ected":true,\allowbreak{}"partitions"\allowbreak{}:1,"replicat\allowbreak{}ion\_factor":\allowbreak{}1,"topic":"e\allowbreak{}cosched.work\allowbreak{}load.arrival\allowbreak{}s.v1"\} \\
+\bottomrule\end{longtable}
+% One ARM64 broker/controller in KRaft mode, one partition and replication factor one; localhost-only external listener. Not a high-availability deployment.
+% Sources: ARNAV_Task/reports/phase4_verification.json, ARNAV_Task/docker-compose.yml

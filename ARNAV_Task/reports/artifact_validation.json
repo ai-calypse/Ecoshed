@@ -1,0 +1,951 @@
+{
+  "active_scope": {
+    "policies": [
+      "first_fit",
+      "best_fit",
+      "lr_mmt",
+      "lr_mmt_memory"
+    ],
+    "power_curves": [
+      "hpe_dl360_gen9",
+      "huawei_rh2288h_v3",
+      "quanta_d51b_2u"
+    ],
+    "workload_sizes": [
+      250,
+      1000,
+      4000
+    ]
+  },
+  "artifact_sha256": {
+    "ARNAV_Task/config/artifacts.json": "3b3bd1c5be07ed523a9b2d382bb35e4c30495b75bd6d6efef1b1981604472c16",
+    "BASELINE_Comparison/reports/all_pairwise_comparisons.csv": "9bc5c77564d0d4c8bf112150130e5beccd44258a61f6db4a96fb141cff4bf7c7",
+    "BASELINE_Comparison/reports/proposal_pairs.csv": "8f8b25619ddf945458eec86437ebb51deb338007609889b2c3e54635a65a39a0",
+    "BASELINE_Comparison/reports/summaries.json": "88cc588af6508257e4bbda9302328b4d992f803862bf19d0608beea5b1a461bd",
+    "BASELINE_Comparison/reports/validation.json": "54ed4bcd94db316dd01aff393521523ae4f1d6cf6677c10056a645db213d34ce",
+    "RAW_Alibaba/archive_audit.json": "031795105541b003dc73ceae2d8027de9f934edc444173a4b3c284c1a9a31e6c",
+    "RAW_Alibaba/archive_content_corroboration.json": "315f9717b273c2b56b73269b7d1dcaf32bebe5e4effdbd59b7683b3f681ec5de",
+    "RAW_Alibaba/config.json": "c202ff0da61c273f2a136566ff7e273512553f93327235c5b801109c555e9e19",
+    "RAW_Alibaba/data_validation.json": "5d143eee4379c6906ccbe7de218adee4e188fff23745c10f62b367a450b61e55",
+    "RAW_Alibaba/prepared/manifest.json": "91de65a667ac2fbc30f5c803819602f829b230f45a23d7ba66e04f089e7e6ce5",
+    "RAW_Alibaba/reports/comparison.csv": "6a542f3b0f17cdd8afc52242a07b93815bb1e9071bd4e1db9c8758da1c02a29d",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_1000/hpe_dl360_gen9/best_fit/summary.json": "8c1f9dd00f7016a4d5bcde2fda03874813bcf35483c5a948bed5adb282f7809e",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_1000/hpe_dl360_gen9/first_fit/summary.json": "a750db70a4e8ac41d5039172811d5a973f11cae7981b5346c404c7a9263ea12d",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_1000/hpe_dl360_gen9/lr_mmt/summary.json": "8ffc0d4a5ba0eef58f5e25eb42333711955c35bfc22eea4972908b5b02af344c",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_1000/hpe_dl360_gen9/lr_mmt_memory/summary.json": "ba99783273a03030f025cb133acf47424904ba6ade85c4b786da55ca95c8cb7b",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_250/hpe_dl360_gen9/best_fit/summary.json": "0872278f4ca819a719c92b2f38f629a28b888076c453f3b94bf8ff58666e0122",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_250/hpe_dl360_gen9/first_fit/summary.json": "9ee117fdeb3b2fbe261ca81a585d51da91bde22379f0f94f3d23ece8e9908f1a",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_250/hpe_dl360_gen9/lr_mmt/summary.json": "38c138fcabbe62fbbf822bf4e2fe325e189c3883c1be237f21bf2152867aa775",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_250/hpe_dl360_gen9/lr_mmt_memory/summary.json": "7ec7e40bebb333e5830c1934187644228b09bf7eee44ca88800ecb77b31063b8",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_4000/hpe_dl360_gen9/best_fit/summary.json": "46a06a67154a87cec1c4fca5715f8858b6c26dd8a73eb76ef3ee57e3a349f48e",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_4000/hpe_dl360_gen9/first_fit/summary.json": "526c7deb413dcc538cb0c4c3cbd30ffddcb1ebce5e7abda5a5d27fb2d59ea67c",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_4000/hpe_dl360_gen9/lr_mmt/summary.json": "f262e4f0a1657f2a19841403272286770aa88faa1c946d81e0d4496c98353c85",
+    "RAW_Alibaba/reports/runs/hpe_dl360_gen9/workload_4000/hpe_dl360_gen9/lr_mmt_memory/summary.json": "1a8db871f58e06f8978f25317d28cf9424a47b87308316d1cb67ed17d7168d41",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_1000/huawei_rh2288h_v3/best_fit/summary.json": "7ad8e17ec77773a259cc81dc35fe497079ac39d1cbbb580a4c57a954071d0ccd",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_1000/huawei_rh2288h_v3/first_fit/summary.json": "d8076a129f166f20ce424b8c8d49343de62147dab86382051c68d2804f60f1ae",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_1000/huawei_rh2288h_v3/lr_mmt/summary.json": "1e3c0a347dd87bea3aefc584fb7606f4aaea5f5a064390e6e01ebb3f4bb1d849",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_1000/huawei_rh2288h_v3/lr_mmt_memory/summary.json": "c9ea47a47ba3c1e089cd9bf01d8ed9e50bb62228fe70a8e29aa6a5d1a105f68c",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_250/huawei_rh2288h_v3/best_fit/summary.json": "fbbcd8ec33590269374414d7a2ba3c80df562f67ef7216d2af87af4200d02568",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_250/huawei_rh2288h_v3/first_fit/summary.json": "84cbe12fe68f31b0e89c9da6a1a456c0530e0c2acbbdd85fe19388bfec3da5c5",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_250/huawei_rh2288h_v3/lr_mmt/summary.json": "9c25a0d53474b1da170a73dff82bfaffe3b0256ecc328e4f3d17ac32a6bf6f49",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_250/huawei_rh2288h_v3/lr_mmt_memory/summary.json": "092d4a3e41dd057ee0d56eb735df0b0893abe926ed59c75c7adee411440450c3",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_4000/huawei_rh2288h_v3/best_fit/summary.json": "ab3d555b34f30ec9983b96cd000d521a7209efd46374d3cf7866839de67c314d",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_4000/huawei_rh2288h_v3/first_fit/summary.json": "3b70e90f72b2ba36009f15cacdad7cb40abef235391b7ead828bef9b85b1d448",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_4000/huawei_rh2288h_v3/lr_mmt/summary.json": "96eeb9dfa377bf694cb48e198e242f230ac08259b01f78554f1307c33928a5fd",
+    "RAW_Alibaba/reports/runs/huawei_rh2288h_v3/workload_4000/huawei_rh2288h_v3/lr_mmt_memory/summary.json": "687093219b3d473578668ca53bd79b52e4432f0d7097542e596555720a91d51d",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_1000/quanta_d51b_2u/best_fit/summary.json": "2e64ab969438475aa861861ab0bfc779b8e42d1b91fcf266f13239fa9686ad1f",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_1000/quanta_d51b_2u/first_fit/summary.json": "d54ba9550e46092e4e7d5716926c0b16894bb92f76acdf06e901c33b8e84e28b",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_1000/quanta_d51b_2u/lr_mmt/summary.json": "c14c0b74084ec5baf29f5654610111f17ca6517317d72a17d4737b1795a990d2",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_1000/quanta_d51b_2u/lr_mmt_memory/summary.json": "6fe30df0a750a052e3829d890e7fa87d9286c7ed6c365170687c689ac8ec8b8f",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_250/quanta_d51b_2u/best_fit/summary.json": "fe2678c64a1b3b3771c7a5bd56264918ceeac6f77e497c8f692e2d27ef46dbfa",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_250/quanta_d51b_2u/first_fit/summary.json": "dc80e72ea1c1e93e63710670307ca16d0b20040006d3f0a0babb426b94ea3851",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_250/quanta_d51b_2u/lr_mmt/summary.json": "4fd8e2850f26ec128396f2a906f590f3145ed0ebb59fd115afa93fd0762f526e",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_250/quanta_d51b_2u/lr_mmt_memory/summary.json": "7c76ec407139a8a99a82c678e038cf0daedb3a1b6db4159c31405bb7b43cf36d",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_4000/quanta_d51b_2u/best_fit/summary.json": "ce6ae76517941bc4581cd993bbbfc6497e5be01812bd799291618ebedfac0997",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_4000/quanta_d51b_2u/first_fit/summary.json": "e04797d50174451c37b0895367514e7d5c9fe1ea0e2af3aabfda7e48d3ddb556",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_4000/quanta_d51b_2u/lr_mmt/summary.json": "ff260416edd815750bf171fb2444164a513827fd9a66c3dd855f64c4bb5f444e",
+    "RAW_Alibaba/reports/runs/quanta_d51b_2u/workload_4000/quanta_d51b_2u/lr_mmt_memory/summary.json": "0492f6cba481388463d16bd3a572767a3366c712d5f6da3727edcf308559729d",
+    "RAW_Alibaba/reports/summaries.json": "479d3c44747f114e8c793362ff382e455a2b09470ef0d86ae2f775f02fd917d9",
+    "RAW_Alibaba/reports/validation.json": "4914c85d338b3c0e83741b746db0d364c4139e148a872b4c1618e3498d6698ea",
+    "ROHAN_Task/config/default.json": "67bd8f4e13a5875a5ee19c13f55cf3afe53fd1cd9fc79b27b5620e56136e9bd2",
+    "RUSHI_Task/reports/controller_diagnostics.csv": "db18276f48c56a8a3e83b4fffff286e71e6afd1a98d4ba3edcb659f4f2f0ce93",
+    "RUSHI_Task/reports/curve_band_watts.csv": "ad37ed6158b32eecbb00500e6a168ece62dfa693c40794c9cbcc2cf78ba44ac4",
+    "RUSHI_Task/reports/outcomes_by_task_type.csv": "fbc7e27bff8df9adce20c715f24793f47fd2294c8cbaf91b7279cad0a9902fbc",
+    "RUSHI_Task/reports/pair_energy_gap.csv": "4933674c57a87c152e7572177b42da281ffc2ab41a79aca7b27f0fd1ec7f88f3",
+    "RUSHI_Task/reports/placement_decisions.csv": "7389f4b5a2e5f7ed64cf740d3a7ddc69216b092c7ea33300a68bcfda3db3a5d7",
+    "RUSHI_Task/reports/placement_load_bands.csv": "7f2aaa8150d0e0b6003cb797d97bb3a405ab19ad9f1ccd87bc55d35663f97d8a",
+    "RUSHI_Task/reports/placement_score_arithmetic.csv": "bc181823a11de7850df24b89ad72555e10cb28dc674ab489142dbf4c0fe1de67",
+    "RUSHI_Task/reports/run_energy_breakdown.csv": "65f569481a4e0b743a9ab199c74b23db79efbb828df56000032c4a16504ef8c1",
+    "RUSHI_Task/reports/runs/hpe_dl360_gen9/workload_1000/lr_mmt.json": "13afd4fe946f21725d956a8182396f338f54b642b1c8ea14a2cfff9c1fb7b102",
+    "RUSHI_Task/reports/runs/hpe_dl360_gen9/workload_1000/lr_mmt_memory.json": "f70190f343b600807eb640c17afeba95c64bacc4ef063b2cd9a685b40ae4de0a",
+    "RUSHI_Task/reports/runs/hpe_dl360_gen9/workload_250/lr_mmt.json": "b4116d90f825680f554b8027bbce8bad2d48906a1b3f8a276ab349554c5cac8e",
+    "RUSHI_Task/reports/runs/hpe_dl360_gen9/workload_250/lr_mmt_memory.json": "137072a5be77ad9adc2d3d6aa9959397d842ae084932bf61add0a69ee551ccbc",
+    "RUSHI_Task/reports/runs/hpe_dl360_gen9/workload_4000/lr_mmt.json": "3a5d8514a982082c4a5b50289c5612445f012359f844f69d9cdfae09fd485b8a",
+    "RUSHI_Task/reports/runs/hpe_dl360_gen9/workload_4000/lr_mmt_memory.json": "61a5121d3c092ce2b40df6307d20de4277a3b62cdbd78997d8aad5198b07f051",
+    "RUSHI_Task/reports/runs/huawei_rh2288h_v3/workload_1000/lr_mmt.json": "5c0b99444ee224bd3de4ae37f026212637ad9cb224fcd22a5eafa7e90b3fe3c2",
+    "RUSHI_Task/reports/runs/huawei_rh2288h_v3/workload_1000/lr_mmt_memory.json": "a128119b3eb7415452ccef9c41b559ebb7350db2a5e0039ded469563f4ea03a4",
+    "RUSHI_Task/reports/runs/huawei_rh2288h_v3/workload_250/lr_mmt.json": "1c48fad14637458d6fa416860ecbfd74faab7e30c29dca86e87d9dffc2e20997",
+    "RUSHI_Task/reports/runs/huawei_rh2288h_v3/workload_250/lr_mmt_memory.json": "2c2206e596a4227660f4d2940e0d25225f3059b9e103d2bbf0da985e5bbbf59d",
+    "RUSHI_Task/reports/runs/huawei_rh2288h_v3/workload_4000/lr_mmt.json": "6f5b0c88206b0263206098b9c2288624214c6a7a88747c32d026555010f5c187",
+    "RUSHI_Task/reports/runs/huawei_rh2288h_v3/workload_4000/lr_mmt_memory.json": "a1f3751935430ba7b91768163e18d676161cce87239314316c24253c5f4a8bbf",
+    "RUSHI_Task/reports/runs/quanta_d51b_2u/workload_1000/lr_mmt.json": "d81424e3c1c32c3574901a0c67b6699ed8b61dda8df8af543f7c8f11ec2c7e03",
+    "RUSHI_Task/reports/runs/quanta_d51b_2u/workload_1000/lr_mmt_memory.json": "83798f9cd641d42f9f0752a1727e1dad3dff2d836ecf2f8225c2523508eed065",
+    "RUSHI_Task/reports/runs/quanta_d51b_2u/workload_250/lr_mmt.json": "68ccaf459bf24e77c51bbe710b614b2f58142f36a0e33cb9b8f779d020a33c01",
+    "RUSHI_Task/reports/runs/quanta_d51b_2u/workload_250/lr_mmt_memory.json": "5587fe00434be617d2d96c56d6569b91a02208910cee6c44b29d8f030cc15bf9",
+    "RUSHI_Task/reports/runs/quanta_d51b_2u/workload_4000/lr_mmt.json": "8774790ef486aaf4532a858214a2635cb5b168f447f27b0056d64c937f41749c",
+    "RUSHI_Task/reports/runs/quanta_d51b_2u/workload_4000/lr_mmt_memory.json": "943e4be44f504a4bec26d8b81c4ef026ce8504d8d7e9b42869defae58deb11a6",
+    "RUSHI_Task/reports/servers_running_work.csv": "913966b4ee946d5532f5e9085a84f06fb4438757364354aeceedd9d99bac02a8",
+    "RUSHI_Task/reports/tradeoffs.csv": "087858bb9ff151883e5d753e1e88861f0fede9060ac76e4fe0e956512cebe68f",
+    "RUSHI_Task/reports/validation.json": "a5c7d2fe3a6204ece5a11b837f75e0940ff1f704fdb32672b4865f82d7e093c2",
+    "RUSHI_Task/reports/workload_mix.csv": "0982b2a19b5937183b57a0cc75bb5cbf659c26640c955a3c57aadb4490b95ef4",
+    "ecosched/power_curves.json": "3740374e6ec09c0645bc7d3cf81daceba26648d7c37fbe7633acac1e6c7e9ca6"
+  },
+  "metric_definitions": {
+    "comparison_scope": "Identical workload size, SPECpower curve, simulation config and input-manifest reference.",
+    "energy_reduction_pct": {
+      "definition": "100 * (baseline energy - candidate energy) / baseline energy; positive saves energy.",
+      "unit": "percent"
+    },
+    "missing_values": "JSON null / empty CSV field; no imputation.",
+    "percentiles": "Never averaged or pooled from summary percentiles.",
+    "resource_skew_metrics": {
+      "delayed_pct": {
+        "definition": "Category instances with positive initial wait.",
+        "unit": "percent"
+      },
+      "instances": {
+        "definition": "Observed category count; an absent category has no outcome row.",
+        "unit": "instances"
+      },
+      "mean_wait_s": {
+        "definition": "Instance-weighted initial wait, including queueing and wake delay.",
+        "unit": "seconds"
+      },
+      "migrated_pct": {
+        "definition": "Category instances migrated at least once; not migration count.",
+        "unit": "percent"
+      },
+      "p95_wait_s": {
+        "definition": "Within-run 95th percentile; never average across runs or categories.",
+        "unit": "seconds"
+      },
+      "placed_on_asleep_or_waking_server_pct": {
+        "definition": "Category placements on asleep or waking hosts.",
+        "unit": "percent"
+      }
+    },
+    "resource_skew_scope": "D5 primary LR-MMT pair only; no category energy allocation.",
+    "run_metrics": {
+      "completed_instances": {
+        "definition": "Completed independent instances, not task groups.",
+        "unit": "instances"
+      },
+      "drain_time_s": {
+        "definition": "Simulation time beyond the arrival horizon.",
+        "unit": "seconds"
+      },
+      "energy_kwh": {
+        "definition": "Modeled whole-cluster energy, including sleep and wake power.",
+        "unit": "kWh"
+      },
+      "max_wait_s": {
+        "definition": "Maximum initial instance wait.",
+        "unit": "seconds"
+      },
+      "mean_active_hosts": {
+        "definition": "Time-weighted powered hosts, including waking hosts.",
+        "unit": "hosts"
+      },
+      "mean_fragmentation_index": {
+        "definition": "Event-integrated normalized residual-resource fragmentation index.",
+        "unit": "fraction"
+      },
+      "mean_wait_s": {
+        "definition": "Instance-weighted initial wait, including queueing and wake delay.",
+        "unit": "seconds"
+      },
+      "migration_pause_instance_seconds": {
+        "definition": "Sum of instance pauses, including destination wake delay.",
+        "unit": "instance-seconds"
+      },
+      "migrations": {
+        "definition": "Number of stop-and-copy migrations.",
+        "unit": "transfers"
+      },
+      "overload_host_time_fraction": {
+        "definition": "Modeled SLA proxy: CPU-or-memory reservation pressure above the configured threshold; not measured SLA violations.",
+        "unit": "fraction"
+      },
+      "p95_turnaround_s": {
+        "definition": "Within-run 95th percentile of completion minus release.",
+        "unit": "seconds"
+      },
+      "p95_wait_s": {
+        "definition": "Within-run 95th percentile; never average across runs or categories.",
+        "unit": "seconds"
+      },
+      "peak_active_hosts": {
+        "definition": "Maximum number of powered hosts, including waking hosts.",
+        "unit": "hosts"
+      },
+      "queue_instance_seconds": {
+        "definition": "Queue time before dispatch, excluding subsequent wake delay.",
+        "unit": "instance-seconds"
+      },
+      "rejected_instances": {
+        "definition": "Offered instances rejected by the simulator.",
+        "unit": "instances"
+      },
+      "stop_time_s": {
+        "definition": "Maximum of arrival horizon and final completion.",
+        "unit": "seconds"
+      },
+      "unfinished_instances": {
+        "definition": "Arrived instances neither completed nor rejected at the stopping rule.",
+        "unit": "instances"
+      },
+      "wh_per_completed_instance": {
+        "definition": "1000 * energy_kwh / completed_instances; not per task group.",
+        "unit": "Wh/instance"
+      }
+    }
+  },
+  "mode": "offline",
+  "new_simulations": 0,
+  "numerical": {
+    "active_outcomes": 36,
+    "checks": [
+      "manifest and recorded validation coverage",
+      "run (250, 'hpe_dl360_gen9', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'hpe_dl360_gen9', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'hpe_dl360_gen9', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (250, 'hpe_dl360_gen9', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (250, 'huawei_rh2288h_v3', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'huawei_rh2288h_v3', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'huawei_rh2288h_v3', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (250, 'huawei_rh2288h_v3', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (250, 'quanta_d51b_2u', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'quanta_d51b_2u', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (250, 'quanta_d51b_2u', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (250, 'quanta_d51b_2u', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (1000, 'hpe_dl360_gen9', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'hpe_dl360_gen9', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'hpe_dl360_gen9', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (1000, 'hpe_dl360_gen9', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (1000, 'huawei_rh2288h_v3', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'huawei_rh2288h_v3', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'huawei_rh2288h_v3', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (1000, 'huawei_rh2288h_v3', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (1000, 'quanta_d51b_2u', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'quanta_d51b_2u', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (1000, 'quanta_d51b_2u', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (1000, 'quanta_d51b_2u', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (4000, 'hpe_dl360_gen9', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'hpe_dl360_gen9', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'hpe_dl360_gen9', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (4000, 'hpe_dl360_gen9', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (4000, 'huawei_rh2288h_v3', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'huawei_rh2288h_v3', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'huawei_rh2288h_v3', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (4000, 'huawei_rh2288h_v3', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "run (4000, 'quanta_d51b_2u', 'first_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'quanta_d51b_2u', 'best_fit'): counts, units, energy, timing and assumptions",
+      "run (4000, 'quanta_d51b_2u', 'lr_mmt'): counts, units, energy, timing and assumptions",
+      "run (4000, 'quanta_d51b_2u', 'lr_mmt_memory'): counts, units, energy, timing and assumptions",
+      "nine primary pairs, 144 ordered comparisons and raw CSV consistency",
+      "D5 recordings, resource-skew outcomes, sampled series and energy accounting"
+    ],
+    "checks_passed": 39,
+    "completed_instance_replays": 5559312,
+    "d5": {
+      "recordings": 18,
+      "resource_skew_rows": 48,
+      "table_rows": {
+        "controller_diagnostics": 18,
+        "curve_band_watts": 30,
+        "outcomes_by_task_type": 48,
+        "pair_energy_gap": 9,
+        "placement_decisions": 18,
+        "placement_load_bands": 48,
+        "placement_score_arithmetic": 3,
+        "run_energy_breakdown": 36,
+        "servers_running_work": 18,
+        "tradeoffs": 9,
+        "workload_mix": 3
+      }
+    },
+    "errors": [],
+    "missing_optional_metrics": {},
+    "passed": true,
+    "per_curve_outcomes": {
+      "hpe_dl360_gen9": 12,
+      "huawei_rh2288h_v3": 12,
+      "quanta_d51b_2u": 12
+    },
+    "policy_comparisons": 144,
+    "primary_comparisons": 9,
+    "rejected_instances": 0,
+    "unfinished_instances": 0
+  },
+  "passed": true,
+  "provenance": {
+    "archive_identity": {
+      "interpretation": "Recorded gzip/member integrity and raw-payload corroboration are not a publisher compressed-checksum match. No archive was processed by D6.",
+      "published_legacy_archive_sha256": "02c1fbc412fccc03b748c05ec18fc30fd93c0bc383eea47ac21146c4aa2235df",
+      "raw_members": [
+        {
+          "current_sha256": null,
+          "expected_sha256": "195f25ef36484a2da9bb92c08e203224ed34a32f48fcbe11c01d94ecf308d817",
+          "hash_matches": false,
+          "path": "RAW_Alibaba/raw/batch_instance.csv",
+          "present": false
+        },
+        {
+          "current_sha256": null,
+          "expected_sha256": "50f3c50ab4a917ad06c1cee6ec601e1356708774d7962503e8eafdd720b2286d",
+          "hash_matches": false,
+          "path": "RAW_Alibaba/raw/batch_task.csv",
+          "present": false
+        },
+        {
+          "current_sha256": null,
+          "expected_sha256": "8e2c2776983fb0867f5088352849773186eab22de9d878e10978b5018c68aeda",
+          "hash_matches": false,
+          "path": "RAW_Alibaba/raw/container_event.csv",
+          "present": false
+        },
+        {
+          "current_sha256": null,
+          "expected_sha256": "9ccb7abafdc492b173eb87b49c9cec3df30cb6e8fbfce09e7023be826de3a10a",
+          "hash_matches": false,
+          "path": "RAW_Alibaba/raw/container_usage.csv",
+          "present": false
+        },
+        {
+          "current_sha256": null,
+          "expected_sha256": "336f7255add3ae3c08bf5163b15319f542365a3c7814ed3f712699560933968b",
+          "hash_matches": false,
+          "path": "RAW_Alibaba/raw/server_event.csv",
+          "present": false
+        },
+        {
+          "current_sha256": null,
+          "expected_sha256": "032fa4193f4b426941fb1eecef5add3d8b0632aaf7cbd7663b0051ceb8a4637a",
+          "hash_matches": false,
+          "path": "RAW_Alibaba/raw/server_usage.csv",
+          "present": false
+        }
+      ],
+      "recorded_archive": {
+        "current_sha256": null,
+        "expected_sha256": "b7efe9dc9caa75352de41b9ac34b329602cde3414fd7cab87c1d21a9a9871d66",
+        "hash_matches": false,
+        "path": "alibaba-trace-2017.tar.gz",
+        "present": false
+      },
+      "recorded_gzip_and_member_integrity": true,
+      "recorded_metadata_consistent": true,
+      "recorded_publisher_compressed_checksum_match": false,
+      "recorded_raw_member_corroboration": {
+        "all_six_raw_payloads_match": true,
+        "member_checks": {
+          "batch_instance.csv": true,
+          "batch_task.csv": true,
+          "container_event.csv": true,
+          "container_usage.csv": true,
+          "server_event.csv": true,
+          "server_usage.csv": true
+        },
+        "published_legacy_compressed_archive_matches": false,
+        "purpose": "archive-content corroboration only; no cleaned inputs or cleaning code are used by fresh preparation",
+        "reference": "previously recorded raw-file fingerprints in YAKSH_Task/manifest.json"
+      }
+    },
+    "discrepancies": [
+      {
+        "current_sha256": "91de65a667ac2fbc30f5c803819602f829b230f45a23d7ba66e04f089e7e6ce5",
+        "earlier_matching_version_found": false,
+        "expected_sha256": [
+          "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b"
+        ],
+        "history": {
+          "matching_versions": [],
+          "scope": "All fetched local Git refs at this path; excludes deleted/unfetched refs and unreachable objects.",
+          "search_available": true,
+          "shallow_repository": false,
+          "versions_checked": 1
+        },
+        "id": "prepared_manifest_reference",
+        "implication": "Result/input lineage cannot be certified by the recorded manifest reference. Numerical copies can still agree.",
+        "references": [
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[0].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[1].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[2].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[3].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[4].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[5].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[6].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[7].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[8].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[9].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[10].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[11].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[12].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[13].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[14].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[15].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[16].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[17].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[18].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[19].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[20].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[21].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[22].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[23].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[24].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[25].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[26].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[27].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[28].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[29].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[30].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[31].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[32].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[33].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[34].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[35].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[36].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[37].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[38].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[39].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[40].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[41].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[42].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[43].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[44].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[45].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[46].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[47].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[48].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[49].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[50].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[51].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[52].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "[53].manifest_sha256",
+            "file": "RAW_Alibaba/reports/summaries.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "manifest_sha256",
+            "file": "RAW_Alibaba/data_validation.json"
+          },
+          {
+            "expected_sha256": "110e649725860bd615632a89a15573203d2858821c0917c6c478514bf8fbd18b",
+            "field": "input_manifest_sha256",
+            "file": "BASELINE_Comparison/reports/validation.json"
+          }
+        ],
+        "status": "unresolved",
+        "target": "RAW_Alibaba/prepared/manifest.json"
+      },
+      {
+        "current_sha256": "479d3c44747f114e8c793362ff382e455a2b09470ef0d86ae2f775f02fd917d9",
+        "earlier_matching_version_found": false,
+        "expected_sha256": [
+          "b64f374f1884cdb8c4bd0a0be540cdca69be842fc7d3e2ca18e03d5fb91c7f0c"
+        ],
+        "history": {
+          "matching_versions": [],
+          "scope": "All fetched local Git refs at this path; excludes deleted/unfetched refs and unreachable objects.",
+          "search_available": true,
+          "shallow_repository": false,
+          "versions_checked": 1
+        },
+        "id": "raw_summaries_reference",
+        "implication": "The baseline validation does not identify the current raw-summary bytes. Compare the selected rows directly.",
+        "references": [
+          {
+            "expected_sha256": "b64f374f1884cdb8c4bd0a0be540cdca69be842fc7d3e2ca18e03d5fb91c7f0c",
+            "field": "source_summary_sha256",
+            "file": "BASELINE_Comparison/reports/validation.json"
+          }
+        ],
+        "status": "unresolved",
+        "target": "RAW_Alibaba/reports/summaries.json"
+      },
+      {
+        "current_sha256": "031795105541b003dc73ceae2d8027de9f934edc444173a4b3c284c1a9a31e6c",
+        "earlier_matching_version_found": false,
+        "expected_sha256": [
+          "711dc21157f2a5cd06378d086ece853786e1359e8063bcf5e67fd54813d960b6"
+        ],
+        "history": {
+          "matching_versions": [],
+          "scope": "All fetched local Git refs at this path; excludes deleted/unfetched refs and unreachable objects.",
+          "search_available": true,
+          "shallow_repository": false,
+          "versions_checked": 1
+        },
+        "id": "archive_audit_reference",
+        "implication": "The manifest does not identify the current archive-audit bytes. Raw-member records corroborate content, not this broken link.",
+        "references": [
+          {
+            "expected_sha256": "711dc21157f2a5cd06378d086ece853786e1359e8063bcf5e67fd54813d960b6",
+            "field": "archive_audit_sha256",
+            "file": "RAW_Alibaba/prepared/manifest.json"
+          }
+        ],
+        "status": "unresolved",
+        "target": "RAW_Alibaba/archive_audit.json"
+      }
+    ],
+    "end_to_end_reproducibility": {
+      "prerequisites_available_and_consistent": false,
+      "reason": "D6 Phase 1 reads stored artifacts; no fresh raw preparation or simulation replay was executed.",
+      "verified": false
+    },
+    "lineage_consistent": false,
+    "numerical_consistency_is_separate": true,
+    "prepared_inputs": {
+      "all_hashes_verified": false,
+      "all_present": false,
+      "files": [
+        {
+          "current_sha256": null,
+          "expected_sha256": "9d4a52c8a85f404a5f7ac3494f8e377defa7e5912e5aea149d6f5f45d72d2896",
+          "hash_matches": false,
+          "path": "RAW_Alibaba/prepared/hosts.csv",
+          "present": false
+        },
+        {
+          "current_sha256": null,
+          "expected_sha256": "af98184ffd6895c5077f74ed6fabf523bcbd4e5627c5da58c34599a7eff63557",
+          "hash_matches": false,
+          "path": "RAW_Alibaba/prepared/instances.csv",
+          "present": false
+        },
+        {
+          "current_sha256": null,
+          "expected_sha256": "bd209c77f06b5a706204d2becbd6af79cebffc09e97eb715d67e6c68109f819e",
+          "hash_matches": false,
+          "path": "RAW_Alibaba/prepared/workload_1000.csv",
+          "present": false
+        },
+        {
+          "current_sha256": null,
+          "expected_sha256": "4057404c1d09ed964af35911409dd16b2d775c6951d2077bdb2371af6899254f",
+          "hash_matches": false,
+          "path": "RAW_Alibaba/prepared/workload_250.csv",
+          "present": false
+        },
+        {
+          "current_sha256": null,
+          "expected_sha256": "06e2519db449ed83b136318d95d64e938f4864588a9a5053c1452d1302464e84",
+          "hash_matches": false,
+          "path": "RAW_Alibaba/prepared/workload_4000.csv",
+          "present": false
+        }
+      ]
+    },
+    "source_code_fingerprints": {
+      "conflicting_references": [],
+      "consistent": true,
+      "files": [
+        {
+          "current_sha256": "1a2b4879cb0fcbae73c2f8514a8944159cb48541117e71067bc75ed93602b86b",
+          "expected_sha256": "1a2b4879cb0fcbae73c2f8514a8944159cb48541117e71067bc75ed93602b86b",
+          "hash_matches": true,
+          "path": "BASELINE_Comparison/build.py",
+          "present": true
+        },
+        {
+          "current_sha256": "ce3b1ee1790477ee8252bdbf11fc0f1beacc6f5409a81702e00326938e50b937",
+          "expected_sha256": "ce3b1ee1790477ee8252bdbf11fc0f1beacc6f5409a81702e00326938e50b937",
+          "hash_matches": true,
+          "path": "ENERGY_Study/instrumentation.py",
+          "present": true
+        },
+        {
+          "current_sha256": "73231d5f32109c87c81d29d1ca4b2370a9e75aad074f3383dd345d579b1fc2bc",
+          "expected_sha256": "73231d5f32109c87c81d29d1ca4b2370a9e75aad074f3383dd345d579b1fc2bc",
+          "hash_matches": true,
+          "path": "ENERGY_Study/policies.py",
+          "present": true
+        },
+        {
+          "current_sha256": "b79631c1e876456f529c35b5c18d0ef7fd20bf1213f030759aab69016a00c33e",
+          "expected_sha256": "b79631c1e876456f529c35b5c18d0ef7fd20bf1213f030759aab69016a00c33e",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/__init__.py",
+          "present": true
+        },
+        {
+          "current_sha256": "c202ff0da61c273f2a136566ff7e273512553f93327235c5b801109c555e9e19",
+          "expected_sha256": "c202ff0da61c273f2a136566ff7e273512553f93327235c5b801109c555e9e19",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/config.json",
+          "present": true
+        },
+        {
+          "current_sha256": "71fbc35957fe7def7c3be619a3b37b802d771158da5541c69dc5086735a8ae6b",
+          "expected_sha256": "71fbc35957fe7def7c3be619a3b37b802d771158da5541c69dc5086735a8ae6b",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/data.py",
+          "present": true
+        },
+        {
+          "current_sha256": "963c5792da64bb49c8aedc76fbf24d6fe83e9c4816bfa149c247bff5199fcbab",
+          "expected_sha256": "963c5792da64bb49c8aedc76fbf24d6fe83e9c4816bfa149c247bff5199fcbab",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/extract.py",
+          "present": true
+        },
+        {
+          "current_sha256": "e4ca1bb06435f7706b0b72381c81b3ab6356d7071cfdeeda12e228498c98931c",
+          "expected_sha256": "e4ca1bb06435f7706b0b72381c81b3ab6356d7071cfdeeda12e228498c98931c",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/prepare.py",
+          "present": true
+        },
+        {
+          "current_sha256": "f17793dcb1af8aa7c88e240f5d3deb0e47ea91b73ddec269268e73a2c28b27d0",
+          "expected_sha256": "f17793dcb1af8aa7c88e240f5d3deb0e47ea91b73ddec269268e73a2c28b27d0",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/run.py",
+          "present": true
+        },
+        {
+          "current_sha256": "2b36f546f65aac034d8adff4bda6da1cefd5b54531fae463251408308a5f9f54",
+          "expected_sha256": "2b36f546f65aac034d8adff4bda6da1cefd5b54531fae463251408308a5f9f54",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/verify.py",
+          "present": true
+        },
+        {
+          "current_sha256": "ca8de3a89520164d0247cfc47574aee3b5f3fe0e2ae51a1465364505f1a72977",
+          "expected_sha256": "ca8de3a89520164d0247cfc47574aee3b5f3fe0e2ae51a1465364505f1a72977",
+          "hash_matches": true,
+          "path": "RAW_Alibaba/verify_data.py",
+          "present": true
+        },
+        {
+          "current_sha256": "a0e2d66ee85e960731389370ccf41cc3d20f91b392307da16f4e3d7ff05a43bc",
+          "expected_sha256": "a0e2d66ee85e960731389370ccf41cc3d20f91b392307da16f4e3d7ff05a43bc",
+          "hash_matches": true,
+          "path": "ROHAN_Task/policies.py",
+          "present": true
+        },
+        {
+          "current_sha256": "11c973711c7658766ed169007c17c83523d5cf9f64464a557355a42379cf427a",
+          "expected_sha256": "11c973711c7658766ed169007c17c83523d5cf9f64464a557355a42379cf427a",
+          "hash_matches": true,
+          "path": "RUSHI_Task/__init__.py",
+          "present": true
+        },
+        {
+          "current_sha256": "fd48e740f47e4c5f1cfd63ee12d48b37f0aebb05d9ea1e57127cdd0db407c2a0",
+          "expected_sha256": "fd48e740f47e4c5f1cfd63ee12d48b37f0aebb05d9ea1e57127cdd0db407c2a0",
+          "hash_matches": true,
+          "path": "RUSHI_Task/accounting.py",
+          "present": true
+        },
+        {
+          "current_sha256": "9bcf03a2662e4018f6d7a8af54aee8ebe6ace43d3244aeb0032f974b13a570c5",
+          "expected_sha256": "9bcf03a2662e4018f6d7a8af54aee8ebe6ace43d3244aeb0032f974b13a570c5",
+          "hash_matches": true,
+          "path": "RUSHI_Task/analyze.py",
+          "present": true
+        },
+        {
+          "current_sha256": "54e5a7481e9228b0a9e29ec19af538517561e294595e86bd0dcb2d0573836e5b",
+          "expected_sha256": "54e5a7481e9228b0a9e29ec19af538517561e294595e86bd0dcb2d0573836e5b",
+          "hash_matches": true,
+          "path": "RUSHI_Task/charts.py",
+          "present": true
+        },
+        {
+          "current_sha256": "af652febe06f82f29787da1d2c464eca1f928a0591126152b7d35a6b71d9c0d6",
+          "expected_sha256": "af652febe06f82f29787da1d2c464eca1f928a0591126152b7d35a6b71d9c0d6",
+          "hash_matches": true,
+          "path": "RUSHI_Task/observer.py",
+          "present": true
+        },
+        {
+          "current_sha256": "cf09b3dba25875630db5c50f4c38c97411f810538d342294f1b69ac862272a03",
+          "expected_sha256": "cf09b3dba25875630db5c50f4c38c97411f810538d342294f1b69ac862272a03",
+          "hash_matches": true,
+          "path": "RUSHI_Task/rerun.py",
+          "present": true
+        },
+        {
+          "current_sha256": "4ca0a98f4b1795517424ecd4c7a9fa1d181dd0d7a255c3db6930de06659aeef8",
+          "expected_sha256": "4ca0a98f4b1795517424ecd4c7a9fa1d181dd0d7a255c3db6930de06659aeef8",
+          "hash_matches": true,
+          "path": "ecosched/__init__.py",
+          "present": true
+        },
+        {
+          "current_sha256": "e9e1271c2548d9b55b2db058baf62e7c1c2f8acaf31af937cb06f4d4abd3e0d7",
+          "expected_sha256": "e9e1271c2548d9b55b2db058baf62e7c1c2f8acaf31af937cb06f4d4abd3e0d7",
+          "hash_matches": true,
+          "path": "ecosched/__main__.py",
+          "present": true
+        },
+        {
+          "current_sha256": "1f468124cd751c21c57c87e525049e1453cbdd5d4bb49b9aeb6e05a09505dbd3",
+          "expected_sha256": "1f468124cd751c21c57c87e525049e1453cbdd5d4bb49b9aeb6e05a09505dbd3",
+          "hash_matches": true,
+          "path": "ecosched/engine.py",
+          "present": true
+        },
+        {
+          "current_sha256": "f0627674b71cba2ff918551bd19a83e760b206f6ac8e31abb725855f293482fb",
+          "expected_sha256": "f0627674b71cba2ff918551bd19a83e760b206f6ac8e31abb725855f293482fb",
+          "hash_matches": true,
+          "path": "ecosched/models.py",
+          "present": true
+        },
+        {
+          "current_sha256": "15360788f03f676ec09590624f37a1074fb068cd105356ad4c9f4b371dcd81b4",
+          "expected_sha256": "15360788f03f676ec09590624f37a1074fb068cd105356ad4c9f4b371dcd81b4",
+          "hash_matches": true,
+          "path": "ecosched/policies.py",
+          "present": true
+        },
+        {
+          "current_sha256": "8d269e0b7749f7346268b9ebeb6df54e76f2c75307405ae13fd34a87aef66442",
+          "expected_sha256": "8d269e0b7749f7346268b9ebeb6df54e76f2c75307405ae13fd34a87aef66442",
+          "hash_matches": true,
+          "path": "ecosched/power.py",
+          "present": true
+        },
+        {
+          "current_sha256": "3740374e6ec09c0645bc7d3cf81daceba26648d7c37fbe7633acac1e6c7e9ca6",
+          "expected_sha256": "3740374e6ec09c0645bc7d3cf81daceba26648d7c37fbe7633acac1e6c7e9ca6",
+          "hash_matches": true,
+          "path": "ecosched/power_curves.json",
+          "present": true
+        }
+      ]
+    },
+    "status": "unresolved",
+    "strict_prerequisites_passed": false,
+    "unresolved_discrepancy_count": 3
+  },
+  "raw_archive_processing_in_this_phase": false,
+  "schema_version": 1
+}

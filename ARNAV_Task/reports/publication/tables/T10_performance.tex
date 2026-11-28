@@ -1,0 +1,129 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{Hosts, migrations and waiting outcomes}\
+\toprule
+Workload Groups & Power Curve & Policy & Mean Active Hosts (hosts) & Peak Active Hosts (hosts) & Migrations (transfers) & Migration Pause Instance Seconds (instance-seconds) \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & first\_fit & 1.21012 & 13 & 0 & 0 \\
+250 & hpe\_dl360\_gen9 & best\_fit & 1.2184 & 14 & 0 & 0 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt & 1.23448 & 15 & 275 & 2,336.36 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 1.19454 & 14 & 276 & 2,607.39 \\
+250 & huawei\_rh2288h\_v3 & first\_fit & 1.21012 & 13 & 0 & 0 \\
+250 & huawei\_rh2288h\_v3 & best\_fit & 1.2184 & 14 & 0 & 0 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & 1.24996 & 15 & 307 & 2,462.41 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 1.19454 & 14 & 276 & 2,607.39 \\
+250 & quanta\_d51b\_2u & first\_fit & 1.21012 & 13 & 0 & 0 \\
+250 & quanta\_d51b\_2u & best\_fit & 1.2184 & 14 & 0 & 0 \\
+250 & quanta\_d51b\_2u & lr\_mmt & 1.23448 & 15 & 275 & 2,336.36 \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & 1.19449 & 14 & 276 & 2,607.39 \\
+1000 & hpe\_dl360\_gen9 & first\_fit & 4.35488 & 34 & 0 & 0 \\
+1000 & hpe\_dl360\_gen9 & best\_fit & 4.37512 & 34 & 0 & 0 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & 4.42319 & 34 & 1634 & 12,702.1 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 4.72222 & 34 & 1482 & 11,493.3 \\
+1000 & huawei\_rh2288h\_v3 & first\_fit & 4.35488 & 34 & 0 & 0 \\
+1000 & huawei\_rh2288h\_v3 & best\_fit & 4.37512 & 34 & 0 & 0 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & 4.65277 & 34 & 1746 & 13,030.5 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 4.7154 & 34 & 1443 & 11,794 \\
+1000 & quanta\_d51b\_2u & first\_fit & 4.35488 & 34 & 0 & 0 \\
+1000 & quanta\_d51b\_2u & best\_fit & 4.37512 & 34 & 0 & 0 \\
+1000 & quanta\_d51b\_2u & lr\_mmt & 4.44013 & 34 & 1540 & 12,591.4 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & 4.73743 & 34 & 1469 & 11,937 \\
+4000 & hpe\_dl360\_gen9 & first\_fit & 23.8671 & 64 & 0 & 0 \\
+4000 & hpe\_dl360\_gen9 & best\_fit & 23.9259 & 64 & 0 & 0 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & 23.9685 & 64 & 7695 & 64,496.1 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 32.6065 & 64 & 7222 & 53,022.2 \\
+4000 & huawei\_rh2288h\_v3 & first\_fit & 23.8671 & 64 & 0 & 0 \\
+4000 & huawei\_rh2288h\_v3 & best\_fit & 23.9259 & 64 & 0 & 0 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & 25.8588 & 64 & 9103 & 70,617.5 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 32.4964 & 64 & 7095 & 51,170.5 \\
+4000 & quanta\_d51b\_2u & first\_fit & 23.8671 & 64 & 0 & 0 \\
+4000 & quanta\_d51b\_2u & best\_fit & 23.9259 & 64 & 0 & 0 \\
+4000 & quanta\_d51b\_2u & lr\_mmt & 24.1834 & 64 & 7337 & 63,153.2 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & 32.5724 & 64 & 7138 & 52,007.8 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{Hosts, migrations and waiting outcomes}\
+\toprule
+Workload Groups & Power Curve & Policy & Mean Wait S (seconds) & P95 Wait S (seconds) & Rejected Instances (instances) & Unfinished Instances (instances) \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & first\_fit & 8.45428 & 10 & 0 & 0 \\
+250 & hpe\_dl360\_gen9 & best\_fit & 8.4821 & 10 & 0 & 0 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt & 8.42095 & 10 & 0 & 0 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 8.4045 & 10 & 0 & 0 \\
+250 & huawei\_rh2288h\_v3 & first\_fit & 8.45428 & 10 & 0 & 0 \\
+250 & huawei\_rh2288h\_v3 & best\_fit & 8.4821 & 10 & 0 & 0 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & 8.42095 & 10 & 0 & 0 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 8.4045 & 10 & 0 & 0 \\
+250 & quanta\_d51b\_2u & first\_fit & 8.45428 & 10 & 0 & 0 \\
+250 & quanta\_d51b\_2u & best\_fit & 8.4821 & 10 & 0 & 0 \\
+250 & quanta\_d51b\_2u & lr\_mmt & 8.42095 & 10 & 0 & 0 \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & 8.4045 & 10 & 0 & 0 \\
+1000 & hpe\_dl360\_gen9 & first\_fit & 5.66228 & 10 & 0 & 0 \\
+1000 & hpe\_dl360\_gen9 & best\_fit & 5.67645 & 10 & 0 & 0 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & 5.67733 & 10 & 0 & 0 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 5.0946 & 10 & 0 & 0 \\
+1000 & huawei\_rh2288h\_v3 & first\_fit & 5.66228 & 10 & 0 & 0 \\
+1000 & huawei\_rh2288h\_v3 & best\_fit & 5.67645 & 10 & 0 & 0 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & 5.34609 & 10 & 0 & 0 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 5.05589 & 10 & 0 & 0 \\
+1000 & quanta\_d51b\_2u & first\_fit & 5.66228 & 10 & 0 & 0 \\
+1000 & quanta\_d51b\_2u & best\_fit & 5.67645 & 10 & 0 & 0 \\
+1000 & quanta\_d51b\_2u & lr\_mmt & 5.67764 & 10 & 0 & 0 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & 5.10201 & 10 & 0 & 0 \\
+4000 & hpe\_dl360\_gen9 & first\_fit & 55.9592 & 465 & 0 & 0 \\
+4000 & hpe\_dl360\_gen9 & best\_fit & 56.0278 & 465 & 0 & 0 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & 56.0617 & 466 & 0 & 0 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 54.47 & 465 & 0 & 0 \\
+4000 & huawei\_rh2288h\_v3 & first\_fit & 55.9592 & 465 & 0 & 0 \\
+4000 & huawei\_rh2288h\_v3 & best\_fit & 56.0278 & 465 & 0 & 0 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & 55.5883 & 466 & 0 & 0 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 54.5567 & 465 & 0 & 0 \\
+4000 & quanta\_d51b\_2u & first\_fit & 55.9592 & 465 & 0 & 0 \\
+4000 & quanta\_d51b\_2u & best\_fit & 56.0278 & 465 & 0 & 0 \\
+4000 & quanta\_d51b\_2u & lr\_mmt & 55.9911 & 465 & 0 & 0 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & 54.4792 & 465 & 0 & 0 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}}
+\caption{Hosts, migrations and waiting outcomes}\
+\toprule
+Workload Groups & Power Curve & Policy & Source Individual Summary \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & first\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_250/hpe\_dl3\allowbreak{}60\_gen9/firs\allowbreak{}t\_fit/summar\allowbreak{}y.json \\
+250 & hpe\_dl360\_gen9 & best\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_250/hpe\_dl3\allowbreak{}60\_gen9/best\allowbreak{}\_fit/summary\allowbreak{}.json \\
+250 & hpe\_dl360\_gen9 & lr\_mmt & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_250/hpe\_dl3\allowbreak{}60\_gen9/lr\_m\allowbreak{}mt/summary.j\allowbreak{}son \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_250/hpe\_dl3\allowbreak{}60\_gen9/lr\_m\allowbreak{}mt\_memory/su\allowbreak{}mmary.json \\
+250 & huawei\_rh2288h\_v3 & first\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_250/huaw\allowbreak{}ei\_rh2288h\_v\allowbreak{}3/first\_fit/\allowbreak{}summary.json \\
+250 & huawei\_rh2288h\_v3 & best\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_250/huaw\allowbreak{}ei\_rh2288h\_v\allowbreak{}3/best\_fit/s\allowbreak{}ummary.json \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_250/huaw\allowbreak{}ei\_rh2288h\_v\allowbreak{}3/lr\_mmt/sum\allowbreak{}mary.json \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_250/huaw\allowbreak{}ei\_rh2288h\_v\allowbreak{}3/lr\_mmt\_mem\allowbreak{}ory/summary.\allowbreak{}json \\
+250 & quanta\_d51b\_2u & first\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_250/quanta\_\allowbreak{}d51b\_2u/firs\allowbreak{}t\_fit/summar\allowbreak{}y.json \\
+250 & quanta\_d51b\_2u & best\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_250/quanta\_\allowbreak{}d51b\_2u/best\allowbreak{}\_fit/summary\allowbreak{}.json \\
+250 & quanta\_d51b\_2u & lr\_mmt & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_250/quanta\_\allowbreak{}d51b\_2u/lr\_m\allowbreak{}mt/summary.j\allowbreak{}son \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_250/quanta\_\allowbreak{}d51b\_2u/lr\_m\allowbreak{}mt\_memory/su\allowbreak{}mmary.json \\
+1000 & hpe\_dl360\_gen9 & first\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_1000/hpe\_dl\allowbreak{}360\_gen9/fir\allowbreak{}st\_fit/summa\allowbreak{}ry.json \\
+1000 & hpe\_dl360\_gen9 & best\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_1000/hpe\_dl\allowbreak{}360\_gen9/bes\allowbreak{}t\_fit/summar\allowbreak{}y.json \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_1000/hpe\_dl\allowbreak{}360\_gen9/lr\_\allowbreak{}mmt/summary.\allowbreak{}json \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_1000/hpe\_dl\allowbreak{}360\_gen9/lr\_\allowbreak{}mmt\_memory/s\allowbreak{}ummary.json \\
+1000 & huawei\_rh2288h\_v3 & first\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_1000/hua\allowbreak{}wei\_rh2288h\_\allowbreak{}v3/first\_fit\allowbreak{}/summary.jso\allowbreak{}n \\
+1000 & huawei\_rh2288h\_v3 & best\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_1000/hua\allowbreak{}wei\_rh2288h\_\allowbreak{}v3/best\_fit/\allowbreak{}summary.json \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_1000/hua\allowbreak{}wei\_rh2288h\_\allowbreak{}v3/lr\_mmt/su\allowbreak{}mmary.json \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_1000/hua\allowbreak{}wei\_rh2288h\_\allowbreak{}v3/lr\_mmt\_me\allowbreak{}mory/summary\allowbreak{}.json \\
+1000 & quanta\_d51b\_2u & first\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_1000/quanta\allowbreak{}\_d51b\_2u/fir\allowbreak{}st\_fit/summa\allowbreak{}ry.json \\
+1000 & quanta\_d51b\_2u & best\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_1000/quanta\allowbreak{}\_d51b\_2u/bes\allowbreak{}t\_fit/summar\allowbreak{}y.json \\
+1000 & quanta\_d51b\_2u & lr\_mmt & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_1000/quanta\allowbreak{}\_d51b\_2u/lr\_\allowbreak{}mmt/summary.\allowbreak{}json \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_1000/quanta\allowbreak{}\_d51b\_2u/lr\_\allowbreak{}mmt\_memory/s\allowbreak{}ummary.json \\
+4000 & hpe\_dl360\_gen9 & first\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_4000/hpe\_dl\allowbreak{}360\_gen9/fir\allowbreak{}st\_fit/summa\allowbreak{}ry.json \\
+4000 & hpe\_dl360\_gen9 & best\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_4000/hpe\_dl\allowbreak{}360\_gen9/bes\allowbreak{}t\_fit/summar\allowbreak{}y.json \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_4000/hpe\_dl\allowbreak{}360\_gen9/lr\_\allowbreak{}mmt/summary.\allowbreak{}json \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_4000/hpe\_dl\allowbreak{}360\_gen9/lr\_\allowbreak{}mmt\_memory/s\allowbreak{}ummary.json \\
+4000 & huawei\_rh2288h\_v3 & first\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_4000/hua\allowbreak{}wei\_rh2288h\_\allowbreak{}v3/first\_fit\allowbreak{}/summary.jso\allowbreak{}n \\
+4000 & huawei\_rh2288h\_v3 & best\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_4000/hua\allowbreak{}wei\_rh2288h\_\allowbreak{}v3/best\_fit/\allowbreak{}summary.json \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_4000/hua\allowbreak{}wei\_rh2288h\_\allowbreak{}v3/lr\_mmt/su\allowbreak{}mmary.json \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_4000/hua\allowbreak{}wei\_rh2288h\_\allowbreak{}v3/lr\_mmt\_me\allowbreak{}mory/summary\allowbreak{}.json \\
+4000 & quanta\_d51b\_2u & first\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_4000/quanta\allowbreak{}\_d51b\_2u/fir\allowbreak{}st\_fit/summa\allowbreak{}ry.json \\
+4000 & quanta\_d51b\_2u & best\_fit & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_4000/quanta\allowbreak{}\_d51b\_2u/bes\allowbreak{}t\_fit/summar\allowbreak{}y.json \\
+4000 & quanta\_d51b\_2u & lr\_mmt & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_4000/quanta\allowbreak{}\_d51b\_2u/lr\_\allowbreak{}mmt/summary.\allowbreak{}json \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_4000/quanta\allowbreak{}\_d51b\_2u/lr\_\allowbreak{}mmt\_memory/s\allowbreak{}ummary.json \\
+\bottomrule\end{longtable}
+% P95 values are individual-run quantiles; no averaging across runs. Pause is accumulated instance-seconds, not elapsed experiment overhead.
+% Sources: BASELINE_Comparison/reports/summaries.json

@@ -1,0 +1,174 @@
+{
+  "format": "16:9",
+  "main_slides": 15,
+  "native_charts": true,
+  "pdf_rendering": {
+    "pptx_unchanged": true,
+    "renderer": "Microsoft PowerPoint for Mac",
+    "version": "16.115.2"
+  },
+  "presentation_figures": "Editable readable variants use the Phase 1 adapter and Phase 6 diagram data; actual Phase 5 screenshot embedded.",
+  "slide_count": 20,
+  "slides": [
+    {
+      "appendix": false,
+      "figure": null,
+      "kind": "title",
+      "presenter_provisional": "Arnav Desai",
+      "slide": 1,
+      "title": "EcoSched"
+    },
+    {
+      "appendix": false,
+      "figure": null,
+      "kind": "motivation",
+      "presenter_provisional": "Brave Desai",
+      "slide": 2,
+      "title": "Balanced resources do not automatically mean lower energy"
+    },
+    {
+      "appendix": false,
+      "figure": null,
+      "kind": "ablation",
+      "presenter_provisional": "Rohan Rane",
+      "slide": 3,
+      "title": "Change placement; hold the controller fixed"
+    },
+    {
+      "appendix": false,
+      "figure": "A01",
+      "kind": "architecture",
+      "presenter_provisional": "Brave Desai",
+      "slide": 4,
+      "title": "One evidence pipeline, from raw rows to research outputs"
+    },
+    {
+      "appendix": false,
+      "figure": null,
+      "kind": "dataset",
+      "presenter_provisional": "Yaksh Gandhi",
+      "slide": 5,
+      "title": "Preserve each task group\u2019s individual instances"
+    },
+    {
+      "appendix": false,
+      "figure": null,
+      "kind": "algorithms",
+      "presenter_provisional": "Rohan Rane",
+      "slide": 6,
+      "title": "A common feasibility rule; one extra scoring term"
+    },
+    {
+      "appendix": false,
+      "figure": "R04",
+      "kind": "power",
+      "presenter_provisional": "Brave Desai",
+      "slide": 7,
+      "title": "SPECpower supplies a surrogate, not Alibaba electricity"
+    },
+    {
+      "appendix": false,
+      "figure": null,
+      "kind": "method",
+      "presenter_provisional": "Rohan Rane",
+      "slide": 8,
+      "title": "36 outcomes; 9 primary paired comparisons"
+    },
+    {
+      "appendix": false,
+      "figure": "R03",
+      "kind": "primary",
+      "presenter_provisional": "Rushi Jhala",
+      "slide": 9,
+      "title": "Memory-aware placement saves energy in 4/9 cases"
+    },
+    {
+      "appendix": false,
+      "figure": "R06",
+      "kind": "tradeoff",
+      "presenter_provisional": "Rushi Jhala",
+      "slide": 10,
+      "title": "A larger powered footprint buys modest performance gains"
+    },
+    {
+      "appendix": false,
+      "figure": "R05",
+      "kind": "mechanism",
+      "presenter_provisional": "Rushi Jhala",
+      "slide": 11,
+      "title": "Extra busy-host on-time explains the largest-case penalty"
+    },
+    {
+      "appendix": false,
+      "figure": "A02",
+      "kind": "kafka",
+      "presenter_provisional": "Arnav Desai",
+      "slide": 12,
+      "title": "Kafka transports arrivals; it does not run the scheduler"
+    },
+    {
+      "appendix": false,
+      "figure": null,
+      "kind": "demo",
+      "presenter_provisional": "Arnav Desai",
+      "slide": 13,
+      "title": "Classroom demo: inspect results, then replay real arrivals"
+    },
+    {
+      "appendix": false,
+      "figure": null,
+      "kind": "validation",
+      "presenter_provisional": "Arnav Desai",
+      "slide": 14,
+      "title": "Verified numbers; unresolved historical metadata"
+    },
+    {
+      "appendix": false,
+      "figure": null,
+      "kind": "conclusion",
+      "presenter_provisional": "Arnav Desai",
+      "slide": 15,
+      "title": "The defensible result is an energy/performance trade-off"
+    },
+    {
+      "appendix": true,
+      "figure": null,
+      "kind": "primary_table",
+      "presenter_provisional": "Rushi Jhala",
+      "slide": 16,
+      "title": "Appendix \u00b7 all primary energy comparisons"
+    },
+    {
+      "appendix": true,
+      "figure": null,
+      "kind": "settings",
+      "presenter_provisional": "Rohan Rane",
+      "slide": 17,
+      "title": "Appendix \u00b7 fixed controls and resource-skew scope"
+    },
+    {
+      "appendix": true,
+      "figure": "S01",
+      "kind": "streaming",
+      "presenter_provisional": "Arnav Desai",
+      "slide": 18,
+      "title": "Appendix \u00b7 verified Kafka fast-mode sessions"
+    },
+    {
+      "appendix": true,
+      "figure": null,
+      "kind": "provenance",
+      "presenter_provisional": "Arnav Desai",
+      "slide": 19,
+      "title": "Appendix \u00b7 unresolved metadata references"
+    },
+    {
+      "appendix": true,
+      "figure": null,
+      "kind": "references",
+      "presenter_provisional": "All team members",
+      "slide": 20,
+      "title": "Appendix \u00b7 references and individual contribution evidence"
+    }
+  ]
+}

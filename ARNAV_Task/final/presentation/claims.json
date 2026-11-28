@@ -1,0 +1,162 @@
+{
+  "d5_pooled_share": {
+    "source": "RUSHI_Task/analyze.py:407-411; RUSHI_Task/reports/pair_energy_gap.csv",
+    "value": 87.96903449570328
+  },
+  "fast_1000_average_instances_per_s": {
+    "source": "ARNAV_Task/reports/phase4_verification.json",
+    "value": 6008.785045566443
+  },
+  "fast_1000_elapsed_wall_s": {
+    "source": "ARNAV_Task/reports/phase4_verification.json",
+    "value": 11.392818927764893
+  },
+  "fast_250_average_instances_per_s": {
+    "source": "ARNAV_Task/reports/phase4_verification.json",
+    "value": 4202.5981199499265
+  },
+  "fast_250_elapsed_wall_s": {
+    "source": "ARNAV_Task/reports/phase4_verification.json",
+    "value": 3.9342329502105713
+  },
+  "fast_4000_average_instances_per_s": {
+    "source": "ARNAV_Task/reports/phase4_verification.json",
+    "value": 6928.259655203253
+  },
+  "fast_4000_elapsed_wall_s": {
+    "source": "ARNAV_Task/reports/phase4_verification.json",
+    "value": 54.60029196739197
+  },
+  "hosts": {
+    "source": "RAW_Alibaba/config.json",
+    "value": 64
+  },
+  "hpe_cpu_energy": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": 34.269961690439196
+  },
+  "hpe_mem_energy": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": 39.13609389593756
+  },
+  "hpe_on_share": {
+    "source": "RUSHI_Task/reports/pair_energy_gap.csv",
+    "value": 87.0861831733438
+  },
+  "hpe_reduction": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": -14.199409527953877
+  },
+  "huawei_cpu_energy": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": 34.017004368575485
+  },
+  "huawei_mem_energy": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": 37.74531934182412
+  },
+  "huawei_on_share": {
+    "source": "RUSHI_Task/reports/pair_energy_gap.csv",
+    "value": 88.25411983771595
+  },
+  "huawei_reduction": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": -10.960150790622855
+  },
+  "instances_1000": {
+    "source": "RAW_Alibaba/prepared/manifest.json",
+    "value": 68457
+  },
+  "instances_250": {
+    "source": "RAW_Alibaba/prepared/manifest.json",
+    "value": 16534
+  },
+  "instances_4000": {
+    "source": "RAW_Alibaba/prepared/manifest.json",
+    "value": 378285
+  },
+  "pairs": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": 9
+  },
+  "penalty_hi": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": 14.559762926102794
+  },
+  "penalty_lo": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": 10.960150790622855
+  },
+  "prepared_outputs": {
+    "source": "ARNAV_Task/reports/phase3_verification.json",
+    "value": 5
+  },
+  "prior_tests": {
+    "source": "ARNAV_Task/reports/phase6_verification.json",
+    "value": 307
+  },
+  "quanta_cpu_energy": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": 35.33316268746673
+  },
+  "quanta_mem_energy": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": 40.4775874090561
+  },
+  "quanta_on_share": {
+    "source": "RUSHI_Task/reports/pair_energy_gap.csv",
+    "value": 88.59751746087377
+  },
+  "quanta_reduction": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": -14.559762926102794
+  },
+  "raw_members": {
+    "source": "ARNAV_Task/reports/phase3_verification.json",
+    "value": 6
+  },
+  "replayed_instances": {
+    "source": "BASELINE_Comparison/reports/summaries.json",
+    "value": 5559312
+  },
+  "runs": {
+    "source": "BASELINE_Comparison/reports/summaries.json",
+    "value": 36
+  },
+  "seed": {
+    "source": "RAW_Alibaba/config.json",
+    "value": 2026
+  },
+  "timed_duration": {
+    "source": "ARNAV_Task/reports/phase5_verification.json",
+    "value": 72.6980950832367
+  },
+  "timed_rate": {
+    "source": "ARNAV_Task/reports/phase5_verification.json",
+    "value": 227.43374473662848
+  },
+  "unresolved": {
+    "source": "ARNAV_Task/reports/artifact_validation.json",
+    "value": 3
+  },
+  "wait_delta_hi": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": -1.0316071088522776
+  },
+  "wait_delta_lo": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": -1.5916546362087516
+  },
+  "wins": {
+    "source": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "value": 4
+  },
+  "wins_vs_best_fit": {
+    "source": "BASELINE_Comparison/reports/all_pairwise_comparisons.csv",
+    "value": 3
+  },
+  "wins_vs_first_fit": {
+    "source": "BASELINE_Comparison/reports/all_pairwise_comparisons.csv",
+    "value": 2
+  }
+}

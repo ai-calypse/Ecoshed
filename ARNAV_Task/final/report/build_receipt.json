@@ -1,0 +1,176 @@
+{
+  "docx": "EcoSched_Final_Report.docx",
+  "figures": [
+    "A01",
+    "R04",
+    "R03",
+    "R01",
+    "R06",
+    "R07",
+    "R09",
+    "R05",
+    "R11",
+    "R13",
+    "A02",
+    "S01",
+    "A04"
+  ],
+  "page_count": 28,
+  "pages": [
+    {
+      "page": 1,
+      "size": "A4",
+      "title": "EcoSched"
+    },
+    {
+      "page": 2,
+      "size": "A4",
+      "title": "Abstract and reading guide"
+    },
+    {
+      "page": 3,
+      "size": "A4",
+      "title": "1. Introduction and 2. Related work"
+    },
+    {
+      "page": 4,
+      "size": "A3L",
+      "title": "3. Research gap and 4. System architecture"
+    },
+    {
+      "page": 5,
+      "size": "A4",
+      "title": "5. Dataset and preprocessing"
+    },
+    {
+      "page": 6,
+      "size": "A4",
+      "title": "5.1 Deterministic sampling, releases and recovery"
+    },
+    {
+      "page": 7,
+      "size": "A4",
+      "title": "6. Scheduling algorithms: admission and placement"
+    },
+    {
+      "page": 8,
+      "size": "A4",
+      "title": "6.3 Shared LR/MMT controller and migration safeguards"
+    },
+    {
+      "page": 9,
+      "size": "A4",
+      "title": "7. SPECpower energy model"
+    },
+    {
+      "page": 10,
+      "size": "A4",
+      "title": "8. Experimental methodology and metric definitions"
+    },
+    {
+      "page": 11,
+      "size": "A3L",
+      "title": "9. Primary energy results"
+    },
+    {
+      "page": 12,
+      "size": "A4L",
+      "title": "9.1 Workload and power sensitivity; additional baselines"
+    },
+    {
+      "page": 13,
+      "size": "A4L",
+      "title": "9.2 Active-host footprint"
+    },
+    {
+      "page": 14,
+      "size": "A4L",
+      "title": "9.3 Waiting, migration and completion"
+    },
+    {
+      "page": 15,
+      "size": "A4L",
+      "title": "9.4 Pressure, fragmentation and interpretation"
+    },
+    {
+      "page": 16,
+      "size": "A4L",
+      "title": "10. D5 mechanism analysis: where the penalty arises"
+    },
+    {
+      "page": 17,
+      "size": "A3",
+      "title": "10.1 Energy/performance trade-offs and descriptive Pareto sets"
+    },
+    {
+      "page": 18,
+      "size": "A3",
+      "title": "10.2 Resource-skew findings and placement decisions"
+    },
+    {
+      "page": 19,
+      "size": "A3L",
+      "title": "11. D6 Kafka and monitoring architecture"
+    },
+    {
+      "page": 20,
+      "size": "A4",
+      "title": "11.1 Dashboard implementation and data separation"
+    },
+    {
+      "page": 21,
+      "size": "A3L",
+      "title": "12. Streaming evaluation and recovery evidence"
+    },
+    {
+      "page": 22,
+      "size": "A3L",
+      "title": "13. Reproducibility and layered validation"
+    },
+    {
+      "page": 23,
+      "size": "A4",
+      "title": "14. Limitations; 15. Conclusion; 16. Contributions"
+    },
+    {
+      "page": 24,
+      "size": "A4",
+      "title": "17. References"
+    },
+    {
+      "page": 25,
+      "size": "A4",
+      "title": "Appendix A. Complete energy and efficiency results"
+    },
+    {
+      "page": 26,
+      "size": "A3L",
+      "title": "Appendix B. Complete host, migration and waiting results"
+    },
+    {
+      "page": 27,
+      "size": "A3",
+      "title": "Appendix C. Complete supported resource-skew outcomes"
+    },
+    {
+      "page": 28,
+      "size": "A3",
+      "title": "Appendix D. Fingerprints, configuration, schema and commands"
+    }
+  ],
+  "pdf": "EcoSched_Final_Report.pdf",
+  "source": "ARNAV_Task/final/report/source/report.json",
+  "tables": [
+    "workloads",
+    "metrics",
+    "primary",
+    "efficiency_primary",
+    "mechanism",
+    "streaming",
+    "contributions",
+    "energy_all",
+    "performance_all",
+    "skew_all"
+  ],
+  "vector_publication_figures": true
+}

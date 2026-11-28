@@ -1,0 +1,63 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{Primary energy and performance comparisons}\
+\toprule
+Workload Groups & Power Curve & Policy & Policy Label & Baseline & Baseline Label & Energy Kwh \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & LR-MMT + CPU/Memory-Aware Placement & lr\_mmt & CPU-oriented LR-MMT & 5.19695 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & LR-MMT + CPU/Memory-Aware Placement & lr\_mmt & CPU-oriented LR-MMT & 5.15875 \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & LR-MMT + CPU/Memory-Aware Placement & lr\_mmt & CPU-oriented LR-MMT & 5.24449 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & LR-MMT + CPU/Memory-Aware Placement & lr\_mmt & CPU-oriented LR-MMT & 9.15286 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & LR-MMT + CPU/Memory-Aware Placement & lr\_mmt & CPU-oriented LR-MMT & 8.96469 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & LR-MMT + CPU/Memory-Aware Placement & lr\_mmt & CPU-oriented LR-MMT & 9.35672 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & LR-MMT + CPU/Memory-Aware Placement & lr\_mmt & CPU-oriented LR-MMT & 39.1361 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & LR-MMT + CPU/Memory-Aware Placement & lr\_mmt & CPU-oriented LR-MMT & 37.7453 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & LR-MMT + CPU/Memory-Aware Placement & lr\_mmt & CPU-oriented LR-MMT & 40.4776 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{Primary energy and performance comparisons}\
+\toprule
+Workload Groups & Power Curve & Policy & Baseline Energy Kwh & Energy Reduction Pct (percent) & Mean Wait Delta S (seconds) & P95 Wait Delta S (seconds) \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 5.21723 & 0.388666 & -0.0164509 & 0 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 5.18914 & 0.585579 & -0.0164509 & 0 \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & 5.2706 & 0.495459 & -0.0164509 & 0 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 9.03205 & -1.33757 & -0.582731 & 0 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 8.96977 & 0.0566569 & -0.290197 & 0 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & 9.23047 & -1.36775 & -0.575631 & 0 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 34.27 & -14.1994 & -1.59165 & -1 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 34.017 & -10.9602 & -1.03161 & -1 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & 35.3332 & -14.5598 & -1.51181 & 0 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{Primary energy and performance comparisons}\
+\toprule
+Workload Groups & Power Curve & Policy & Migrations & Pressure Delta Percentage Points (percentage points) & Source Candidate & Source Baseline \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 276 & -0.0550013 & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_250/hpe\_dl3\allowbreak{}60\_gen9/lr\_m\allowbreak{}mt\_memory/su\allowbreak{}mmary.json & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_250/hpe\_dl3\allowbreak{}60\_gen9/lr\_m\allowbreak{}mt/summary.j\allowbreak{}son \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 276 & -0.0545673 & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_250/huaw\allowbreak{}ei\_rh2288h\_v\allowbreak{}3/lr\_mmt\_mem\allowbreak{}ory/summary.\allowbreak{}json & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_250/huaw\allowbreak{}ei\_rh2288h\_v\allowbreak{}3/lr\_mmt/sum\allowbreak{}mary.json \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & 276 & -0.0551099 & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_250/quanta\_\allowbreak{}d51b\_2u/lr\_m\allowbreak{}mt\_memory/su\allowbreak{}mmary.json & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_250/quanta\_\allowbreak{}d51b\_2u/lr\_m\allowbreak{}mt/summary.j\allowbreak{}son \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 1482 & -0.38407 & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_1000/hpe\_dl\allowbreak{}360\_gen9/lr\_\allowbreak{}mmt\_memory/s\allowbreak{}ummary.json & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_1000/hpe\_dl\allowbreak{}360\_gen9/lr\_\allowbreak{}mmt/summary.\allowbreak{}json \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 1443 & -0.327278 & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_1000/hua\allowbreak{}wei\_rh2288h\_\allowbreak{}v3/lr\_mmt\_me\allowbreak{}mory/summary\allowbreak{}.json & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_1000/hua\allowbreak{}wei\_rh2288h\_\allowbreak{}v3/lr\_mmt/su\allowbreak{}mmary.json \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & 1469 & -0.357117 & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_1000/quanta\allowbreak{}\_d51b\_2u/lr\_\allowbreak{}mmt\_memory/s\allowbreak{}ummary.json & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_1000/quanta\allowbreak{}\_d51b\_2u/lr\_\allowbreak{}mmt/summary.\allowbreak{}json \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & 7222 & -4.39706 & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_4000/hpe\_dl\allowbreak{}360\_gen9/lr\_\allowbreak{}mmt\_memory/s\allowbreak{}ummary.json & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/hpe\_dl360\_g\allowbreak{}en9/workload\allowbreak{}\_4000/hpe\_dl\allowbreak{}360\_gen9/lr\_\allowbreak{}mmt/summary.\allowbreak{}json \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & 7095 & -3.23554 & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_4000/hua\allowbreak{}wei\_rh2288h\_\allowbreak{}v3/lr\_mmt\_me\allowbreak{}mory/summary\allowbreak{}.json & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/huawei\_rh22\allowbreak{}88h\_v3/workl\allowbreak{}oad\_4000/hua\allowbreak{}wei\_rh2288h\_\allowbreak{}v3/lr\_mmt/su\allowbreak{}mmary.json \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & 7138 & -3.7485 & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_4000/quanta\allowbreak{}\_d51b\_2u/lr\_\allowbreak{}mmt\_memory/s\allowbreak{}ummary.json & RAW\_Alibaba/\allowbreak{}reports/runs\allowbreak{}/quanta\_d51b\allowbreak{}\_2u/workload\allowbreak{}\_4000/quanta\allowbreak{}\_d51b\_2u/lr\_\allowbreak{}mmt/summary.\allowbreak{}json \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}}
+\caption{Primary energy and performance comparisons}\
+\toprule
+Workload Groups & Power Curve & Policy & Source Comparison \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & BASELINE\_Com\allowbreak{}parison/repo\allowbreak{}rts/proposal\allowbreak{}\_pairs.csv \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & BASELINE\_Com\allowbreak{}parison/repo\allowbreak{}rts/proposal\allowbreak{}\_pairs.csv \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & BASELINE\_Com\allowbreak{}parison/repo\allowbreak{}rts/proposal\allowbreak{}\_pairs.csv \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & BASELINE\_Com\allowbreak{}parison/repo\allowbreak{}rts/proposal\allowbreak{}\_pairs.csv \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & BASELINE\_Com\allowbreak{}parison/repo\allowbreak{}rts/proposal\allowbreak{}\_pairs.csv \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & BASELINE\_Com\allowbreak{}parison/repo\allowbreak{}rts/proposal\allowbreak{}\_pairs.csv \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & BASELINE\_Com\allowbreak{}parison/repo\allowbreak{}rts/proposal\allowbreak{}\_pairs.csv \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & BASELINE\_Com\allowbreak{}parison/repo\allowbreak{}rts/proposal\allowbreak{}\_pairs.csv \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & BASELINE\_Com\allowbreak{}parison/repo\allowbreak{}rts/proposal\allowbreak{}\_pairs.csv \\
+\bottomrule\end{longtable}
+% Energy reduction = 100 × (baseline − candidate) / baseline; CPU LR-MMT is baseline. Positive means savings. Conditions match exactly.
+% Sources: BASELINE_Comparison/reports/proposal_pairs.csv

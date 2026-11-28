@@ -1,0 +1,18 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.267\linewidth}>{\raggedright\arraybackslash}p{0.267\linewidth}>{\raggedright\arraybackslash}p{0.267\linewidth}}
+\caption{Layered reproducibility and provenance status}\
+\toprule
+Layer & Status & Evidence \\
+\midrule\endhead
+Numerical results & True & 36 active outcomes cross-checked against raw aggregate and individual summaries \\
+Source-code fingerprint consistency & True & Recorded simulator and preparation source hashes agree; this is distinct from historical metadata identity \\
+Reconstructed prepared-output identity & True & 4e295b76cacf\allowbreak{}10326cd5e81f\allowbreak{}bcdd6cd8ea22\allowbreak{}61244d5d01ce\allowbreak{}aca3f051fdcc\allowbreak{}b42c \\
+Historical metadata lineage & UNRESOLVED & Three expected historical versions not recovered \\
+Compressed archive identity & Active archive match; legacy archive differs & b7efe9dc9caa\allowbreak{}75352de41b9a\allowbreak{}c34b329602cd\allowbreak{}e3414fd7cab8\allowbreak{}7c1d21a9a987\allowbreak{}1d66 \\
+End-to-end simulation replication in D6 & False & No benchmark simulations rerun \\
+prepared\_man\allowbreak{}ifest\_refere\allowbreak{}nce & UNRESOLVED & Current: 91de65a667ac\allowbreak{}2fbc30f5c803\allowbreak{}819602f829b2\allowbreak{}30f45a23d7ba\allowbreak{}66e04f089e7e\allowbreak{}6ce5; expected: 110e64972586\allowbreak{}0bd615632a89\allowbreak{}a15573203d28\allowbreak{}58821c0917c6\allowbreak{}c478514bf8fb\allowbreak{}d18b \\
+raw\_summaries\_reference & UNRESOLVED & Current: 479d3c44747f\allowbreak{}114e8c793362\allowbreak{}ff382e455a2b\allowbreak{}09470ef0d86a\allowbreak{}e2f775f02fd9\allowbreak{}17d9; expected: b64f374f1884\allowbreak{}cdb8c4bd0a0b\allowbreak{}e540cdca69be\allowbreak{}842fc7d3e2ca\allowbreak{}18e03d5fb91c\allowbreak{}7f0c \\
+archive\_audit\_reference & UNRESOLVED & Current: 031795105541\allowbreak{}b003dc73ceae\allowbreak{}2d8027de9f93\allowbreak{}4edc444173a4\allowbreak{}b3c284c1a9a3\allowbreak{}1e6c; expected: 711dc21157f2\allowbreak{}a5cd06378d08\allowbreak{}6ece853786e1\allowbreak{}359e8063bcf5\allowbreak{}e67fd54813d9\allowbreak{}60b6 \\
+\bottomrule\end{longtable}
+% Prepared-file byte identity, raw-member identity and numerical consistency do not repair three missing historical metadata versions. Full lineage remains unresolved.
+% Sources: ARNAV_Task/reports/artifact_validation.json, ARNAV_Task/reports/phase3_verification.json, ARNAV_Task/reports/provenance_reconciliation.md

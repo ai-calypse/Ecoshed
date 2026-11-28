@@ -1,0 +1,39 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.400\linewidth}>{\raggedright\arraybackslash}p{0.400\linewidth}}
+\caption{Fixed simulator and sampling configuration}\
+\toprule
+Parameter & Value \\
+\midrule\endhead
+source & user\_downloa\allowbreak{}ded\_alibaba\_\allowbreak{}v2017\_archiv\allowbreak{}e \\
+source\_repository & https://gith\allowbreak{}ub.com/aliba\allowbreak{}ba/clusterda\allowbreak{}ta/tree/mast\allowbreak{}er/cluster-t\allowbreak{}race-v2017 \\
+window\_start\_s & 0 \\
+window\_end\_s & 43200 \\
+host\_count & 64 \\
+workload\_group\_counts & [250,1000,4000] \\
+seed & 2026 \\
+arrival\_bin\_s & 900 \\
+cpu\_request\_divisor & 100 \\
+runtime\_model & individual\_o\allowbreak{}bserved\_comp\allowbreak{}leted\_first\_\allowbreak{}attempt\_dura\allowbreak{}tion\_complet\allowbreak{}e\_groups\_onl\allowbreak{}y \\
+arrival\_model & task\_create\_\allowbreak{}time\_release\allowbreak{}\_for\_all\_dec\allowbreak{}lared\_instan\allowbreak{}ces \\
+background\_online\_load & False \\
+replay\_failures & False \\
+arrival\_window\_s & 43200 \\
+idle\_timeout\_s & 60 \\
+sleep\_watts & 5 \\
+wake\_latency\_s & 10 \\
+wake\_energy\_j & 0 \\
+control\_interval\_s & 300 \\
+overload\_threshold & 0.9 \\
+memory\_unit\_bytes & 68719476736 \\
+migration\_ba\allowbreak{}ndwidth\_byte\allowbreak{}s\_s & 1.25e+08 \\
+migration\_extra\_watts & 0 \\
+history\_length & 10 \\
+safety\_factor & 1.2 \\
+fallback\_threshold & 0.9 \\
+underload\_threshold & 0.3 \\
+memory\_balance\_weight & 0.25 \\
+cooldown\_s & 600 \\
+max\_migrations\_per\_tick & 256 \\
+\bottomrule\end{longtable}
+% Fixed simulation assumptions. Memory-unit conversion and independent per-transfer bandwidth are modeling assumptions, not Alibaba measurements.
+% Sources: RAW_Alibaba/config.json, ROHAN_Task/config/default.json

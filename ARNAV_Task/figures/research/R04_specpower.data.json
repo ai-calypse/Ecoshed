@@ -1,0 +1,167 @@
+[
+  {
+    "load_fraction": 0.0,
+    "power_curve": "hpe_dl360_gen9",
+    "watts": 45.0
+  },
+  {
+    "load_fraction": 0.1,
+    "power_curve": "hpe_dl360_gen9",
+    "watts": 83.7
+  },
+  {
+    "load_fraction": 0.2,
+    "power_curve": "hpe_dl360_gen9",
+    "watts": 101
+  },
+  {
+    "load_fraction": 0.30000000000000004,
+    "power_curve": "hpe_dl360_gen9",
+    "watts": 118
+  },
+  {
+    "load_fraction": 0.4,
+    "power_curve": "hpe_dl360_gen9",
+    "watts": 133
+  },
+  {
+    "load_fraction": 0.5,
+    "power_curve": "hpe_dl360_gen9",
+    "watts": 145
+  },
+  {
+    "load_fraction": 0.6000000000000001,
+    "power_curve": "hpe_dl360_gen9",
+    "watts": 162
+  },
+  {
+    "load_fraction": 0.7000000000000001,
+    "power_curve": "hpe_dl360_gen9",
+    "watts": 188
+  },
+  {
+    "load_fraction": 0.8,
+    "power_curve": "hpe_dl360_gen9",
+    "watts": 218
+  },
+  {
+    "load_fraction": 0.9,
+    "power_curve": "hpe_dl360_gen9",
+    "watts": 248
+  },
+  {
+    "load_fraction": 1.0,
+    "power_curve": "hpe_dl360_gen9",
+    "watts": 276
+  },
+  {
+    "load_fraction": 0.0,
+    "power_curve": "huawei_rh2288h_v3",
+    "watts": 44.8
+  },
+  {
+    "load_fraction": 0.1,
+    "power_curve": "huawei_rh2288h_v3",
+    "watts": 83.2
+  },
+  {
+    "load_fraction": 0.2,
+    "power_curve": "huawei_rh2288h_v3",
+    "watts": 96.6
+  },
+  {
+    "load_fraction": 0.30000000000000004,
+    "power_curve": "huawei_rh2288h_v3",
+    "watts": 110
+  },
+  {
+    "load_fraction": 0.4,
+    "power_curve": "huawei_rh2288h_v3",
+    "watts": 125
+  },
+  {
+    "load_fraction": 0.5,
+    "power_curve": "huawei_rh2288h_v3",
+    "watts": 141
+  },
+  {
+    "load_fraction": 0.6000000000000001,
+    "power_curve": "huawei_rh2288h_v3",
+    "watts": 160
+  },
+  {
+    "load_fraction": 0.7000000000000001,
+    "power_curve": "huawei_rh2288h_v3",
+    "watts": 183
+  },
+  {
+    "load_fraction": 0.8,
+    "power_curve": "huawei_rh2288h_v3",
+    "watts": 208
+  },
+  {
+    "load_fraction": 0.9,
+    "power_curve": "huawei_rh2288h_v3",
+    "watts": 237
+  },
+  {
+    "load_fraction": 1.0,
+    "power_curve": "huawei_rh2288h_v3",
+    "watts": 266
+  },
+  {
+    "load_fraction": 0.0,
+    "power_curve": "quanta_d51b_2u",
+    "watts": 49.6
+  },
+  {
+    "load_fraction": 0.1,
+    "power_curve": "quanta_d51b_2u",
+    "watts": 88.0
+  },
+  {
+    "load_fraction": 0.2,
+    "power_curve": "quanta_d51b_2u",
+    "watts": 104
+  },
+  {
+    "load_fraction": 0.30000000000000004,
+    "power_curve": "quanta_d51b_2u",
+    "watts": 120
+  },
+  {
+    "load_fraction": 0.4,
+    "power_curve": "quanta_d51b_2u",
+    "watts": 137
+  },
+  {
+    "load_fraction": 0.5,
+    "power_curve": "quanta_d51b_2u",
+    "watts": 148
+  },
+  {
+    "load_fraction": 0.6000000000000001,
+    "power_curve": "quanta_d51b_2u",
+    "watts": 169
+  },
+  {
+    "load_fraction": 0.7000000000000001,
+    "power_curve": "quanta_d51b_2u",
+    "watts": 190
+  },
+  {
+    "load_fraction": 0.8,
+    "power_curve": "quanta_d51b_2u",
+    "watts": 217
+  },
+  {
+    "load_fraction": 0.9,
+    "power_curve": "quanta_d51b_2u",
+    "watts": 245
+  },
+  {
+    "load_fraction": 1.0,
+    "power_curve": "quanta_d51b_2u",
+    "watts": 272
+  }
+]

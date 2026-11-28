@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "policies": {
+    "first_fit": "First Fit",
+    "best_fit": "Best Fit",
+    "lr_mmt": "CPU-oriented LR-MMT",
+    "lr_mmt_memory": "LR-MMT + CPU/Memory-Aware Placement"
+  },
+  "workload_sizes": [250, 1000, 4000],
+  "power_curves": {
+    "hpe_dl360_gen9": "HPE DL360 Gen9",
+    "huawei_rh2288h_v3": "Huawei RH2288H V3",
+    "quanta_d51b_2u": "QuantaGrid D51B-2U"
+  },
+  "sources": {
+    "raw_summaries": "RAW_Alibaba/reports/summaries.json",
+    "raw_runs": "RAW_Alibaba/reports/runs",
+    "raw_comparison": "RAW_Alibaba/reports/comparison.csv",
+    "active_summaries": "BASELINE_Comparison/reports/summaries.json",
+    "primary_pairs": "BASELINE_Comparison/reports/proposal_pairs.csv",
+    "policy_pairs": "BASELINE_Comparison/reports/all_pairwise_comparisons.csv",
+    "manifest": "RAW_Alibaba/prepared/manifest.json",
+    "raw_config": "RAW_Alibaba/config.json",
+    "policy_config": "ROHAN_Task/config/default.json",
+    "power_curves": "ecosched/power_curves.json",
+    "data_validation": "RAW_Alibaba/data_validation.json",
+    "raw_validation": "RAW_Alibaba/reports/validation.json",
+    "baseline_validation": "BASELINE_Comparison/reports/validation.json",
+    "archive_audit": "RAW_Alibaba/archive_audit.json",
+    "archive_corroboration": "RAW_Alibaba/archive_content_corroboration.json",
+    "d5_reports": "RUSHI_Task/reports"
+  }
+}

@@ -1,0 +1,5 @@
+mode,size,replay_id,speed,distinct_instances,groups,elapsed_wall_s,average_instances_per_s,complete,integrity_passed,invalid,sequence_gaps
+Phase 4 fast,250,72306d47-074a-492f-8ece-334195b12df6,0,16534,250,3.9342329502105713,4202.5981199499265,True,True,0,0
+Phase 4 fast,1000,9a097df0-12be-4651-9007-35242d78aa8a,0,68457,1000,11.392818927764893,6008.785045566443,True,True,0,0
+Phase 4 fast,4000,1f2aee4c-4323-43a4-a6a6-2b3acebf4e20,0,378285,4000,54.60029196739197,6928.259655203253,True,True,0,0
+Phase 5 browser timed,250,49dc2730-14b9-48a1-b05b-d2c3eb290b38,600,16534,250,72.6980950832367,227.43374473662848,True,True,0,0

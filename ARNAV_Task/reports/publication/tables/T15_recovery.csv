@@ -1,0 +1,3 @@
+test,replay_id,consumed_deliveries,distinct_instances,duplicate_deliveries,invalid_messages,sequence_gaps,passed,persisted_before_restart,offset_before_restart
+duplicate_redelivery,72306d47-074a-492f-8ece-334195b12df6,33068,16534,16534,0,0,True,,
+consumer_restart,fc186769-43ea-4e89-b10d-e560f1f0e0ac,16534,16534,0,0,0,True,317,1406930

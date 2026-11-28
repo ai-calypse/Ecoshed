@@ -1,0 +1,13 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}>{\raggedright\arraybackslash}p{0.200\linewidth}}
+\caption{Active scheduling policy definitions}\
+\toprule
+Policy & Label & Definition & Source \\
+\midrule\endhead
+first\_fit & First Fit & Powered-host-first first fit; common FIFO admission and CPU/memory feasibility. & ROHAN\_Task/README.md \\
+best\_fit & Best Fit & Fullest feasible CPU host, preferring powered hosts; no consolidation controller. & ROHAN\_Task/README.md \\
+lr\_mmt & CPU-oriented LR-MMT & Common LR overload detector and MMT selector; CPU-oriented incremental-power placement. & ROHAN\_Task/README.md \\
+lr\_mmt\_memory & LR-MMT + CPU/Memory-Aware Placement & Same LR/MMT controller; incremental-power score plus CPU/memory imbalance penalty. & ROHAN\_Task/README.md \\
+\bottomrule\end{longtable}
+% The primary controlled ablation changes placement only. Additional baselines are included without restoring historical policies.
+% Sources: ROHAN_Task/README.md, ROHAN_Task/config/default.json, BASELINE_Comparison/reports/REPORT.md

@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="232" height="48" viewBox="0 0 232 48" role="img" aria-label="EcoSched research platform">
+  <g fill="none" stroke="#63CFBF" stroke-width="2">
+    <rect x="2" y="8" width="28" height="9" rx="2"/>
+    <rect x="2" y="23" width="28" height="9" rx="2"/>
+    <path d="M8 17v6m16-6v6"/>
+  </g>
+  <g fill="#63CFBF"><circle cx="8" cy="12.5" r="1.5"/><circle cx="8" cy="27.5" r="1.5"/></g>
+  <text x="43" y="25" fill="#E5EDF6" font-family="Arial,sans-serif" font-size="24" font-weight="600">EcoSched</text>
+  <text x="44" y="41" fill="#93A9BC" font-family="Arial,sans-serif" font-size="10" letter-spacing="1.8">RESEARCH PLATFORM</text>
+</svg>

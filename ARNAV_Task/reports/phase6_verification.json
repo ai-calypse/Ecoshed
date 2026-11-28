@@ -1,0 +1,1685 @@
+{
+  "artifact_counts": {
+    "architecture_diagrams": 4,
+    "captioned_artifacts": 45,
+    "figure_and_table_output_files": 162,
+    "research_figures": 15,
+    "streaming_figures": 4,
+    "tables": 22
+  },
+  "base": "b0c48284a48407b1b14242c579f39a1f27248e5f",
+  "branch": "arnav/d6-final-package",
+  "checks": {
+    "dependency": "passed",
+    "full_build_without_live_inputs": "32-test publication suite includes all sections with Kafka/workload entrypoints forbidden and optional history absent",
+    "syntax": "10 new Python source/test files parsed successfully",
+    "type": "ty 0.0.112: all checks passed"
+  },
+  "dashboard_runtime_checks": [
+    {
+      "exceptions": [],
+      "page": "",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "scheduler_comparison",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "energy_analysis",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "performance_analysis",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "resource_skew",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "research_findings",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "reproducibility",
+      "status": "ready"
+    },
+    {
+      "exceptions": [],
+      "page": "live_replay",
+      "status": "ready"
+    }
+  ],
+  "figure_inventory": [
+    {
+      "evidence_type": "system architecture",
+      "identifier": "A01_system",
+      "outputs": [
+        {
+          "bytes": 22269,
+          "format": "pdf",
+          "path": "figures/architecture/A01_system.pdf",
+          "sha256": "dd1db54a128b83d124a27ca66871549008afbb95c70b822b695b6fe1bd4f3249"
+        },
+        {
+          "bytes": 12919,
+          "format": "svg",
+          "path": "figures/architecture/A01_system.svg",
+          "sha256": "8fb71cee69e21f614f5fae6dfe6014d1cf66dc6f87884eec1d78ea4808104ba9"
+        },
+        {
+          "bytes": 165769,
+          "format": "png",
+          "path": "figures/architecture/A01_system.png",
+          "sha256": "adc7ec61f2fcc85294b0fbe083b9ee36cdb4dd389807d71d470bb6ec0aa4182a"
+        },
+        {
+          "bytes": 1009,
+          "format": "json",
+          "path": "figures/architecture/A01_system.data.json",
+          "sha256": "82e08b18c3eaeadd88d3aac0c4e79d2a28248dfb04542fdf21a74fa3141c9c34"
+        },
+        {
+          "bytes": 527,
+          "format": "mmd",
+          "path": "figures/architecture/A01_system.mmd",
+          "sha256": "26e5810fed986169446a1b7353372b94865f5562f845ff134367fc83edfb3a8f"
+        }
+      ],
+      "section": "architecture",
+      "title": "Complete EcoSched research architecture"
+    },
+    {
+      "evidence_type": "system architecture",
+      "identifier": "A02_kafka",
+      "outputs": [
+        {
+          "bytes": 16942,
+          "format": "pdf",
+          "path": "figures/architecture/A02_kafka.pdf",
+          "sha256": "c4fc9fbe2944bf446f0f97579c27030a43c7b88685701bf57f695f65a2027d6f"
+        },
+        {
+          "bytes": 13966,
+          "format": "svg",
+          "path": "figures/architecture/A02_kafka.svg",
+          "sha256": "d6a0aa7193c410cf6d7c4b0765cb26b4f9dd1aea7e34ef940e75d70ea0833141"
+        },
+        {
+          "bytes": 194961,
+          "format": "png",
+          "path": "figures/architecture/A02_kafka.png",
+          "sha256": "e04fa2aac66b0a9a1baaadb62598c91c82b6bea855f9cd0ab169541d8216d5cd"
+        },
+        {
+          "bytes": 1127,
+          "format": "json",
+          "path": "figures/architecture/A02_kafka.data.json",
+          "sha256": "785f424dd2a01b19d67826e6d10f7ff8e1e0858f1e7f8a03bdb4792b940d5b49"
+        },
+        {
+          "bytes": 643,
+          "format": "mmd",
+          "path": "figures/architecture/A02_kafka.mmd",
+          "sha256": "0995e036afecfcde3cf6b8c43fd09dc81eb8c838320a66317e108acf64e4358f"
+        }
+      ],
+      "section": "architecture",
+      "title": "Kafka arrival transport and monitoring"
+    },
+    {
+      "evidence_type": "system architecture",
+      "identifier": "A03_dashboard_modes",
+      "outputs": [
+        {
+          "bytes": 19804,
+          "format": "pdf",
+          "path": "figures/architecture/A03_dashboard_modes.pdf",
+          "sha256": "0b60727060cd954378c8ef27edd24302c9181fea1be2c00fea31e5544d411c55"
+        },
+        {
+          "bytes": 9566,
+          "format": "svg",
+          "path": "figures/architecture/A03_dashboard_modes.svg",
+          "sha256": "8c3fc87dd6d5e011097a84e998b006b650f1769ccc0ea224208c328114b89983"
+        },
+        {
+          "bytes": 137452,
+          "format": "png",
+          "path": "figures/architecture/A03_dashboard_modes.png",
+          "sha256": "02d236178d36c7afd65ba6b262fce9c3d3403dc1e850198ebeadf4d9f758f0b9"
+        },
+        {
+          "bytes": 777,
+          "format": "json",
+          "path": "figures/architecture/A03_dashboard_modes.data.json",
+          "sha256": "4724c82f6654cd5853b8d8faab4581be5bc9e648de9a4ab81b3c643774de71d1"
+        },
+        {
+          "bytes": 437,
+          "format": "mmd",
+          "path": "figures/architecture/A03_dashboard_modes.mmd",
+          "sha256": "7dd185c88d45111e95d0c5e2f93e0f8df91fb71e9d1e433fbc3968d53ad845cd"
+        }
+      ],
+      "section": "architecture",
+      "title": "Offline research and live transport remain separate"
+    },
+    {
+      "evidence_type": "system architecture",
+      "identifier": "A04_validation",
+      "outputs": [
+        {
+          "bytes": 21603,
+          "format": "pdf",
+          "path": "figures/architecture/A04_validation.pdf",
+          "sha256": "12b5ce91bfc33124e2d62cf1996d69c542632dde215d89b3714246918d24372b"
+        },
+        {
+          "bytes": 10515,
+          "format": "svg",
+          "path": "figures/architecture/A04_validation.svg",
+          "sha256": "5c9843069d80b2f699c5630e6ce517651695c1cf69555ca968d6d5c5c7ddde18"
+        },
+        {
+          "bytes": 159959,
+          "format": "png",
+          "path": "figures/architecture/A04_validation.png",
+          "sha256": "a0a198846f9d494cb2afde78466af1ea44fb408858a0ee17893e352c3742b8ac"
+        },
+        {
+          "bytes": 899,
+          "format": "json",
+          "path": "figures/architecture/A04_validation.data.json",
+          "sha256": "64085cea1a3cd73708d8dbf40686936dae3ff713b4cb8d1112b317717f65489e"
+        },
+        {
+          "bytes": 531,
+          "format": "mmd",
+          "path": "figures/architecture/A04_validation.mmd",
+          "sha256": "efdec4bcb860bbdf6cf5a7150622503daf05e35394c547c5cb29d73e3bfce7a3"
+        }
+      ],
+      "section": "architecture",
+      "title": "Layered reproducibility and validation"
+    },
+    {
+      "evidence_type": "active research evidence",
+      "identifier": "R01_energy",
+      "outputs": [
+        {
+          "bytes": 19390,
+          "format": "pdf",
+          "path": "figures/research/R01_energy.pdf",
+          "sha256": "c5beae4abaf0f40c766c53f779e79793ee3f77918fa2de5f88128817bbebb63e"
+        },
+        {
+          "bytes": 44089,
+          "format": "svg",
+          "path": "figures/research/R01_energy.svg",
+          "sha256": "e985afae69beeb49f533b72c7548c95f2b4d2c4654d3a1893559e79043587893"
+        },
+        {
+          "bytes": 135394,
+          "format": "png",
+          "path": "figures/research/R01_energy.png",
+          "sha256": "a6430c27dd215a8b574fc04645bce10860f598bfb190eb90b4f16ed96a202714"
+        },
+        {
+          "bytes": 4993,
+          "format": "json",
+          "path": "figures/research/R01_energy.data.json",
+          "sha256": "f5c98b660602e6236fbc930d21eed8e344c8b013cdc576f9522cc165e8bd9f8b"
+        }
+      ],
+      "section": "research",
+      "title": "Modeled energy across the active experiment matrix"
+    },
+    {
+      "evidence_type": "active research evidence",
+      "identifier": "R02_efficiency_sensitivity",
+      "outputs": [
+        {
+          "bytes": 26675,
+          "format": "pdf",
+          "path": "figures/research/R02_efficiency_sensitivity.pdf",
+          "sha256": "8b904bdcc32492ee2b3d98734f68013ad74f620c096079c996304bd11357c0f0"
+        },
+        {
+          "bytes": 77446,
+          "format": "svg",
+          "path": "figures/research/R02_efficiency_sensitivity.svg",
+          "sha256": "0e94286d5830edc46209b0341365a15d02b63c5b8aebaa678c3d899d18dccfdb"
+        },
+        {
+          "bytes": 374276,
+          "format": "png",
+          "path": "figures/research/R02_efficiency_sensitivity.png",
+          "sha256": "87ef912a8dac54c2f38b01bb68891ed3f2d3ab280fb3829b9c8da659fef75a84"
+        },
+        {
+          "bytes": 6926,
+          "format": "json",
+          "path": "figures/research/R02_efficiency_sensitivity.data.json",
+          "sha256": "b6f7a7700eb2f8365fc9d5995df6c6bdc6621a3b778f1234a49ac6e2061a95de"
+        }
+      ],
+      "section": "research",
+      "title": "Workload-size and power-curve sensitivity"
+    },
+    {
+      "evidence_type": "active research evidence",
+      "identifier": "R03_primary_savings",
+      "outputs": [
+        {
+          "bytes": 23571,
+          "format": "pdf",
+          "path": "figures/research/R03_primary_savings.pdf",
+          "sha256": "12e3ea34c6db920d5f75298e55029c203561e943ecd047ecc097cf4d3618d650"
+        },
+        {
+          "bytes": 38367,
+          "format": "svg",
+          "path": "figures/research/R03_primary_savings.svg",
+          "sha256": "d789313b25fe75108028bf241d089dd4a7d3cc0483dcbebbb70ef04b5909f6eb"
+        },
+        {
+          "bytes": 158078,
+          "format": "png",
+          "path": "figures/research/R03_primary_savings.png",
+          "sha256": "525e096e74981b1dc9341f59b3dd97e407d2bcf0042998f0ef52f4dba11bea91"
+        },
+        {
+          "bytes": 7605,
+          "format": "json",
+          "path": "figures/research/R03_primary_savings.data.json",
+          "sha256": "63c391a6951f8e7c3a9cb8afcc8f67a65ad1557319e65cb36f038ccf75ec8965"
+        }
+      ],
+      "section": "research",
+      "title": "Nine-condition primary energy comparison"
+    },
+    {
+      "evidence_type": "active research evidence",
+      "identifier": "R04_specpower",
+      "outputs": [
+        {
+          "bytes": 17400,
+          "format": "pdf",
+          "path": "figures/research/R04_specpower.pdf",
+          "sha256": "76e6368deaf73ab8f687e331f7aa432be0bf1da57b92761f2ec0166006f3d8f3"
+        },
+        {
+          "bytes": 20357,
+          "format": "svg",
+          "path": "figures/research/R04_specpower.svg",
+          "sha256": "9d736c9199db948fa1149df208b9357de6e77a2bbbe3b9e4dfe7ea6d4486c60c"
+        },
+        {
+          "bytes": 157073,
+          "format": "png",
+          "path": "figures/research/R04_specpower.png",
+          "sha256": "96f2a6804d3d415317024ac048241ad989915b96c4c878c5526a2e23b25c149e"
+        },
+        {
+          "bytes": 3118,
+          "format": "json",
+          "path": "figures/research/R04_specpower.data.json",
+          "sha256": "945bbaa58aad074198c2bc1544470ed69f98a5f89b9a66a9d1b44748cd4127fe"
+        }
+      ],
+      "section": "research",
+      "title": "SPECpower surrogate power curves"
+    },
+    {
+      "evidence_type": "D5 mechanism analysis",
+      "identifier": "R05_d5_energy_decomposition",
+      "outputs": [
+        {
+          "bytes": 18253,
+          "format": "pdf",
+          "path": "figures/research/R05_d5_energy_decomposition.pdf",
+          "sha256": "fc8141f67fcf30d6e8c072c69b9c48d03c514f2a8c79f334ad4179af8f228a6e"
+        },
+        {
+          "bytes": 29117,
+          "format": "svg",
+          "path": "figures/research/R05_d5_energy_decomposition.svg",
+          "sha256": "63590e51e06545cf72dc3f6687e9a50163360850cd452ad3be3bcaa458b8c880"
+        },
+        {
+          "bytes": 124519,
+          "format": "png",
+          "path": "figures/research/R05_d5_energy_decomposition.png",
+          "sha256": "90920a2f964ae4a0a6eed254d7f7f1de113c00aa9eed59bd979394c77f7c8c85"
+        },
+        {
+          "bytes": 2513,
+          "format": "json",
+          "path": "figures/research/R05_d5_energy_decomposition.data.json",
+          "sha256": "c11e46e8c1e2797aa28a8e1bf8ba899c06127247e6fd3c76af4b175802f2b18f"
+        }
+      ],
+      "section": "research",
+      "title": "D5 decomposition of the largest-workload penalty"
+    },
+    {
+      "evidence_type": "active research evidence",
+      "identifier": "R06_active_hosts",
+      "outputs": [
+        {
+          "bytes": 20544,
+          "format": "pdf",
+          "path": "figures/research/R06_active_hosts.pdf",
+          "sha256": "c0f2b6735c2cc1c58eee0a027c310f64a28e3579702cd282131942999cd546b2"
+        },
+        {
+          "bytes": 75423,
+          "format": "svg",
+          "path": "figures/research/R06_active_hosts.svg",
+          "sha256": "a0bd30eb44ecf164921825b46dc068793ce9d27e7d591c56a0a406b09311ee41"
+        },
+        {
+          "bytes": 158564,
+          "format": "png",
+          "path": "figures/research/R06_active_hosts.png",
+          "sha256": "0c6511b2b25dfd6a8e916948f28a0b0ff42ef8942319beafa878065dd82eed29"
+        },
+        {
+          "bytes": 6307,
+          "format": "json",
+          "path": "figures/research/R06_active_hosts.data.json",
+          "sha256": "0e9f0f7a37889aaf3b2c3e8752ef0d4b796767a46c3951c4477ec958f8218962"
+        }
+      ],
+      "section": "research",
+      "title": "Active-host footprint"
+    },
+    {
+      "evidence_type": "active research evidence",
+      "identifier": "R07_waiting",
+      "outputs": [
+        {
+          "bytes": 19970,
+          "format": "pdf",
+          "path": "figures/research/R07_waiting.pdf",
+          "sha256": "da1e34f76d4fa9d8282afdd92b5f25e43aa8a0d5f1e8ec44326286352732c1c4"
+        },
+        {
+          "bytes": 68392,
+          "format": "svg",
+          "path": "figures/research/R07_waiting.svg",
+          "sha256": "819192c4b553b22cb39b31dcbe062b3ee9db946539ad4dbeba5759c2f4c45f91"
+        },
+        {
+          "bytes": 148311,
+          "format": "png",
+          "path": "figures/research/R07_waiting.png",
+          "sha256": "639346253a2004f07915ad7d2aa812f8d7542abc388cfc48007450823818397c"
+        },
+        {
+          "bytes": 5908,
+          "format": "json",
+          "path": "figures/research/R07_waiting.data.json",
+          "sha256": "9e56b05cc82f616155822d59c29003bf965af9a602811629de39079ada4fb7b9"
+        }
+      ],
+      "section": "research",
+      "title": "Waiting-time outcomes"
+    },
+    {
+      "evidence_type": "active research evidence",
+      "identifier": "R08_migrations",
+      "outputs": [
+        {
+          "bytes": 21042,
+          "format": "pdf",
+          "path": "figures/research/R08_migrations.pdf",
+          "sha256": "7249dd4d12a9829fa66ceb0ad182436d167838d088954202ba2acb217d7e1acb"
+        },
+        {
+          "bytes": 77120,
+          "format": "svg",
+          "path": "figures/research/R08_migrations.svg",
+          "sha256": "7fa6acdebcda7b01071458e7460e2400eb5668ea5b818b42039d484b658014d9"
+        },
+        {
+          "bytes": 196848,
+          "format": "png",
+          "path": "figures/research/R08_migrations.png",
+          "sha256": "53a9697e1fa9156adbd4f11da43a123f101930217ebcf425061a568671907695"
+        },
+        {
+          "bytes": 6347,
+          "format": "json",
+          "path": "figures/research/R08_migrations.data.json",
+          "sha256": "50a5e8f662aa2adddc154b5185dd9658cd318cd15c7ccf8c863b03067c892e9d"
+        }
+      ],
+      "section": "research",
+      "title": "Migration activity and pause"
+    },
+    {
+      "evidence_type": "active research evidence",
+      "identifier": "R09_pressure_fragmentation",
+      "outputs": [
+        {
+          "bytes": 21255,
+          "format": "pdf",
+          "path": "figures/research/R09_pressure_fragmentation.pdf",
+          "sha256": "2c7e6a524c8bd83af74974680cff24fa8bc90b0fe0196874f04e2320941f36c3"
+        },
+        {
+          "bytes": 75635,
+          "format": "svg",
+          "path": "figures/research/R09_pressure_fragmentation.svg",
+          "sha256": "2b80951bdb3534dfbe4aa17a758f9c753343f94ae8cde15ec59e87cde7c2a864"
+        },
+        {
+          "bytes": 175109,
+          "format": "png",
+          "path": "figures/research/R09_pressure_fragmentation.png",
+          "sha256": "9029c992e2bbb65f798883ca6d7315360c7e90994ecf11a874750ed1c1b773e3"
+        },
+        {
+          "bytes": 7670,
+          "format": "json",
+          "path": "figures/research/R09_pressure_fragmentation.data.json",
+          "sha256": "4df87ad74d3ec457e969e682f4b7ae329f1d9e41add3a59d6f962bd7f8d8ea02"
+        }
+      ],
+      "section": "research",
+      "title": "Reservation pressure and fragmentation"
+    },
+    {
+      "evidence_type": "active research evidence",
+      "identifier": "R10_stranded_capacity",
+      "outputs": [
+        {
+          "bytes": 20423,
+          "format": "pdf",
+          "path": "figures/research/R10_stranded_capacity.pdf",
+          "sha256": "639991ffc11d1bf4d613b218eb9102d16f7828a88bf04624291dd97a5f1a353d"
+        },
+        {
+          "bytes": 78924,
+          "format": "svg",
+          "path": "figures/research/R10_stranded_capacity.svg",
+          "sha256": "2a33347c6f013bccc55d7ab892b42f0c804c1bb51c460114775d975de8462dea"
+        },
+        {
+          "bytes": 173861,
+          "format": "png",
+          "path": "figures/research/R10_stranded_capacity.png",
+          "sha256": "53a46e92aed83a52ffc4430a0f4446b9d241d4097d8d7ad3ad56ea9d8e7838b9"
+        },
+        {
+          "bytes": 8028,
+          "format": "json",
+          "path": "figures/research/R10_stranded_capacity.data.json",
+          "sha256": "49e3851ccef37b8df0bfa5bc8a3cddc679f05ba37322efeb0e39cb9e7af5d886"
+        }
+      ],
+      "section": "research",
+      "title": "Stranded resource capacity"
+    },
+    {
+      "evidence_type": "active research evidence",
+      "identifier": "R11_pareto_tradeoffs",
+      "outputs": [
+        {
+          "bytes": 32678,
+          "format": "pdf",
+          "path": "figures/research/R11_pareto_tradeoffs.pdf",
+          "sha256": "c3d65eaf1945817a830f2cc00a21ac5237c597804b4c09fa1f34601ee6b02807"
+        },
+        {
+          "bytes": 154568,
+          "format": "svg",
+          "path": "figures/research/R11_pareto_tradeoffs.svg",
+          "sha256": "f9fff611989e578c03b43d9ff381072031c5ca3e472dd5d9a7b0d36f4e37140f"
+        },
+        {
+          "bytes": 525147,
+          "format": "png",
+          "path": "figures/research/R11_pareto_tradeoffs.png",
+          "sha256": "d92661020358c9ab65d5bc3d17b0d1b5da0410ba0b179a55eebf4fa70fe190bf"
+        },
+        {
+          "bytes": 11335,
+          "format": "json",
+          "path": "figures/research/R11_pareto_tradeoffs.data.json",
+          "sha256": "e7cf2fa66e5fd3ebc63b0235e2db5d354e39e2f7b923c16d6862f14977f353d6"
+        }
+      ],
+      "section": "research",
+      "title": "Condition-specific descriptive Pareto comparisons"
+    },
+    {
+      "evidence_type": "D5 mechanism analysis",
+      "identifier": "R12_resource_composition",
+      "outputs": [
+        {
+          "bytes": 16163,
+          "format": "pdf",
+          "path": "figures/research/R12_resource_composition.pdf",
+          "sha256": "0eb6fe6b404914fa133022eed8618ea1c18b681d48e936ef7237b3696de6aa17"
+        },
+        {
+          "bytes": 22057,
+          "format": "svg",
+          "path": "figures/research/R12_resource_composition.svg",
+          "sha256": "2b9c1283a0e166c7d38f44db836f53528de75a1c377035610435c06395276114"
+        },
+        {
+          "bytes": 101436,
+          "format": "png",
+          "path": "figures/research/R12_resource_composition.png",
+          "sha256": "d8aec075a5d7af491ed551147a03b23bd36473aadbae43c5051985a1f582b0ef"
+        },
+        {
+          "bytes": 844,
+          "format": "json",
+          "path": "figures/research/R12_resource_composition.data.json",
+          "sha256": "c41d193c8a789a9148e12e4fde20da726373e4a3df6b0786c34cf7a28a6715f8"
+        }
+      ],
+      "section": "research",
+      "title": "Resource-skew composition"
+    },
+    {
+      "evidence_type": "D5 mechanism analysis",
+      "identifier": "R13_resource_outcomes",
+      "outputs": [
+        {
+          "bytes": 21618,
+          "format": "pdf",
+          "path": "figures/research/R13_resource_outcomes.pdf",
+          "sha256": "cf11d10bbb903122b2f039a75f4c0f65cf58d15b6f8b3955851368ab72ee002c"
+        },
+        {
+          "bytes": 101053,
+          "format": "svg",
+          "path": "figures/research/R13_resource_outcomes.svg",
+          "sha256": "d5996255f954c7ba2d5682b428e76fe03eefb97750f02cfc4ad087e0cd6aacf7"
+        },
+        {
+          "bytes": 405580,
+          "format": "png",
+          "path": "figures/research/R13_resource_outcomes.png",
+          "sha256": "ec95689ff18dc1ab147ff5b162925d7893e636cac0f166196bec3c46c8f7b09b"
+        },
+        {
+          "bytes": 5765,
+          "format": "json",
+          "path": "figures/research/R13_resource_outcomes.data.json",
+          "sha256": "e24eadf81cd19ac0e84b9890f64110014bdee96ba5253407bddf5cdeab5bbf86"
+        }
+      ],
+      "section": "research",
+      "title": "Supported resource-skew outcomes"
+    },
+    {
+      "evidence_type": "D5 mechanism analysis",
+      "identifier": "R14_offline_host_timelines",
+      "outputs": [
+        {
+          "bytes": 44667,
+          "format": "pdf",
+          "path": "figures/research/R14_offline_host_timelines.pdf",
+          "sha256": "a9d882412a6d6be4388528d2bb04b3764b33347c97272ead290820794936c8ab"
+        },
+        {
+          "bytes": 200832,
+          "format": "svg",
+          "path": "figures/research/R14_offline_host_timelines.svg",
+          "sha256": "8ba79c2949e5acd76ee6850006754744781a2cca9be1b327897a69ab27a6a7e1"
+        },
+        {
+          "bytes": 340008,
+          "format": "png",
+          "path": "figures/research/R14_offline_host_timelines.png",
+          "sha256": "2babdc50bb9343cfc78a8bc5af51aa7fc5ca8355c0e25cf3bd5b0055d871bd58"
+        },
+        {
+          "bytes": 83025,
+          "format": "json",
+          "path": "figures/research/R14_offline_host_timelines.data.json",
+          "sha256": "222768b1c17d7c7425f5d728287a7258fa3442cee303fbb8cc7b2379b91f051a"
+        }
+      ],
+      "section": "research",
+      "title": "Offline sampled host-state timelines"
+    },
+    {
+      "evidence_type": "D5 mechanism analysis",
+      "identifier": "R15_d5_placement",
+      "outputs": [
+        {
+          "bytes": 17404,
+          "format": "pdf",
+          "path": "figures/research/R15_d5_placement.pdf",
+          "sha256": "7917dbb159f2be12ec1182f8e7d5033810deb11025d7bddc2d677e250a098845"
+        },
+        {
+          "bytes": 21698,
+          "format": "svg",
+          "path": "figures/research/R15_d5_placement.svg",
+          "sha256": "bd48f9d93af0729ae87e8ef204ddd82a6c6ffba5884a0628b0f53bfe90e31c04"
+        },
+        {
+          "bytes": 152829,
+          "format": "png",
+          "path": "figures/research/R15_d5_placement.png",
+          "sha256": "efc330ce9a4bf6f1e5e0f009eb0d123c04c121ae2d1cb126795b3ccd71059d5b"
+        },
+        {
+          "bytes": 6362,
+          "format": "json",
+          "path": "figures/research/R15_d5_placement.data.json",
+          "sha256": "36545fc2c21c3fe505171de1c4e88e000d48145d08e3f524ef394a634934439d"
+        }
+      ],
+      "section": "research",
+      "title": "D5 explanation of memory-balance placement"
+    },
+    {
+      "evidence_type": "Kafka transport verification",
+      "identifier": "S01_fast_replay",
+      "outputs": [
+        {
+          "bytes": 16917,
+          "format": "pdf",
+          "path": "figures/streaming/S01_fast_replay.pdf",
+          "sha256": "7cd026548e7c8d5db9fd34019f117ca47f0591fa352f65696a6d03a819f9fcaa"
+        },
+        {
+          "bytes": 20453,
+          "format": "svg",
+          "path": "figures/streaming/S01_fast_replay.svg",
+          "sha256": "6e811d8962f83cb5b9a642d91a5791bad9add58a140a7b90099dfe4253e08c0f"
+        },
+        {
+          "bytes": 117869,
+          "format": "png",
+          "path": "figures/streaming/S01_fast_replay.png",
+          "sha256": "367de57ed6620639d02bfa4f872d87b5cc535139b7f5f7c885c87fe80964e138"
+        },
+        {
+          "bytes": 685,
+          "format": "json",
+          "path": "figures/streaming/S01_fast_replay.data.json",
+          "sha256": "693e457b807a1b54ddfe582bb32b0baf55b29221078006e3c70e191808a51c94"
+        }
+      ],
+      "section": "streaming",
+      "title": "Measured fast-mode Kafka replay"
+    },
+    {
+      "evidence_type": "Kafka transport verification",
+      "identifier": "S02_integrity_recovery",
+      "outputs": [
+        {
+          "bytes": 21967,
+          "format": "pdf",
+          "path": "figures/streaming/S02_integrity_recovery.pdf",
+          "sha256": "585eb6c188392da502e0719072c676cebac19987ba4e0d57a83d53bc3cbdb572"
+        },
+        {
+          "bytes": 22869,
+          "format": "svg",
+          "path": "figures/streaming/S02_integrity_recovery.svg",
+          "sha256": "e6e338236e7e7cc08f55c4db3edef1fc62c83a76f6e6bf5f22da34b7885f118a"
+        },
+        {
+          "bytes": 146506,
+          "format": "png",
+          "path": "figures/streaming/S02_integrity_recovery.png",
+          "sha256": "a2d7e2e414af98613ddb19e0cbadb2d572311608d93bb376549d28e3e2c6cb83"
+        },
+        {
+          "bytes": 5821,
+          "format": "json",
+          "path": "figures/streaming/S02_integrity_recovery.data.json",
+          "sha256": "3f65f3194ac6c1888dda5733924b0cfb39846299d54aee41acab96e9fe0949a4"
+        }
+      ],
+      "section": "streaming",
+      "title": "Duplicate delivery and restart integrity"
+    },
+    {
+      "evidence_type": "Dashboard demonstration evidence",
+      "identifier": "S03_browser_timed_replay",
+      "outputs": [
+        {
+          "bytes": 24033,
+          "format": "pdf",
+          "path": "figures/streaming/S03_browser_timed_replay.pdf",
+          "sha256": "3f1767684e5cb2de39eea32f260040cacdc9b43b5140533da0e92abe1de43f17"
+        },
+        {
+          "bytes": 37066,
+          "format": "svg",
+          "path": "figures/streaming/S03_browser_timed_replay.svg",
+          "sha256": "ccb806d19686a1cdcf5110a45c3de83f5f18937ff0684a0d479bccee47af9ba6"
+        },
+        {
+          "bytes": 204525,
+          "format": "png",
+          "path": "figures/streaming/S03_browser_timed_replay.png",
+          "sha256": "4da90584bd2981a7abfc480c5436d0ed2438f0d439d7171f9852a6c84f0cccbb"
+        },
+        {
+          "bytes": 5532,
+          "format": "json",
+          "path": "figures/streaming/S03_browser_timed_replay.data.json",
+          "sha256": "6dc347ca83ad9c51c531d4e3efc409bdb6abf7b1e70fd7f2ea374edd705d2093"
+        }
+      ],
+      "section": "streaming",
+      "title": "Recorded browser-driven timed replay"
+    },
+    {
+      "evidence_type": "Kafka transport verification",
+      "identifier": "S04_recorded_transport_history",
+      "outputs": [
+        {
+          "bytes": 31570,
+          "format": "pdf",
+          "path": "figures/streaming/S04_recorded_transport_history.pdf",
+          "sha256": "715681d9b04fd5d9acb409e05a51913230491160b9764a4e380d0916f73a3893"
+        },
+        {
+          "bytes": 96290,
+          "format": "svg",
+          "path": "figures/streaming/S04_recorded_transport_history.svg",
+          "sha256": "94a804cdb1110be4245d43d418fa2d976976ec68f1812fa3e4043e755b04808e"
+        },
+        {
+          "bytes": 253000,
+          "format": "png",
+          "path": "figures/streaming/S04_recorded_transport_history.png",
+          "sha256": "9e85e8fd00049d37647bda96458ddbdf172046d887f7b7443420f2168757a76e"
+        },
+        {
+          "bytes": 34053,
+          "format": "json",
+          "path": "figures/streaming/S04_recorded_transport_history.data.json",
+          "sha256": "5ce48f71bbf7edadf60f0d185d4ddde86fad9e885053bb94d844ba3c6fd69ec9"
+        }
+      ],
+      "section": "streaming",
+      "title": "Measured throughput, lag and offered arrival demand"
+    }
+  ],
+  "final_state": {
+    "active_replay": null,
+    "broker_health": "healthy",
+    "dashboard_health": "ok",
+    "dashboard_url": "http://localhost:8501",
+    "temporary_inspection_processes_stopped": true
+  },
+  "formats": {
+    "architecture_additional": "Mermaid .mmd",
+    "figures": [
+      "PDF (vector, embedded DejaVu Sans)",
+      "SVG (editable text, sans-serif fallbacks)",
+      "PNG (300 DPI)"
+    ],
+    "tables": [
+      "CSV (original scalar precision)",
+      "Markdown (six significant digits for float display)",
+      "LaTeX (split longtable panels)"
+    ]
+  },
+  "implementation_files": [
+    "ARNAV_Task/publication/__init__.py",
+    "ARNAV_Task/publication/build.py",
+    "ARNAV_Task/publication/diagrams.py",
+    "ARNAV_Task/publication/figures.py",
+    "ARNAV_Task/publication/style.py",
+    "ARNAV_Task/publication/tables.py",
+    "ARNAV_Task/publication/validation.py"
+  ],
+  "kafka_runs": "Only the explicitly requested 10-test real-broker regression suite; publication figures retain original Phase 4/5 measurements.",
+  "limitations": [
+    "Three historical metadata lineage discrepancies remain unresolved.",
+    "Deterministic grid: no confidence intervals, statistical significance, universal superiority or production electricity claims.",
+    "Kafka figures describe local single-broker transport, not live scheduling or distributed scalability.",
+    "Publication-throughput history and isolated verifier duration were not measured; neither is synthesized.",
+    "Optional runtime history is frozen from the fully verified Phase 5 session; if missing, S04 is omitted.",
+    "Editable SVG fonts may fall back by viewer; PDF embeds the print font.",
+    "LaTeX fragments were not compiled because no TeX engine is installed."
+  ],
+  "log_sha256": {
+    "ARNAV_Task/.runtime/phase6_dependency_check.log": "9261363b733079a641c2e4cc9bc46ffa1d8336945a87f807b6cf68847dbc9b09",
+    "ARNAV_Task/.runtime/phase6_kafka_tests.log": "7a7bfc60dac66e234cc2df2b69c949b8b4295bd065a79a1091c46a71e80022bc",
+    "ARNAV_Task/.runtime/phase6_ordinary_tests.log": "bfcc9e7287f9e6294010a87cb16293a6b123c2ed430f3047028040af4dfda3c0",
+    "ARNAV_Task/.runtime/phase6_post_export_tests.log": "9a1f8575cfb94d99f5a560abafd7431e544e137643b7e01a03f6f78f328625fc",
+    "ARNAV_Task/.runtime/phase6_teammate_tests.log": "ed237e738386feaecd3f3de7ec7acad08a01a4e7b476c1b3d1103604834309ac",
+    "ARNAV_Task/.runtime/phase6_typecheck.log": "82b3e6a6c090a57601d22943bd23fca9218d1031dbe5a7b754092f9a156b4f18"
+  },
+  "modified_previous_d6_files": [
+    "ARNAV_Task/README.md",
+    "ARNAV_Task/requirements.txt"
+  ],
+  "new_demonstration_replays": 0,
+  "new_files": [
+    "ARNAV_Task/config/publication.json",
+    "ARNAV_Task/figures/architecture/A01_system.data.json",
+    "ARNAV_Task/figures/architecture/A01_system.mmd",
+    "ARNAV_Task/figures/architecture/A01_system.pdf",
+    "ARNAV_Task/figures/architecture/A01_system.png",
+    "ARNAV_Task/figures/architecture/A01_system.svg",
+    "ARNAV_Task/figures/architecture/A02_kafka.data.json",
+    "ARNAV_Task/figures/architecture/A02_kafka.mmd",
+    "ARNAV_Task/figures/architecture/A02_kafka.pdf",
+    "ARNAV_Task/figures/architecture/A02_kafka.png",
+    "ARNAV_Task/figures/architecture/A02_kafka.svg",
+    "ARNAV_Task/figures/architecture/A03_dashboard_modes.data.json",
+    "ARNAV_Task/figures/architecture/A03_dashboard_modes.mmd",
+    "ARNAV_Task/figures/architecture/A03_dashboard_modes.pdf",
+    "ARNAV_Task/figures/architecture/A03_dashboard_modes.png",
+    "ARNAV_Task/figures/architecture/A03_dashboard_modes.svg",
+    "ARNAV_Task/figures/architecture/A04_validation.data.json",
+    "ARNAV_Task/figures/architecture/A04_validation.mmd",
+    "ARNAV_Task/figures/architecture/A04_validation.pdf",
+    "ARNAV_Task/figures/architecture/A04_validation.png",
+    "ARNAV_Task/figures/architecture/A04_validation.svg",
+    "ARNAV_Task/figures/research/R01_energy.data.json",
+    "ARNAV_Task/figures/research/R01_energy.pdf",
+    "ARNAV_Task/figures/research/R01_energy.png",
+    "ARNAV_Task/figures/research/R01_energy.svg",
+    "ARNAV_Task/figures/research/R02_efficiency_sensitivity.data.json",
+    "ARNAV_Task/figures/research/R02_efficiency_sensitivity.pdf",
+    "ARNAV_Task/figures/research/R02_efficiency_sensitivity.png",
+    "ARNAV_Task/figures/research/R02_efficiency_sensitivity.svg",
+    "ARNAV_Task/figures/research/R03_primary_savings.data.json",
+    "ARNAV_Task/figures/research/R03_primary_savings.pdf",
+    "ARNAV_Task/figures/research/R03_primary_savings.png",
+    "ARNAV_Task/figures/research/R03_primary_savings.svg",
+    "ARNAV_Task/figures/research/R04_specpower.data.json",
+    "ARNAV_Task/figures/research/R04_specpower.pdf",
+    "ARNAV_Task/figures/research/R04_specpower.png",
+    "ARNAV_Task/figures/research/R04_specpower.svg",
+    "ARNAV_Task/figures/research/R05_d5_energy_decomposition.data.json",
+    "ARNAV_Task/figures/research/R05_d5_energy_decomposition.pdf",
+    "ARNAV_Task/figures/research/R05_d5_energy_decomposition.png",
+    "ARNAV_Task/figures/research/R05_d5_energy_decomposition.svg",
+    "ARNAV_Task/figures/research/R06_active_hosts.data.json",
+    "ARNAV_Task/figures/research/R06_active_hosts.pdf",
+    "ARNAV_Task/figures/research/R06_active_hosts.png",
+    "ARNAV_Task/figures/research/R06_active_hosts.svg",
+    "ARNAV_Task/figures/research/R07_waiting.data.json",
+    "ARNAV_Task/figures/research/R07_waiting.pdf",
+    "ARNAV_Task/figures/research/R07_waiting.png",
+    "ARNAV_Task/figures/research/R07_waiting.svg",
+    "ARNAV_Task/figures/research/R08_migrations.data.json",
+    "ARNAV_Task/figures/research/R08_migrations.pdf",
+    "ARNAV_Task/figures/research/R08_migrations.png",
+    "ARNAV_Task/figures/research/R08_migrations.svg",
+    "ARNAV_Task/figures/research/R09_pressure_fragmentation.data.json",
+    "ARNAV_Task/figures/research/R09_pressure_fragmentation.pdf",
+    "ARNAV_Task/figures/research/R09_pressure_fragmentation.png",
+    "ARNAV_Task/figures/research/R09_pressure_fragmentation.svg",
+    "ARNAV_Task/figures/research/R10_stranded_capacity.data.json",
+    "ARNAV_Task/figures/research/R10_stranded_capacity.pdf",
+    "ARNAV_Task/figures/research/R10_stranded_capacity.png",
+    "ARNAV_Task/figures/research/R10_stranded_capacity.svg",
+    "ARNAV_Task/figures/research/R11_pareto_tradeoffs.data.json",
+    "ARNAV_Task/figures/research/R11_pareto_tradeoffs.pdf",
+    "ARNAV_Task/figures/research/R11_pareto_tradeoffs.png",
+    "ARNAV_Task/figures/research/R11_pareto_tradeoffs.svg",
+    "ARNAV_Task/figures/research/R12_resource_composition.data.json",
+    "ARNAV_Task/figures/research/R12_resource_composition.pdf",
+    "ARNAV_Task/figures/research/R12_resource_composition.png",
+    "ARNAV_Task/figures/research/R12_resource_composition.svg",
+    "ARNAV_Task/figures/research/R13_resource_outcomes.data.json",
+    "ARNAV_Task/figures/research/R13_resource_outcomes.pdf",
+    "ARNAV_Task/figures/research/R13_resource_outcomes.png",
+    "ARNAV_Task/figures/research/R13_resource_outcomes.svg",
+    "ARNAV_Task/figures/research/R14_offline_host_timelines.data.json",
+    "ARNAV_Task/figures/research/R14_offline_host_timelines.pdf",
+    "ARNAV_Task/figures/research/R14_offline_host_timelines.png",
+    "ARNAV_Task/figures/research/R14_offline_host_timelines.svg",
+    "ARNAV_Task/figures/research/R15_d5_placement.data.json",
+    "ARNAV_Task/figures/research/R15_d5_placement.pdf",
+    "ARNAV_Task/figures/research/R15_d5_placement.png",
+    "ARNAV_Task/figures/research/R15_d5_placement.svg",
+    "ARNAV_Task/figures/streaming/S01_fast_replay.data.json",
+    "ARNAV_Task/figures/streaming/S01_fast_replay.pdf",
+    "ARNAV_Task/figures/streaming/S01_fast_replay.png",
+    "ARNAV_Task/figures/streaming/S01_fast_replay.svg",
+    "ARNAV_Task/figures/streaming/S02_integrity_recovery.data.json",
+    "ARNAV_Task/figures/streaming/S02_integrity_recovery.pdf",
+    "ARNAV_Task/figures/streaming/S02_integrity_recovery.png",
+    "ARNAV_Task/figures/streaming/S02_integrity_recovery.svg",
+    "ARNAV_Task/figures/streaming/S03_browser_timed_replay.data.json",
+    "ARNAV_Task/figures/streaming/S03_browser_timed_replay.pdf",
+    "ARNAV_Task/figures/streaming/S03_browser_timed_replay.png",
+    "ARNAV_Task/figures/streaming/S03_browser_timed_replay.svg",
+    "ARNAV_Task/figures/streaming/S04_recorded_transport_history.data.json",
+    "ARNAV_Task/figures/streaming/S04_recorded_transport_history.pdf",
+    "ARNAV_Task/figures/streaming/S04_recorded_transport_history.png",
+    "ARNAV_Task/figures/streaming/S04_recorded_transport_history.svg",
+    "ARNAV_Task/publication/__init__.py",
+    "ARNAV_Task/publication/build.py",
+    "ARNAV_Task/publication/diagrams.py",
+    "ARNAV_Task/publication/figures.py",
+    "ARNAV_Task/publication/style.py",
+    "ARNAV_Task/publication/tables.py",
+    "ARNAV_Task/publication/validation.py",
+    "ARNAV_Task/reports/phase6_verification.json",
+    "ARNAV_Task/reports/phase6_verification.md",
+    "ARNAV_Task/reports/publication/captions.md",
+    "ARNAV_Task/reports/publication/figure_manifest.json",
+    "ARNAV_Task/reports/publication/research_findings.md",
+    "ARNAV_Task/reports/publication/streaming_observations.json",
+    "ARNAV_Task/reports/publication/table_manifest.json",
+    "ARNAV_Task/reports/publication/tables/T01_dataset.csv",
+    "ARNAV_Task/reports/publication/tables/T01_dataset.md",
+    "ARNAV_Task/reports/publication/tables/T01_dataset.tex",
+    "ARNAV_Task/reports/publication/tables/T02_workloads.csv",
+    "ARNAV_Task/reports/publication/tables/T02_workloads.md",
+    "ARNAV_Task/reports/publication/tables/T02_workloads.tex",
+    "ARNAV_Task/reports/publication/tables/T03_experiment_matrix.csv",
+    "ARNAV_Task/reports/publication/tables/T03_experiment_matrix.md",
+    "ARNAV_Task/reports/publication/tables/T03_experiment_matrix.tex",
+    "ARNAV_Task/reports/publication/tables/T04_simulator_configuration.csv",
+    "ARNAV_Task/reports/publication/tables/T04_simulator_configuration.md",
+    "ARNAV_Task/reports/publication/tables/T04_simulator_configuration.tex",
+    "ARNAV_Task/reports/publication/tables/T05_power_models.csv",
+    "ARNAV_Task/reports/publication/tables/T05_power_models.md",
+    "ARNAV_Task/reports/publication/tables/T05_power_models.tex",
+    "ARNAV_Task/reports/publication/tables/T06_policies.csv",
+    "ARNAV_Task/reports/publication/tables/T06_policies.md",
+    "ARNAV_Task/reports/publication/tables/T06_policies.tex",
+    "ARNAV_Task/reports/publication/tables/T07_energy.csv",
+    "ARNAV_Task/reports/publication/tables/T07_energy.md",
+    "ARNAV_Task/reports/publication/tables/T07_energy.tex",
+    "ARNAV_Task/reports/publication/tables/T08_efficiency.csv",
+    "ARNAV_Task/reports/publication/tables/T08_efficiency.md",
+    "ARNAV_Task/reports/publication/tables/T08_efficiency.tex",
+    "ARNAV_Task/reports/publication/tables/T09_primary_comparisons.csv",
+    "ARNAV_Task/reports/publication/tables/T09_primary_comparisons.md",
+    "ARNAV_Task/reports/publication/tables/T09_primary_comparisons.tex",
+    "ARNAV_Task/reports/publication/tables/T10_performance.csv",
+    "ARNAV_Task/reports/publication/tables/T10_performance.md",
+    "ARNAV_Task/reports/publication/tables/T10_performance.tex",
+    "ARNAV_Task/reports/publication/tables/T11_pressure_fragmentation.csv",
+    "ARNAV_Task/reports/publication/tables/T11_pressure_fragmentation.md",
+    "ARNAV_Task/reports/publication/tables/T11_pressure_fragmentation.tex",
+    "ARNAV_Task/reports/publication/tables/T12_resource_skew.csv",
+    "ARNAV_Task/reports/publication/tables/T12_resource_skew.md",
+    "ARNAV_Task/reports/publication/tables/T12_resource_skew.tex",
+    "ARNAV_Task/reports/publication/tables/T13_kafka_configuration.csv",
+    "ARNAV_Task/reports/publication/tables/T13_kafka_configuration.md",
+    "ARNAV_Task/reports/publication/tables/T13_kafka_configuration.tex",
+    "ARNAV_Task/reports/publication/tables/T14_kafka_replays.csv",
+    "ARNAV_Task/reports/publication/tables/T14_kafka_replays.md",
+    "ARNAV_Task/reports/publication/tables/T14_kafka_replays.tex",
+    "ARNAV_Task/reports/publication/tables/T15_recovery.csv",
+    "ARNAV_Task/reports/publication/tables/T15_recovery.md",
+    "ARNAV_Task/reports/publication/tables/T15_recovery.tex",
+    "ARNAV_Task/reports/publication/tables/T16_recorded_validation.csv",
+    "ARNAV_Task/reports/publication/tables/T16_recorded_validation.md",
+    "ARNAV_Task/reports/publication/tables/T16_recorded_validation.tex",
+    "ARNAV_Task/reports/publication/tables/T17_provenance.csv",
+    "ARNAV_Task/reports/publication/tables/T17_provenance.md",
+    "ARNAV_Task/reports/publication/tables/T17_provenance.tex",
+    "ARNAV_Task/reports/publication/tables/T18_contributions.csv",
+    "ARNAV_Task/reports/publication/tables/T18_contributions.md",
+    "ARNAV_Task/reports/publication/tables/T18_contributions.tex",
+    "ARNAV_Task/reports/publication/tables/T19_d5_energy_accounting.csv",
+    "ARNAV_Task/reports/publication/tables/T19_d5_energy_accounting.md",
+    "ARNAV_Task/reports/publication/tables/T19_d5_energy_accounting.tex",
+    "ARNAV_Task/reports/publication/tables/T20_d5_placement.csv",
+    "ARNAV_Task/reports/publication/tables/T20_d5_placement.md",
+    "ARNAV_Task/reports/publication/tables/T20_d5_placement.tex",
+    "ARNAV_Task/reports/publication/tables/T21_d5_controller.csv",
+    "ARNAV_Task/reports/publication/tables/T21_d5_controller.md",
+    "ARNAV_Task/reports/publication/tables/T21_d5_controller.tex",
+    "ARNAV_Task/reports/publication/tables/T22_d5_score_arithmetic.csv",
+    "ARNAV_Task/reports/publication/tables/T22_d5_score_arithmetic.md",
+    "ARNAV_Task/reports/publication/tables/T22_d5_score_arithmetic.tex",
+    "ARNAV_Task/reports/publication/test_results.json",
+    "ARNAV_Task/reports/publication/validation.json",
+    "ARNAV_Task/tests/test_publication_figures.py",
+    "ARNAV_Task/tests/test_publication_tables.py",
+    "ARNAV_Task/tests/test_publication_validation.py"
+  ],
+  "new_scheduler_simulations": 0,
+  "numerical_validation": {
+    "active_outcomes": 36,
+    "completed_instance_replays": 5559312,
+    "errors": [],
+    "full_historical_lineage": "UNRESOLVED",
+    "historical_policies_included": false,
+    "output_files_checked": 162,
+    "passed": true,
+    "primary_comparisons": 9,
+    "primary_energy_savings_cases": 4,
+    "raw_archive_or_broker_required": false,
+    "statistical_error_bars": false
+  },
+  "passed": true,
+  "phase": 6,
+  "preservation": {
+    "dashboard_and_kafka_source_unchanged": true,
+    "git_diff_against_head_empty": true,
+    "original_tracked_files": 508,
+    "phase1_exports_unchanged": true,
+    "phase3_4_5_receipts_unchanged": true,
+    "previous_d6_files_checked": 88,
+    "previous_d6_files_preserved_except_documentation_dependencies": true,
+    "tracked_file_hash_map_sha256": "a4bcd70d0c34cf89be8c8aa80bff2b3c515dd7670779b567d55d0a1081ee8bfc"
+  },
+  "recorded_at_utc": "2026-11-27T05:42:25.335984+00:00",
+  "reproducibility": {
+    "compared_files": 167,
+    "method": "Two full offline builds, default and isolated output roots; compare every figure/table/data sidecar plus manifests, captions, findings and validation JSON by SHA-256.",
+    "passed": true,
+    "scope": "Pinned environment byte identity; not cross-version or end-to-end simulation reproducibility."
+  },
+  "research_findings": {
+    "conclusion": "Memory-aware placement does not consistently save energy; largest-workload penalties retained.",
+    "primary_comparisons": 9,
+    "primary_savings_cases": 4,
+    "source": "ARNAV_Task/reports/publication/research_findings.md"
+  },
+  "schema_version": 1,
+  "scope": "Publication assets only; no academic report, slide deck or new scheduler experiment.",
+  "source_sha256": {
+    "ARNAV_Task/README.md": "9d9a51710673e0f2b50f1ec79c2fe96427260d83c4852622bd668dc682edd9a1",
+    "ARNAV_Task/config/publication.json": "9c25b63bb568ce76745dd056ded9e4351992ed819aba90b0a6f8620d80a1a324",
+    "ARNAV_Task/publication/__init__.py": "223bd2564a4332ee87a4554d4bb235421f845494080a11a01b312b9554926ddb",
+    "ARNAV_Task/publication/build.py": "aaa4115f90af85c9248b41be3e1023d17122f8f7e054e39a8146d87fceca1540",
+    "ARNAV_Task/publication/diagrams.py": "50ee8849e4c1941665a9f391eefc0e1b104d0437d49159aed30296ba3db0bba9",
+    "ARNAV_Task/publication/figures.py": "6c34a734690e0458546950a09577c4a9086ad82370ab5a5700ab98990c4f1b7c",
+    "ARNAV_Task/publication/style.py": "48362d421e8db1f5f2b309748182656b5544f9edf83339fd16159b7149af4673",
+    "ARNAV_Task/publication/tables.py": "5f2c2b7f142e654d194f21e1312a9d199437d74f802ac637cf32bab2cece491b",
+    "ARNAV_Task/publication/validation.py": "357bd0e820047b0b6737c82afb424772823242cc495951d66164576398d51b7e",
+    "ARNAV_Task/reports/publication/figure_manifest.json": "98c94f84f4cd4785470a14b0f2a84130d4b7677135c3135e4616902b7f06b9bf",
+    "ARNAV_Task/reports/publication/streaming_observations.json": "5ce48f71bbf7edadf60f0d185d4ddde86fad9e885053bb94d844ba3c6fd69ec9",
+    "ARNAV_Task/reports/publication/table_manifest.json": "32ff362a5e6f24ec144854bdac93bb41cb1bb5df9edadc5fa594fe23d5a513a3",
+    "ARNAV_Task/reports/publication/test_results.json": "52b123351fbd41c62b94d5a26cb1a686c1c516d714f2e85fa1790786a0dd4e97",
+    "ARNAV_Task/requirements.txt": "0a7f8c53722e68c6904c7ea10bfe97b34694a55b9d2190d3e87d24d133497629",
+    "ARNAV_Task/tests/test_publication_figures.py": "1294fb150b55123360045e8eaf6a29fda4db7b1d1e2de7e8b55faa51219437e7",
+    "ARNAV_Task/tests/test_publication_tables.py": "54eb7047badc2cab05eb19e7ddf8e3722ff74892fdecdc28f68e887cefd87b4a",
+    "ARNAV_Task/tests/test_publication_validation.py": "ac4c9a447a3bc4bbe96b64d232654ebca03acfe7a3879b8a3dd9d7f07d8401d2"
+  },
+  "table_inventory": [
+    {
+      "identifier": "T01_dataset",
+      "outputs": [
+        {
+          "bytes": 539,
+          "format": "csv",
+          "path": "reports/publication/tables/T01_dataset.csv",
+          "sha256": "677965e8db486d58a176d8a51dea9e208c052d1691c3ef8037b5d1d427bd7509"
+        },
+        {
+          "bytes": 929,
+          "format": "md",
+          "path": "reports/publication/tables/T01_dataset.md",
+          "sha256": "2f60976616de2072306d53221ed909be7f62ddccb6f406436d2b83695da0213a"
+        },
+        {
+          "bytes": 1467,
+          "format": "tex",
+          "path": "reports/publication/tables/T01_dataset.tex",
+          "sha256": "baadb90579184cc6cab60ff394e7c5b948d905e4b78761418563c830ece2c756"
+        }
+      ],
+      "row_count": 11,
+      "title": "Dataset characteristics"
+    },
+    {
+      "identifier": "T02_workloads",
+      "outputs": [
+        {
+          "bytes": 309,
+          "format": "csv",
+          "path": "reports/publication/tables/T02_workloads.csv",
+          "sha256": "56cd300c4170e288a999669304418beae4c848e5ba3328e5a83b60e57e75a9c4"
+        },
+        {
+          "bytes": 573,
+          "format": "md",
+          "path": "reports/publication/tables/T02_workloads.md",
+          "sha256": "e8ee885b3cb5f843a93b8f7febfbe0556d73c418b4011d939b07f2da9f28bc9a"
+        },
+        {
+          "bytes": 1056,
+          "format": "tex",
+          "path": "reports/publication/tables/T02_workloads.tex",
+          "sha256": "ebf572ee2e66da84c5a6cce3eacbe2cdbeb0a57ec2421d37ebbb4a5db91171f5"
+        }
+      ],
+      "row_count": 3,
+      "title": "Workload groups and individual instances"
+    },
+    {
+      "identifier": "T03_experiment_matrix",
+      "outputs": [
+        {
+          "bytes": 4526,
+          "format": "csv",
+          "path": "reports/publication/tables/T03_experiment_matrix.csv",
+          "sha256": "d50850e4c26c54bb0ce20cffdbeb7ff1876180356d83e537ea60346531d3f14e"
+        },
+        {
+          "bytes": 5125,
+          "format": "md",
+          "path": "reports/publication/tables/T03_experiment_matrix.md",
+          "sha256": "2e64069a1e39a4b324680758cd4c5b1b9d2113a1d2372f64f04186e935f365c0"
+        },
+        {
+          "bytes": 9140,
+          "format": "tex",
+          "path": "reports/publication/tables/T03_experiment_matrix.tex",
+          "sha256": "73a9c313e80eb7e1b8c16851bdfa93c32d953080fa036845934ba461fc89b63b"
+        }
+      ],
+      "row_count": 36,
+      "title": "Active experiment matrix"
+    },
+    {
+      "identifier": "T04_simulator_configuration",
+      "outputs": [
+        {
+          "bytes": 885,
+          "format": "csv",
+          "path": "reports/publication/tables/T04_simulator_configuration.csv",
+          "sha256": "a17a6cf18707443621fd124592b9c1bbc6f2d304395439cecb5af38a7c6a16c6"
+        },
+        {
+          "bytes": 1336,
+          "format": "md",
+          "path": "reports/publication/tables/T04_simulator_configuration.md",
+          "sha256": "cf89bb51db125b7a5fa2bfab964297d72b922cba68c4aeb96dc85122b83b128e"
+        },
+        {
+          "bytes": 1877,
+          "format": "tex",
+          "path": "reports/publication/tables/T04_simulator_configuration.tex",
+          "sha256": "a1055f557d67d3ba14f4405a8d2082df5c3c140eb5f5818a77736378d5d16136"
+        }
+      ],
+      "row_count": 30,
+      "title": "Fixed simulator and sampling configuration"
+    },
+    {
+      "identifier": "T05_power_models",
+      "outputs": [
+        {
+          "bytes": 1379,
+          "format": "csv",
+          "path": "reports/publication/tables/T05_power_models.csv",
+          "sha256": "6952535599b1c9250d6e420da3f5bb165cec4d687eb0cc8b8f5596e985a3ba50"
+        },
+        {
+          "bytes": 1773,
+          "format": "md",
+          "path": "reports/publication/tables/T05_power_models.md",
+          "sha256": "2274b6d2aeaf0006bc262c5a231948dcb0795ee60669e813304524a665129e52"
+        },
+        {
+          "bytes": 3122,
+          "format": "tex",
+          "path": "reports/publication/tables/T05_power_models.tex",
+          "sha256": "1d861df7b1718baaff17658e133b9a2b9b7bf2020a422a8982a0baa6a84c7e26"
+        }
+      ],
+      "row_count": 3,
+      "title": "SPECpower model configuration"
+    },
+    {
+      "identifier": "T06_policies",
+      "outputs": [
+        {
+          "bytes": 565,
+          "format": "csv",
+          "path": "reports/publication/tables/T06_policies.csv",
+          "sha256": "380e85d2caf4bd204bea0527aeffffa61238a552dc4c9cf4e32367bc297e0c71"
+        },
+        {
+          "bytes": 918,
+          "format": "md",
+          "path": "reports/publication/tables/T06_policies.md",
+          "sha256": "507e29cb8dd7582fba400e046e00ffedafc4e42f9b8d63d548a47f3708548a8a"
+        },
+        {
+          "bytes": 1251,
+          "format": "tex",
+          "path": "reports/publication/tables/T06_policies.tex",
+          "sha256": "c1ae62cb2515fc59d3c4e8b33be1b81a3c1aa5c52e89cfe3c9d3f292505e6b8f"
+        }
+      ],
+      "row_count": 4,
+      "title": "Active scheduling policy definitions"
+    },
+    {
+      "identifier": "T07_energy",
+      "outputs": [
+        {
+          "bytes": 5194,
+          "format": "csv",
+          "path": "reports/publication/tables/T07_energy.csv",
+          "sha256": "d5ec66a63cb81605237e2e65f644be159e5c5312d85f29552f6fe0fa1881465d"
+        },
+        {
+          "bytes": 5519,
+          "format": "md",
+          "path": "reports/publication/tables/T07_energy.md",
+          "sha256": "17d9bb445af4c564abe81c0a696aeccfb9866071973ee2af94a06cbedc059cd4"
+        },
+        {
+          "bytes": 9576,
+          "format": "tex",
+          "path": "reports/publication/tables/T07_energy.tex",
+          "sha256": "fc43bc94646d4d868c3c4fcca78668edb89fdf26f2a3c3fa0243b5d99e462105"
+        }
+      ],
+      "row_count": 36,
+      "title": "Complete modeled energy results"
+    },
+    {
+      "identifier": "T08_efficiency",
+      "outputs": [
+        {
+          "bytes": 6177,
+          "format": "csv",
+          "path": "reports/publication/tables/T08_efficiency.csv",
+          "sha256": "c5502f4e518b0db71380528dc544f72ca27b0c421df24f0671b1bfef3fcf77a6"
+        },
+        {
+          "bytes": 6321,
+          "format": "md",
+          "path": "reports/publication/tables/T08_efficiency.md",
+          "sha256": "ddca79b0d142cfb79364a333e5f0e18d31e980f638674d003610c06dd25a7699"
+        },
+        {
+          "bytes": 10462,
+          "format": "tex",
+          "path": "reports/publication/tables/T08_efficiency.tex",
+          "sha256": "d81f317da31406a81cd53025fa0f5edf420f4b151e8b2353fc137997beed3a82"
+        }
+      ],
+      "row_count": 36,
+      "title": "Energy per completed individual instance"
+    },
+    {
+      "identifier": "T09_primary_comparisons",
+      "outputs": [
+        {
+          "bytes": 4202,
+          "format": "csv",
+          "path": "reports/publication/tables/T09_primary_comparisons.csv",
+          "sha256": "d0f52c2dabe65a1613745de2cfa3fc5820027d0ad89b2fd8d6781d6b51077059"
+        },
+        {
+          "bytes": 4445,
+          "format": "md",
+          "path": "reports/publication/tables/T09_primary_comparisons.md",
+          "sha256": "3983e320002c814fbe799d76dcc5abaf012a85c2ea530caeded640b3f7a07696"
+        },
+        {
+          "bytes": 9670,
+          "format": "tex",
+          "path": "reports/publication/tables/T09_primary_comparisons.tex",
+          "sha256": "77ee9ee3934841404c9ad6a3351576e9101eccfd07ef38962bdc539ac61871ef"
+        }
+      ],
+      "row_count": 9,
+      "title": "Primary energy and performance comparisons"
+    },
+    {
+      "identifier": "T10_performance",
+      "outputs": [
+        {
+          "bytes": 6961,
+          "format": "csv",
+          "path": "reports/publication/tables/T10_performance.csv",
+          "sha256": "ceab4df8fcd3d946a63ce42b5fa9f54f5b6a6a878eaea9a7ff87f7fdc2be949a"
+        },
+        {
+          "bytes": 7294,
+          "format": "md",
+          "path": "reports/publication/tables/T10_performance.md",
+          "sha256": "f7b077afda618a3334f3e130218ead20cba6b8f3cc0d6074ef5c9fe9da63e4b1"
+        },
+        {
+          "bytes": 15209,
+          "format": "tex",
+          "path": "reports/publication/tables/T10_performance.tex",
+          "sha256": "85de433ab27ce8748adbc7c735e1fda824ba4590bb205ff28e994707daae233f"
+        }
+      ],
+      "row_count": 36,
+      "title": "Hosts, migrations and waiting outcomes"
+    },
+    {
+      "identifier": "T11_pressure_fragmentation",
+      "outputs": [
+        {
+          "bytes": 7382,
+          "format": "csv",
+          "path": "reports/publication/tables/T11_pressure_fragmentation.csv",
+          "sha256": "72aec9d7a6e53306147aaddb48e4c64bda1f3855a9d9c7d8d1ed8f8da8af1b1b"
+        },
+        {
+          "bytes": 7106,
+          "format": "md",
+          "path": "reports/publication/tables/T11_pressure_fragmentation.md",
+          "sha256": "24d0e4e308829f44fd9c24ffb8d9e42364a1188b21e1dc22033ff287a02b7b74"
+        },
+        {
+          "bytes": 13116,
+          "format": "tex",
+          "path": "reports/publication/tables/T11_pressure_fragmentation.tex",
+          "sha256": "1ca578317320c82cf4e5fa19afa98bf1296bfa0835a4ce934fa4728b5ea5b3d5"
+        }
+      ],
+      "row_count": 36,
+      "title": "Reservation pressure, fragmentation and stranded capacity"
+    },
+    {
+      "identifier": "T12_resource_skew",
+      "outputs": [
+        {
+          "bytes": 7026,
+          "format": "csv",
+          "path": "reports/publication/tables/T12_resource_skew.csv",
+          "sha256": "7eba49eda4e8cbc27b7470d3a21986dd209326e425d07a69b2d9b20d9dfc6552"
+        },
+        {
+          "bytes": 6830,
+          "format": "md",
+          "path": "reports/publication/tables/T12_resource_skew.md",
+          "sha256": "cfa4f9be68382bba77bc7d7534d1592df335b5a92d2f8a69476606e76ca35f23"
+        },
+        {
+          "bytes": 14293,
+          "format": "tex",
+          "path": "reports/publication/tables/T12_resource_skew.tex",
+          "sha256": "28a012175db895a191b881055d0df62d98f0663975a5ff7cbd8522d212ca8852"
+        }
+      ],
+      "row_count": 54,
+      "title": "Supported resource-skew outcomes"
+    },
+    {
+      "identifier": "T13_kafka_configuration",
+      "outputs": [
+        {
+          "bytes": 617,
+          "format": "csv",
+          "path": "reports/publication/tables/T13_kafka_configuration.csv",
+          "sha256": "809802a3b3984b923394e635e4fd0467830609fcafd6e8acb83f371c916db06f"
+        },
+        {
+          "bytes": 936,
+          "format": "md",
+          "path": "reports/publication/tables/T13_kafka_configuration.md",
+          "sha256": "fae9f15e42e9377af894d32937471aad894fb810683cd3aebb3ce7b2079994f6"
+        },
+        {
+          "bytes": 1630,
+          "format": "tex",
+          "path": "reports/publication/tables/T13_kafka_configuration.tex",
+          "sha256": "daddef361e4a3a0d46c16a69049664b8892ab975941463b45dd785d6d519603a"
+        }
+      ],
+      "row_count": 8,
+      "title": "Tested Kafka infrastructure"
+    },
+    {
+      "identifier": "T14_kafka_replays",
+      "outputs": [
+        {
+          "bytes": 622,
+          "format": "csv",
+          "path": "reports/publication/tables/T14_kafka_replays.csv",
+          "sha256": "97032a1e507140c0c8eb08f98669eeeaf214b9e5f712c16b6766b7b53723cf05"
+        },
+        {
+          "bytes": 1102,
+          "format": "md",
+          "path": "reports/publication/tables/T14_kafka_replays.md",
+          "sha256": "a43db9c2187db9ae5234b12cddf241dc469295c68d9c20499caf38502b45c79c"
+        },
+        {
+          "bytes": 2010,
+          "format": "tex",
+          "path": "reports/publication/tables/T14_kafka_replays.tex",
+          "sha256": "d64ed3beb48b5ca5855891df2824cc9900b3ef60d7bd42074ce2048ef66f0b46"
+        }
+      ],
+      "row_count": 4,
+      "title": "Complete replay and event-level verification results"
+    },
+    {
+      "identifier": "T15_recovery",
+      "outputs": [
+        {
+          "bytes": 336,
+          "format": "csv",
+          "path": "reports/publication/tables/T15_recovery.csv",
+          "sha256": "965e9054ba2656a0f2f9b324d41b9ed4a542caa9c5c3f45e5588249ca7230405"
+        },
+        {
+          "bytes": 737,
+          "format": "md",
+          "path": "reports/publication/tables/T15_recovery.md",
+          "sha256": "a62959d53f17debe477609e9b285b61625e938591feba72e0508a45df5b8af37"
+        },
+        {
+          "bytes": 1505,
+          "format": "tex",
+          "path": "reports/publication/tables/T15_recovery.tex",
+          "sha256": "ec7da7a735df7628145d11e79e54228a22f80ea345a0d5679a7f954377f807c4"
+        }
+      ],
+      "row_count": 2,
+      "title": "Duplicate delivery and interruption recovery"
+    },
+    {
+      "identifier": "T16_recorded_validation",
+      "outputs": [
+        {
+          "bytes": 722,
+          "format": "csv",
+          "path": "reports/publication/tables/T16_recorded_validation.csv",
+          "sha256": "be72d4676a5fe0d6e3f0d38bbfe25201928a97416fb77c7099b824f70bc3b015"
+        },
+        {
+          "bytes": 1373,
+          "format": "md",
+          "path": "reports/publication/tables/T16_recorded_validation.md",
+          "sha256": "b06d524f1e7fa72984694e4113f2579c53826d8c85390b1f22984a156a9fd263"
+        },
+        {
+          "bytes": 1642,
+          "format": "tex",
+          "path": "reports/publication/tables/T16_recorded_validation.tex",
+          "sha256": "0bb72168450544b52e7e5f09f89846437a62c1d4447641c549172f23ed6ed2d4"
+        }
+      ],
+      "row_count": 13,
+      "title": "Recorded validation and test coverage"
+    },
+    {
+      "identifier": "T17_provenance",
+      "outputs": [
+        {
+          "bytes": 1244,
+          "format": "csv",
+          "path": "reports/publication/tables/T17_provenance.csv",
+          "sha256": "24fdd35683a522729727edb629f3ad25d16f541719b580e86fcdcfb7b99ceca4"
+        },
+        {
+          "bytes": 1715,
+          "format": "md",
+          "path": "reports/publication/tables/T17_provenance.md",
+          "sha256": "47e95e5c3fd033a7569edd59d154b67d18e22c9225b4ed03b1b1001e202e3393"
+        },
+        {
+          "bytes": 2544,
+          "format": "tex",
+          "path": "reports/publication/tables/T17_provenance.tex",
+          "sha256": "570e9c194c1c84de9f9fa350e8d64059c645ec314a34d3221caa54c71ccc417a"
+        }
+      ],
+      "row_count": 9,
+      "title": "Layered reproducibility and provenance status"
+    },
+    {
+      "identifier": "T18_contributions",
+      "outputs": [
+        {
+          "bytes": 1533,
+          "format": "csv",
+          "path": "reports/publication/tables/T18_contributions.csv",
+          "sha256": "15ffd2aadd987f10c64109a71cdb6e7406f2d6048a0938067cd8293aa204e16e"
+        },
+        {
+          "bytes": 2029,
+          "format": "md",
+          "path": "reports/publication/tables/T18_contributions.md",
+          "sha256": "b851af0c7db958c5a22435a21678c191c8ff0d7360a91e86ad6d737713c44a01"
+        },
+        {
+          "bytes": 2839,
+          "format": "tex",
+          "path": "reports/publication/tables/T18_contributions.tex",
+          "sha256": "e52759177ba2248bac092d3e9c78b78aa8c5b07070d9dd603f5451c85fefe74f"
+        }
+      ],
+      "row_count": 5,
+      "title": "Individual contributions and Git evidence"
+    },
+    {
+      "identifier": "T19_d5_energy_accounting",
+      "outputs": [
+        {
+          "bytes": 2982,
+          "format": "csv",
+          "path": "reports/publication/tables/T19_d5_energy_accounting.csv",
+          "sha256": "4933674c57a87c152e7572177b42da281ffc2ab41a79aca7b27f0fd1ec7f88f3"
+        },
+        {
+          "bytes": 2493,
+          "format": "md",
+          "path": "reports/publication/tables/T19_d5_energy_accounting.md",
+          "sha256": "ff985f9630d84d5f9a4124a68e846f644f32fe0731ebb504874273cc0fafca72"
+        },
+        {
+          "bytes": 4907,
+          "format": "tex",
+          "path": "reports/publication/tables/T19_d5_energy_accounting.tex",
+          "sha256": "b39c25d1ce93d3e26b068ee52fc2a5a8059df8759999a2ee44084d8e12e3db4a"
+        }
+      ],
+      "row_count": 9,
+      "title": "D5 pair energy gap"
+    },
+    {
+      "identifier": "T20_d5_placement",
+      "outputs": [
+        {
+          "bytes": 3572,
+          "format": "csv",
+          "path": "reports/publication/tables/T20_d5_placement.csv",
+          "sha256": "7389f4b5a2e5f7ed64cf740d3a7ddc69216b092c7ea33300a68bcfda3db3a5d7"
+        },
+        {
+          "bytes": 2903,
+          "format": "md",
+          "path": "reports/publication/tables/T20_d5_placement.md",
+          "sha256": "fd158d43d2211a0fc192ac05d2c694c293de4759a348b637de80fc5a045ea47d"
+        },
+        {
+          "bytes": 5702,
+          "format": "tex",
+          "path": "reports/publication/tables/T20_d5_placement.tex",
+          "sha256": "1012f79a558ac982c5d6ca4e71f715a6b45b3cd798d8f6a7acc544da38bce143"
+        }
+      ],
+      "row_count": 18,
+      "title": "D5 placement decisions"
+    },
+    {
+      "identifier": "T21_d5_controller",
+      "outputs": [
+        {
+          "bytes": 1474,
+          "format": "csv",
+          "path": "reports/publication/tables/T21_d5_controller.csv",
+          "sha256": "db18276f48c56a8a3e83b4fffff286e71e6afd1a98d4ba3edcb659f4f2f0ce93"
+        },
+        {
+          "bytes": 2336,
+          "format": "md",
+          "path": "reports/publication/tables/T21_d5_controller.md",
+          "sha256": "16f99e15e9d01d583ec6a8dee47d73e7d6fb944ec7768aac24459a95999affd6"
+        },
+        {
+          "bytes": 5183,
+          "format": "tex",
+          "path": "reports/publication/tables/T21_d5_controller.tex",
+          "sha256": "96ac62cb9095afb6f76e26aa7156504bc24dff2603567c3738d1ab911080b335"
+        }
+      ],
+      "row_count": 18,
+      "title": "D5 controller diagnostics"
+    },
+    {
+      "identifier": "T22_d5_score_arithmetic",
+      "outputs": [
+        {
+          "bytes": 1285,
+          "format": "csv",
+          "path": "reports/publication/tables/T22_d5_score_arithmetic.csv",
+          "sha256": "bc181823a11de7850df24b89ad72555e10cb28dc674ab489142dbf4c0fe1de67"
+        },
+        {
+          "bytes": 1482,
+          "format": "md",
+          "path": "reports/publication/tables/T22_d5_score_arithmetic.md",
+          "sha256": "e753a24760dc0a471da2a0aaaf8ae17c3e3aa6983e26e3ecf0a99df6198950dd"
+        },
+        {
+          "bytes": 2930,
+          "format": "tex",
+          "path": "reports/publication/tables/T22_d5_score_arithmetic.tex",
+          "sha256": "b9a3d0f659382b69d2b14e5f32aa31925d8b4d78593d944323e8092c14fc0415"
+        }
+      ],
+      "row_count": 3,
+      "title": "D5 placement score arithmetic"
+    }
+  ],
+  "test_receipt": "ARNAV_Task/reports/publication/test_results.json",
+  "test_results": {
+    "d6_ordinary_passed": 213,
+    "new_phase6_tests": 32,
+    "real_kafka_integration_passed": 10,
+    "teammate_passed": 84,
+    "total_distinct_passed": 307
+  },
+  "visual_inspection": {
+    "latex": "CSV/Markdown/LaTeX generated and escape-tested; no installed TeX engine, so LaTeX fragments were not compiled.",
+    "pdf": "R03_primary_savings.pdf rendered by macOS Quick Look and visually inspected; every PDF parsed successfully with pypdf.",
+    "png": "All 23 figures reviewed in a contact sheet; representative research, mechanism and architecture assets inspected at larger size.",
+    "svg": "R15_d5_placement.svg and A02_kafka.svg rendered and visually inspected in actual Chrome; S04 also inspected. Browser-safe font fallbacks fixed serif fallback; placement legend, workload-axis spacing and diagram routing refined.",
+    "temporary_captures": "ARNAV_Task/.runtime/phase6_preview/ (ignored); published PNGs are the reproducible previews."
+  }
+}

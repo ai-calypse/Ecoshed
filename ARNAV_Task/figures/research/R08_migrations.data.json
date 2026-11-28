@@ -1,0 +1,254 @@
+[
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "migration_pause_instance_seconds": 2336.362995691574,
+    "migrations": 275,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "migration_pause_instance_seconds": 2607.392269496948,
+    "migrations": 276,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 250
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "migration_pause_instance_seconds": 2462.408529227445,
+    "migrations": 307,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "migration_pause_instance_seconds": 2607.392269496948,
+    "migrations": 276,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 250
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "migration_pause_instance_seconds": 2336.362995691574,
+    "migrations": 275,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "migration_pause_instance_seconds": 2607.392269496948,
+    "migrations": 276,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 250
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "migration_pause_instance_seconds": 12702.144652160327,
+    "migrations": 1634,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "migration_pause_instance_seconds": 11493.306897031063,
+    "migrations": 1482,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 1000
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "migration_pause_instance_seconds": 13030.470893846334,
+    "migrations": 1746,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "migration_pause_instance_seconds": 11793.99595905572,
+    "migrations": 1443,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 1000
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "migration_pause_instance_seconds": 12591.392807980526,
+    "migrations": 1540,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "migration_pause_instance_seconds": 11937.029520718286,
+    "migrations": 1469,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 1000
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "first_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "best_fit",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "migration_pause_instance_seconds": 64496.103970462296,
+    "migrations": 7695,
+    "policy": "lr_mmt",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "migration_pause_instance_seconds": 53022.15508678008,
+    "migrations": 7222,
+    "policy": "lr_mmt_memory",
+    "power_curve": "hpe_dl360_gen9",
+    "workload_groups": 4000
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "first_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "best_fit",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "migration_pause_instance_seconds": 70617.45041438236,
+    "migrations": 9103,
+    "policy": "lr_mmt",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "migration_pause_instance_seconds": 51170.529488814325,
+    "migrations": 7095,
+    "policy": "lr_mmt_memory",
+    "power_curve": "huawei_rh2288h_v3",
+    "workload_groups": 4000
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "first_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  },
+  {
+    "migration_pause_instance_seconds": 0.0,
+    "migrations": 0,
+    "policy": "best_fit",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  },
+  {
+    "migration_pause_instance_seconds": 63153.21934346231,
+    "migrations": 7337,
+    "policy": "lr_mmt",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  },
+  {
+    "migration_pause_instance_seconds": 52007.784490109116,
+    "migrations": 7138,
+    "policy": "lr_mmt_memory",
+    "power_curve": "quanta_d51b_2u",
+    "workload_groups": 4000
+  }
+]

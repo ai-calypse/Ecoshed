@@ -1,0 +1,5 @@
+-r requirements-runtime.txt
+matplotlib==3.11.2
+pypdf==7.2.0
+numpy==2.5.5
+pillow==13.0.0

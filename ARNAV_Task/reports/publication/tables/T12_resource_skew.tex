@@ -1,0 +1,183 @@
+% Requires longtable, booktabs, array; tables are split into manageable column panels.
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{Supported resource-skew outcomes}\
+\toprule
+Workload Groups & Power Curve & Policy & Task Type & Instances & Mean Wait S (seconds) & P95 Wait S (seconds) \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & lr\_mmt & balanced & 15217 & 8.52218 & 10 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt & memory\_heavy & 1317 & 7.25133 & 10 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt & cpu\_heavy & — & — & — \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & balanced & 15217 & 8.47408 & 10 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & memory\_heavy & 1317 & 7.60061 & 10 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & cpu\_heavy & — & — & — \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & balanced & 15217 & 8.52218 & 10 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & memory\_heavy & 1317 & 7.25133 & 10 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & cpu\_heavy & — & — & — \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & balanced & 15217 & 8.47408 & 10 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & memory\_heavy & 1317 & 7.60061 & 10 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & cpu\_heavy & — & — & — \\
+250 & quanta\_d51b\_2u & lr\_mmt & balanced & 15217 & 8.52218 & 10 \\
+250 & quanta\_d51b\_2u & lr\_mmt & memory\_heavy & 1317 & 7.25133 & 10 \\
+250 & quanta\_d51b\_2u & lr\_mmt & cpu\_heavy & — & — & — \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & balanced & 15217 & 8.47408 & 10 \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & memory\_heavy & 1317 & 7.60061 & 10 \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & cpu\_heavy & — & — & — \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & balanced & 52062 & 5.4383 & 10 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & memory\_heavy & 16297 & 6.46892 & 10 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & cpu\_heavy & 98 & 1.02041 & 10 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & balanced & 52062 & 4.90767 & 10 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & memory\_heavy & 16297 & 5.71627 & 10 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & cpu\_heavy & 98 & 1.02041 & 10 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & balanced & 52062 & 5.06095 & 10 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & memory\_heavy & 16297 & 6.283 & 10 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & cpu\_heavy & 98 & 1.02041 & 10 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & balanced & 52062 & 4.87597 & 10 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & memory\_heavy & 16297 & 5.65491 & 10 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & cpu\_heavy & 98 & 1.02041 & 10 \\
+1000 & quanta\_d51b\_2u & lr\_mmt & balanced & 52062 & 5.44082 & 10 \\
+1000 & quanta\_d51b\_2u & lr\_mmt & memory\_heavy & 16297 & 6.46217 & 10 \\
+1000 & quanta\_d51b\_2u & lr\_mmt & cpu\_heavy & 98 & 1.02041 & 10 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & balanced & 52062 & 4.92029 & 10 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & memory\_heavy & 16297 & 5.70706 & 10 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & cpu\_heavy & 98 & 1.02041 & 10 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & balanced & 303807 & 53.3306 & 112 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & memory\_heavy & 73730 & 67.3391 & 523 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & cpu\_heavy & 748 & 53.7204 & 8 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & balanced & 303807 & 51.7812 & 110 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & memory\_heavy & 73730 & 65.5592 & 521 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & cpu\_heavy & 748 & 53.492 & 7 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & balanced & 303807 & 52.8955 & 110 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & memory\_heavy & 73730 & 66.7035 & 523 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & cpu\_heavy & 748 & 53.6511 & 8 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & balanced & 303807 & 51.8723 & 110 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & memory\_heavy & 73730 & 65.6282 & 523 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & cpu\_heavy & 748 & 53.512 & 7 \\
+4000 & quanta\_d51b\_2u & lr\_mmt & balanced & 303807 & 53.2729 & 112 \\
+4000 & quanta\_d51b\_2u & lr\_mmt & memory\_heavy & 73730 & 67.2147 & 523 \\
+4000 & quanta\_d51b\_2u & lr\_mmt & cpu\_heavy & 748 & 53.7072 & 8 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & balanced & 303807 & 51.7756 & 110 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & memory\_heavy & 73730 & 65.6313 & 522 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & cpu\_heavy & 748 & 53.3382 & 3 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}>{\raggedright\arraybackslash}p{0.114\linewidth}}
+\caption{Supported resource-skew outcomes}\
+\toprule
+Workload Groups & Power Curve & Policy & Task Type & Delayed Pct & Placed On Asleep Or Waking Server Pct & Migrated Pct (percent) \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & lr\_mmt & balanced & 85.3125 & 85.3125 & 1.7809 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt & memory\_heavy & 72.5133 & 72.5133 & 0.303721 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt & cpu\_heavy & — & — & — \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & balanced & 84.8262 & 84.8262 & 1.7349 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & memory\_heavy & 76.0061 & 76.0061 & 0.911162 \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & cpu\_heavy & — & — & — \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & balanced & 85.3125 & 85.3125 & 1.95176 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & memory\_heavy & 72.5133 & 72.5133 & 0.759301 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & cpu\_heavy & — & — & — \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & balanced & 84.8262 & 84.8262 & 1.7349 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & memory\_heavy & 76.0061 & 76.0061 & 0.911162 \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & cpu\_heavy & — & — & — \\
+250 & quanta\_d51b\_2u & lr\_mmt & balanced & 85.3125 & 85.3125 & 1.7809 \\
+250 & quanta\_d51b\_2u & lr\_mmt & memory\_heavy & 72.5133 & 72.5133 & 0.303721 \\
+250 & quanta\_d51b\_2u & lr\_mmt & cpu\_heavy & — & — & — \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & balanced & 84.8262 & 84.8262 & 1.7349 \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & memory\_heavy & 76.0061 & 76.0061 & 0.911162 \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & cpu\_heavy & — & — & — \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & balanced & 54.9115 & 54.9115 & 2.03795 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & memory\_heavy & 64.7052 & 64.7052 & 3.42394 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & cpu\_heavy & 10.2041 & 10.2041 & 15.3061 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & balanced & 49.7234 & 49.7234 & 1.8574 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & memory\_heavy & 57.2007 & 57.2007 & 3.08646 \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & cpu\_heavy & 10.2041 & 10.2041 & 12.2449 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & balanced & 51.0756 & 51.0756 & 2.18201 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & memory\_heavy & 62.8459 & 62.8459 & 3.63257 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & cpu\_heavy & 10.2041 & 10.2041 & 18.3673 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & balanced & 49.4065 & 49.4065 & 1.79401 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & memory\_heavy & 56.5871 & 56.5871 & 3.04964 \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & cpu\_heavy & 10.2041 & 10.2041 & 12.2449 \\
+1000 & quanta\_d51b\_2u & lr\_mmt & balanced & 54.9345 & 54.9345 & 1.85356 \\
+1000 & quanta\_d51b\_2u & lr\_mmt & memory\_heavy & 64.6377 & 64.6377 & 3.43622 \\
+1000 & quanta\_d51b\_2u & lr\_mmt & cpu\_heavy & 10.2041 & 10.2041 & 15.3061 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & balanced & 49.8483 & 49.8483 & 1.82475 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & memory\_heavy & 57.1087 & 57.1087 & 3.111 \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & cpu\_heavy & 10.2041 & 10.2041 & 12.2449 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & balanced & 52.7891 & 36.2283 & 1.43381 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & memory\_heavy & 41.8093 & 31.3482 & 4.37814 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & cpu\_heavy & 12.7005 & 7.8877 & 13.6364 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & balanced & 38.4784 & 22.1769 & 1.40813 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & memory\_heavy & 25.2285 & 14.8244 & 3.86546 \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & cpu\_heavy & 11.7647 & 6.95187 & 11.4973 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & balanced & 48.1016 & 31.5928 & 1.73663 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & memory\_heavy & 35.3628 & 24.9152 & 5.06442 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & cpu\_heavy & 12.1658 & 7.35294 & 11.8984 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & balanced & 39.0537 & 22.7305 & 1.39069 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & memory\_heavy & 25.4211 & 14.998 & 3.75424 \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & cpu\_heavy & 11.3636 & 6.5508 & 12.7005 \\
+4000 & quanta\_d51b\_2u & lr\_mmt & balanced & 52.3336 & 35.7872 & 1.32189 \\
+4000 & quanta\_d51b\_2u & lr\_mmt & memory\_heavy & 40.7446 & 30.2835 & 4.35644 \\
+4000 & quanta\_d51b\_2u & lr\_mmt & cpu\_heavy & 12.2995 & 7.48663 & 13.7701 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & balanced & 38.4711 & 22.1552 & 1.42492 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & memory\_heavy & 26.0789 & 15.6571 & 3.70134 \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & cpu\_heavy & 9.35829 & 4.54545 & 9.75936 \\
+\bottomrule\end{longtable}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.160\linewidth}>{\raggedright\arraybackslash}p{0.160\linewidth}>{\raggedright\arraybackslash}p{0.160\linewidth}>{\raggedright\arraybackslash}p{0.160\linewidth}>{\raggedright\arraybackslash}p{0.160\linewidth}}
+\caption{Supported resource-skew outcomes}\
+\toprule
+Workload Groups & Power Curve & Policy & Task Type & Observation Status \\
+\midrule\endhead
+250 & hpe\_dl360\_gen9 & lr\_mmt & balanced & Observed \\
+250 & hpe\_dl360\_gen9 & lr\_mmt & memory\_heavy & Observed \\
+250 & hpe\_dl360\_gen9 & lr\_mmt & cpu\_heavy & No observations \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & balanced & Observed \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & memory\_heavy & Observed \\
+250 & hpe\_dl360\_gen9 & lr\_mmt\_memory & cpu\_heavy & No observations \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & balanced & Observed \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & memory\_heavy & Observed \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt & cpu\_heavy & No observations \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & balanced & Observed \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & memory\_heavy & Observed \\
+250 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & cpu\_heavy & No observations \\
+250 & quanta\_d51b\_2u & lr\_mmt & balanced & Observed \\
+250 & quanta\_d51b\_2u & lr\_mmt & memory\_heavy & Observed \\
+250 & quanta\_d51b\_2u & lr\_mmt & cpu\_heavy & No observations \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & balanced & Observed \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & memory\_heavy & Observed \\
+250 & quanta\_d51b\_2u & lr\_mmt\_memory & cpu\_heavy & No observations \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & balanced & Observed \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & memory\_heavy & Observed \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt & cpu\_heavy & Observed \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & balanced & Observed \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & memory\_heavy & Observed \\
+1000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & cpu\_heavy & Observed \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & balanced & Observed \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & memory\_heavy & Observed \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt & cpu\_heavy & Observed \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & balanced & Observed \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & memory\_heavy & Observed \\
+1000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & cpu\_heavy & Observed \\
+1000 & quanta\_d51b\_2u & lr\_mmt & balanced & Observed \\
+1000 & quanta\_d51b\_2u & lr\_mmt & memory\_heavy & Observed \\
+1000 & quanta\_d51b\_2u & lr\_mmt & cpu\_heavy & Observed \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & balanced & Observed \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & memory\_heavy & Observed \\
+1000 & quanta\_d51b\_2u & lr\_mmt\_memory & cpu\_heavy & Observed \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & balanced & Observed \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & memory\_heavy & Observed \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt & cpu\_heavy & Observed \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & balanced & Observed \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & memory\_heavy & Observed \\
+4000 & hpe\_dl360\_gen9 & lr\_mmt\_memory & cpu\_heavy & Observed \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & balanced & Observed \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & memory\_heavy & Observed \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt & cpu\_heavy & Observed \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & balanced & Observed \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & memory\_heavy & Observed \\
+4000 & huawei\_rh2288h\_v3 & lr\_mmt\_memory & cpu\_heavy & Observed \\
+4000 & quanta\_d51b\_2u & lr\_mmt & balanced & Observed \\
+4000 & quanta\_d51b\_2u & lr\_mmt & memory\_heavy & Observed \\
+4000 & quanta\_d51b\_2u & lr\_mmt & cpu\_heavy & Observed \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & balanced & Observed \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & memory\_heavy & Observed \\
+4000 & quanta\_d51b\_2u & lr\_mmt\_memory & cpu\_heavy & Observed \\
+\bottomrule\end{longtable}
+% Only primary policies have category outcomes: 48 observed rows plus six explicit absent-category rows. Missing outcomes remain empty, never artificial zeros. CPU-heavy means (CPU / median host CPU) / (memory / median host memory) > 2; memory-heavy means this ratio < 0.5; otherwise balanced.
+% Sources: RUSHI_Task/reports/outcomes_by_task_type.csv

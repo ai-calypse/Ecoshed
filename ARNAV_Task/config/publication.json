@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "dpi": 300,
+  "formats": ["pdf", "svg", "png"],
+  "font_family": "DejaVu Sans",
+  "svg_hashsalt": "ecosched-d6-publication-v1",
+  "focus_workload_groups": 4000,
+  "resource_skew_curve": "hpe_dl360_gen9",
+  "streaming_history_session": "browser_full_250_at_600x",
+  "limitations": [
+    "Deterministic simulation grid; no statistical replications or confidence intervals.",
+    "SPECpower curves are separate surrogate sensitivity cases, not Alibaba hardware calibration.",
+    "Reservation pressure is a modeled overload/SLA proxy, not measured application SLA violations.",
+    "Three historical metadata hash discrepancies remain unresolved.",
+    "Kafka measurements describe one ARM64 laptop and one broker, not scheduler execution or distributed scalability."
+  ]
+}
